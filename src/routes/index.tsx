@@ -155,14 +155,16 @@ function HomePage() {
               <Button asChild variant="outline"><Link to="/services">Our Services</Link></Button>
             </div>
           </div>
-          <ul className="grid grid-cols-2 gap-3 text-sm md:grid-cols-3">
-            {["Dubai","Abu Dhabi","Ras Al Khaimah","Sharjah","Fujairah","Ajman","Umm Al Quwain"].map((c) => (
-              <li key={c} className="rounded-sm border border-border bg-background px-4 py-3">
-                <span className="eyebrow text-[0.6rem]">Emirate</span>
-                <p className="mt-1 font-display text-lg">{c}</p>
-              </li>
-            ))}
-          </ul>
+          <div className="relative overflow-hidden rounded-sm border border-border bg-background/60 shadow-sm">
+            <img
+              src={uaeMapAsset.url}
+              alt="Map of the UAE with all seven emirates marked — Dubai, Abu Dhabi, Sharjah, Ajman, Umm Al Quwain, Ras Al Khaimah, and Fujairah"
+              width={1664}
+              height={936}
+              loading="lazy"
+              className="h-auto w-full object-contain"
+            />
+          </div>
         </div>
       </section>
 
