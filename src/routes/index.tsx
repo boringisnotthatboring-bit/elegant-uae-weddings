@@ -166,7 +166,7 @@ function HomePage() {
               width={1664}
               height={936}
               loading="lazy"
-              className="relative h-auto w-full object-contain mix-blend-multiply drop-shadow-[0_20px_35px_rgba(120,85,40,0.18)]"
+              className="relative h-auto w-full object-contain drop-shadow-[0_20px_35px_rgba(120,85,40,0.18)]"
             />
           </div>
         </div>
