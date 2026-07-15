@@ -14,6 +14,7 @@ import { testimonials } from "@/lib/content/testimonials";
 import { blogPosts } from "@/lib/content/blog";
 import { portfolioItems } from "@/lib/content/portfolio";
 import { company } from "@/lib/content/nav";
+import uaeMapAsset from "@/assets/uae-map.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
