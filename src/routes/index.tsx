@@ -94,7 +94,13 @@ function HomePage() {
               Experience you can count on, elegance you can feel.
             </p>
             <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground">
-              With over 12 years of experience, Awesome Events Weddings is a trusted wedding planner in Dubai, creating extraordinary celebrations across the UAE. From intimate ceremonies and civil weddings to grand destination celebrations, our team combines creative vision, luxury planning, bespoke décor, and world-class production to bring every couple's vision to life.
+              With over 12 years of experience, Awesome Events Weddings is a trusted luxury wedding planner in Dubai, creating extraordinary celebrations across the UAE.
+            </p>
+            <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground">
+              From intimate ceremonies and civil weddings to grand multicultural and destination weddings, we provide complete end-to-end wedding planning and execution, including creative concept development, venue selection, bespoke décor, vendor management, budgeting, entertainment, technical production, guest hospitality, invitations, transportation, accommodation, wedding logistics, permits, timelines, and seamless on-ground coordination.
+            </p>
+            <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground">
+              Through meticulous planning, personalized service, and world-class production, we manage every detail from the first consultation to the final celebration, bringing each couple’s unique wedding vision to life.
             </p>
             <div className="mt-8">
               <p className="eyebrow text-foreground/60">Weddings We Specialize In</p>
