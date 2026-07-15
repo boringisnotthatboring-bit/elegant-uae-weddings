@@ -20,23 +20,6 @@ export function WhatsAppWidget() {
     <div className="fixed bottom-5 right-5 z-50 flex flex-col items-end gap-3">
       {open && (
         <div className="w-[320px] overflow-hidden rounded-lg border border-border bg-card shadow-2xl">
-          <div className="flex items-center gap-3 bg-[#075E54] px-4 py-3 text-white">
-            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white/20 font-semibold">
-              RJ
-            </div>
-            <div className="flex-1">
-              <p className="text-sm font-semibold leading-tight">{AGENT_NAME}</p>
-              <p className="text-xs text-white/80">Wedding Specialist · Online</p>
-            </div>
-            <button
-              type="button"
-              onClick={() => setOpen(false)}
-              aria-label="Close chat"
-              className="rounded-full p-1 transition-colors hover:bg-white/10"
-            >
-              <X className="h-4 w-4" />
-            </button>
-          </div>
           <div className="bg-[#ECE5DD] px-4 py-5">
             <div className="max-w-[85%] rounded-lg rounded-tl-none bg-white px-3 py-2 text-sm shadow-sm">
               <p className="text-foreground">
