@@ -12,7 +12,6 @@ import { flagshipServices, specialties } from "@/lib/content/services";
 import { faqItems } from "@/lib/content/faqs";
 import { testimonials } from "@/lib/content/testimonials";
 import { blogPosts } from "@/lib/content/blog";
-import { portfolioItems } from "@/lib/content/portfolio";
 import { company } from "@/lib/content/nav";
 import uaeMapAsset from "@/assets/uae-map-isolated.png";
 
@@ -193,34 +192,6 @@ function HomePage() {
         </div>
       </section>
 
-      {/* Portfolio teaser */}
-      <section className="bg-secondary/60 section-y">
-        <div className="container-page">
-          <SectionHeader
-            eyebrow="Portfolio"
-            title="Luxury Wedding Gallery"
-            body="Discover beautifully curated luxury weddings in Dubai, from elegant beachfront ceremonies and five-star hotel receptions to unforgettable destination weddings across the UAE."
-          />
-          <div className="mt-12 grid grid-cols-2 gap-3 md:grid-cols-4">
-            {portfolioItems.slice(0, 8).map((p, i) => (
-              <div
-                key={p.id}
-                className={
-                  "relative overflow-hidden rounded-sm " +
-                  (i === 0 || i === 5 ? "aspect-[3/4] md:col-span-1 md:row-span-2" : "aspect-square")
-                }
-              >
-                <img src={p.image} alt={p.title} loading="lazy" className="h-full w-full object-cover" />
-              </div>
-            ))}
-          </div>
-          <div className="mt-10">
-            <Button asChild>
-              <Link to="/portfolio">View Portfolio <ArrowRight className="ml-2 h-4 w-4" /></Link>
-            </Button>
-          </div>
-        </div>
-      </section>
 
       {/* Why Couples Choose Us */}
       <section className="section-y">
