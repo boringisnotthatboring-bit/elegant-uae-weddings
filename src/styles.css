@@ -1,6 +1,4 @@
-@import "tailwindcss" source(none);
-@source "../src";
-@import "tw-animate-css";
+@import "tailwindcss";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -8,7 +6,7 @@
  * Awesome Events Weddings — editorial luxury palette
  * Warm cream ground, deep burgundy accent, soft champagne gold.
  * Serif display (Cormorant Garamond) + refined sans (Inter).
- * All tokens live here; components consume via bg-*/text-* utilities.
+ * All tokens live here; components consume via bg- and text- utilities.
  */
 
 @theme inline {
@@ -59,13 +57,13 @@
   --popover: oklch(0.99 0.008 85);
   --popover-foreground: oklch(0.18 0.02 40);
 
-  --primary: oklch(0.32 0.08 25);        /* deep burgundy */
+  --primary: oklch(0.32 0.08 25);
   --primary-foreground: oklch(0.975 0.012 85);
   --secondary: oklch(0.92 0.015 80);
   --secondary-foreground: oklch(0.22 0.03 30);
   --muted: oklch(0.94 0.012 85);
   --muted-foreground: oklch(0.45 0.02 40);
-  --accent: oklch(0.72 0.09 75);         /* champagne gold */
+  --accent: oklch(0.72 0.09 75);
   --accent-foreground: oklch(0.18 0.02 40);
   --destructive: oklch(0.55 0.22 25);
   --destructive-foreground: oklch(0.98 0.003 85);
@@ -96,37 +94,66 @@
   --ring: oklch(0.72 0.09 75);
 }
 
-@layer base {
-  * {
-    border-color: var(--color-border);
-  }
 
-  html {
-    scroll-behavior: smooth;
-  }
+html {
+  scroll-behavior: smooth;
+}
 
-  body {
-    background-color: var(--color-background);
-    color: var(--color-foreground);
-    font-family: var(--font-sans);
-    font-feature-settings: "ss01", "cv11";
-    -webkit-font-smoothing: antialiased;
-  }
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+  font-feature-settings: "ss01", "cv11";
+  -webkit-font-smoothing: antialiased;
+}
 
-  h1, h2, h3, h4, .font-display {
-    font-family: var(--font-display);
-    font-weight: 500;
-    letter-spacing: -0.01em;
-  }
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
 
-  .eyebrow {
-    font-family: var(--font-sans);
-    text-transform: uppercase;
-    letter-spacing: 0.22em;
-    font-size: 0.72rem;
-    font-weight: 500;
-    color: var(--color-primary);
-  }
+.eyebrow {
+  font-family: var(--font-sans);
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--color-primary);
+}
+
+
+*,
+::before,
+::after {
+  border-color: var(--color-border);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+  font-feature-settings: "ss01", "cv11";
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+.eyebrow {
+  font-family: var(--font-sans);
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--color-primary);
 }
 
 @utility container-page {
