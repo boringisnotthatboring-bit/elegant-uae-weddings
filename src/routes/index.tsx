@@ -35,10 +35,9 @@ export const Route = createFileRoute("/")({
 });
 
 const trustStats = [
-  { value: "12+", label: "Years of Experience" },
-  { value: "500+", label: "Weddings Planned" },
-  { value: "7", label: "Emirates Covered" },
-  { value: "50+", label: "Partner Venues" },
+  { value: "450+", label: "Events" },
+  { value: "62k+", label: "Attendees" },
+  { value: "100+", label: "Event Partners" },
 ];
 
 const publishedPosts = blogPosts.filter((p) => p.status === "published").slice(0, 4);
