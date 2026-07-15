@@ -175,3 +175,94 @@ h1, h2, h3, h4, .font-display {
   border-top: 1px solid var(--color-border);
 }
 
+/* ============================================================
+ * iOS-level smoothness — buttery global motion
+ * SEO-safe: pure CSS, no content hidden from crawlers, honors
+ * prefers-reduced-motion. Content is fully rendered in SSR HTML.
+ * ============================================================ */
+
+:root {
+  --ease-ios: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-ios-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --dur-fast: 180ms;
+  --dur-base: 320ms;
+  --dur-slow: 520ms;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  overscroll-behavior-y: none;
+}
+
+a,
+button,
+[role="button"],
+input,
+select,
+textarea,
+summary,
+label,
+.transition-smooth {
+  transition:
+    color var(--dur-base) var(--ease-ios),
+    background-color var(--dur-base) var(--ease-ios),
+    border-color var(--dur-base) var(--ease-ios),
+    box-shadow var(--dur-base) var(--ease-ios),
+    transform var(--dur-base) var(--ease-ios),
+    opacity var(--dur-base) var(--ease-ios),
+    filter var(--dur-base) var(--ease-ios);
+}
+
+a:active,
+button:active,
+[role="button"]:active {
+  transform: scale(0.98);
+  transition-duration: var(--dur-fast);
+}
+
+img, svg, video {
+  transition: transform var(--dur-slow) var(--ease-ios), opacity var(--dur-base) var(--ease-ios);
+}
+
+:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--color-ring) 45%, transparent);
+  transition: box-shadow var(--dur-fast) var(--ease-ios);
+  border-radius: var(--radius);
+}
+
+/* Reveal on scroll — progressive enhancement.
+   Content is fully rendered/visible in SSR HTML for SEO + a11y;
+   this only animates entry when the browser supports scroll timelines. */
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .reveal-on-view {
+      animation: reveal-fade-up linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 60%;
+    }
+  }
+}
+
+@keyframes reveal-fade-up {
+  from { opacity: 0; transform: translate3d(0, 16px, 0); }
+  to   { opacity: 1; transform: translate3d(0, 0, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
