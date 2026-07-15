@@ -56,7 +56,7 @@ function HomePage() {
             height={1200}
             className="h-full w-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/25 to-background" />
+          <div className="absolute inset-0 hero-scrim" />
         </div>
         <div className="container-page relative flex min-h-[85vh] flex-col justify-end pb-20 pt-32 text-primary-foreground">
           <p className="eyebrow text-accent">{company.tagline}</p>
