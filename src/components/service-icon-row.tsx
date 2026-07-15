@@ -1,12 +1,11 @@
-import { Sparkles, Camera, Music, Plane, Flame, Cpu } from "lucide-react";
+import { Sparkles, Camera, Music, Brush, Users } from "lucide-react";
 
 const services = [
   { icon: Sparkles, label: "Décor & Styling" },
   { icon: Camera, label: "Photography" },
   { icon: Music, label: "AV & Lighting" },
-  { icon: Plane, label: "Drone Shows" },
-  { icon: Flame, label: "Fireworks" },
-  { icon: Cpu, label: "AI Integration" },
+  { icon: Brush, label: "Makeup & Henna Artists" },
+  { icon: Users, label: "Guest Hospitality & RSVP" },
 ];
 
 export function ServiceIconRow() {
