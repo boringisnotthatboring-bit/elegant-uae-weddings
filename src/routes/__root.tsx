@@ -143,6 +143,7 @@ function RootComponent() {
           </main>
           <SiteFooter />
         </div>
+        <WhatsAppWidget />
       </I18nProvider>
     </QueryClientProvider>
   );
