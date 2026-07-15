@@ -41,7 +41,7 @@ export function WhatsAppWidget() {
           <div className="bg-[#ECE5DD] px-4 py-5">
             <div className="max-w-[85%] rounded-lg rounded-tl-none bg-white px-3 py-2 text-sm shadow-sm">
               <p className="text-foreground">
-                Hi 👋 I'm {AGENT_NAME.split(" ")[0]}. Tell me a bit about your wedding — I'll reply on WhatsApp right away.
+                tell us more and we will cater to your requirements
               </p>
             </div>
           </div>
