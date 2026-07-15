@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Linkedin, Instagram, Mail, MapPin, Phone } from "lucide-react";
+import { Linkedin, Instagram, Youtube, MapPin, Phone, Mail } from "lucide-react";
 import { footerExplore, socialLinks, company } from "@/lib/content/nav";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -7,73 +7,89 @@ import { Input } from "@/components/ui/input";
 export function SiteFooter() {
   return (
     <footer className="mt-24 border-t border-border bg-primary text-primary-foreground">
-      <div className="container-page grid gap-12 py-16 md:grid-cols-4">
-        <div className="md:col-span-2">
-          <div className="font-display text-3xl">{company.name}</div>
-          <p className="eyebrow mt-1 text-primary-foreground/70">
-            {company.tagline}
+      <div className="container-page grid gap-12 py-16 md:grid-cols-3">
+        <div>
+          <h4 className="eyebrow text-primary-foreground/60">Studio</h4>
+          <p className="mt-4 text-sm text-primary-foreground/80">
+            {company.address}
           </p>
-          <p className="mt-6 max-w-md text-sm text-primary-foreground/80">
-            Bespoke luxury wedding planning across Dubai, Abu Dhabi, Ras Al
-            Khaimah, Sharjah, Fujairah, Ajman and the wider UAE.
-          </p>
-          <div className="mt-6 flex items-center gap-3">
-            <a
-              href={socialLinks.linkedin}
-              target="_blank"
-              rel="noreferrer"
-              aria-label="LinkedIn"
-              className="rounded-full border border-primary-foreground/30 p-2 transition-colors hover:border-accent hover:text-accent"
-            >
-              <Linkedin className="h-4 w-4" />
-            </a>
-            <a
-              href={socialLinks.instagram}
-              target="_blank"
-              rel="noreferrer"
-              aria-label="Instagram"
-              className="rounded-full border border-primary-foreground/30 p-2 transition-colors hover:border-accent hover:text-accent"
-            >
-              <Instagram className="h-4 w-4" />
-            </a>
-          </div>
         </div>
 
         <div>
-          <h4 className="eyebrow text-primary-foreground/70">Explore</h4>
-          <ul className="mt-4 space-y-2 text-sm">
+          <h4 className="eyebrow text-primary-foreground/60">Contact</h4>
+          <ul className="mt-4 space-y-3 text-sm text-primary-foreground/80">
+            <li>
+              <a
+                href={`mailto:${company.email}`}
+                className="transition-colors hover:text-accent"
+              >
+                {company.email}
+              </a>
+            </li>
+            <li>
+              <a
+                href={`tel:${company.phone.replace(/\s/g, "")}`}
+                className="transition-colors hover:text-accent"
+              >
+                {company.phone}
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 className="eyebrow text-primary-foreground/60">Follow</h4>
+          <ul className="mt-4 space-y-3 text-sm text-primary-foreground/80">
+            <li>
+              <a
+                href={socialLinks.instagram}
+                target="_blank"
+                rel="noreferrer"
+                className="transition-colors hover:text-accent"
+              >
+                Instagram
+              </a>
+            </li>
+            <li>
+              <a
+                href={socialLinks.linkedin}
+                target="_blank"
+                rel="noreferrer"
+                className="transition-colors hover:text-accent"
+              >
+                LinkedIn
+              </a>
+            </li>
+            <li>
+              <a
+                href={socialLinks.youtube}
+                target="_blank"
+                rel="noreferrer"
+                className="transition-colors hover:text-accent"
+              >
+                YouTube
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div className="border-t border-primary-foreground/15">
+        <div className="container-page grid gap-8 py-8 md:grid-cols-2 md:items-center">
+          <div className="flex flex-wrap gap-x-6 gap-y-2 text-xs text-primary-foreground/60">
             {footerExplore.map((l) => (
-              <li key={l.to}>
-                <Link
-                  to={l.to}
-                  className="text-primary-foreground/85 transition-colors hover:text-accent"
-                >
-                  {l.label}
-                </Link>
-              </li>
+              <Link
+                key={l.to}
+                to={l.to}
+                className="transition-colors hover:text-accent"
+              >
+                {l.label}
+              </Link>
             ))}
-          </ul>
-        </div>
-
-        <div>
-          <h4 className="eyebrow text-primary-foreground/70">Get in Touch</h4>
-          <ul className="mt-4 space-y-3 text-sm text-primary-foreground/85">
-            <li className="flex items-start gap-2">
-              <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
-              {company.address}
-            </li>
-            <li className="flex items-start gap-2">
-              <Phone className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
-              {company.phone}
-            </li>
-            <li className="flex items-start gap-2">
-              <Mail className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
-              {company.email}
-            </li>
-          </ul>
+          </div>
 
           <form
-            className="mt-6 flex gap-2"
+            className="flex gap-2 md:justify-end"
             onSubmit={(e) => {
               e.preventDefault();
             }}
@@ -81,7 +97,7 @@ export function SiteFooter() {
             <Input
               type="email"
               placeholder="Newsletter email"
-              className="border-primary-foreground/30 bg-primary-foreground/10 text-primary-foreground placeholder:text-primary-foreground/60"
+              className="max-w-[16rem] border-primary-foreground/30 bg-primary-foreground/10 text-primary-foreground placeholder:text-primary-foreground/60"
               aria-label="Newsletter email"
             />
             <Button
@@ -95,9 +111,12 @@ export function SiteFooter() {
           </form>
         </div>
       </div>
+
       <div className="border-t border-primary-foreground/15">
         <div className="container-page flex flex-col items-center justify-between gap-2 py-6 text-xs text-primary-foreground/60 md:flex-row">
-          <p>© {new Date().getFullYear()} {company.name}. All rights reserved.</p>
+          <p>
+            © {new Date().getFullYear()} {company.name}. All rights reserved.
+          </p>
           <p>Crafted for couples across the UAE.</p>
         </div>
       </div>
