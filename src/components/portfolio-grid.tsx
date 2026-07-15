@@ -32,16 +32,13 @@ export function PortfolioGrid() {
           </button>
         ))}
       </div>
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {filtered.map((item, i) => (
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        {filtered.map((item) => (
           <button
             type="button"
             key={item.id}
             onClick={() => setLightbox(item.image)}
-            className={
-              "group relative overflow-hidden rounded-sm " +
-              (i % 5 === 0 ? "aspect-[4/5]" : "aspect-[4/3]")
-            }
+            className="group relative aspect-[4/3] overflow-hidden rounded-sm"
           >
             <img
               src={item.image}
