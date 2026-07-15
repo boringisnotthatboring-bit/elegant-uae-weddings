@@ -2,7 +2,6 @@ import { useState } from "react";
 import { MessageCircle, X, Send } from "lucide-react";
 
 const PHONE = "971526232321";
-const AGENT_NAME = "Ronika Jinadra";
 
 export function WhatsAppWidget() {
   const [open, setOpen] = useState(false);
