@@ -12,7 +12,6 @@ import { flagshipServices, specialties } from "@/lib/content/services";
 import { faqItems } from "@/lib/content/faqs";
 import { testimonials } from "@/lib/content/testimonials";
 import { blogPosts } from "@/lib/content/blog";
-import { portfolioItems } from "@/lib/content/portfolio";
 import { company } from "@/lib/content/nav";
 import uaeMapAsset from "@/assets/uae-map-isolated.png";
 
