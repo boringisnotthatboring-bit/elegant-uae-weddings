@@ -1,5 +1,4 @@
 import { Link } from "@tanstack/react-router";
-import { Instagram, Linkedin, Youtube } from "lucide-react";
 import { footerExplore, socialLinks, company } from "@/lib/content/nav";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
