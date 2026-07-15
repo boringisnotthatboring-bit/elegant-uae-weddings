@@ -20,8 +20,9 @@ export const footerExplore: NavLink[] = [
 ];
 
 export const socialLinks = {
-  linkedin: "https://ae.linkedin.com/in/ronika-jinadra-b968231a",
-  instagram: "https://www.instagram.com/",
+  linkedin: "https://www.linkedin.com/company/awesome-ae/",
+  instagram: "https://www.instagram.com/awesomeeventsuae/",
+  youtube: "https://www.youtube.com/@awesomeevents4700",
 };
 
 export const company = {
