@@ -14,7 +14,7 @@ import { testimonials } from "@/lib/content/testimonials";
 import { blogPosts } from "@/lib/content/blog";
 import { portfolioItems } from "@/lib/content/portfolio";
 import { company } from "@/lib/content/nav";
-import uaeMapAsset from "@/assets/uae-map-themed.png";
+import uaeMapAsset from "@/assets/uae-map-isolated.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -166,7 +166,7 @@ function HomePage() {
               width={1664}
               height={936}
               loading="lazy"
-              className="relative h-auto w-full object-contain mix-blend-multiply drop-shadow-[0_20px_35px_rgba(120,85,40,0.18)]"
+              className="relative h-auto w-full object-contain drop-shadow-[0_20px_35px_rgba(120,85,40,0.18)]"
             />
           </div>
         </div>
