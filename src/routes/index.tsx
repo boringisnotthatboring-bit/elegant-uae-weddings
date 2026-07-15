@@ -155,14 +155,18 @@ function HomePage() {
               <Button asChild variant="outline"><Link to="/services">Our Services</Link></Button>
             </div>
           </div>
-          <div className="relative overflow-hidden rounded-sm border border-border bg-background/60 shadow-sm">
+          <div className="relative -mx-2 md:-mx-4 lg:scale-[1.07] lg:origin-center">
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute inset-x-6 bottom-2 h-10 rounded-[50%] bg-primary/20 blur-2xl"
+            />
             <img
-              src={uaeMapAsset.url}
+              src={uaeMapAsset}
               alt="Map of the UAE with all seven emirates marked — Dubai, Abu Dhabi, Sharjah, Ajman, Umm Al Quwain, Ras Al Khaimah, and Fujairah"
               width={1664}
               height={936}
               loading="lazy"
-              className="h-auto w-full object-contain"
+              className="relative h-auto w-full object-contain mix-blend-multiply drop-shadow-[0_20px_35px_rgba(120,85,40,0.18)]"
             />
           </div>
         </div>
