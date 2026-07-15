@@ -167,6 +167,11 @@ h1, h2, h3, h4, .font-display {
   padding-block: 5rem;
 }
 
+@utility hero-scrim {
+  background: radial-gradient(ellipse 90% 55% at 10% 85%, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0.25) 40%, transparent 72%);
+}
+
 @utility hairline {
   border-top: 1px solid var(--color-border);
 }
+
