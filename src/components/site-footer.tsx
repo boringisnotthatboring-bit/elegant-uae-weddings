@@ -8,7 +8,7 @@ export function SiteFooter() {
     <footer className="mt-24 border-t border-border bg-primary text-primary-foreground">
       <div className="container-page grid gap-12 py-16 md:grid-cols-3">
         <div>
-          <h4 className="eyebrow text-primary-foreground/60">Studio</h4>
+          <h4 className="text-xs font-medium uppercase tracking-widest text-primary-foreground/60">Studio</h4>
           <p className="mt-4 text-sm text-primary-foreground/80">
             {company.address}
           </p>
