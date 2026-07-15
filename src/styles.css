@@ -6,7 +6,7 @@
  * Awesome Events Weddings — editorial luxury palette
  * Warm cream ground, deep burgundy accent, soft champagne gold.
  * Serif display (Cormorant Garamond) + refined sans (Inter).
- * All tokens live here; components consume via bg-*/text-* utilities.
+ * All tokens live here; components consume via bg- and text- utilities.
  */
 
 @theme inline {
