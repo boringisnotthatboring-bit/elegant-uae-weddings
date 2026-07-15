@@ -37,11 +37,15 @@ export function SiteHeader() {
           <button
             type="button"
             onClick={() => setLocale(locale === "en" ? "ar" : "en")}
-            className="hidden items-center gap-1.5 rounded-full border border-border px-3 py-1.5 text-xs uppercase tracking-widest text-foreground/70 transition-colors hover:border-primary hover:text-primary md:inline-flex"
-            aria-label="Toggle language"
+            className="notranslate inline-flex items-center gap-1.5 rounded-full border border-primary/40 px-3 py-1.5 text-sm font-medium text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
+            aria-label={locale === "en" ? "Switch to Arabic" : "Switch to English"}
+            translate="no"
+            lang={locale === "en" ? "ar" : "en"}
           >
             <Globe className="h-3.5 w-3.5" />
-            {locale === "en" ? "AR" : "EN"}
+            <span style={{ fontFamily: locale === "en" ? "'Cairo','Tajawal',sans-serif" : undefined }}>
+              {locale === "en" ? "عربي" : "English"}
+            </span>
           </button>
           <Button asChild size="sm" className="hidden md:inline-flex">
             <Link to="/contact">Book Free Consultation</Link>
