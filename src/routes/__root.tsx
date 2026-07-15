@@ -121,8 +121,27 @@ function RootShell({ children }: { children: ReactNode }) {
     <html lang="en">
       <head>
         <HeadContent />
+        {/* Google Translate widget: renders into #google_translate_element,
+            then applies translations based on the googtrans cookie set by
+            the header language toggle. Hidden visually — we drive it via
+            the cookie + reload flow instead of showing Google's UI. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `function googleTranslateElementInit(){new google.translate.TranslateElement({pageLanguage:'en',includedLanguages:'en,ar',autoDisplay:false},'google_translate_element');}`,
+          }}
+        />
+        <script
+          src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+          async
+        />
+        <style
+          dangerouslySetInnerHTML={{
+            __html: `#google_translate_element{position:absolute;left:-9999px;top:-9999px;visibility:hidden}.goog-te-banner-frame{display:none!important}body{top:0!important}.skiptranslate>iframe{display:none!important}`,
+          }}
+        />
       </head>
       <body>
+        <div id="google_translate_element" aria-hidden="true" />
         {children}
         <Scripts />
       </body>
