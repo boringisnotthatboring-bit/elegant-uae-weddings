@@ -24,10 +24,10 @@ export const Route = createFileRoute("/")({
         content:
           "Dubai's leading luxury wedding planner. Beach, desert, hotel and destination weddings across the UAE — planned end-to-end by our award-winning team.",
       },
-      { property: "og:title", content: "Awesome Events Weddings — Luxury Weddings in Dubai & UAE" },
+      { property: "og:title", content: "Luxury Wedding Planner in Dubai | Awesome Events Weddings" },
       {
         property: "og:description",
-        content: "Bespoke luxury weddings in Dubai and the UAE. Over 12 years of unforgettable celebrations.",
+        content: "Dubai's leading luxury wedding planner. Beach, desert, hotel and destination weddings across the UAE — planned end-to-end by our award-winning team.",
       },
     ],
   }),

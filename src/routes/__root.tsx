@@ -78,21 +78,25 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Awesome Events Weddings — Luxury Wedding Planner in Dubai & UAE" },
+      { title: "Luxury Wedding Planner in Dubai | Awesome Events Weddings" },
       {
         name: "description",
         content:
-          "Dubai's leading luxury wedding planner. Bespoke beach, desert, hotel and cultural weddings across the UAE. Over 12 years planning unforgettable celebrations.",
+          "Dubai's leading luxury wedding planner. Beach, desert, hotel and destination weddings across the UAE — planned end-to-end by our award-winning team.",
       },
       { name: "author", content: "Awesome Events Weddings" },
-      { property: "og:title", content: "Awesome Events Weddings — Luxury Wedding Planner in Dubai" },
+      { property: "og:title", content: "Luxury Wedding Planner in Dubai | Awesome Events Weddings" },
       {
         property: "og:description",
         content:
-          "Bespoke luxury wedding planning across Dubai, Abu Dhabi, Ras Al Khaimah and the UAE.",
+          "Dubai's leading luxury wedding planner. Beach, desert, hotel and destination weddings across the UAE — planned end-to-end by our award-winning team.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Luxury Wedding Planner in Dubai | Awesome Events Weddings" },
+      { name: "twitter:description", content: "Dubai's leading luxury wedding planner. Beach, desert, hotel and destination weddings across the UAE — planned end-to-end by our award-winning team." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/8be68708-7d30-45bc-a85c-4a290f4301c9/id-preview-dee9a0bf--7b8db359-78a8-45f7-a27a-d52f3e88fd1b.lovable.app-1784116697597.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/8be68708-7d30-45bc-a85c-4a290f4301c9/id-preview-dee9a0bf--7b8db359-78a8-45f7-a27a-d52f3e88fd1b.lovable.app-1784116697597.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
