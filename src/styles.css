@@ -21,3 +21,19 @@
   --primary: oklch(0.32 0.08 25);
   --border: oklch(0.87 0.015 80);
 }
+
+@custom-variant dark (&:is(.dark *));
+
+.dark {
+  --background: oklch(0.14 0.015 40);
+  --border: oklch(1 0 0 / 12%);
+}
+
+*, ::before, ::after {
+  border-color: var(--color-border);
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+}
