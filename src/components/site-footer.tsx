@@ -37,7 +37,7 @@ export function SiteFooter() {
         </div>
 
         <div>
-          <h4 className="eyebrow text-primary-foreground/60">Follow</h4>
+          <h4 className="text-xs font-medium uppercase tracking-widest text-primary-foreground/60">Follow</h4>
           <ul className="mt-4 space-y-3 text-sm text-primary-foreground/80">
             <li>
               <a
