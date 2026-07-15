@@ -94,11 +94,6 @@
   --ring: oklch(0.72 0.09 75);
 }
 
-*,
-::before,
-::after {
-  border-color: var(--color-border);
-}
 
 html {
   scroll-behavior: smooth;
