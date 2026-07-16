@@ -145,6 +145,8 @@ function RootComponent() {
           </main>
           <SiteFooter />
         </div>
+        <WhatsAppWidget />
+        <GoogleTranslate />
       </I18nProvider>
     </QueryClientProvider>
   );
