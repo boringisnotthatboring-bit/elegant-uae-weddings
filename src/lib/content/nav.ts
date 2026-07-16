@@ -30,6 +30,6 @@ export const company = {
   tagline: "Dubai's Leading Luxury Wedding Planner",
   phone: "+971 4 000 0000",
   email: "hello@awesomeevents.ae",
-  address: "Dubai, United Arab Emirates",
+  address: "Sheikh Zayed Rd - Trade Center First - Dubai",
   yearsExperience: 12,
 };
