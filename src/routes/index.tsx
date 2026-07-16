@@ -221,7 +221,7 @@ function HomePage() {
               </div>
             </div>
           </div>
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col items-end gap-4">
             <img
               src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80"
               alt="Bride in an elegant wedding dress"
