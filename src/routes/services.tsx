@@ -7,6 +7,7 @@ import {
   culturalServices,
   customOfferings,
 } from "@/lib/content/services";
+import servicesHero from "@/assets/services-hero.jpg";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
@@ -27,22 +28,42 @@ export const Route = createFileRoute("/services")({
 function ServicesPage() {
   return (
     <>
+      <section className="relative isolate overflow-hidden">
+        <div className="absolute inset-0 -z-10">
+          <img
+            src={servicesHero}
+            alt=""
+            className="h-full w-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/65" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/70" />
+        </div>
+        <div className="container-page flex min-h-[420px] items-center justify-center py-24 md:min-h-[520px]">
+          <div className="mx-auto w-full max-w-3xl text-center text-white">
+            <nav className="mb-6 text-[0.65rem] uppercase tracking-[0.3em] text-white/70">
+              <Link to="/" className="hover:text-white">Home</Link>
+              <span className="mx-2">/</span>
+              <span className="text-white">Services</span>
+            </nav>
+            <p className="eyebrow text-white/75">Wedding Services</p>
+            <h1 className="mt-4 font-display text-4xl leading-tight md:text-5xl lg:text-6xl">
+              Your Dream Wedding in the UAE, Planned to Perfection
+            </h1>
+            <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-white/85 md:text-lg">
+              Celebrate your love story with Awesome Events Weddings — an award-winning luxury wedding planner across Dubai, Abu Dhabi, Ras Al Khaimah and beyond.
+            </p>
+            <div className="mt-8 flex justify-center">
+              <Button asChild size="lg">
+                <Link to="/contact">Book a Free Consultation</Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="section-y bg-secondary/40">
         <div className="container-page">
-          <nav className="mb-6 text-xs uppercase tracking-widest text-muted-foreground">
-            <Link to="/">Home</Link> <span className="mx-2">/</span> Services
-          </nav>
-          <SectionHeader
-            eyebrow="Wedding Services"
-            title="Your Dream Wedding in the UAE, Planned to Perfection"
-            body="Celebrate your love story with Awesome Events Weddings, an award-winning wedding agency in the UAE. We specialize in luxury wedding planning and event management across Dubai, Abu Dhabi, Ras Al Khaimah, and beyond — creating elegant, personalized, and unforgettable celebrations."
-          />
-          <div className="mt-8">
-            <Button asChild size="lg">
-              <Link to="/contact">Book a Free Consultation</Link>
-            </Button>
-          </div>
-          <p className="mt-10 max-w-4xl text-sm leading-relaxed text-muted-foreground md:text-base">
+          <p className="mx-auto max-w-4xl text-center text-sm leading-relaxed text-muted-foreground md:text-base">
             <strong className="text-foreground">Wedding Planning Services in Dubai & UAE.</strong>{" "}
             From breathtaking beach weddings along the Arabian Gulf to enchanting desert celebrations beneath the stars, we create unforgettable experiences tailored to your vision. We specialize in elegant luxury hotel weddings at the UAE's finest venues, intimate elopements and micro weddings for couples seeking a more personal celebration, and seamless civil weddings with complete legal documentation support for residents and visitors.
           </p>
