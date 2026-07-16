@@ -1,33 +1,30 @@
-## Goal
+Plan: Tidy the "Why Choose Us" section spacing and image stack
 
-Strip everything from the map image except the UAE landmass itself. The final asset should be just the calligraphy-filled map silhouette with its pin markers and emirate labels, floating on the section's cream background — no Dubai skyline, no gold ribbons/waves, no Islamic pattern corners, no background paper texture.
+### Problem
+The current "Why Choose Us" section has two layout issues:
+1. Too much empty headroom above the section (the blue-marked area).
+2. The two right-side images are stacked with a heavy overlap (`-mt-20`), looking messy instead of the clean, evenly spaced vertical stack shown in the earlier reference image.
 
-## Approach
+### Goal
+- Reduce the top padding/empty space so the section starts higher and feels connected to the content above.
+- Restack the two images as a neat vertical column with equal gaps between them, matching the previous reference image's layout.
+- Keep the left text (eyebrow, heading, divider, three feature points) clean and readable.
 
-1. Re-run image edit on `src/assets/uae-map-themed.png` with a prompt that instructs the model to:
-   - Remove the Dubai skyline silhouette (Burj Khalifa, Burj Al Arab, palms, mosque) at the left
-   - Remove the gold ribbon/wave flourishes across the canvas
-   - Remove the geometric Islamic pattern textures in the corners
-   - Remove the background paper/parchment texture entirely
-   - Keep only the UAE landmass with its Arabic calligraphy fill, the 7 gold pin markers, and their emirate labels (Dubai, Abu Dhabi, Sharjah, Ajman, Umm Al Quwain, Ras Al Khaimah, Fujairah)
-   - Output on a solid white background
-   - Use `transparent_background: true` so the result is a transparent PNG that visually floats on the cream section
+### Changes
+1. **Tighten top spacing**
+   - Replace the generic `section-y` utility on this section with explicit vertical padding: smaller top padding (e.g. `pt-8 md:pt-12`) and retain adequate bottom padding (e.g. `pb-16 md:pb-24`).
 
-2. Save as `src/assets/uae-map-isolated.png` and update the import in `src/routes/index.tsx`.
+2. **Clean image stack**
+   - Change the right column from the overlapping grid hack to a simple flex column.
+   - Use a consistent gap (e.g. `gap-4` or `gap-6`) between the two images.
+   - Keep both images the same aspect ratio (e.g. `aspect-[3/4]`) and width.
+   - Remove the negative margin overlap.
 
-3. Since the new image is transparent PNG, drop `mix-blend-multiply` from the `<img>` classes (no longer needed and can dim the labels). Keep the existing:
-   - `-mx-2 md:-mx-4 lg:scale-[1.07]` sizing
-   - Faint blurred ground-shadow ellipse beneath it
-   - `drop-shadow-[0_20px_35px_rgba(120,85,40,0.18)]` floating shadow
+3. **Preserve text layout**
+   - Left column keeps eyebrow, heading, divider, and three feature blocks.
+   - Keep responsive two-column layout with `lg:grid-cols-2`.
 
-4. Delete the now-unused `src/assets/uae-map-themed.png`.
+### Files to touch
+- `src/routes/index.tsx` — only the "Why Choose Us" section markup.
 
-## Files touched
-
-- `src/assets/uae-map-isolated.png` (new, generated via image edit)
-- `src/routes/index.tsx` (swap import, remove `mix-blend-multiply` class)
-- `src/assets/uae-map-themed.png` (delete)
-
-## Risk
-
-The image model may leave faint remnants of the removed elements. If that happens, re-run the edit with a stricter prompt before finalizing.
+### No new dependencies or routes.
