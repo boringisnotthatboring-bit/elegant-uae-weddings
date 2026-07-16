@@ -199,7 +199,7 @@ function HomePage() {
             <h2 className="mt-4 font-display text-3xl leading-tight md:text-5xl">
               Why Choose Wedding Planner Dubai?
             </h2>
-            <div className="mt-6 h-px w-24 bg-border" />
+            <div className="mt-6 h-px w-24 bg-foreground/20" />
             <div className="mt-8 space-y-8">
               <div>
                 <h3 className="font-display text-xl md:text-2xl">Expert Wedding Planners</h3>
