@@ -229,7 +229,7 @@ function HomePage() {
               className="aspect-[3/4] w-full max-w-md border border-border object-cover shadow-lg"
             />
             <img
-              src="https://unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&w=800&q=80"
+              src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&w=800&q=80"
               alt="Bridal wedding dress detail"
               loading="lazy"
               className="aspect-[3/4] w-full max-w-md border border-border object-cover shadow-lg"
