@@ -193,14 +193,52 @@ function HomePage() {
 
       {/* Why Couples Choose Us */}
       <section className="section-y">
-        <div className="container-page grid gap-10 lg:grid-cols-2">
-          <SectionHeader
-            title="Why Couples Choose Us"
-            body="Every couple has a unique story, and we believe your wedding should tell it beautifully. At Awesome Events Weddings, we take the time to get to know you, understand your vision, and create a celebration that feels authentic to who you are. Our experienced wedding planning team is with you every step of the way, offering expert guidance, honest advice, and unwavering support."
-          />
-          <p className="text-base leading-relaxed text-muted-foreground lg:pt-16">
-            As a trusted wedding planner in Dubai and wedding organizer UAE, we're proud to create timeless luxury weddings in Dubai & UAE that are as meaningful as they are beautiful. It's this personal approach, attention to detail, and genuine care that makes couples choose us — not just to plan their wedding, but to be part of one of the most important days of their lives.
-          </p>
+        <div className="container-page grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+          <div className="max-w-xl">
+            <p className="eyebrow">Why Choose Us</p>
+            <h2 className="mt-4 font-display text-3xl leading-tight md:text-5xl">
+              Why Choose Wedding Planner Dubai?
+            </h2>
+            <div className="mt-6 h-px w-24 bg-border" />
+            <div className="mt-8 space-y-8">
+              <div>
+                <h3 className="font-display text-xl md:text-2xl">Expert Wedding Planners</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground md:text-base">
+                  Wedding planner Dubai delivering seamless planning, flawless coordination, and stress-free execution for your special day.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-display text-xl md:text-2xl">Luxury & Customized Concepts</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground md:text-base">
+                  We design personalized wedding concepts with luxury styling, creative décor, and unique themes tailored to your vision and culture.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-display text-xl md:text-2xl">Complete Wedding Experience</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground md:text-base">
+                  From planning to execution, we manage every detail with multicultural expertise, premium services, and full wedding coverage across Dubai & UAE.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="relative grid grid-cols-[1fr_8fr_1fr] gap-4 md:grid-cols-[1fr_6fr_2fr]">
+            <div className="col-start-2 col-end-4">
+              <img
+                src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80"
+                alt="Bride in an elegant wedding dress"
+                loading="lazy"
+                className="h-auto w-full rounded-sm object-cover shadow-lg"
+              />
+            </div>
+            <div className="col-start-1 col-end-3 -mt-12 md:-mt-20">
+              <img
+                src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&w=800&q=80"
+                alt="Bridal wedding dress detail"
+                loading="lazy"
+                className="h-auto w-full rounded-sm object-cover shadow-lg"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
