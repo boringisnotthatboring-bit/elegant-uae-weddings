@@ -35,8 +35,8 @@ function ServicesPage() {
             alt=""
             className="h-full w-full object-cover"
           />
-          <div className="absolute inset-0 bg-black/65" />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/70" />
+          <div className="absolute inset-0 bg-black/45" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/25 to-black/50" />
         </div>
         <div className="container-page flex min-h-[420px] items-center justify-center py-24 md:min-h-[520px]">
           <div className="mx-auto w-full max-w-3xl text-center text-white">
