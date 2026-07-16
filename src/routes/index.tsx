@@ -4,7 +4,7 @@ import heroImage from "@/assets/hero-wedding.jpg";
 import { Button } from "@/components/ui/button";
 import { SectionHeader } from "@/components/section-header";
 import { ServiceIconRow } from "@/components/service-icon-row";
-import { ServiceCard } from "@/components/service-card";
+import { ServicesCarousel } from "@/components/services-carousel";
 import { FaqAccordion } from "@/components/faq-accordion";
 import { TestimonialsCarousel } from "@/components/testimonials-carousel";
 import { BlogPreviewGrid } from "@/components/blog-preview-grid";
