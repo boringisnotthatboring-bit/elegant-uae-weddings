@@ -33,7 +33,7 @@ function PortfolioPage() {
         </div>
         <div className="container-page flex min-h-[300px] items-center justify-center py-20 md:min-h-[360px]">
           <div className="w-full px-8 py-10 text-center text-primary-foreground md:px-16 md:py-14">
-            <p className="eyebrow text-accent">Portfolio</p>
+            <p className="eyebrow text-white">Portfolio</p>
             <h1 className="mt-3 font-display text-4xl md:text-5xl lg:text-6xl">
               Luxury Wedding Gallery
             </h1>
