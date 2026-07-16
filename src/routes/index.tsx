@@ -4,7 +4,7 @@ import heroImage from "@/assets/hero-wedding.jpg";
 import { Button } from "@/components/ui/button";
 import { SectionHeader } from "@/components/section-header";
 import { ServiceIconRow } from "@/components/service-icon-row";
-import { ServiceCard } from "@/components/service-card";
+import { ServicesCarousel } from "@/components/services-carousel";
 import { FaqAccordion } from "@/components/faq-accordion";
 import { TestimonialsCarousel } from "@/components/testimonials-carousel";
 import { BlogPreviewGrid } from "@/components/blog-preview-grid";
@@ -179,14 +179,12 @@ function HomePage() {
             title="Luxury Wedding Planner in Dubai"
             body="We provide bespoke wedding planning services across Dubai, Abu Dhabi, Ras Al Khaimah, and the UAE."
           />
-          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {flagshipServices.map((s) => (
-              <ServiceCard key={s.slug} item={s} />
-            ))}
+          <div className="mt-12 -mx-3">
+            <ServicesCarousel items={flagshipServices} />
           </div>
           <div className="mt-10">
             <Button asChild variant="outline">
-              <Link to="/services">View all services <ArrowRight className="ml-2 h-4 w-4" /></Link>
+              <Link to="/services">View all Weddings <ArrowRight className="ml-2 h-4 w-4" /></Link>
             </Button>
           </div>
         </div>
