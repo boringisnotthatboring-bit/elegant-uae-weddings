@@ -14,6 +14,8 @@ import { reportLovableError } from "../lib/lovable-error-reporting";
 import { I18nProvider } from "@/components/i18n-provider";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { WhatsAppWidget } from "@/components/whatsapp-widget";
+import { GoogleTranslate } from "@/components/google-translate";
 
 function NotFoundComponent() {
   return (
@@ -120,24 +122,6 @@ function RootShell({ children }: { children: ReactNode }) {
     <html lang="en">
       <head>
         <HeadContent />
-        {/* Google Translate widget: renders into #google_translate_element,
-            then applies translations based on the googtrans cookie set by
-            the header language toggle. Hidden visually — we drive it via
-            the cookie + reload flow instead of showing Google's UI. */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `function googleTranslateElementInit(){new google.translate.TranslateElement({pageLanguage:'en',includedLanguages:'en,ar',autoDisplay:false},'google_translate_element');}`,
-          }}
-        />
-        <script
-          src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
-          async
-        />
-        <style
-          dangerouslySetInnerHTML={{
-            __html: `#google_translate_element{position:absolute;left:-9999px;top:-9999px;visibility:hidden}.goog-te-banner-frame{display:none!important}body{top:0!important}.skiptranslate>iframe{display:none!important}`,
-          }}
-        />
       </head>
       <body>
         <div id="google_translate_element" aria-hidden="true" />
@@ -161,6 +145,8 @@ function RootComponent() {
           </main>
           <SiteFooter />
         </div>
+        <WhatsAppWidget />
+        <GoogleTranslate />
       </I18nProvider>
     </QueryClientProvider>
   );
