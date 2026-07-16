@@ -3,12 +3,30 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { ServiceCard } from "@/components/service-card";
 import type { ServiceItem } from "@/lib/content/services";
 
+function getVisibleCount() {
+  if (typeof window === "undefined") return 3;
+  const w = window.innerWidth;
+  if (w < 640) return 1;
+  if (w < 1024) return 2;
+  return 3;
+}
+
 export function ServicesCarousel({ items }: { items: ServiceItem[] }) {
+  const [visible, setVisible] = useState(getVisibleCount);
   const [index, setIndex] = useState(0);
   const total = items.length;
-
-  const visible = 3;
   const maxIndex = Math.max(0, total - visible);
+
+  useEffect(() => {
+    const update = () => {
+      const next = getVisibleCount();
+      setVisible(next);
+      setIndex((i) => Math.min(i, Math.max(0, total - next)));
+    };
+    update();
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
+  }, [total]);
 
   const prev = useCallback(() => {
     setIndex((i) => (i > 0 ? i - 1 : maxIndex));
@@ -18,22 +36,18 @@ export function ServicesCarousel({ items }: { items: ServiceItem[] }) {
     setIndex((i) => (i < maxIndex ? i + 1 : 0));
   }, [maxIndex]);
 
-  useEffect(() => {
-    if (index > maxIndex) setIndex(maxIndex);
-  }, [maxIndex, index]);
+  const widthClass = visible === 1 ? "w-full" : visible === 2 ? "w-1/2" : "w-1/3";
+  const translatePercent = 100 / visible;
 
   return (
     <div className="relative">
       <div className="overflow-hidden">
         <div
-          className="flex gap-6 transition-transform duration-500 ease-out"
-          style={{ transform: `translateX(-${index * (100 / visible + 2)}%)` }}
+          className="flex transition-transform duration-500 ease-out"
+          style={{ transform: `translateX(-${index * translatePercent}%)` }}
         >
           {items.map((s) => (
-            <div
-              key={s.slug}
-              className="w-full shrink-0 sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]"
-            >
+            <div key={s.slug} className={`shrink-0 px-3 ${widthClass}`}>
               <ServiceCard item={s} />
             </div>
           ))}
