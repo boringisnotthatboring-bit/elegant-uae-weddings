@@ -192,8 +192,8 @@ function HomePage() {
 
 
       {/* Why Couples Choose Us */}
-      <section className="section-y">
-        <div className="container-page grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+      <section className="pt-8 pb-16 md:pt-12 md:pb-24">
+        <div className="container-page grid items-start gap-10 lg:grid-cols-2 lg:gap-16">
           <div className="max-w-xl">
             <p className="eyebrow">Why Choose Us</p>
             <h2 className="mt-4 font-display text-3xl leading-tight md:text-5xl">
@@ -221,23 +221,19 @@ function HomePage() {
               </div>
             </div>
           </div>
-          <div className="relative grid grid-cols-[1fr_8fr_1fr] gap-4 md:grid-cols-[1fr_6fr_2fr]">
-            <div className="col-start-2 col-end-4">
-              <img
-                src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80"
-                alt="Bride in an elegant wedding dress"
-                loading="lazy"
-                className="aspect-[3/4] w-full border border-border object-cover shadow-lg"
-              />
-            </div>
-            <div className="col-start-1 col-end-3 -mt-12 md:-mt-20">
-              <img
-                src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&w=800&q=80"
-                alt="Bridal wedding dress detail"
-                loading="lazy"
-                className="aspect-[3/4] w-full border border-border object-cover shadow-lg"
-              />
-            </div>
+          <div className="flex flex-col items-end gap-6">
+            <img
+              src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80"
+              alt="Bride in an elegant wedding dress"
+              loading="lazy"
+              className="aspect-[3/4] w-full max-w-md border border-border object-cover shadow-lg"
+            />
+            <img
+              src="https://unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&w=800&q=80"
+              alt="Bridal wedding dress detail"
+              loading="lazy"
+              className="aspect-[3/4] w-full max-w-md border border-border object-cover shadow-lg"
+            />
           </div>
         </div>
       </section>
