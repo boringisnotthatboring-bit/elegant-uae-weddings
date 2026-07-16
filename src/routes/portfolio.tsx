@@ -29,15 +29,15 @@ function PortfolioPage() {
             alt=""
             className="h-full w-full object-cover"
           />
-          <div className="absolute inset-0 bg-primary/55" />
+          <div className="absolute inset-0 bg-black/55" />
         </div>
         <div className="container-page flex min-h-[300px] items-center justify-center py-20 md:min-h-[360px]">
-          <div className="w-full border border-border/50 bg-background/40 px-8 py-10 text-center shadow-sm backdrop-blur-xl md:px-16 md:py-14">
-            <p className="eyebrow text-foreground/70">Portfolio</p>
+          <div className="w-full px-8 py-10 text-center text-primary-foreground md:px-16 md:py-14">
+            <p className="eyebrow text-accent">Portfolio</p>
             <h1 className="mt-3 font-display text-4xl md:text-5xl lg:text-6xl">
               Luxury Wedding Gallery
             </h1>
-            <p className="mx-auto mt-4 max-w-2xl text-foreground/80">
+            <p className="mx-auto mt-4 max-w-2xl text-primary-foreground/90">
               A curated selection of the celebrations we've had the privilege of designing across the UAE.
             </p>
           </div>
