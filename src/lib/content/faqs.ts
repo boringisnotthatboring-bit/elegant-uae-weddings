@@ -1,51 +1,80 @@
+import { Link } from "@tanstack/react-router";
+
 export interface FaqItem {
   q: string;
-  a: string;
+  a: React.ReactNode;
 }
 
 export const faqItems: FaqItem[] = [
   {
-    q: "What is the wedding season in Dubai?",
-    a: "October to April offers pleasant weather, making it Dubai's most popular wedding season.",
+    q: "How much does a wedding in Dubai cost?",
+    a: "Costs depend on venue, guests, season, décor, catering, entertainment, and production requirements.",
   },
   {
-    q: "Are summer weddings in Dubai a good idea? Where should we celebrate them?",
-    a: "Yes. Luxury hotels and indoor ballrooms offer beautiful, climate-controlled venues throughout summer.",
+    q: "When is the best wedding season in Dubai?",
+    a: "October to April is Dubai's best wedding season for comfortable outdoor celebrations.",
   },
   {
-    q: "What wedding services does Awesome Events Weddings offer?",
-    a: "Planning, décor, florals, production, fireworks, drones, entertainment, coordination, logistics, styling, and complete wedding management. Check out our Services section for more information.",
+    q: "Are summer weddings in Dubai a good idea?",
+    a: "Yes. Luxury hotels and indoor ballrooms offer elegant, climate-controlled summer wedding venues.",
   },
   {
-    q: "Do you handle both the bride's and groom's side?",
-    a: "Yes, we coordinate ceremonies, events, and logistics for both families seamlessly.",
+    q: "Can tourists legally get married in the UAE?",
+    a: "Yes. Eligible tourists can legally marry through Abu Dhabi's civil marriage service.",
   },
   {
-    q: "Can you plan multicultural weddings?",
-    a: "Yes, we specialize in seamlessly blending multiple cultures, traditions, and wedding ceremonies.",
+    q: "What documents are required for a civil marriage in the UAE?",
+    a: "Valid passports and supporting documents are required; requirements vary by nationality and status.",
   },
   {
-    q: "Do you organize church weddings in Dubai?",
-    a: "Yes, we coordinate church ceremonies and reception celebrations across Dubai and the UAE.",
+    q: "How far in advance should we book a wedding planner in Dubai?",
+    a: "Book 3–6 months ahead for peak season; intimate weddings may need less time.",
   },
   {
-    q: "Can you create a custom wedding theme?",
-    a: "Absolutely. Every wedding is uniquely designed around your vision, style, and personality.",
+    q: "What wedding planning services does Awesome Events Weddings offer?",
+    a: (
+      <>
+        We provide complete wedding planning, décor, production, entertainment, hospitality, logistics, coordination and much more. Check out our{" "}
+        <Link to="/services" className="font-medium text-primary underline underline-offset-4 hover:text-primary/80">
+          Services Page
+        </Link>{" "}
+        for more details.
+      </>
+    ),
   },
   {
-    q: "What is the minimum budget to book Awesome Events Weddings?",
-    a: "Budgets vary by requirements. Contact us for a customized proposal.",
+    q: "Do you plan Indian, Arabic, and multicultural weddings?",
+    a: "Yes. We plan Indian, Arabic, multicultural, and multi-day weddings across the UAE.",
+  },
+  {
+    q: "Can you create a custom luxury wedding theme?",
+    a: "Yes. Every luxury wedding theme is customized around your story, style, and culture.",
+  },
+  {
+    q: "Do you help with wedding venue selection in Dubai and the UAE?",
+    a: "Yes. We source luxury wedding venues across Dubai and the UAE.",
+  },
+  {
+    q: "Do you manage both the bride's and groom's families?",
+    a: "Yes. We coordinate ceremonies, hospitality, schedules, and logistics for both families.",
+  },
+  {
+    q: "Can you plan a wedding around our budget?",
+    a: "Yes. We create realistic wedding plans aligned with your priorities and budget.",
   },
   {
     q: "Will someone manage everything on the wedding day?",
-    a: "Yes, our coordinators oversee every detail for a seamless wedding day experience.",
+    a: "Yes. Our coordinators manage vendors, timelines, guests, production, and wedding-day operations, so you can have a stress-free wedding celebration.",
   },
   {
-    q: "How do we get started?",
-    a: "Contact us to schedule a free consultation and begin planning your dream wedding.",
-  },
-  {
-    q: "Do you book last-minute weddings?",
-    a: "Yes. We accept last-minute weddings, but booking 3–6 months ahead ensures greater availability and design possibilities.",
+    q: "How do we start planning our wedding?",
+    a: (
+      <>
+        <Link to="/contact" className="font-medium text-primary underline underline-offset-4 hover:text-primary/80">
+          Contact us
+        </Link>
+        , complete the 1 minute questionnaire, and schedule your free wedding planning consultation.
+      </>
+    ),
   },
 ];
