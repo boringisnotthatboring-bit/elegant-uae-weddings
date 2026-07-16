@@ -303,7 +303,7 @@ function HomePage() {
                 <Link to="/contact">Book Free Consultation</Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="border-primary-foreground/40 bg-transparent text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                <Link to="/wedding-guide">Read the Guide</Link>
+                <Link to="/portfolio">View our portfolio page</Link>
               </Button>
             </div>
           </div>
