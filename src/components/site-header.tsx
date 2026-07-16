@@ -1,12 +1,19 @@
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { Menu, X, Globe } from "lucide-react";
+import { Menu, X, Globe, ChevronDown } from "lucide-react";
 import { primaryNav, company } from "@/lib/content/nav";
 import { useI18n } from "@/lib/i18n";
 import { Button } from "@/components/ui/button";
+import { flagshipServices, culturalServices } from "@/lib/content/services";
+
+const serviceLinks = [...flagshipServices, ...culturalServices].map((s) => ({
+  label: s.title,
+  slug: s.slug,
+}));
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const { locale, setLocale } = useI18n();
 
   return (
@@ -20,17 +27,52 @@ export function SiteHeader() {
         </Link>
 
         <nav className="hidden items-center gap-7 lg:flex">
-          {primaryNav.map((item) => (
-            <Link
-              key={item.to}
-              to={item.to}
-              className="text-sm text-foreground/80 transition-colors hover:text-primary"
-              activeProps={{ className: "text-primary" }}
-              activeOptions={{ exact: item.to === "/" }}
-            >
-              {item.label}
-            </Link>
-          ))}
+          {primaryNav.map((item) => {
+            if (item.to === "/services") {
+              return (
+                <div key={item.to} className="group relative">
+                  <Link
+                    to={item.to}
+                    className="inline-flex items-center gap-1 text-sm text-foreground/80 transition-colors hover:text-primary group-hover:text-primary"
+                    activeProps={{ className: "text-primary" }}
+                  >
+                    {item.label}
+                    <ChevronDown className="h-3.5 w-3.5 transition-transform group-hover:rotate-180" />
+                  </Link>
+                  <div
+                    className="invisible absolute left-1/2 top-full z-50 w-72 -translate-x-1/2 pt-3 opacity-0 transition-all duration-150 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100"
+                  >
+                    <div className="overflow-hidden rounded-sm border border-border bg-background shadow-xl">
+                      <ul className="py-2">
+                        {serviceLinks.map((s) => (
+                          <li key={s.slug}>
+                            <Link
+                              to="/services"
+                              hash={s.slug}
+                              className="block px-4 py-2 text-sm text-foreground/80 transition-colors hover:bg-secondary hover:text-primary"
+                            >
+                              {s.label}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              );
+            }
+            return (
+              <Link
+                key={item.to}
+                to={item.to}
+                className="text-sm text-foreground/80 transition-colors hover:text-primary"
+                activeProps={{ className: "text-primary" }}
+                activeOptions={{ exact: item.to === "/" }}
+              >
+                {item.label}
+              </Link>
+            );
+          })}
         </nav>
 
         <div className="flex items-center gap-2">
@@ -64,16 +106,65 @@ export function SiteHeader() {
       {open && (
         <div className="border-t border-border bg-background lg:hidden">
           <nav className="container-page flex flex-col gap-1 py-4">
-            {primaryNav.map((item) => (
-              <Link
-                key={item.to}
-                to={item.to}
-                onClick={() => setOpen(false)}
-                className="py-2 text-sm text-foreground/80"
-              >
-                {item.label}
-              </Link>
-            ))}
+            {primaryNav.map((item) => {
+              if (item.to === "/services") {
+                return (
+                  <div key={item.to} className="flex flex-col">
+                    <div className="flex items-center justify-between">
+                      <Link
+                        to={item.to}
+                        onClick={() => setOpen(false)}
+                        className="py-2 text-sm text-foreground/80"
+                      >
+                        {item.label}
+                      </Link>
+                      <button
+                        type="button"
+                        onClick={() => setMobileServicesOpen((v) => !v)}
+                        aria-label="Toggle wedding services"
+                        className="p-2"
+                      >
+                        <ChevronDown
+                          className={
+                            "h-4 w-4 transition-transform " +
+                            (mobileServicesOpen ? "rotate-180" : "")
+                          }
+                        />
+                      </button>
+                    </div>
+                    {mobileServicesOpen && (
+                      <ul className="mb-1 ml-3 flex flex-col border-l border-border/60 pl-3">
+                        {serviceLinks.map((s) => (
+                          <li key={s.slug}>
+                            <Link
+                              to="/services"
+                              hash={s.slug}
+                              onClick={() => {
+                                setOpen(false);
+                                setMobileServicesOpen(false);
+                              }}
+                              className="block py-1.5 text-sm text-foreground/70 hover:text-primary"
+                            >
+                              {s.label}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                );
+              }
+              return (
+                <Link
+                  key={item.to}
+                  to={item.to}
+                  onClick={() => setOpen(false)}
+                  className="py-2 text-sm text-foreground/80"
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
             <div className="mt-2 flex items-center gap-3">
               <Button asChild size="sm" className="flex-1">
                 <Link to="/contact">Book Free Consultation</Link>
