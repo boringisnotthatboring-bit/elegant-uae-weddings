@@ -227,7 +227,7 @@ function HomePage() {
                 src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80"
                 alt="Bride in an elegant wedding dress"
                 loading="lazy"
-                className="h-auto w-full rounded-sm object-cover shadow-lg"
+                className="aspect-[3/4] w-full border border-border object-cover shadow-lg"
               />
             </div>
             <div className="col-start-1 col-end-3 -mt-12 md:-mt-20">
@@ -235,7 +235,7 @@ function HomePage() {
                 src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&w=800&q=80"
                 alt="Bridal wedding dress detail"
                 loading="lazy"
-                className="h-auto w-full rounded-sm object-cover shadow-lg"
+                className="aspect-[3/4] w-full border border-border object-cover shadow-lg"
               />
             </div>
           </div>
