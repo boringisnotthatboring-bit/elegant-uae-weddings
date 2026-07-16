@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PortfolioGrid } from "@/components/portfolio-grid";
+import { SectionHeader } from "@/components/section-header";
 import heroImage from "@/assets/hero-wedding.jpg";
 
 export const Route = createFileRoute("/portfolio")({
