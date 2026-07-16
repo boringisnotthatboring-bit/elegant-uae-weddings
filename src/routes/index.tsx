@@ -193,14 +193,14 @@ function HomePage() {
 
       {/* Why Couples Choose Us */}
       <section className="pt-8 pb-16 md:pt-12 md:pb-24">
-        <div className="container-page grid items-start gap-10 lg:grid-cols-2 lg:gap-16">
-          <div className="max-w-xl">
+        <div className="container-page grid items-stretch gap-10 lg:grid-cols-2 lg:gap-16">
+          <div className="flex max-w-xl flex-col">
             <p className="eyebrow">Why Choose Us</p>
             <h2 className="mt-4 font-display text-3xl leading-tight md:text-5xl">
               Why Choose Wedding Planner Dubai?
             </h2>
             <div className="mt-6 h-px w-24 bg-foreground/20" />
-            <div className="mt-8 space-y-8">
+            <div className="mt-8 flex flex-col justify-between gap-8 md:gap-10">
               <div>
                 <h3 className="font-display text-xl md:text-2xl">Expert Wedding Planners</h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground md:text-base">
@@ -221,18 +221,18 @@ function HomePage() {
               </div>
             </div>
           </div>
-          <div className="flex flex-col items-end gap-6">
+          <div className="flex flex-col items-end gap-4">
             <img
               src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80"
               alt="Bride in an elegant wedding dress"
               loading="lazy"
-              className="aspect-[3/4] w-full max-w-md border border-border object-cover shadow-lg"
+              className="aspect-[4/3] w-full max-w-md border border-border object-cover shadow-lg"
             />
             <img
               src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&w=800&q=80"
               alt="Bridal wedding dress detail"
               loading="lazy"
-              className="aspect-[3/4] w-full max-w-md border border-border object-cover shadow-lg"
+              className="aspect-[4/3] w-full max-w-md border border-border object-cover shadow-lg"
             />
           </div>
         </div>
