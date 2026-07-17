@@ -20,6 +20,7 @@ const weddingTypes = [
   "Civil Wedding",
   "Elopement / Micro Wedding",
   "Destination Wedding",
+  "Western Wedding",
 ];
 
 const serviceOptions = [
