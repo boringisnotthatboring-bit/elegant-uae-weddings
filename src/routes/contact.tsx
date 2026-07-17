@@ -6,6 +6,9 @@ import { Button } from "@/components/ui/button";
 import { company, socialLinks } from "@/lib/content/nav";
 
 export const Route = createFileRoute("/contact")({
+  validateSearch: (search: Record<string, unknown>) => ({
+    type: typeof search.type === "string" ? search.type : undefined,
+  }),
   head: () => ({
     meta: [
       { title: "Contact Us | Awesome Events Weddings — Wedding Planner Dubai" },
