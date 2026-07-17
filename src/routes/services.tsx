@@ -63,10 +63,29 @@ function ServicesPage() {
 
       <section className="section-y bg-secondary/40">
         <div className="container-page">
-          <p className="mx-auto max-w-4xl text-center text-sm leading-relaxed text-muted-foreground md:text-base">
-            <strong className="text-foreground">Wedding Planning Services in Dubai & UAE.</strong>{" "}
-            From breathtaking beach weddings along the Arabian Gulf to enchanting desert celebrations beneath the stars, we create unforgettable experiences tailored to your vision. We specialize in elegant luxury hotel weddings at the UAE's finest venues, intimate elopements and micro weddings for couples seeking a more personal celebration, and seamless civil weddings with complete legal documentation support for residents and visitors.
-          </p>
+          <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+            <div className="text-left">
+              <h2 className="font-display text-2xl md:text-3xl">
+                Wedding Planning Services in Dubai & UAE
+              </h2>
+              <div className="mt-5 space-y-4 text-sm leading-relaxed text-muted-foreground md:text-base">
+                <p>
+                  At Awesome Events Weddings, we offer Wedding Planning Services for couples looking to create unforgettable celebrations across Dubai, Abu Dhabi, Ras Al Khaimah, and the UAE. As a trusted Wedding Organizer in UAE, we combine creativity, thoughtful planning, and expert coordination to bring every wedding vision to life. Whether you're planning an intimate celebration, a grand ballroom reception, or a multi-day Destination Wedding, our experienced team is here to guide you every step of the way.
+                </p>
+                <p>
+                  Our dedicated Wedding Coordinators work closely with you from the initial consultation through to your wedding day, helping with venue selection, trusted vendor recommendations, timelines, guest experiences, entertainment, and Wedding Decoration in Dubai & UAE. Every celebration is thoughtfully planned to reflect your style, traditions, and personality, so you can enjoy every moment leading up to your special day with the people you love.
+                </p>
+              </div>
+            </div>
+            <div className="relative aspect-[4/3] overflow-hidden rounded-sm shadow-lg">
+              <img
+                src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=70"
+                alt="Elegant wedding planning in Dubai"
+                loading="lazy"
+                className="h-full w-full object-cover"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
