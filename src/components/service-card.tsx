@@ -11,8 +11,8 @@ export function ServiceCard({
 }) {
   return (
     <Link
-      to="/services"
-      hash={item.slug}
+      to="/wedding-services/$slug"
+      params={{ slug: item.slug }}
       className={
         "group relative flex flex-col overflow-hidden rounded-sm border border-border bg-card transition-all hover:-translate-y-1 hover:shadow-xl"
       }
