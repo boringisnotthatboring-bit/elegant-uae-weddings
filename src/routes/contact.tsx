@@ -6,6 +6,9 @@ import { Button } from "@/components/ui/button";
 import { company, socialLinks } from "@/lib/content/nav";
 
 export const Route = createFileRoute("/contact")({
+  validateSearch: (search: Record<string, unknown>) => ({
+    type: typeof search.type === "string" ? search.type : undefined,
+  }),
   head: () => ({
     meta: [
       { title: "Contact Us | Awesome Events Weddings — Wedding Planner Dubai" },
@@ -22,6 +25,7 @@ export const Route = createFileRoute("/contact")({
 });
 
 function ContactPage() {
+  const { type } = Route.useSearch();
   return (
     <>
       <section className="section-y">
@@ -59,7 +63,7 @@ function ContactPage() {
                 Tell us about your dream wedding — one of our specialists will be in touch within one business day.
               </p>
               <div className="mt-6">
-                <ContactForm />
+                <ContactForm initialWeddingType={type} />
               </div>
             </div>
           </div>

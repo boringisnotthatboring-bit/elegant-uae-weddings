@@ -18,6 +18,7 @@ import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as PortfolioRouteImport } from './routes/portfolio'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as WeddingServicesSlugRouteImport } from './routes/wedding-services.$slug'
 import { Route as WeddingGuideSlugRouteImport } from './routes/wedding-guide.$slug'
 
 const WeddingGuideRoute = WeddingGuideRouteImport.update({
@@ -65,6 +66,11 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const WeddingServicesSlugRoute = WeddingServicesSlugRouteImport.update({
+  id: '/wedding-services/$slug',
+  path: '/wedding-services/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const WeddingGuideSlugRoute = WeddingGuideSlugRouteImport.update({
   id: '/$slug',
   path: '/$slug',
@@ -82,6 +88,7 @@ export interface FileRoutesByFullPath {
   '/venues': typeof VenuesRoute
   '/wedding-guide': typeof WeddingGuideRouteWithChildren
   '/wedding-guide/$slug': typeof WeddingGuideSlugRoute
+  '/wedding-services/$slug': typeof WeddingServicesSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -94,6 +101,7 @@ export interface FileRoutesByTo {
   '/venues': typeof VenuesRoute
   '/wedding-guide': typeof WeddingGuideRouteWithChildren
   '/wedding-guide/$slug': typeof WeddingGuideSlugRoute
+  '/wedding-services/$slug': typeof WeddingServicesSlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -107,6 +115,7 @@ export interface FileRoutesById {
   '/venues': typeof VenuesRoute
   '/wedding-guide': typeof WeddingGuideRouteWithChildren
   '/wedding-guide/$slug': typeof WeddingGuideSlugRoute
+  '/wedding-services/$slug': typeof WeddingServicesSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -121,6 +130,7 @@ export interface FileRouteTypes {
     | '/venues'
     | '/wedding-guide'
     | '/wedding-guide/$slug'
+    | '/wedding-services/$slug'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -133,6 +143,7 @@ export interface FileRouteTypes {
     | '/venues'
     | '/wedding-guide'
     | '/wedding-guide/$slug'
+    | '/wedding-services/$slug'
   id:
     | '__root__'
     | '/'
@@ -145,6 +156,7 @@ export interface FileRouteTypes {
     | '/venues'
     | '/wedding-guide'
     | '/wedding-guide/$slug'
+    | '/wedding-services/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -157,6 +169,7 @@ export interface RootRouteChildren {
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   VenuesRoute: typeof VenuesRoute
   WeddingGuideRoute: typeof WeddingGuideRouteWithChildren
+  WeddingServicesSlugRoute: typeof WeddingServicesSlugRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -224,6 +237,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/wedding-services/$slug': {
+      id: '/wedding-services/$slug'
+      path: '/wedding-services/$slug'
+      fullPath: '/wedding-services/$slug'
+      preLoaderRoute: typeof WeddingServicesSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/wedding-guide/$slug': {
       id: '/wedding-guide/$slug'
       path: '/$slug'
@@ -256,6 +276,7 @@ const rootRouteChildren: RootRouteChildren = {
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   VenuesRoute: VenuesRoute,
   WeddingGuideRoute: WeddingGuideRouteWithChildren,
+  WeddingServicesSlugRoute: WeddingServicesSlugRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

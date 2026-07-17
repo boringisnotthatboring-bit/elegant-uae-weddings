@@ -24,8 +24,11 @@ const initialValues: ContactFormValues = {
  * "backend" wiring can be swapped later (e.g. to a server function
  * or CRM webhook) without touching JSX.
  */
-export function useContactForm() {
-  const [values, setValues] = useState<ContactFormValues>(initialValues);
+export function useContactForm(overrides?: Partial<ContactFormValues>) {
+  const [values, setValues] = useState<ContactFormValues>({
+    ...initialValues,
+    ...overrides,
+  });
   const [submitted, setSubmitted] = useState(false);
 
   const update = <K extends keyof ContactFormValues>(

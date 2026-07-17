@@ -20,6 +20,7 @@ const weddingTypes = [
   "Civil Wedding",
   "Elopement / Micro Wedding",
   "Destination Wedding",
+  "Western Wedding",
 ];
 
 const serviceOptions = [
@@ -33,8 +34,8 @@ const serviceOptions = [
   "AI Technology",
 ];
 
-export function ContactForm() {
-  const form = useContactForm();
+export function ContactForm({ initialWeddingType }: { initialWeddingType?: string } = {}) {
+  const form = useContactForm(initialWeddingType ? { weddingType: initialWeddingType } : undefined);
 
   if (form.submitted) {
     return (
