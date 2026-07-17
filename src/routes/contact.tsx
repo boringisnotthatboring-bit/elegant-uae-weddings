@@ -63,7 +63,7 @@ function ContactPage() {
                 Tell us about your dream wedding — one of our specialists will be in touch within one business day.
               </p>
               <div className="mt-6">
-                <ContactForm />
+                <ContactForm initialWeddingType={type} />
               </div>
             </div>
           </div>
