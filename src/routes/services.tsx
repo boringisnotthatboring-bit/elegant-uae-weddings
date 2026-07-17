@@ -1,12 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Check, Star } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { SectionHeader } from "@/components/section-header";
-import {
-  flagshipServices,
-  culturalServices,
-  customOfferings,
-} from "@/lib/content/services";
+import { allServices } from "@/lib/content/services";
 import servicesHero from "@/assets/services-hero.jpg";
 
 export const Route = createFileRoute("/services")({
@@ -30,11 +25,7 @@ function ServicesPage() {
     <>
       <section className="relative isolate overflow-hidden">
         <div className="absolute inset-0 -z-10">
-          <img
-            src={servicesHero}
-            alt=""
-            className="h-full w-full object-cover"
-          />
+          <img src={servicesHero} alt="" className="h-full w-full object-cover" />
           <div className="absolute inset-0 bg-black/45" />
           <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/25 to-black/50" />
         </div>
@@ -43,14 +34,14 @@ function ServicesPage() {
             <nav className="mb-6 text-[0.65rem] uppercase tracking-[0.3em] text-white/70">
               <Link to="/" className="hover:text-white">Home</Link>
               <span className="mx-2">/</span>
-              <span className="text-white">Services</span>
+              <span className="text-white">Wedding Services</span>
             </nav>
             <p className="eyebrow text-white/75">Wedding Services</p>
             <h1 className="mt-4 font-display text-4xl leading-tight md:text-5xl lg:text-6xl">
               Your Dream Wedding in the UAE, Planned to Perfection
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-white/85 md:text-lg">
-              Celebrate your love story with Awesome Events Weddings — an award-winning luxury wedding planner across Dubai, Abu Dhabi, Ras Al Khaimah and beyond.
+              Explore our full range of luxury wedding planning services across Dubai, Abu Dhabi, Ras Al Khaimah and beyond.
             </p>
             <div className="mt-8 flex justify-center">
               <Button asChild size="lg">
@@ -63,156 +54,46 @@ function ServicesPage() {
 
       <section className="section-y bg-secondary/40">
         <div className="container-page">
-          <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
-            <div className="text-left">
-              <h2 className="font-display text-2xl md:text-3xl">
-                Wedding Planning Services in Dubai & UAE
-              </h2>
-              <div className="mt-5 space-y-4 text-sm leading-relaxed text-muted-foreground md:text-base">
-                <p>
-                  At Awesome Events Weddings, we offer Wedding Planning Services for couples looking to create unforgettable celebrations across Dubai, Abu Dhabi, Ras Al Khaimah, and the UAE. As a trusted Wedding Organizer in UAE, we combine creativity, thoughtful planning, and expert coordination to bring every wedding vision to life. Whether you're planning an intimate celebration, a grand ballroom reception, or a multi-day Destination Wedding, our experienced team is here to guide you every step of the way.
-                </p>
-                <p>
-                  Our dedicated Wedding Coordinators work closely with you from the initial consultation through to your wedding day, helping with venue selection, trusted vendor recommendations, timelines, guest experiences, entertainment, and Wedding Decoration in Dubai & UAE. Every celebration is thoughtfully planned to reflect your style, traditions, and personality, so you can enjoy every moment leading up to your special day with the people you love.
-                </p>
-              </div>
-            </div>
-            <div className="relative aspect-[4/3] overflow-hidden rounded-sm shadow-lg">
-              <img
-                src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=70"
-                alt="Elegant wedding planning in Dubai"
-                loading="lazy"
-                className="h-full w-full object-cover"
-              />
-            </div>
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="eyebrow">Wedding Planning Services in Dubai & UAE</p>
+            <h2 className="mt-3 font-display text-3xl md:text-4xl">
+              Every celebration, planned with heart
+            </h2>
+            <p className="mt-5 text-base leading-relaxed text-muted-foreground">
+              At Awesome Events Weddings, we design unforgettable celebrations tailored to your vision, traditions, and personality. Choose the wedding experience that speaks to you — each has its own dedicated planning journey.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Flagship services */}
       <section className="section-y">
-        <div className="container-page grid gap-16">
-          {flagshipServices.map((s, i) => (
-            <article
-              key={s.slug}
-              id={s.slug}
-              className="grid scroll-mt-28 gap-8 md:grid-cols-2 md:items-center"
-            >
-              <div className={i % 2 === 1 ? "md:order-2" : ""}>
-                <div className="relative aspect-[4/3] overflow-hidden rounded-sm">
+        <div className="container-page">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {allServices.map((s) => (
+              <Link
+                key={s.slug}
+                to="/wedding-services/$slug"
+                params={{ slug: s.slug }}
+                className="group flex flex-col overflow-hidden rounded-sm border border-border bg-card transition-all hover:-translate-y-1 hover:shadow-xl"
+              >
+                <div className="relative aspect-[4/3] overflow-hidden">
                   <img
                     src={s.image}
                     alt={s.title}
                     loading="lazy"
-                    className="h-full w-full object-cover"
+                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
                 </div>
-              </div>
-              <div>
-                <p className="eyebrow">{s.short}</p>
-                <h3 className="mt-3 font-display text-3xl md:text-4xl">
-                  {s.title}
-                </h3>
-                <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-                  {s.description}
-                </p>
-                {s.perfectFor && (
-                  <div className="mt-6">
-                    <p className="text-sm font-medium">Perfect for:</p>
-                    <ul className="mt-2 grid gap-1.5 text-sm text-muted-foreground sm:grid-cols-2">
-                      {s.perfectFor.map((p) => (
-                        <li key={p} className="flex items-start gap-2">
-                          <Check className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
-                          {p}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-                <div className="mt-6">
-                  <Button asChild>
-                    <Link to="/contact">
-                      {s.cta} <ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
-                  </Button>
-                </div>
-              </div>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      {/* Cultural */}
-      <section className="section-y bg-secondary/50">
-        <div className="container-page">
-          <SectionHeader
-            eyebrow="Cultural Weddings"
-            title="Luxury Weddings for Every Culture"
-            body="We specialize in planning and designing authentic cultural weddings across Dubai, Abu Dhabi, Ras Al Khaimah, and the UAE — blending cherished traditions with luxury styling and flawless event management."
-          />
-          <div className="mt-12 grid gap-8 md:grid-cols-3">
-            {culturalServices.map((s) => (
-              <article
-                key={s.slug}
-                id={s.slug}
-                className="scroll-mt-28 overflow-hidden rounded-sm border border-border bg-card"
-              >
-                <div className="relative aspect-[4/3] overflow-hidden">
-                  <img src={s.image} alt={s.title} loading="lazy" className="h-full w-full object-cover" />
-                </div>
-                <div className="p-6">
+                <div className="flex flex-1 flex-col p-6">
                   <h3 className="font-display text-2xl">{s.title}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                    {s.description}
-                  </p>
-                  {s.perfectFor && (
-                    <p className="mt-4 text-xs text-foreground/70">
-                      <span className="font-medium">Ideal for: </span>
-                      {s.perfectFor.join(" · ")}
-                    </p>
-                  )}
+                  <p className="mt-2 text-sm text-muted-foreground">{s.short}</p>
+                  <span className="mt-auto pt-4 inline-flex items-center gap-1.5 text-sm font-medium text-primary">
+                    Explore
+                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </span>
                 </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Custom offerings */}
-      <section className="section-y">
-        <div className="container-page">
-          <SectionHeader
-            eyebrow="Custom Wedding Planning"
-            title="Our luxury wedding services"
-            body="A complete suite of planning, design, production and hospitality services — mix and match to build your celebration."
-          />
-          <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {customOfferings.map((o) => (
-              <div
-                key={o.title}
-                className={
-                  "rounded-sm border p-6 " +
-                  (o.featured
-                    ? "border-primary bg-primary text-primary-foreground md:col-span-2 lg:col-span-2"
-                    : "border-border bg-card")
-                }
-              >
-                {o.featured && (
-                  <div className="mb-3 flex items-center gap-1.5 text-accent">
-                    <Star className="h-4 w-4 fill-current" />
-                    <span className="text-xs uppercase tracking-widest">Featured</span>
-                  </div>
-                )}
-                <h4 className="font-display text-xl">{o.title}</h4>
-                <p
-                  className={
-                    "mt-3 text-sm leading-relaxed " +
-                    (o.featured ? "text-primary-foreground/85" : "text-muted-foreground")
-                  }
-                >
-                  {o.description}
-                </p>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
