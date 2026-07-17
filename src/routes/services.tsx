@@ -77,7 +77,7 @@ function ServicesPage() {
                 </p>
               </div>
             </div>
-            <div className="relative aspect-[4/3] overflow-hidden rounded-sm shadow-elegant">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-sm shadow-lg">
               <img
                 src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=70"
                 alt="Elegant wedding planning in Dubai"
