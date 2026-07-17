@@ -25,6 +25,7 @@ export const Route = createFileRoute("/contact")({
 });
 
 function ContactPage() {
+  const { type } = Route.useSearch();
   return (
     <>
       <section className="section-y">
