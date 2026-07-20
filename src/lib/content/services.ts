@@ -216,3 +216,59 @@ export const allServices: ServiceItem[] = [...flagshipServices, ...culturalServi
 export function getServiceBySlug(slug: string): ServiceItem | undefined {
   return allServices.find((s) => s.slug === slug);
 }
+
+// Shared CTA metadata used by both the /services overview and the
+// /wedding-services/$slug detail page.
+export interface ServiceCta {
+  viewLabel: string;
+  ctaLabel: string;
+  contactType: string;
+}
+
+export const serviceCtaMeta: Record<string, ServiceCta> = {
+  "beach-wedding-dubai": {
+    viewLabel: "View Beach Wedding",
+    ctaLabel: "Start Planning Your Beach Wedding",
+    contactType: "Beach Wedding",
+  },
+  "desert-wedding-dubai": {
+    viewLabel: "View Desert Wedding",
+    ctaLabel: "Begin Your Desert Wedding Journey",
+    contactType: "Desert Wedding",
+  },
+  "intimate-elopements": {
+    viewLabel: "View Intimate Weddings",
+    ctaLabel: "Plan My Elopement",
+    contactType: "Elopement / Micro Wedding",
+  },
+  "civil-weddings-uae": {
+    viewLabel: "View Civil Weddings",
+    ctaLabel: "Start My Civil Wedding",
+    contactType: "Civil Wedding",
+  },
+  "luxury-hotel-weddings": {
+    viewLabel: "View Luxury Wedding",
+    ctaLabel: "Plan My Luxury Hotel Wedding",
+    contactType: "Luxury Wedding",
+  },
+  "south-asian-weddings": {
+    viewLabel: "View South Asian Wedding",
+    ctaLabel: "Plan My South Asian Wedding",
+    contactType: "Indian Wedding",
+  },
+  "emirati-gcc-weddings": {
+    viewLabel: "View Emirati Wedding",
+    ctaLabel: "Plan My Emirati Wedding",
+    contactType: "Arabic Wedding",
+  },
+  "western-weddings": {
+    viewLabel: "View Western Wedding",
+    ctaLabel: "Plan My Western Wedding",
+    contactType: "Western Wedding",
+  },
+};
+
+export function getServiceCta(slug: string): ServiceCta | undefined {
+  return serviceCtaMeta[slug];
+}
+
