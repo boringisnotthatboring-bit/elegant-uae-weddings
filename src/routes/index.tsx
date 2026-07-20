@@ -13,7 +13,7 @@ import { faqItems } from "@/lib/content/faqs";
 import { testimonials } from "@/lib/content/testimonials";
 import { blogPosts } from "@/lib/content/blog";
 import { company } from "@/lib/content/nav";
-import uaeMapAsset from "@/assets/uae-map-correct.png.asset.json";
+import uaeMapAsset from "@/assets/uae-map-cutout.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
