@@ -291,6 +291,9 @@ function HomePage() {
         </div>
       </section>
 
+      {/* Wedding Venues */}
+      <WeddingVenuesShowcase />
+
       {/* Get in Touch */}
       <section className="section-y">
         <div className="container-page rounded-sm bg-primary p-10 text-primary-foreground md:p-16">
