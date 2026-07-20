@@ -56,28 +56,30 @@ function HomePage() {
             height={1200}
             className="h-full w-full object-cover"
           />
-          <div className="absolute inset-0 hero-scrim" />
+        <div className="absolute inset-0 hero-scrim" />
         </div>
         <div className="container-page relative flex min-h-[85vh] flex-col justify-end pb-20 pt-32 text-primary-foreground">
-          <p className="eyebrow text-accent">{company.tagline}</p>
-          <h1 className="mt-4 max-w-3xl font-display text-5xl leading-[1.02] md:text-7xl">
-            Turning Dreams into Beautiful Realities
-          </h1>
-          <p className="mt-6 max-w-2xl text-base text-primary-foreground/85 md:text-lg">
-            Awesome Events Weddings is a leading wedding planner in Dubai, creating bespoke luxury weddings and unforgettable celebrations across the UAE — from private beach ceremonies and iconic hotel weddings to breathtaking destination events.
-          </p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
-              <Link to="/contact">Book Free Consultation</Link>
-            </Button>
-            <Button
-              asChild
-              size="lg"
-              variant="outline"
-              className="border-primary-foreground/50 bg-transparent text-primary-foreground hover:bg-primary-foreground hover:text-primary"
-            >
-              <Link to="/services">Our Wedding Services</Link>
-            </Button>
+          <div className="max-w-3xl rounded-2xl bg-white/10 p-6 backdrop-blur-xl backdrop-saturate-150 md:p-10">
+            <p className="eyebrow text-accent">{company.tagline}</p>
+            <h1 className="mt-4 max-w-3xl font-display text-5xl leading-[1.02] md:text-7xl">
+              Turning Dreams into Beautiful Realities
+            </h1>
+            <p className="mt-6 max-w-2xl text-base text-primary-foreground/90 md:text-lg">
+              Awesome Events Weddings is a leading wedding planner in Dubai, creating bespoke luxury weddings and unforgettable celebrations across the UAE — from private beach ceremonies and iconic hotel weddings to breathtaking destination events.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
+                <Link to="/contact">Book Free Consultation</Link>
+              </Button>
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="border-primary-foreground/50 bg-transparent text-primary-foreground hover:bg-primary-foreground hover:text-primary"
+              >
+                <Link to="/services">Our Wedding Services</Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
