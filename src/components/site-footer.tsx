@@ -4,7 +4,7 @@ import { footerExplore, socialLinks, company } from "@/lib/content/nav";
 export function SiteFooter() {
   return (
     <footer className="mt-24 border-t border-border bg-primary text-primary-foreground">
-      <div className="container-page grid gap-12 py-16 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+      <div className="container-page grid gap-12 py-16 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
         <div>
           <h4 className="text-xs font-medium uppercase tracking-widest text-primary-foreground/60">
             Address
@@ -14,37 +14,6 @@ export function SiteFooter() {
           </p>
         </div>
 
-        <div>
-          <h4 className="text-xs font-medium uppercase tracking-widest text-primary-foreground/60">
-            Contact
-          </h4>
-          <ul className="mt-4 space-y-3 text-sm text-primary-foreground/80">
-            <li>
-              <a
-                href={`mailto:${company.email}`}
-                className="transition-colors hover:text-accent"
-              >
-                {company.email}
-              </a>
-            </li>
-            <li>
-              <a
-                href={`tel:${company.phone.replace(/\s/g, "")}`}
-                className="transition-colors hover:text-accent"
-              >
-                {company.phone}
-              </a>
-            </li>
-          </ul>
-          <div className="mt-6">
-            <h4 className="text-xs font-medium uppercase tracking-widest text-primary-foreground/60">
-              Opening Hours
-            </h4>
-            <p className="mt-2 text-sm text-primary-foreground/80">
-              By Appointment Only
-            </p>
-          </div>
-        </div>
 
         <div>
           <h4 className="text-xs font-medium uppercase tracking-widest text-primary-foreground/60">
