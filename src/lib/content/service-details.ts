@@ -7,11 +7,6 @@ export interface WhyChooseItem {
   body: string;
 }
 
-export interface PackageItem {
-  title: string;
-  price: string;
-  body: string;
-}
 
 export interface ServiceFaq {
   q: string;
@@ -27,8 +22,6 @@ export interface ServiceDetail {
   inclusionsIntro: string;
   inclusions: string[];
   inclusionsOutro?: string;
-  packagesTitle: string;
-  packages: PackageItem[];
   faqs: ServiceFaq[];
 }
 
@@ -54,7 +47,7 @@ const commonWhyChoose = (kind: string, kindLower: string): WhyChooseItem[] => [
 const commonFaqs = (kind: string, kindLower: string): ServiceFaq[] => [
   {
     q: `How much does a ${kindLower} in the UAE cost?`,
-    a: `${kind} pricing depends on the venue, guest count, décor, catering, and entertainment. We build customised packages around your budget and share transparent estimates once we understand your vision.`,
+    a: `${kind} pricing depends on the venue, guest count, décor, catering, and entertainment. We build a customised plan around your budget and share transparent estimates once we understand your vision.`,
   },
   {
     q: "How far in advance should we book?",
@@ -95,24 +88,6 @@ export const serviceDetails: Record<string, ServiceDetail> = {
     ],
     inclusionsOutro:
       "We create elegant beachfront setups that turn your seaside vision into a fully realised celebration.",
-    packagesTitle: "Beach Wedding Packages",
-    packages: [
-      {
-        title: "Intimate Beach Wedding",
-        price: "Starting from AED 24,999",
-        body: "Perfect for private ceremonies and small beach celebrations with elegant décor, floral arrangements, ceremony setup, and essential coordination services.",
-      },
-      {
-        title: "Luxury Beach Wedding",
-        price: "Starting from AED 79,999",
-        body: "Designed for grand beachfront weddings with premium décor, entertainment, catering, photography, lighting, and complete event management.",
-      },
-      {
-        title: "Destination Beach Wedding",
-        price: "Starting from AED 149,999",
-        body: "Complete destination planning for couples travelling to the UAE for a luxurious multi-day beach wedding experience with fully customised arrangements.",
-      },
-    ],
     faqs: commonFaqs("Beach weddings", "beach wedding"),
   },
   "desert-wedding-dubai": {
@@ -132,24 +107,6 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       "Fire lanterns, torches, and warm lighting",
       "Long banquet tables and reception styling",
       "Cinematic photography and videography",
-    ],
-    packagesTitle: "Desert Wedding Packages",
-    packages: [
-      {
-        title: "Intimate Desert Ceremony",
-        price: "Starting from AED 29,999",
-        body: "A private dune-top ceremony for elopements and micro weddings with styling, floral design, and coordination.",
-      },
-      {
-        title: "Signature Desert Wedding",
-        price: "Starting from AED 89,999",
-        body: "A full desert celebration with majlis lounges, traditional entertainment, catering, and cinematic production.",
-      },
-      {
-        title: "Luxury Desert Experience",
-        price: "Starting from AED 179,999",
-        body: "Multi-day desert celebrations with private camp setup, curated guest experiences, and complete destination planning.",
-      },
     ],
     faqs: commonFaqs("Desert weddings", "desert wedding"),
   },
@@ -171,24 +128,6 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       "Bridal styling and beauty coordination",
       "Personal on-the-day coordination",
     ],
-    packagesTitle: "Intimate Wedding Packages",
-    packages: [
-      {
-        title: "Elopement Package",
-        price: "Starting from AED 14,999",
-        body: "Just the two of you — a ceremony, florals, photography, and a beautifully styled setting to make it unforgettable.",
-      },
-      {
-        title: "Micro Wedding",
-        price: "Starting from AED 39,999",
-        body: "Up to 30 guests, full styling, dining experience, and coordination — perfect for a close-family celebration.",
-      },
-      {
-        title: "Luxury Intimate Wedding",
-        price: "Starting from AED 79,999",
-        body: "A premium micro celebration with elevated styling, entertainment, and a full weekend experience for your guests.",
-      },
-    ],
     faqs: commonFaqs("Intimate weddings", "intimate wedding"),
   },
   "civil-weddings-uae": {
@@ -208,24 +147,6 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       "Photography and videography",
       "Reception planning and venue sourcing",
       "Full-service celebration after your ceremony",
-    ],
-    packagesTitle: "Civil Wedding Packages",
-    packages: [
-      {
-        title: "Ceremony Essentials",
-        price: "Starting from AED 9,999",
-        body: "Streamlined civil ceremony coordination with styling, florals, and photography for the paperwork day.",
-      },
-      {
-        title: "Ceremony + Celebration",
-        price: "Starting from AED 34,999",
-        body: "Legal ceremony paired with an intimate reception, dining experience, and full coordination.",
-      },
-      {
-        title: "Signature Civil Wedding",
-        price: "Starting from AED 89,999",
-        body: "A complete luxury celebration built around your civil ceremony — full styling, entertainment, and destination-quality guest experience.",
-      },
     ],
     faqs: commonFaqs("Civil weddings", "civil wedding"),
   },
@@ -247,24 +168,6 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       "Advanced AV, lighting, and production",
       "Multi-day guest experience coordination",
     ],
-    packagesTitle: "Luxury Wedding Packages",
-    packages: [
-      {
-        title: "Signature Luxury",
-        price: "Starting from AED 149,999",
-        body: "A refined ballroom or estate wedding with premium styling, entertainment, and full coordination.",
-      },
-      {
-        title: "Grand Luxury",
-        price: "Starting from AED 299,999",
-        body: "A full-scale luxury celebration with elevated production, curated entertainment, and multi-event planning.",
-      },
-      {
-        title: "Bespoke Luxury Weekend",
-        price: "On request",
-        body: "A fully custom multi-day wedding weekend, styled and delivered to the highest standard across the UAE.",
-      },
-    ],
     faqs: commonFaqs("Luxury weddings", "luxury wedding"),
   },
   "south-asian-weddings": {
@@ -284,24 +187,6 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       "Traditional and fusion catering coordination",
       "Live dhol, DJs, and cultural entertainment",
       "Guest hospitality, RSVP, and logistics",
-    ],
-    packagesTitle: "South Asian Wedding Packages",
-    packages: [
-      {
-        title: "Single-Day Celebration",
-        price: "Starting from AED 79,999",
-        body: "One signature event — reception, Nikah, or Sangeet — fully styled and coordinated.",
-      },
-      {
-        title: "Multi-Event Wedding",
-        price: "Starting from AED 199,999",
-        body: "A 2–3 day celebration with décor, entertainment, catering, and end-to-end management.",
-      },
-      {
-        title: "Grand Destination Wedding",
-        price: "On request",
-        body: "A full destination South Asian wedding across multiple UAE venues with custom guest experiences.",
-      },
     ],
     faqs: commonFaqs("South Asian weddings", "South Asian wedding"),
   },
@@ -323,24 +208,6 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       "Traditional performers and live entertainment",
       "Complete family and guest hospitality",
     ],
-    packagesTitle: "Emirati Wedding Packages",
-    packages: [
-      {
-        title: "Signature Reception",
-        price: "Starting from AED 99,999",
-        body: "A refined single-event reception with full styling, catering, and coordination.",
-      },
-      {
-        title: "Grand Emirati Wedding",
-        price: "Starting from AED 249,999",
-        body: "A large-scale traditional celebration with Zaffa, entertainment, and multi-hall styling.",
-      },
-      {
-        title: "Royal Destination Wedding",
-        price: "On request",
-        body: "A completely bespoke luxury Gulf wedding with private venues and curated multi-day experiences.",
-      },
-    ],
     faqs: commonFaqs("Emirati weddings", "Emirati wedding"),
   },
   "western-weddings": {
@@ -360,24 +227,6 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       "Live band, DJ, and entertainment",
       "Full menu curation and tastings",
       "Bridal party and guest hospitality",
-    ],
-    packagesTitle: "Western Wedding Packages",
-    packages: [
-      {
-        title: "Signature Western Wedding",
-        price: "Starting from AED 89,999",
-        body: "A classic ceremony and reception with full styling, coordination, and photography.",
-      },
-      {
-        title: "Luxury Western Wedding",
-        price: "Starting from AED 179,999",
-        body: "An elevated experience with premium venues, live entertainment, and multi-event coordination.",
-      },
-      {
-        title: "Destination Western Wedding",
-        price: "On request",
-        body: "A full destination weekend planned end-to-end with curated guest experiences across the UAE.",
-      },
     ],
     faqs: commonFaqs("Western weddings", "Western wedding"),
   },
