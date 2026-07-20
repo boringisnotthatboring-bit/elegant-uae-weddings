@@ -1,45 +1,9 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { ArrowRight, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { getServiceBySlug, allServices } from "@/lib/content/services";
+import { getServiceBySlug, allServices, serviceCtaMeta } from "@/lib/content/services";
 import servicesHero from "@/assets/services-hero.jpg";
 
-// Maps each service slug to the CTA copy and the Wedding-type value pre-selected
-// on the /contact form.
-const serviceMeta: Record<string, { cta: string; contactType: string }> = {
-  "beach-wedding-dubai": {
-    cta: "Start Planning Your Beach Wedding",
-    contactType: "Beach Wedding",
-  },
-  "desert-wedding-dubai": {
-    cta: "Begin Your Desert Wedding Journey",
-    contactType: "Desert Wedding",
-  },
-  "intimate-elopements": {
-    cta: "Plan My Elopement",
-    contactType: "Elopement / Micro Wedding",
-  },
-  "civil-weddings-uae": {
-    cta: "Start My Civil Wedding",
-    contactType: "Civil Wedding",
-  },
-  "luxury-hotel-weddings": {
-    cta: "Plan My Luxury Hotel Wedding",
-    contactType: "Luxury Wedding",
-  },
-  "south-asian-weddings": {
-    cta: "Plan My South Asian Wedding",
-    contactType: "Indian Wedding",
-  },
-  "emirati-gcc-weddings": {
-    cta: "Plan My Emirati Wedding",
-    contactType: "Arabic Wedding",
-  },
-  "western-weddings": {
-    cta: "Plan My Western Wedding",
-    contactType: "Western Wedding",
-  },
-};
 
 export const Route = createFileRoute("/wedding-services/$slug")({
   loader: ({ params }) => {
