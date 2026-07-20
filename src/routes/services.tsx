@@ -2,7 +2,8 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { allServices } from "@/lib/content/services";
-import servicesHero from "@/assets/services-hero.jpg";
+import servicesHero from "@/assets/beach-wedding-hero.png.asset.json";
+
 
 export const Route = createFileRoute("/services")({
   head: () => ({
