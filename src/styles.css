@@ -176,6 +176,10 @@ h1, h2, h3, h4, .font-display {
   border-top: 1px solid var(--color-border);
 }
 
+@utility font-faq {
+  font-family: var(--font-faq);
+}
+
 /* ============================================================
  * iOS-level smoothness — buttery global motion
  * SEO-safe: pure CSS, no content hidden from crawlers, honors
