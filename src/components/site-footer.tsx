@@ -14,8 +14,8 @@ export function SiteFooter() {
           </p>
         </div>
 
-
         <div>
+
           <h4 className="text-xs font-medium uppercase tracking-widest text-primary-foreground/60">
             Follow
           </h4>
