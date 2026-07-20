@@ -15,7 +15,7 @@ import {
 import {
   getServiceDetail,
   type WhyChooseItem,
-  type PackageItem,
+  
   type ServiceFaq,
 } from "@/lib/content/service-details";
 import servicesHero from "@/assets/services-hero.jpg";
