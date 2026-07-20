@@ -27,8 +27,6 @@ export interface ServiceDetail {
   inclusionsIntro: string;
   inclusions: string[];
   inclusionsOutro?: string;
-  packagesTitle: string;
-  packages: PackageItem[];
   faqs: ServiceFaq[];
 }
 
