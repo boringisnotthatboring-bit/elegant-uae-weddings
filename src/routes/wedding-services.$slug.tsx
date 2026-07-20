@@ -126,7 +126,7 @@ function WeddingServicePage() {
             <div>
               <p className="eyebrow">Overview</p>
               <h2 className="mt-3 font-display text-3xl md:text-4xl">
-                Create Your Dream {service.title}
+                {detail.introHeading ?? `Create Your Dream ${service.title}`}
               </h2>
               {detail.intro.map((p: string, i: number) => (
                 <p
@@ -136,11 +136,13 @@ function WeddingServicePage() {
                   {p}
                 </p>
               ))}
-              {service.perfectFor && (
+              {(detail.idealFor ?? service.perfectFor) && (
                 <div className="mt-6">
-                  <p className="text-sm font-medium">Perfect for:</p>
+                  <p className="text-sm font-medium">
+                    {detail.idealFor ? "Ideal for:" : "Perfect for:"}
+                  </p>
                   <ul className="mt-2 grid gap-1.5 text-sm text-muted-foreground sm:grid-cols-2">
-                    {service.perfectFor.map((p: string) => (
+                    {(detail.idealFor ?? service.perfectFor)!.map((p: string) => (
                       <li key={p} className="flex items-start gap-2">
                         <Check className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
                         {p}
