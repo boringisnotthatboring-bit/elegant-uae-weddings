@@ -7,11 +7,6 @@ export interface WhyChooseItem {
   body: string;
 }
 
-export interface PackageItem {
-  title: string;
-  price: string;
-  body: string;
-}
 
 export interface ServiceFaq {
   q: string;
