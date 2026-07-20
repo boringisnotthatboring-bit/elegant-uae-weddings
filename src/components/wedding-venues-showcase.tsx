@@ -20,7 +20,7 @@ export function WeddingVenuesShowcase() {
           {venueCategories.map((item) => (
             <article
               key={item.slug}
-              className="group flex flex-col"
+              className="group flex h-full flex-col"
             >
               <div className="relative aspect-[4/3] overflow-hidden rounded-sm">
                 <img
@@ -37,13 +37,16 @@ export function WeddingVenuesShowcase() {
                 <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">
                   {item.description}
                 </p>
-                <Link
-                  to="/venues"
-                  className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-primary transition-colors hover:text-primary/80"
+                <Button
+                  asChild
+                  variant="outline"
+                  className="mt-auto h-auto min-h-[3rem] w-full justify-between whitespace-normal rounded-none border-primary/30 py-3 text-left text-sm font-medium text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
                 >
-                  {item.cta}
-                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </Link>
+                  <Link to="/venues">
+                    {item.cta}
+                    <ArrowRight className="h-4 w-4 shrink-0 transition-transform group-hover:translate-x-1" />
+                  </Link>
+                </Button>
               </div>
             </article>
           ))}
