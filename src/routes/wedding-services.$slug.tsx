@@ -8,8 +8,8 @@ import servicesHero from "@/assets/services-hero.jpg";
 export const Route = createFileRoute("/wedding-services/$slug")({
   loader: ({ params }) => {
     const service = getServiceBySlug(params.slug);
-    if (!service || !serviceMeta[params.slug]) throw notFound();
-    return { service, meta: serviceMeta[params.slug] };
+    if (!service || !serviceCtaMeta[params.slug]) throw notFound();
+    return { service, meta: serviceCtaMeta[params.slug] };
   },
   head: ({ loaderData }) => {
     if (!loaderData) {
