@@ -1,3 +1,5 @@
+import beachWeddingCard from "@/assets/beach-wedding-card.png.asset.json";
+
 export interface ServiceItem {
   slug: string;
   title: string;
@@ -26,7 +28,7 @@ export const flagshipServices: ServiceItem[] = [
       "Luxury beachfront celebrations",
     ],
     cta: "Explore Beach Weddings",
-    image: img("photo-1519741497674-611481863552"),
+    image: beachWeddingCard.url,
   },
   {
     slug: "desert-wedding-dubai",
