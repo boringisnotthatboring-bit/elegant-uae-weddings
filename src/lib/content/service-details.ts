@@ -203,9 +203,19 @@ export const serviceDetails: Record<string, ServiceDetail> = {
   },
   "emirati-gcc-weddings": {
     heroSubtitle: "Zaffa, Majlis, and Gulf hospitality — done properly.",
+    introHeading: "Emirati & GCC Weddings Dubai",
     intro: [
-      "We plan elegant Emirati and GCC weddings across the UAE with a deep respect for local traditions, family customs, and the hospitality that defines the Gulf. From the Zaffa procession to the reception, every detail is curated with cultural authenticity.",
-      "Our team coordinates with trusted vendors, majlis stylists, traditional performers, and premium venues to deliver a wedding that feels both timeless and completely tailored to your family.",
+      "Experience elegant Emirati weddings in Dubai with luxury wedding planning services designed to honour local traditions and Gulf customs. Our expert wedding coordinator team delivers sophisticated celebrations featuring traditional Zaffa processions, elegant Majlis settings, exceptional hospitality, and bespoke wedding decoration Dubai. As a trusted wedding organizer in UAE, we ensure every ceremony is planned with precision and cultural authenticity.",
+    ],
+    idealFor: [
+      "Emirati Weddings",
+      "Arabic Weddings",
+      "Saudi Weddings",
+      "Kuwaiti Weddings",
+      "Qatari Weddings",
+      "Bahraini Weddings",
+      "Omani Weddings",
+      "GCC Family Weddings",
     ],
     whyChooseTitle: "Why Choose Us for an Emirati or GCC Wedding",
     whyChoose: commonWhyChoose("Emirati Weddings", "Emirati and GCC weddings"),
