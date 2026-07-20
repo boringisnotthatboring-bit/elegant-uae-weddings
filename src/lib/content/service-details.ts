@@ -321,24 +321,6 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       "Traditional performers and live entertainment",
       "Complete family and guest hospitality",
     ],
-    packagesTitle: "Emirati Wedding Packages",
-    packages: [
-      {
-        title: "Signature Reception",
-        price: "Starting from AED 99,999",
-        body: "A refined single-event reception with full styling, catering, and coordination.",
-      },
-      {
-        title: "Grand Emirati Wedding",
-        price: "Starting from AED 249,999",
-        body: "A large-scale traditional celebration with Zaffa, entertainment, and multi-hall styling.",
-      },
-      {
-        title: "Royal Destination Wedding",
-        price: "On request",
-        body: "A completely bespoke luxury Gulf wedding with private venues and curated multi-day experiences.",
-      },
-    ],
     faqs: commonFaqs("Emirati weddings", "Emirati wedding"),
   },
   "western-weddings": {
