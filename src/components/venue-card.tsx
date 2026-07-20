@@ -22,7 +22,7 @@ export function VenueCard({ item }: { item: VenueCategory }) {
         <Button
           asChild
           variant="outline"
-          className="mt-auto h-auto min-h-[3rem] w-full justify-between whitespace-normal rounded-none border-primary/30 py-3 text-left text-sm font-medium text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
+          className="mt-auto h-14 w-full justify-between whitespace-normal rounded-none border-primary/30 py-2 text-left text-sm font-medium text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
         >
           <Link to="/venues">
             {item.cta}
