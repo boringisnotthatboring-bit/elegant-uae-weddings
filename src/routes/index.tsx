@@ -15,6 +15,7 @@ import { blogPosts } from "@/lib/content/blog";
 import { company } from "@/lib/content/nav";
 import uaeMapAsset from "@/assets/uae-map-final.png.asset.json";
 import whyChooseUs1 from "@/assets/why-choose-us-1.png.asset.json";
+import whyChooseUs2 from "@/assets/why-choose-us-2.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
