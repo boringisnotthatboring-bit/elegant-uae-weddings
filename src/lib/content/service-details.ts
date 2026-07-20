@@ -283,24 +283,6 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       "Live dhol, DJs, and cultural entertainment",
       "Guest hospitality, RSVP, and logistics",
     ],
-    packagesTitle: "South Asian Wedding Packages",
-    packages: [
-      {
-        title: "Single-Day Celebration",
-        price: "Starting from AED 79,999",
-        body: "One signature event — reception, Nikah, or Sangeet — fully styled and coordinated.",
-      },
-      {
-        title: "Multi-Event Wedding",
-        price: "Starting from AED 199,999",
-        body: "A 2–3 day celebration with décor, entertainment, catering, and end-to-end management.",
-      },
-      {
-        title: "Grand Destination Wedding",
-        price: "On request",
-        body: "A full destination South Asian wedding across multiple UAE venues with custom guest experiences.",
-      },
-    ],
     faqs: commonFaqs("South Asian weddings", "South Asian wedding"),
   },
   "emirati-gcc-weddings": {
