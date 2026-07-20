@@ -168,11 +168,11 @@ function WeddingServicePage() {
               {detail.whyChooseTitle}
             </h2>
           </div>
-          <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-10 grid gap-6 md:grid-cols-2">
             {detail.whyChoose.map((item: WhyChooseItem) => (
               <div
                 key={item.title}
-                className="rounded-sm border border-border bg-card p-6"
+                className="flex h-full flex-col rounded-sm border border-border bg-card p-6"
               >
                 <h3 className="font-display text-lg">{item.title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
