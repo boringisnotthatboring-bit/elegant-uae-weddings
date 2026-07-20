@@ -131,24 +131,6 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       "Long banquet tables and reception styling",
       "Cinematic photography and videography",
     ],
-    packagesTitle: "Desert Wedding Packages",
-    packages: [
-      {
-        title: "Intimate Desert Ceremony",
-        price: "Starting from AED 29,999",
-        body: "A private dune-top ceremony for elopements and micro weddings with styling, floral design, and coordination.",
-      },
-      {
-        title: "Signature Desert Wedding",
-        price: "Starting from AED 89,999",
-        body: "A full desert celebration with majlis lounges, traditional entertainment, catering, and cinematic production.",
-      },
-      {
-        title: "Luxury Desert Experience",
-        price: "Starting from AED 179,999",
-        body: "Multi-day desert celebrations with private camp setup, curated guest experiences, and complete destination planning.",
-      },
-    ],
     faqs: commonFaqs("Desert weddings", "desert wedding"),
   },
   "intimate-elopements": {
