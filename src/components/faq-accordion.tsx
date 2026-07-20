@@ -11,7 +11,7 @@ export function FaqAccordion({ items }: { items: FaqItem[] }) {
     <Accordion type="single" collapsible className="w-full font-faq">
       {items.map((item, i) => (
         <AccordionItem key={i} value={`faq-${i}`}>
-          <AccordionTrigger className="text-left text-base font-semibold italic md:text-lg">
+          <AccordionTrigger className="text-left text-base font-semibold not-italic md:text-lg">
             {item.q}
           </AccordionTrigger>
           <AccordionContent className="text-sm leading-relaxed text-muted-foreground md:text-base">
