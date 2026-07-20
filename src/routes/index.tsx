@@ -14,6 +14,7 @@ import { testimonials } from "@/lib/content/testimonials";
 import { blogPosts } from "@/lib/content/blog";
 import { company } from "@/lib/content/nav";
 import uaeMapAsset from "@/assets/uae-map-final.png.asset.json";
+import whyChooseUs1 from "@/assets/why-choose-us-1.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -226,14 +227,8 @@ function HomePage() {
           </div>
           <div className="flex flex-col items-end gap-4">
             <img
-              src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80"
-              alt="Bride in an elegant wedding dress"
-              loading="lazy"
-              className="aspect-[4/3] w-full max-w-md border border-border object-cover shadow-lg"
-            />
-            <img
-              src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&w=800&q=80"
-              alt="Bridal wedding dress detail"
+              src={whyChooseUs1.url}
+              alt="Happy couple embracing in a rose garden at golden hour"
               loading="lazy"
               className="aspect-[4/3] w-full max-w-md border border-border object-cover shadow-lg"
             />
