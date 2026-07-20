@@ -233,6 +233,12 @@ function HomePage() {
               loading="lazy"
               className="aspect-[4/3] w-full max-w-md border border-border object-cover shadow-lg"
             />
+            <img
+              src={whyChooseUs2.url}
+              alt="Elegant outdoor garden ceremony with floral arch and gold chairs"
+              loading="lazy"
+              className="aspect-[4/3] w-full max-w-md border border-border object-cover shadow-lg"
+            />
           </div>
         </div>
       </section>
