@@ -245,24 +245,6 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       "Advanced AV, lighting, and production",
       "Multi-day guest experience coordination",
     ],
-    packagesTitle: "Luxury Wedding Packages",
-    packages: [
-      {
-        title: "Signature Luxury",
-        price: "Starting from AED 149,999",
-        body: "A refined ballroom or estate wedding with premium styling, entertainment, and full coordination.",
-      },
-      {
-        title: "Grand Luxury",
-        price: "Starting from AED 299,999",
-        body: "A full-scale luxury celebration with elevated production, curated entertainment, and multi-event planning.",
-      },
-      {
-        title: "Bespoke Luxury Weekend",
-        price: "On request",
-        body: "A fully custom multi-day wedding weekend, styled and delivered to the highest standard across the UAE.",
-      },
-    ],
     faqs: commonFaqs("Luxury weddings", "luxury wedding"),
   },
   "south-asian-weddings": {
