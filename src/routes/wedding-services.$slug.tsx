@@ -228,44 +228,6 @@ function WeddingServicePage() {
         </div>
       </section>
 
-      {/* Packages */}
-      <section className="section-y bg-secondary/40">
-        <div className="container-page">
-          <div className="max-w-3xl">
-            <p className="eyebrow">Packages</p>
-            <h2 className="mt-3 font-display text-3xl md:text-4xl">
-              {detail.packagesTitle}
-            </h2>
-          </div>
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {detail.packages.map((pkg: PackageItem) => (
-              <div
-                key={pkg.title}
-                className="flex h-full flex-col rounded-sm border border-border bg-card p-6"
-              >
-                <h3 className="font-display text-xl">{pkg.title}</h3>
-                <p className="mt-2 text-sm font-medium text-accent">
-                  {pkg.price}
-                </p>
-                <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-                  {pkg.body}
-                </p>
-                <div className="mt-auto pt-6">
-                  <Button
-                    asChild
-                    variant="outline"
-                    className="w-full rounded-none"
-                  >
-                    <Link to="/contact" search={{ type: meta.contactType }}>
-                      Enquire
-                    </Link>
-                  </Button>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Other services */}
       <section className="section-y">
