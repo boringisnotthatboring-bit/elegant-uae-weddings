@@ -14,6 +14,7 @@ export function WeddingVenuesShowcase() {
           title="Best Wedding Venues in Dubai for Weddings"
           body="We collaborate with Dubai's most prestigious wedding venues."
         />
+        <div className="mx-auto mt-8 h-px w-20 bg-foreground/20" />
 
         <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {venueCategories.map((item) => (
