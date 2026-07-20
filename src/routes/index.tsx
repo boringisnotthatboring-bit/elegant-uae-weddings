@@ -38,6 +38,7 @@ const trustStats = [
   { value: "450+", label: "Events" },
   { value: "62k+", label: "Attendees" },
   { value: "100+", label: "Event Partners" },
+  { value: "300+", label: "Happy Couples" },
 ];
 
 const publishedPosts = blogPosts.filter((p) => p.status === "published").slice(0, 4);
