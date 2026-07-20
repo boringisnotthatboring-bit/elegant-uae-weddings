@@ -15,7 +15,9 @@ export interface ServiceFaq {
 
 export interface ServiceDetail {
   heroSubtitle: string;
+  introHeading?: string;
   intro: string[];
+  idealFor?: string[];
   whyChooseTitle: string;
   whyChoose: WhyChooseItem[];
   inclusionsTitle: string;
