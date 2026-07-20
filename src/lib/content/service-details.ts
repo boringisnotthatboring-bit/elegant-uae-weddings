@@ -361,24 +361,6 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       "Full menu curation and tastings",
       "Bridal party and guest hospitality",
     ],
-    packagesTitle: "Western Wedding Packages",
-    packages: [
-      {
-        title: "Signature Western Wedding",
-        price: "Starting from AED 89,999",
-        body: "A classic ceremony and reception with full styling, coordination, and photography.",
-      },
-      {
-        title: "Luxury Western Wedding",
-        price: "Starting from AED 179,999",
-        body: "An elevated experience with premium venues, live entertainment, and multi-event coordination.",
-      },
-      {
-        title: "Destination Western Wedding",
-        price: "On request",
-        body: "A full destination weekend planned end-to-end with curated guest experiences across the UAE.",
-      },
-    ],
     faqs: commonFaqs("Western weddings", "Western wedding"),
   },
 };
