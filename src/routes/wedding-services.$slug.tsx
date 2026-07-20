@@ -12,7 +12,12 @@ import {
   allServices,
   serviceCtaMeta,
 } from "@/lib/content/services";
-import { getServiceDetail } from "@/lib/content/service-details";
+import {
+  getServiceDetail,
+  type WhyChooseItem,
+  type PackageItem,
+  type ServiceFaq,
+} from "@/lib/content/service-details";
 import servicesHero from "@/assets/services-hero.jpg";
 
 export const Route = createFileRoute("/wedding-services/$slug")({
