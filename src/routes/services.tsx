@@ -39,10 +39,10 @@ function ServicesPage() {
             </nav>
             <p className="eyebrow text-white/75">Wedding Services</p>
             <h1 className="mt-4 font-display text-4xl leading-tight md:text-5xl lg:text-6xl">
-              Your Dream Wedding in the UAE, Planned to Perfection
+              Creating Unforgettable Weddings Across the UAE
             </h1>
-            <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-white/85 md:text-lg">
-              Explore our full range of luxury wedding planning services across Dubai, Abu Dhabi, Ras Al Khaimah and beyond.
+            <p className="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-white/85 md:text-lg">
+              Celebrate your love story with Awesome Events Weddings, an award-winning Wedding Agency in UAE and trusted Wedding Planner in Dubai. Based in Dubai, we create unforgettable celebrations across Dubai, Abu Dhabi, Ras Al Khaimah, and the UAE. From romantic Beach Weddings and magical Desert Weddings to elegant Luxury Hotel Weddings and unforgettable Destination Weddings, our personalised Wedding Planning Services bring your vision to life with creativity, care, and exceptional attention to every detail.
             </p>
             <div className="mt-8 flex justify-center">
               <Button asChild size="lg">
