@@ -15,6 +15,7 @@ import { blogPosts } from "@/lib/content/blog";
 import { company } from "@/lib/content/nav";
 import uaeMapAsset from "@/assets/uae-map-final.png.asset.json";
 import whyChooseUs1 from "@/assets/why-choose-us-1.png.asset.json";
+import whyChooseUs2 from "@/assets/why-choose-us-2.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -229,6 +230,12 @@ function HomePage() {
             <img
               src={whyChooseUs1.url}
               alt="Happy couple embracing in a rose garden at golden hour"
+              loading="lazy"
+              className="aspect-[4/3] w-full max-w-md border border-border object-cover shadow-lg"
+            />
+            <img
+              src={whyChooseUs2.url}
+              alt="Elegant outdoor garden ceremony with floral arch and gold chairs"
               loading="lazy"
               className="aspect-[4/3] w-full max-w-md border border-border object-cover shadow-lg"
             />
