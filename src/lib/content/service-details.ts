@@ -54,7 +54,7 @@ const commonWhyChoose = (kind: string, kindLower: string): WhyChooseItem[] => [
 const commonFaqs = (kind: string, kindLower: string): ServiceFaq[] => [
   {
     q: `How much does a ${kindLower} in the UAE cost?`,
-    a: `${kind} pricing depends on the venue, guest count, décor, catering, and entertainment. We build customised packages around your budget and share transparent estimates once we understand your vision.`,
+    a: `${kind} pricing depends on the venue, guest count, décor, catering, and entertainment. We build a customised plan around your budget and share transparent estimates once we understand your vision.`,
   },
   {
     q: "How far in advance should we book?",
