@@ -207,24 +207,6 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       "Reception planning and venue sourcing",
       "Full-service celebration after your ceremony",
     ],
-    packagesTitle: "Civil Wedding Packages",
-    packages: [
-      {
-        title: "Ceremony Essentials",
-        price: "Starting from AED 9,999",
-        body: "Streamlined civil ceremony coordination with styling, florals, and photography for the paperwork day.",
-      },
-      {
-        title: "Ceremony + Celebration",
-        price: "Starting from AED 34,999",
-        body: "Legal ceremony paired with an intimate reception, dining experience, and full coordination.",
-      },
-      {
-        title: "Signature Civil Wedding",
-        price: "Starting from AED 89,999",
-        body: "A complete luxury celebration built around your civil ceremony — full styling, entertainment, and destination-quality guest experience.",
-      },
-    ],
     faqs: commonFaqs("Civil weddings", "civil wedding"),
   },
   "luxury-hotel-weddings": {
