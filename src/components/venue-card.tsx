@@ -19,7 +19,7 @@ export function VenueCard({ item }: { item: VenueCategory }) {
           {item.description}
         </p>
         <Link
-          to="/wedding-guide"
+          to="/venues"
           className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-primary"
         >
           {item.cta}
