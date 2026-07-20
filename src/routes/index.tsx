@@ -163,7 +163,7 @@ function HomePage() {
               className="pointer-events-none absolute inset-x-6 bottom-2 h-10 rounded-[50%] bg-primary/20 blur-2xl"
             />
             <img
-              src={uaeMapAsset}
+              src={uaeMapAsset.url}
               alt="Map of the UAE with all seven emirates marked — Dubai, Abu Dhabi, Sharjah, Ajman, Umm Al Quwain, Ras Al Khaimah, and Fujairah"
               width={1664}
               height={936}
