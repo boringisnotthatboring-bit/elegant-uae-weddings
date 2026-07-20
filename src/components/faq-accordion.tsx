@@ -14,7 +14,7 @@ export function FaqAccordion({ items }: { items: FaqItem[] }) {
           <AccordionTrigger className="text-left text-base font-semibold not-italic md:text-lg">
             {item.q}
           </AccordionTrigger>
-          <AccordionContent className="text-sm leading-relaxed text-muted-foreground md:text-base">
+          <AccordionContent className="text-sm leading-relaxed text-muted-foreground not-italic md:text-base">
             {item.a}
           </AccordionContent>
         </AccordionItem>
