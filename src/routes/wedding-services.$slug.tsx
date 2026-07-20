@@ -157,7 +157,7 @@ function WeddingServicePage() {
                 to="/contact"
                 search={{ type: meta.contactType }}
               >
-                {meta.cta}
+                {meta.ctaLabel}
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
