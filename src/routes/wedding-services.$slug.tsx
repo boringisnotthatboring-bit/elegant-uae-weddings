@@ -151,7 +151,7 @@ function WeddingServicePage() {
               )}
               <div className="mt-8">
                 <Button asChild>
-                  <Link to="/portfolio">View Gallery</Link>
+                  <Link to="/portfolio">View Portfolio</Link>
                 </Button>
               </div>
             </div>
