@@ -128,7 +128,7 @@ function WeddingServicePage() {
               <h2 className="mt-3 font-display text-3xl md:text-4xl">
                 Create Your Dream {service.title}
               </h2>
-              {detail.intro.map((p, i) => (
+              {detail.intro.map((p: string, i: number) => (
                 <p
                   key={i}
                   className="mt-4 text-base leading-relaxed text-muted-foreground"
@@ -169,7 +169,7 @@ function WeddingServicePage() {
             </h2>
           </div>
           <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {detail.whyChoose.map((item) => (
+            {detail.whyChoose.map((item: WhyChooseItem) => (
               <div
                 key={item.title}
                 className="rounded-sm border border-border bg-card p-6"
@@ -204,7 +204,7 @@ function WeddingServicePage() {
                 {detail.inclusionsIntro}
               </p>
               <ul className="mt-6 grid gap-3 text-sm text-muted-foreground sm:grid-cols-2">
-                {detail.inclusions.map((item) => (
+                {detail.inclusions.map((item: string) => (
                   <li key={item} className="flex items-start gap-2">
                     <Check className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
                     {item}
@@ -238,7 +238,7 @@ function WeddingServicePage() {
             </h2>
           </div>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {detail.packages.map((pkg) => (
+            {detail.packages.map((pkg: PackageItem) => (
               <div
                 key={pkg.title}
                 className="flex h-full flex-col rounded-sm border border-border bg-card p-6"
@@ -323,7 +323,7 @@ function WeddingServicePage() {
           </div>
           <div className="mt-8 max-w-3xl">
             <Accordion type="single" collapsible className="w-full">
-              {detail.faqs.map((faq, i) => (
+              {detail.faqs.map((faq: ServiceFaq, i: number) => (
                 <AccordionItem key={i} value={`item-${i}`}>
                   <AccordionTrigger className="text-left">
                     {faq.q}
