@@ -198,28 +198,28 @@ function HomePage() {
       <section className="pt-8 pb-16 md:pt-12 md:pb-24">
         <div className="container-page grid items-stretch gap-10 lg:grid-cols-2 lg:gap-16">
           <div className="flex max-w-xl flex-col">
-            <p className="eyebrow">Why Choose Us</p>
+            <p className="eyebrow">WHY CHOOSE US</p>
             <h2 className="mt-4 font-display text-3xl leading-tight md:text-5xl">
-              Why Choose Wedding Planner Dubai?
+              Why Choose Awesome Events Weddings?
             </h2>
             <div className="mt-6 h-px w-24 bg-foreground/20" />
             <div className="mt-8 flex flex-col justify-between gap-8 md:gap-10">
               <div>
-                <h3 className="font-display text-xl md:text-2xl">Expert Wedding Planners</h3>
+                <h3 className="font-display text-xl md:text-2xl">Experienced Wedding Planners</h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground md:text-base">
-                  Wedding planner Dubai delivering seamless planning, flawless coordination, and stress-free execution for your special day.
+                  As a trusted Wedding Planner Dubai and Wedding Organizer UAE, we provide personalised Wedding Planning Services, guiding you through every stage of your celebration with care and attention to detail.
                 </p>
               </div>
               <div>
-                <h3 className="font-display text-xl md:text-2xl">Luxury & Customized Concepts</h3>
+                <h3 className="font-display text-xl md:text-2xl">Luxury & Customized Wedding Experiences</h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground md:text-base">
-                  We design personalized wedding concepts with luxury styling, creative décor, and unique themes tailored to your vision and culture.
+                  From elegant styling and Wedding Decoration Dubai to bespoke themes and venue design, every celebration is thoughtfully customised to reflect your vision, traditions, and personal style.
                 </p>
               </div>
               <div>
-                <h3 className="font-display text-xl md:text-2xl">Complete Wedding Experience</h3>
+                <h3 className="font-display text-xl md:text-2xl">Complete Wedding Planning Services</h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground md:text-base">
-                  From planning to execution, we manage every detail with multicultural expertise, premium services, and full wedding coverage across Dubai & UAE.
+                  Our dedicated Wedding Coordinator manages venue selection, décor, entertainment, photography, guest experiences, and production for weddings across Dubai, Abu Dhabi, Ras Al Khaimah, and the UAE.
                 </p>
               </div>
             </div>
