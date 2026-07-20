@@ -1,10 +1,11 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import type { VenueCategory } from "@/lib/content/venues";
 
 export function VenueCard({ item }: { item: VenueCategory }) {
   return (
-    <article className="group relative overflow-hidden rounded-sm border border-border bg-card">
+    <article className="group flex flex-col overflow-hidden rounded-sm border border-border bg-card">
       <div className="relative aspect-[4/3] overflow-hidden">
         <img
           src={item.image}
@@ -13,18 +14,21 @@ export function VenueCard({ item }: { item: VenueCategory }) {
           className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
         />
       </div>
-      <div className="p-6">
+      <div className="flex flex-1 flex-col p-6">
         <h3 className="font-display text-2xl">{item.title}</h3>
-        <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+        <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">
           {item.description}
         </p>
-        <Link
-          to="/venues"
-          className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-primary"
+        <Button
+          asChild
+          variant="outline"
+          className="mt-auto h-auto min-h-[3rem] w-full justify-between whitespace-normal rounded-none border-primary/30 py-3 text-left text-sm font-medium text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
         >
-          {item.cta}
-          <ArrowRight className="h-4 w-4" />
-        </Link>
+          <Link to="/venues">
+            {item.cta}
+            <ArrowRight className="h-4 w-4 shrink-0" />
+          </Link>
+        </Button>
       </div>
     </article>
   );
