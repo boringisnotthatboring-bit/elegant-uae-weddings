@@ -169,24 +169,6 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       "Bridal styling and beauty coordination",
       "Personal on-the-day coordination",
     ],
-    packagesTitle: "Intimate Wedding Packages",
-    packages: [
-      {
-        title: "Elopement Package",
-        price: "Starting from AED 14,999",
-        body: "Just the two of you — a ceremony, florals, photography, and a beautifully styled setting to make it unforgettable.",
-      },
-      {
-        title: "Micro Wedding",
-        price: "Starting from AED 39,999",
-        body: "Up to 30 guests, full styling, dining experience, and coordination — perfect for a close-family celebration.",
-      },
-      {
-        title: "Luxury Intimate Wedding",
-        price: "Starting from AED 79,999",
-        body: "A premium micro celebration with elevated styling, entertainment, and a full weekend experience for your guests.",
-      },
-    ],
     faqs: commonFaqs("Intimate weddings", "intimate wedding"),
   },
   "civil-weddings-uae": {
