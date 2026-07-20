@@ -14,36 +14,48 @@ function getVisibleCount() {
 export function ServicesCarousel({ items }: { items: ServiceItem[] }) {
   const [visible, setVisible] = useState(getVisibleCount);
   const [index, setIndex] = useState(0);
+  const [animate, setAnimate] = useState(true);
   const [paused, setPaused] = useState(false);
   const total = items.length;
-  const maxIndex = Math.max(0, total - visible);
+  const looped = [...items, ...items];
+  const trackRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const update = () => {
-      const next = getVisibleCount();
-      setVisible(next);
-      setIndex((i) => Math.min(i, Math.max(0, total - next)));
-    };
+    const update = () => setVisible(getVisibleCount());
     update();
     window.addEventListener("resize", update);
     return () => window.removeEventListener("resize", update);
-  }, [total]);
+  }, []);
 
-  const prev = useCallback(() => {
-    setIndex((i) => (i > 0 ? i - 1 : maxIndex));
-  }, [maxIndex]);
-
-  const next = useCallback(() => {
-    setIndex((i) => (i < maxIndex ? i + 1 : 0));
-  }, [maxIndex]);
+  const step = useCallback((dir: 1 | -1) => {
+    setAnimate(true);
+    setIndex((i) => i + dir);
+  }, []);
 
   useEffect(() => {
-    if (paused || maxIndex === 0) return;
-    const id = window.setInterval(() => {
-      setIndex((i) => (i < maxIndex ? i + 1 : 0));
-    }, 4500);
+    if (paused) return;
+    const id = window.setInterval(() => step(1), 4000);
     return () => window.clearInterval(id);
-  }, [paused, maxIndex]);
+  }, [paused, step]);
+
+  // Seamless loop: when we cross into the cloned half, snap back without animation.
+  const handleTransitionEnd = () => {
+    if (index >= total) {
+      setAnimate(false);
+      setIndex(0);
+    } else if (index < 0) {
+      setAnimate(false);
+      setIndex(total - 1);
+    }
+  };
+
+  // Re-enable animation on next frame after a snap.
+  useEffect(() => {
+    if (!animate) {
+      const id = requestAnimationFrame(() => setAnimate(true));
+      return () => cancelAnimationFrame(id);
+    }
+  }, [animate]);
 
   const widthClass = visible === 1 ? "w-full" : visible === 2 ? "w-1/2" : "w-1/3";
   const translatePercent = 100 / visible;
@@ -56,11 +68,13 @@ export function ServicesCarousel({ items }: { items: ServiceItem[] }) {
     >
       <div className="overflow-hidden">
         <div
-          className="flex transition-transform duration-500 ease-out"
+          ref={trackRef}
+          className={"flex " + (animate ? "transition-transform duration-500 ease-out" : "")}
           style={{ transform: `translateX(-${index * translatePercent}%)` }}
+          onTransitionEnd={handleTransitionEnd}
         >
-          {items.map((s) => (
-            <div key={s.slug} className={`shrink-0 px-3 ${widthClass}`}>
+          {looped.map((s, i) => (
+            <div key={`${s.slug}-${i}`} className={`shrink-0 px-3 ${widthClass}`}>
               <ServiceCard item={s} />
             </div>
           ))}
@@ -70,7 +84,7 @@ export function ServicesCarousel({ items }: { items: ServiceItem[] }) {
       <button
         type="button"
         aria-label="Previous service"
-        onClick={prev}
+        onClick={() => step(-1)}
         className="absolute left-2 top-1/2 -translate-y-1/2 z-10 rounded-full border border-border bg-background/80 backdrop-blur p-2.5 shadow-sm transition-colors hover:border-primary hover:text-primary md:-left-4"
       >
         <ChevronLeft className="h-5 w-5" />
@@ -78,14 +92,14 @@ export function ServicesCarousel({ items }: { items: ServiceItem[] }) {
       <button
         type="button"
         aria-label="Next service"
-        onClick={next}
+        onClick={() => step(1)}
         className="absolute right-2 top-1/2 -translate-y-1/2 z-10 rounded-full border border-border bg-background/80 backdrop-blur p-2.5 shadow-sm transition-colors hover:border-primary hover:text-primary md:-right-4"
       >
         <ChevronRight className="h-5 w-5" />
       </button>
 
       <div className="mt-8 flex items-center justify-center gap-2">
-        {Array.from({ length: maxIndex + 1 }).map((_, i) => (
+        {items.map((_, i) => (
           <button
             key={i}
             type="button"
@@ -93,7 +107,7 @@ export function ServicesCarousel({ items }: { items: ServiceItem[] }) {
             onClick={() => setIndex(i)}
             className={
               "h-1.5 rounded-full transition-all " +
-              (i === index ? "w-8 bg-primary" : "w-1.5 bg-border")
+              (((index % total) + total) % total === i ? "w-8 bg-primary" : "w-1.5 bg-border")
             }
           />
         ))}
