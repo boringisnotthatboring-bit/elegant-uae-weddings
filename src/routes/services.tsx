@@ -1,9 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight } from "lucide-react";
+import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { allServices } from "@/lib/content/services";
+import { allServices, serviceCtaMeta } from "@/lib/content/services";
 import servicesHero from "@/assets/beach-wedding-hero.png.asset.json";
-
 
 export const Route = createFileRoute("/services")({
   head: () => ({
@@ -24,6 +23,7 @@ export const Route = createFileRoute("/services")({
 function ServicesPage() {
   return (
     <>
+      {/* Hero */}
       <section className="relative isolate overflow-hidden">
         <div className="absolute inset-0 -z-10">
           <img src={servicesHero.url} alt="" className="h-full w-full object-cover" />
@@ -53,49 +53,79 @@ function ServicesPage() {
         </div>
       </section>
 
-      <section className="section-y bg-secondary/40">
+      {/* Intro */}
+      <section className="pt-16 md:pt-24">
         <div className="container-page">
           <div className="mx-auto max-w-3xl text-center">
-            <p className="eyebrow">Wedding Planning Services in Dubai & UAE</p>
-            <h2 className="mt-3 font-display text-3xl md:text-4xl">
-              Every celebration, planned with heart
+            <h2 className="font-display text-3xl md:text-4xl">
+              Explore Our Wedding Services in Dubai
             </h2>
             <p className="mt-5 text-base leading-relaxed text-muted-foreground">
               At Awesome Events Weddings, we design unforgettable celebrations tailored to your vision, traditions, and personality. Choose the wedding experience that speaks to you — each has its own dedicated planning journey.
             </p>
+            <div className="mx-auto mt-8 h-px w-24 bg-border" />
           </div>
         </div>
       </section>
 
-      <section className="section-y">
+      {/* Stacked service rows */}
+      <section className="pb-20 pt-12 md:pb-28 md:pt-16">
         <div className="container-page">
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {allServices.map((s) => (
-              <Link
-                key={s.slug}
-                to="/wedding-services/$slug"
-                params={{ slug: s.slug }}
-                className="group flex flex-col overflow-hidden rounded-sm border border-border bg-card transition-all hover:-translate-y-1 hover:shadow-xl"
-              >
-                <div className="relative aspect-[4/3] overflow-hidden">
-                  <img
-                    src={s.image}
-                    alt={s.title}
-                    loading="lazy"
-                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
-                </div>
-                <div className="flex flex-1 flex-col p-6">
-                  <h3 className="font-display text-2xl">{s.title}</h3>
-                  <p className="mt-2 text-sm text-muted-foreground">{s.short}</p>
-                  <span className="mt-auto pt-4 inline-flex items-center gap-1.5 text-sm font-medium text-primary">
-                    Explore
-                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                  </span>
-                </div>
-              </Link>
-            ))}
+          <div className="mx-auto max-w-5xl space-y-16 md:space-y-24">
+            {allServices.map((s) => {
+              const meta = serviceCtaMeta[s.slug];
+              const viewLabel = meta?.viewLabel ?? `View ${s.title}`;
+              return (
+                <article
+                  key={s.slug}
+                  className="grid gap-8 md:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] md:items-center md:gap-12"
+                >
+                  <Link
+                    to="/wedding-services/$slug"
+                    params={{ slug: s.slug }}
+                    className="group relative block aspect-[5/4] overflow-hidden rounded-sm shadow-md"
+                  >
+                    <img
+                      src={s.image}
+                      alt={s.title}
+                      loading="lazy"
+                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                  </Link>
+                  <div>
+                    <h3 className="font-display text-3xl md:text-4xl">{s.title}</h3>
+                    <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+                      {s.description}
+                    </p>
+                    {s.perfectFor && s.perfectFor.length > 0 && (
+                      <div className="mt-6">
+                        <p className="text-xs font-medium uppercase tracking-[0.2em] text-primary">
+                          Perfect for
+                        </p>
+                        <ul className="mt-3 grid gap-1.5 text-sm text-muted-foreground sm:grid-cols-2">
+                          {s.perfectFor.map((p) => (
+                            <li key={p} className="flex items-start gap-2">
+                              <Check className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
+                              {p}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                    <div className="mt-8">
+                      <Button asChild variant="outline" className="uppercase tracking-[0.18em]">
+                        <Link
+                          to="/wedding-services/$slug"
+                          params={{ slug: s.slug }}
+                        >
+                          {viewLabel}
+                        </Link>
+                      </Button>
+                    </div>
+                  </div>
+                </article>
+              );
+            })}
           </div>
         </div>
       </section>
