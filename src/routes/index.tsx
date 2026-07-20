@@ -6,6 +6,7 @@ import { SectionHeader } from "@/components/section-header";
 import { ServiceIconRow } from "@/components/service-icon-row";
 import { ServicesCarousel } from "@/components/services-carousel";
 import { FaqAccordion } from "@/components/faq-accordion";
+import { WeddingVenuesShowcase } from "@/components/wedding-venues-showcase";
 import { TestimonialsCarousel } from "@/components/testimonials-carousel";
 import { BlogPreviewGrid } from "@/components/blog-preview-grid";
 import { flagshipServices, specialties } from "@/lib/content/services";
