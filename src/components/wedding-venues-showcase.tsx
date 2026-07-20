@@ -56,7 +56,7 @@ export function WeddingVenuesShowcase() {
           <Button
             asChild
             variant="outline"
-            className="border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground"
+            className="h-14 rounded-none border-primary/30 px-8 text-sm font-medium text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
           >
             <Link to="/venues">View All Venues</Link>
           </Button>
