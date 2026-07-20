@@ -93,24 +93,6 @@ export const serviceDetails: Record<string, ServiceDetail> = {
     ],
     inclusionsOutro:
       "We create elegant beachfront setups that turn your seaside vision into a fully realised celebration.",
-    packagesTitle: "Beach Wedding Packages",
-    packages: [
-      {
-        title: "Intimate Beach Wedding",
-        price: "Starting from AED 24,999",
-        body: "Perfect for private ceremonies and small beach celebrations with elegant décor, floral arrangements, ceremony setup, and essential coordination services.",
-      },
-      {
-        title: "Luxury Beach Wedding",
-        price: "Starting from AED 79,999",
-        body: "Designed for grand beachfront weddings with premium décor, entertainment, catering, photography, lighting, and complete event management.",
-      },
-      {
-        title: "Destination Beach Wedding",
-        price: "Starting from AED 149,999",
-        body: "Complete destination planning for couples travelling to the UAE for a luxurious multi-day beach wedding experience with fully customised arrangements.",
-      },
-    ],
     faqs: commonFaqs("Beach weddings", "beach wedding"),
   },
   "desert-wedding-dubai": {
