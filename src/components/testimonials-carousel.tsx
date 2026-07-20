@@ -1,22 +1,41 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 import type { Testimonial } from "@/lib/content/testimonials";
 
 export function TestimonialsCarousel({ items }: { items: Testimonial[] }) {
   const [index, setIndex] = useState(0);
+  const [animate, setAnimate] = useState(true);
   const [paused, setPaused] = useState(false);
   const total = items.length;
+  const looped = [...items, ...items];
 
-  const prev = () => setIndex((i) => (i - 1 + total) % total);
-  const next = () => setIndex((i) => (i + 1) % total);
+  const step = useCallback((dir: 1 | -1) => {
+    setAnimate(true);
+    setIndex((i) => i + dir);
+  }, []);
 
   useEffect(() => {
     if (paused || total <= 1) return;
-    const id = window.setInterval(() => {
-      setIndex((i) => (i + 1) % total);
-    }, 6000);
+    const id = window.setInterval(() => step(1), 5500);
     return () => window.clearInterval(id);
-  }, [paused, total]);
+  }, [paused, total, step]);
+
+  const handleTransitionEnd = () => {
+    if (index >= total) {
+      setAnimate(false);
+      setIndex(0);
+    } else if (index < 0) {
+      setAnimate(false);
+      setIndex(total - 1);
+    }
+  };
+
+  useEffect(() => {
+    if (!animate) {
+      const id = requestAnimationFrame(() => setAnimate(true));
+      return () => cancelAnimationFrame(id);
+    }
+  }, [animate]);
 
   return (
     <div
@@ -26,10 +45,11 @@ export function TestimonialsCarousel({ items }: { items: Testimonial[] }) {
     >
       <div className="overflow-hidden">
         <div
-          className="flex transition-transform duration-500 ease-out"
+          className={"flex " + (animate ? "transition-transform duration-500 ease-out" : "")}
           style={{ transform: `translateX(-${index * 100}%)` }}
+          onTransitionEnd={handleTransitionEnd}
         >
-          {items.map((t, i) => (
+          {looped.map((t, i) => (
             <figure key={i} className="w-full shrink-0 px-2">
               <div className="rounded-sm border border-border bg-card p-8 md:p-12">
                 <div className="flex gap-1 text-accent">
@@ -58,7 +78,7 @@ export function TestimonialsCarousel({ items }: { items: Testimonial[] }) {
       <button
         type="button"
         aria-label="Previous testimonial"
-        onClick={prev}
+        onClick={() => step(-1)}
         className="absolute left-2 top-1/2 -translate-y-1/2 z-10 rounded-full border border-primary-foreground/30 bg-primary-foreground/10 backdrop-blur p-2.5 text-primary-foreground transition-colors hover:bg-primary-foreground hover:text-primary md:-left-4"
       >
         <ChevronLeft className="h-5 w-5" />
@@ -66,7 +86,7 @@ export function TestimonialsCarousel({ items }: { items: Testimonial[] }) {
       <button
         type="button"
         aria-label="Next testimonial"
-        onClick={next}
+        onClick={() => step(1)}
         className="absolute right-2 top-1/2 -translate-y-1/2 z-10 rounded-full border border-primary-foreground/30 bg-primary-foreground/10 backdrop-blur p-2.5 text-primary-foreground transition-colors hover:bg-primary-foreground hover:text-primary md:-right-4"
       >
         <ChevronRight className="h-5 w-5" />
@@ -81,7 +101,7 @@ export function TestimonialsCarousel({ items }: { items: Testimonial[] }) {
             onClick={() => setIndex(i)}
             className={
               "h-1.5 rounded-full transition-all " +
-              (i === index ? "w-8 bg-accent" : "w-1.5 bg-primary-foreground/30")
+              (((index % total) + total) % total === i ? "w-8 bg-accent" : "w-1.5 bg-primary-foreground/30")
             }
           />
         ))}
