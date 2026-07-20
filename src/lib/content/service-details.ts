@@ -174,9 +174,18 @@ export const serviceDetails: Record<string, ServiceDetail> = {
   },
   "south-asian-weddings": {
     heroSubtitle: "Mehndi, Sangeet, Pheras, Walima — planned with heart.",
+    introHeading: "South Asian Weddings Dubai",
     intro: [
-      "Celebrate your traditions with a vibrant South Asian wedding in Dubai, planned by a team who understands the rhythm, rituals, and family dynamics of a multi-day celebration. We plan Mehndi, Sangeet, Haldi, Pheras, Nikah, Walima, and grand receptions across the UAE.",
-      "From bespoke décor and choreographed entrances to catering that honours your cuisine and coordination that respects your customs, we design celebrations that feel unmistakably rooted in your heritage.",
+      "Celebrate vibrant South Asian weddings in Dubai with bespoke wedding planning services tailored to your traditions, customs, and celebrations. As an experienced wedding organizer UAE and dedicated wedding coordinator, we specialize in luxurious multi-day celebrations including Mehndi, Sangeet, Pheras, Walima, and grand receptions. From elegant wedding decoration Dubai to seamless event coordination, we create unforgettable weddings that beautifully reflect your heritage.",
+    ],
+    idealFor: [
+      "North Indian Weddings",
+      "Pakistani Weddings",
+      "South Indian Weddings",
+      "Tamil Weddings",
+      "Sikh Weddings",
+      "Gujarati Weddings",
+      "Multicultural Weddings",
     ],
     whyChooseTitle: "Why Choose Us for a South Asian Wedding",
     whyChoose: commonWhyChoose("South Asian Weddings", "South Asian weddings"),
