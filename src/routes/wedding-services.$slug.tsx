@@ -115,47 +115,47 @@ function WeddingServicePage() {
       {/* Intro */}
       <section className="section-y">
         <div className="container-page">
-          <article className="grid gap-10 md:grid-cols-2 md:items-center md:gap-12">
-            <div className="relative aspect-[4/3] overflow-hidden rounded-sm shadow-lg">
+          <article className="mx-auto max-w-4xl">
+            <p className="eyebrow">Overview</p>
+            <h2 className="mt-3 font-display text-3xl md:text-4xl">
+              {detail.introHeading ?? `Create Your Dream ${service.title}`}
+            </h2>
+            <div className="mt-6 space-y-4">
+              {detail.intro.map((p: string, i: number) => (
+                <p
+                  key={i}
+                  className="text-base leading-relaxed text-muted-foreground"
+                >
+                  {p}
+                </p>
+              ))}
+            </div>
+            <div className="relative mt-10 aspect-[16/9] overflow-hidden rounded-sm shadow-lg">
               <img
                 src={service.image}
                 alt={service.title}
                 className="h-full w-full object-cover"
               />
             </div>
-            <div>
-              <p className="eyebrow">Overview</p>
-              <h2 className="mt-3 font-display text-3xl md:text-4xl">
-                {detail.introHeading ?? `Create Your Dream ${service.title}`}
-              </h2>
-              {detail.intro.map((p: string, i: number) => (
-                <p
-                  key={i}
-                  className="mt-4 text-base leading-relaxed text-muted-foreground"
-                >
-                  {p}
-                </p>
-              ))}
-              {(detail.idealFor ?? service.perfectFor) && (
-                <div className="mt-6">
-                  <p className="text-sm font-medium">
-                    {detail.idealFor ? "Ideal for:" : "Perfect for:"}
-                  </p>
-                  <ul className="mt-2 grid gap-1.5 text-sm text-muted-foreground sm:grid-cols-2">
-                    {(detail.idealFor ?? service.perfectFor)!.map((p: string) => (
-                      <li key={p} className="flex items-start gap-2">
-                        <Check className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
-                        {p}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
+            {(detail.idealFor ?? service.perfectFor) && (
               <div className="mt-8">
-                <Button asChild>
-                  <Link to="/portfolio">View Portfolio</Link>
-                </Button>
+                <p className="text-sm font-medium">
+                  {detail.idealFor ? "Ideal for:" : "Perfect for:"}
+                </p>
+                <ul className="mt-3 grid gap-1.5 text-sm text-muted-foreground sm:grid-cols-2">
+                  {(detail.idealFor ?? service.perfectFor)!.map((p: string) => (
+                    <li key={p} className="flex items-start gap-2">
+                      <Check className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
+                      {p}
+                    </li>
+                  ))}
+                </ul>
               </div>
+            )}
+            <div className="mt-8">
+              <Button asChild>
+                <Link to="/portfolio">View Portfolio</Link>
+              </Button>
             </div>
           </article>
         </div>
