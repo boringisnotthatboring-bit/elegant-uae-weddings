@@ -1,3 +1,4 @@
+import { useEffect, useMemo, useState } from "react";
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { ArrowRight, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -82,6 +83,46 @@ function ServiceNotFound() {
 
 function WeddingServicePage() {
   const { service, meta, detail } = Route.useLoaderData();
+
+  const optionalFeatureSection = {
+    enabled: true, // Change to false whenever this section should be hidden.
+    image: service.image,
+    title: `${service.title} in Dubai`,
+    intro: detail.inclusionsIntro,
+    items: detail.inclusions.slice(0, 6),
+    outro: detail.inclusionsOutro,
+  };
+
+  const otherServices = useMemo(
+    () => allServices.filter((item) => item.slug !== service.slug),
+    [service.slug],
+  );
+
+  const serviceSlides = useMemo(() => {
+    const slides = [];
+    for (let index = 0; index < otherServices.length; index += 3) {
+      slides.push(otherServices.slice(index, index + 3));
+    }
+    return slides;
+  }, [otherServices]);
+
+  const [activeServiceSlide, setActiveServiceSlide] = useState(0);
+
+  useEffect(() => {
+    setActiveServiceSlide(0);
+  }, [service.slug]);
+
+  useEffect(() => {
+    if (serviceSlides.length <= 1) return;
+
+    const timer = window.setInterval(() => {
+      setActiveServiceSlide((current) =>
+        current === serviceSlides.length - 1 ? 0 : current + 1,
+      );
+    }, 4500);
+
+    return () => window.clearInterval(timer);
+  }, [serviceSlides.length]);
 
   return (
     <>
@@ -186,6 +227,54 @@ function WeddingServicePage() {
         </div>
       </section>
 
+      {optionalFeatureSection.enabled && (
+        <section className="section-y bg-[#c8a969] text-white">
+          <div className="container-page">
+            <div className="grid gap-10 md:grid-cols-2 md:items-center md:gap-12">
+              <div className="relative aspect-[4/3] overflow-hidden">
+                <img
+                  src={optionalFeatureSection.image}
+                  alt={optionalFeatureSection.title}
+                  className="h-full w-full object-cover"
+                />
+              </div>
+
+              <div>
+                <h2 className="font-display text-3xl leading-tight md:text-4xl">
+                  {optionalFeatureSection.title}
+                </h2>
+                <p className="mt-5 text-base leading-relaxed text-white/95">
+                  {optionalFeatureSection.intro}
+                </p>
+                <ul className="mt-3 space-y-2 pl-5 text-base leading-relaxed text-white/95">
+                  {optionalFeatureSection.items.map((item: string) => (
+                    <li key={item} className="list-disc">
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+                {optionalFeatureSection.outro && (
+                  <p className="mt-3 text-base leading-relaxed text-white/95">
+                    {optionalFeatureSection.outro}
+                  </p>
+                )}
+                <div className="mt-7">
+                  <Button
+                    asChild
+                    variant="outline"
+                    className="rounded-none border-white bg-transparent text-white hover:bg-white hover:text-[#9f824b]"
+                  >
+                    <Link to="/contact" search={{ type: meta.contactType }}>
+                      Contact Us Now
+                    </Link>
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Inclusions */}
       <section className="section-y">
         <div className="container-page">
@@ -234,45 +323,72 @@ function WeddingServicePage() {
       {/* Other services */}
       <section className="section-y">
         <div className="container-page">
-          <div className="flex items-end justify-between gap-4">
-            <div>
-              <p className="eyebrow">Services</p>
-              <h2 className="mt-3 font-display text-3xl md:text-4xl">
-                Other Wedding Services
-              </h2>
+          <div className="text-center">
+            <p className="eyebrow">Services</p>
+            <h2 className="mt-3 font-display text-3xl md:text-4xl">
+              Other Wedding Services
+            </h2>
+            <div className="mt-5">
+              <Button asChild variant="outline" className="rounded-none">
+                <Link to="/services">View All Services</Link>
+              </Button>
             </div>
-            <Button asChild variant="outline" className="rounded-none">
-              <Link to="/services">View All Services</Link>
-            </Button>
           </div>
-          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {allServices
-              .filter((s) => s.slug !== service.slug)
-              .slice(0, 3)
-              .map((s) => (
-                <Link
-                  key={s.slug}
-                  to="/wedding-services/$slug"
-                  params={{ slug: s.slug }}
-                  className="group overflow-hidden rounded-sm border border-border bg-card transition-all hover:-translate-y-1 hover:shadow-lg"
-                >
-                  <div className="relative aspect-[4/3] overflow-hidden">
-                    <img
-                      src={s.image}
-                      alt={s.title}
-                      loading="lazy"
-                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
+
+          <div className="mt-8 overflow-hidden">
+            <div
+              className="flex transition-transform duration-700 ease-in-out"
+              style={{ transform: `translateX(-${activeServiceSlide * 100}%)` }}
+            >
+              {serviceSlides.map((slide, slideIndex) => (
+                <div key={slideIndex} className="w-full shrink-0">
+                  <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                    {slide.map((item) => (
+                      <Link
+                        key={item.slug}
+                        to="/wedding-services/$slug"
+                        params={{ slug: item.slug }}
+                        className="group overflow-hidden rounded-sm border border-border bg-card transition-all hover:-translate-y-1 hover:shadow-lg"
+                      >
+                        <div className="relative aspect-[4/3] overflow-hidden">
+                          <img
+                            src={item.image}
+                            alt={item.title}
+                            loading="lazy"
+                            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                          />
+                        </div>
+                        <div className="p-5">
+                          <h4 className="font-display text-lg">{item.title}</h4>
+                          <p className="mt-1.5 text-sm text-muted-foreground">
+                            {item.short}
+                          </p>
+                        </div>
+                      </Link>
+                    ))}
                   </div>
-                  <div className="p-5">
-                    <h4 className="font-display text-lg">{s.title}</h4>
-                    <p className="mt-1.5 text-sm text-muted-foreground">
-                      {s.short}
-                    </p>
-                  </div>
-                </Link>
+                </div>
               ))}
+            </div>
           </div>
+
+          {serviceSlides.length > 1 && (
+            <div className="mt-6 flex justify-center gap-2">
+              {serviceSlides.map((_, index) => (
+                <button
+                  key={index}
+                  type="button"
+                  onClick={() => setActiveServiceSlide(index)}
+                  aria-label={`Show service slide ${index + 1}`}
+                  className={`h-2.5 rounded-full transition-all ${
+                    activeServiceSlide === index
+                      ? "w-8 bg-primary"
+                      : "w-2.5 bg-border hover:bg-muted-foreground/50"
+                  }`}
+                />
+              ))}
+            </div>
+          )}
         </div>
       </section>
 
