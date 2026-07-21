@@ -21,6 +21,41 @@ import {
 } from "@/lib/content/service-details";
 import servicesHero from "@/assets/services-hero.jpg";
 
+const beachWeddingFaqs: ServiceFaq[] = [
+  {
+    q: "Which are the best beaches in Dubai for a luxury wedding?",
+    a: "We help couples choose from Dubai's most exclusive beach wedding venues, including private beachfront resorts and luxury hotels that offer stunning sea views and exceptional hospitality.",
+  },
+  {
+    q: "Can a beach wedding be customised to our culture and traditions?",
+    a: "Absolutely. Whether you're planning a Western ceremony, South Asian celebration, Emirati wedding, or a multicultural event, Awesome Events Weddings creates personalised beach weddings that honour your traditions.",
+  },
+  {
+    q: "What happens if the weather changes on our wedding day?",
+    a: "Our experienced team always prepares a backup plan, including indoor or covered venue options where available, ensuring your Luxury Beach Wedding runs smoothly regardless of the weather.",
+  },
+  {
+    q: "Are Palm Jumeirah weddings suitable for destination couples?",
+    a: "Absolutely. Palm Jumeirah is one of the most popular locations for destination weddings in Dubai, offering luxury accommodation, world-class hospitality, and stunning beachfront settings for both ceremonies and receptions.",
+  },
+  {
+    q: "Can you arrange a private beachfront wedding reception?",
+    a: "Yes. We can organise exclusive beachfront receptions with bespoke décor, gourmet catering, live entertainment, and luxury seating for an unforgettable celebration by the sea.",
+  },
+  {
+    q: "Do you decorate the ceremony and reception areas?",
+    a: "Yes. Our team provides bespoke Wedding Decoration Dubai, including floral arches, aisle styling, elegant reception décor, ambient lighting, and customised beach-inspired designs.",
+  },
+  {
+    q: "Can you help with guest accommodation and transportation?",
+    a: "Yes. For Destination Weddings, we assist with hotel bookings, airport transfers, guest transportation, and logistics to ensure a seamless experience for everyone attending.",
+  },
+  {
+    q: "Can we include fireworks or a drone show at our beach wedding?",
+    a: "Yes. Subject to venue approvals and local regulations, we can arrange spectacular fireworks, synchronized drone shows, and other luxury entertainment to make your celebration truly unforgettable.",
+  },
+];
+
 export const Route = createFileRoute("/wedding-services/$slug")({
   loader: ({ params }) => {
     const service = getServiceBySlug(params.slug);
@@ -83,6 +118,10 @@ function ServiceNotFound() {
 
 function WeddingServicePage() {
   const { service, meta, detail } = Route.useLoaderData();
+
+  const faqsToDisplay = service.slug.toLowerCase().includes("beach")
+    ? beachWeddingFaqs
+    : detail.faqs;
 
   const optionalFeatureSection = {
     enabled: true, // Change to false whenever this section should be hidden.
@@ -403,7 +442,7 @@ function WeddingServicePage() {
           </div>
           <div className="mt-8 max-w-3xl">
             <Accordion type="single" collapsible className="w-full">
-              {detail.faqs.map((faq: ServiceFaq, i: number) => (
+              {faqsToDisplay.map((faq: ServiceFaq, i: number) => (
                 <AccordionItem key={i} value={`item-${i}`}>
                   <AccordionTrigger className="text-left">
                     {faq.q}

@@ -9,51 +9,21 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as WeddingGuideRouteImport } from './routes/wedding-guide'
-import { Route as VenuesRouteImport } from './routes/venues'
-import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
-import { Route as ServicesRouteImport } from './routes/services'
-import { Route as ProcessRouteImport } from './routes/process'
-import { Route as PrivacyRouteImport } from './routes/privacy'
-import { Route as PortfolioRouteImport } from './routes/portfolio'
-import { Route as ContactRouteImport } from './routes/contact'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as WeddingServicesSlugRouteImport } from './routes/wedding-services.$slug'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as PortfolioRouteImport } from './routes/portfolio'
+import { Route as PrivacyRouteImport } from './routes/privacy'
+import { Route as ProcessRouteImport } from './routes/process'
+import { Route as ServicesRouteImport } from './routes/services'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as VenuesRouteImport } from './routes/venues'
+import { Route as WeddingGuideRouteImport } from './routes/wedding-guide'
 import { Route as WeddingGuideSlugRouteImport } from './routes/wedding-guide.$slug'
+import { Route as WeddingServicesSlugRouteImport } from './routes/wedding-services.$slug'
 
-const WeddingGuideRoute = WeddingGuideRouteImport.update({
-  id: '/wedding-guide',
-  path: '/wedding-guide',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const VenuesRoute = VenuesRouteImport.update({
-  id: '/venues',
-  path: '/venues',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
-  id: '/sitemap.xml',
-  path: '/sitemap.xml',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ServicesRoute = ServicesRouteImport.update({
-  id: '/services',
-  path: '/services',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ProcessRoute = ProcessRouteImport.update({
-  id: '/process',
-  path: '/process',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PrivacyRoute = PrivacyRouteImport.update({
-  id: '/privacy',
-  path: '/privacy',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PortfolioRoute = PortfolioRouteImport.update({
-  id: '/portfolio',
-  path: '/portfolio',
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactRoute = ContactRouteImport.update({
@@ -61,20 +31,50 @@ const ContactRoute = ContactRouteImport.update({
   path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
+const PortfolioRoute = PortfolioRouteImport.update({
+  id: '/portfolio',
+  path: '/portfolio',
   getParentRoute: () => rootRouteImport,
 } as any)
-const WeddingServicesSlugRoute = WeddingServicesSlugRouteImport.update({
-  id: '/wedding-services/$slug',
-  path: '/wedding-services/$slug',
+const PrivacyRoute = PrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProcessRoute = ProcessRouteImport.update({
+  id: '/process',
+  path: '/process',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesRoute = ServicesRouteImport.update({
+  id: '/services',
+  path: '/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const VenuesRoute = VenuesRouteImport.update({
+  id: '/venues',
+  path: '/venues',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WeddingGuideRoute = WeddingGuideRouteImport.update({
+  id: '/wedding-guide',
+  path: '/wedding-guide',
   getParentRoute: () => rootRouteImport,
 } as any)
 const WeddingGuideSlugRoute = WeddingGuideSlugRouteImport.update({
   id: '/$slug',
   path: '/$slug',
   getParentRoute: () => WeddingGuideRoute,
+} as any)
+const WeddingServicesSlugRoute = WeddingServicesSlugRouteImport.update({
+  id: '/wedding-services/$slug',
+  path: '/wedding-services/$slug',
+  getParentRoute: () => rootRouteImport,
 } as any)
 
 export interface FileRoutesByFullPath {
@@ -174,53 +174,11 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/wedding-guide': {
-      id: '/wedding-guide'
-      path: '/wedding-guide'
-      fullPath: '/wedding-guide'
-      preLoaderRoute: typeof WeddingGuideRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/venues': {
-      id: '/venues'
-      path: '/venues'
-      fullPath: '/venues'
-      preLoaderRoute: typeof VenuesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/sitemap.xml': {
-      id: '/sitemap.xml'
-      path: '/sitemap.xml'
-      fullPath: '/sitemap.xml'
-      preLoaderRoute: typeof SitemapDotxmlRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/services': {
-      id: '/services'
-      path: '/services'
-      fullPath: '/services'
-      preLoaderRoute: typeof ServicesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/process': {
-      id: '/process'
-      path: '/process'
-      fullPath: '/process'
-      preLoaderRoute: typeof ProcessRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/privacy': {
-      id: '/privacy'
-      path: '/privacy'
-      fullPath: '/privacy'
-      preLoaderRoute: typeof PrivacyRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/portfolio': {
-      id: '/portfolio'
-      path: '/portfolio'
-      fullPath: '/portfolio'
-      preLoaderRoute: typeof PortfolioRouteImport
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact': {
@@ -230,18 +188,53 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
+    '/portfolio': {
+      id: '/portfolio'
+      path: '/portfolio'
+      fullPath: '/portfolio'
+      preLoaderRoute: typeof PortfolioRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/wedding-services/$slug': {
-      id: '/wedding-services/$slug'
-      path: '/wedding-services/$slug'
-      fullPath: '/wedding-services/$slug'
-      preLoaderRoute: typeof WeddingServicesSlugRouteImport
+    '/privacy': {
+      id: '/privacy'
+      path: '/privacy'
+      fullPath: '/privacy'
+      preLoaderRoute: typeof PrivacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/process': {
+      id: '/process'
+      path: '/process'
+      fullPath: '/process'
+      preLoaderRoute: typeof ProcessRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services': {
+      id: '/services'
+      path: '/services'
+      fullPath: '/services'
+      preLoaderRoute: typeof ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/venues': {
+      id: '/venues'
+      path: '/venues'
+      fullPath: '/venues'
+      preLoaderRoute: typeof VenuesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/wedding-guide': {
+      id: '/wedding-guide'
+      path: '/wedding-guide'
+      fullPath: '/wedding-guide'
+      preLoaderRoute: typeof WeddingGuideRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/wedding-guide/$slug': {
@@ -250,6 +243,13 @@ declare module '@tanstack/react-router' {
       fullPath: '/wedding-guide/$slug'
       preLoaderRoute: typeof WeddingGuideSlugRouteImport
       parentRoute: typeof WeddingGuideRoute
+    }
+    '/wedding-services/$slug': {
+      id: '/wedding-services/$slug'
+      path: '/wedding-services/$slug'
+      fullPath: '/wedding-services/$slug'
+      preLoaderRoute: typeof WeddingServicesSlugRouteImport
+      parentRoute: typeof rootRouteImport
     }
   }
 }
