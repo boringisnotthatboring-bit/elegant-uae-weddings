@@ -72,9 +72,19 @@ const commonFaqs = (kind: string, kindLower: string): ServiceFaq[] => [
 export const serviceDetails: Record<string, ServiceDetail> = {
   "beach-wedding-dubai": {
     heroSubtitle: "White sands, sunset vows, endless Arabian Gulf.",
+    introHeading: "Luxury Beach Weddings",
     intro: [
-      "Celebrate your love with a breathtaking beach wedding in Dubai — designed with elegance, romance, and unforgettable seaside views. At Awesome Events Weddings, we specialise in luxury beach wedding planning, destination beach ceremonies, and intimate beachfront celebrations tailored to your vision, style, and budget.",
-      "From premium beachfront venues and elegant décor to catering, entertainment, photography, and complete event coordination, our experienced wedding planners handle every detail with precision and care — ensuring a seamless, stress-free celebration from your first sunrise walk-through to the final sparkler send-off.",
+      'Say "I Do" by the Sea with a Celebration Designed Just for You.',
+      "Celebrate your love with a breathtaking Luxury Beach Wedding planned by Awesome Events Weddings. As a trusted Wedding Planner Dubai and Wedding Organizer UAE, we create elegant beachfront celebrations across Dubai, Abu Dhabi, Ras Al Khaimah, and the UAE's most exclusive coastal venues. Whether you envision an intimate sunset ceremony or a grand Destination Wedding, our bespoke Wedding Planning Services ensure every detail is beautifully curated.",
+      "Every celebration is thoughtfully designed to reflect your love story while creating unforgettable memories by the sea.",
+    ],
+    idealFor: [
+      "Exclusive beach wedding venues and luxury beachfront resorts",
+      "Dedicated Wedding Coordinator and end-to-end planning",
+      "Elegant Wedding Decoration Dubai, floral styling, ceremony arches, and reception décor",
+      "Luxury lighting, sound, staging, and beachfront seating",
+      "Photography, videography, live entertainment, fireworks, and synchronized drone shows",
+      "Guest accommodation, travel coordination, and personalised wedding experiences",
     ],
     whyChooseTitle: "Why Choose Us for a Beach Wedding in Dubai",
     whyChoose: commonWhyChoose("Beach Weddings", "luxury beach weddings"),
@@ -92,6 +102,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       "We create elegant beachfront setups that turn your seaside vision into a fully realised celebration.",
     faqs: commonFaqs("Beach weddings", "beach wedding"),
   },
+
   "desert-wedding-dubai": {
     heroSubtitle: "Golden dunes, Arabian nights, cinematic sunsets.",
     intro: [
