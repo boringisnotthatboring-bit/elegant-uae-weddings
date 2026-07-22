@@ -411,13 +411,19 @@ function WeddingServicePage() {
             </h2>
           </div>
           <div className="mt-8 max-w-3xl">
-            <Accordion type="single" collapsible className="w-full">
+            <Accordion
+              type="single"
+              collapsible
+              className="w-full font-['Times_New_Roman']"
+            >
               {faqsToDisplay.map((faq: ServiceFaq, i: number) => (
                 <AccordionItem key={i} value={`item-${i}`}>
-                  <AccordionTrigger className="text-left">
+                  <AccordionTrigger className="text-left font-['Times_New_Roman'] text-xl leading-relaxed md:text-2xl">
                     {faq.q}
                   </AccordionTrigger>
-                  <AccordionContent>{faq.a}</AccordionContent>
+                  <AccordionContent className="font-['Times_New_Roman'] text-lg leading-relaxed md:text-xl">
+                    {faq.a}
+                  </AccordionContent>
                 </AccordionItem>
               ))}
             </Accordion>

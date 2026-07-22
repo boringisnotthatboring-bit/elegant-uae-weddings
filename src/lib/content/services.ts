@@ -28,7 +28,7 @@ export const flagshipServices: ServiceItem[] = [
       "Luxury beachfront celebrations",
     ],
     cta: "Explore Luxury Beach Weddings",
-    image: img("photo-1519741497674-611481863552"),
+    image: 'beach-wedding-1.webp',
   },
   {
     slug: "desert-wedding-dubai",
@@ -43,7 +43,7 @@ export const flagshipServices: ServiceItem[] = [
       "Private desert celebrations",
     ],
     cta: "Explore Desert Weddings",
-    image: img("photo-1583939003579-730e3918a45a"),
+    image: '/A4-E4.webp',
   },
   {
     slug: "intimate-elopements",

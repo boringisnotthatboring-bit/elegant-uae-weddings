@@ -8,15 +8,13 @@ import { ServicesCarousel } from "@/components/services-carousel";
 import { FaqAccordion } from "@/components/faq-accordion";
 import { WeddingVenuesShowcase } from "@/components/wedding-venues-showcase";
 import { TestimonialsCarousel } from "@/components/testimonials-carousel";
-import { BlogPreviewGrid } from "@/components/blog-preview-grid";
 import { flagshipServices, specialties } from "@/lib/content/services";
 import { faqItems } from "@/lib/content/faqs";
 import { testimonials } from "@/lib/content/testimonials";
-import { blogPosts } from "@/lib/content/blog";
 import { company } from "@/lib/content/nav";
-import uaeMapAsset from "@/assets/uae-map-final.png.asset.json";
-import whyChooseUs1 from "@/assets/why-choose-us-1.png.asset.json";
-import whyChooseUs2 from "@/assets/why-choose-us-2.png.asset.json";
+import uaeMapAsset from "@/assets/uae-map-final.webp";
+import whyChooseUs1 from "@/assets/why-choose-us-1.webp";
+import whyChooseUs2 from "@/assets/why-choose-us-2.webp";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -44,7 +42,6 @@ const trustStats = [
   { value: "300+", label: "Happy Couples" },
 ];
 
-const publishedPosts = blogPosts.filter((p) => p.status === "published").slice(0, 4);
 
 function HomePage() {
   return (
@@ -166,7 +163,7 @@ function HomePage() {
               className="pointer-events-none absolute inset-x-6 bottom-2 h-10 rounded-[50%] bg-primary/20 blur-2xl"
             />
             <img
-              src={uaeMapAsset.url}
+              src={uaeMapAsset}
               alt="Map of the UAE with all seven emirates marked — Dubai, Abu Dhabi, Sharjah, Ajman, Umm Al Quwain, Ras Al Khaimah, and Fujairah"
               width={1664}
               height={936}
@@ -229,13 +226,13 @@ function HomePage() {
           </div>
           <div className="flex flex-col items-end gap-4">
             <img
-              src={whyChooseUs1.url}
+              src={whyChooseUs1}
               alt="Happy couple embracing in a rose garden at golden hour"
               loading="lazy"
               className="aspect-[4/3] w-full max-w-md border border-border object-cover shadow-lg"
             />
             <img
-              src={whyChooseUs2.url}
+              src={whyChooseUs2}
               alt="Elegant outdoor garden ceremony with floral arch and gold chairs"
               loading="lazy"
               className="aspect-[4/3] w-full max-w-md border border-border object-cover shadow-lg"
@@ -256,25 +253,6 @@ function HomePage() {
           />
           <div className="mt-12">
             <TestimonialsCarousel items={testimonials} />
-          </div>
-        </div>
-      </section>
-
-      {/* Wedding Guide preview */}
-      <section className="section-y">
-        <div className="container-page">
-          <div className="flex flex-wrap items-end justify-between gap-6">
-            <SectionHeader
-              eyebrow="Wedding Guide"
-              title="Stories, guides & inspiration"
-              body="Expert planning advice, real venue guides, and answers to every question couples ask us."
-            />
-            <Button asChild variant="outline">
-              <Link to="/wedding-guide">Read the guide <ArrowRight className="ml-2 h-4 w-4" /></Link>
-            </Button>
-          </div>
-          <div className="mt-12">
-            <BlogPreviewGrid posts={publishedPosts} />
           </div>
         </div>
       </section>
