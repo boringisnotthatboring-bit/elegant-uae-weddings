@@ -1,7 +1,3 @@
-// Extended detail content for each dedicated wedding service page.
-// Structure inspired by weddingplannerdubai.ae/beach-wedding-dubai/ but with
-// our own copy, tone, and services. Keyed by the same slug as services.ts.
-
 export interface WhyChooseItem {
   title: string;
   body: string;
@@ -86,8 +82,8 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       "Photography, videography, live entertainment, fireworks, and synchronized drone shows",
       "Guest accommodation, travel coordination, and personalised wedding experiences",
     ],
-    whyChooseTitle: "Why Choose Us for a Beach Wedding in Dubai",
-    whyChoose: commonWhyChoose("Beach Weddings", "luxury beach weddings"),
+    whyChooseTitle: "Why Choose Us for a Luxury Beach Wedding in Dubai",
+    whyChoose: commonWhyChoose("Luxury Beach Weddings", "luxury beach weddings"),
     inclusionsTitle: "Beach Wedding Decoration & Styling",
     inclusionsIntro: "Our beach wedding decoration services include:",
     inclusions: [
@@ -100,14 +96,48 @@ export const serviceDetails: Record<string, ServiceDetail> = {
     ],
     inclusionsOutro:
       "We create elegant beachfront setups that turn your seaside vision into a fully realised celebration.",
-    faqs: commonFaqs("Beach weddings", "beach wedding"),
+    faqs: [
+      {
+        q: "Which are the best beaches in Dubai for a luxury wedding?",
+        a: "We help couples choose from Dubai's most exclusive beach wedding venues, including private beachfront resorts and luxury hotels that offer stunning sea views and exceptional hospitality.",
+      },
+      {
+        q: "Can a beach wedding be customised to our culture and traditions?",
+        a: "Absolutely. Whether you're planning a Western ceremony, South Asian celebration, Emirati wedding, or a multicultural event, Awesome Events Weddings creates personalised beach weddings that honour your traditions.",
+      },
+      {
+        q: "What happens if the weather changes on our wedding day?",
+        a: "Our experienced team always prepares a backup plan, including indoor or covered venue options where available, ensuring your Luxury Beach Wedding runs smoothly regardless of the weather.",
+      },
+      {
+        q: "Are Palm Jumeirah weddings suitable for destination couples?",
+        a: "Absolutely. Palm Jumeirah is one of the most popular locations for destination weddings in Dubai, offering luxury accommodation, world-class hospitality, and stunning beachfront settings for both ceremonies and receptions.",
+      },
+      {
+        q: "Can you arrange a private beachfront wedding reception?",
+        a: "Yes. We can organise exclusive beachfront receptions with bespoke décor, gourmet catering, live entertainment, and luxury seating for an unforgettable celebration by the sea.",
+      },
+      {
+        q: "Do you decorate the ceremony and reception areas?",
+        a: "Yes. Our team provides bespoke Wedding Decoration Dubai, including floral arches, aisle styling, elegant reception décor, ambient lighting, and customised beach-inspired designs.",
+      },
+      {
+        q: "Can you help with guest accommodation and transportation?",
+        a: "Yes. For Destination Weddings, we assist with hotel bookings, airport transfers, guest transportation, and logistics to ensure a seamless experience for everyone attending.",
+      },
+      {
+        q: "Can we include fireworks or a drone show at our beach wedding?",
+        a: "Yes. Subject to venue approvals and local regulations, we can arrange spectacular fireworks, synchronized drone shows, and other luxury entertainment to make your celebration truly unforgettable.",
+      },
+    ],
   },
 
   "desert-wedding-dubai": {
     heroSubtitle: "Golden dunes, Arabian nights, cinematic sunsets.",
+    introHeading: "Desert Weddings",
     intro: [
-      "Say your vows against a horizon of golden dunes with a desert wedding in Dubai — an unforgettable celebration inspired by the timeless romance of Arabia. At Awesome Events Weddings, we craft private desert experiences ranging from intimate elopements under the stars to grand multi-day desert celebrations.",
-      "From exclusive dune-top ceremonies and majlis-style receptions to traditional Zaffa entrances, live oud performances, and cinematic lighting, we design every moment to feel magical, personal, and effortlessly luxurious.",
+      "Say your vows against a horizon of golden dunes with a desert wedding in Dubai — an unforgettable celebration inspired by the timeless romance of Arabia.",
+      "From exclusive dune-top ceremonies and majlis-style receptions to traditional welcomes, live performances, and cinematic lighting, every moment is designed to feel personal and effortlessly luxurious.",
     ],
     whyChooseTitle: "Why Choose Us for a Desert Wedding in Dubai",
     whyChoose: commonWhyChoose("Desert Weddings", "desert weddings"),
@@ -116,18 +146,53 @@ export const serviceDetails: Record<string, ServiceDetail> = {
     inclusions: [
       "Dune-top ceremony setups and aisle design",
       "Bedouin-inspired majlis lounges",
-      "Traditional Zaffa and Arabic entertainment",
+      "Traditional welcomes and Arabic entertainment",
       "Fire lanterns, torches, and warm lighting",
       "Long banquet tables and reception styling",
       "Cinematic photography and videography",
     ],
-    faqs: commonFaqs("Desert weddings", "desert wedding"),
+    faqs: [
+      {
+        q: "What makes a desert wedding in Dubai unique?",
+        a: "A desert wedding in Dubai offers breathtaking dunes, sunset views, Arabian-inspired hospitality, and a private setting for an unforgettable luxury celebration.",
+      },
+      {
+        q: "How do guests reach a desert wedding venue?",
+        a: "We plan clear arrival routes, designated parking, luxury transfers, and coordinated desert access for guests, vendors, and wedding suppliers.",
+      },
+      {
+        q: "How do you keep guests comfortable during a desert wedding?",
+        a: "We provide shaded areas, cooling solutions, elegant lounges, refreshments, suitable flooring, and carefully planned ceremony timings for maximum comfort.",
+      },
+      {
+        q: "What is the best time of day for a desert wedding ceremony?",
+        a: "Sunset is ideal for a luxury desert wedding, offering cooler temperatures, golden lighting, and beautiful wedding photography.",
+      },
+      {
+        q: "Can you install proper flooring and seating on the sand?",
+        a: "Yes. We create stable flooring, raised platforms, elegant aisles, stages, dining areas, and comfortable seating suitable for desert terrain.",
+      },
+      {
+        q: "Can a desert wedding include an Arabian-inspired experience?",
+        a: "Yes. We can incorporate traditional welcomes, Arabic entertainment, majlis seating, lantern décor, regional cuisine, and cultural hospitality experiences.",
+      },
+      {
+        q: "How is food and catering managed at a desert wedding?",
+        a: "We coordinate approved caterers, mobile kitchens, service areas, power requirements, food safety, dining setups, and professional hospitality teams.",
+      },
+      {
+        q: "Do desert weddings require special permits and approvals?",
+        a: "Yes. Requirements depend on the location and activities. We manage venue permissions, supplier access, production approvals, and event logistics.",
+      },
+    ],
   },
+
   "intimate-elopements": {
     heroSubtitle: "Small guest lists, big feelings.",
+    introHeading: "Intimate Elopements & Micro Weddings",
     intro: [
-      "For couples craving something quieter and deeply personal, our intimate elopements and micro weddings deliver a beautifully curated celebration for your closest people — or just the two of you. From cliffside vows to boutique venue dinners, every detail is designed with intention.",
-      "We handle everything from officiants and legal paperwork to florals, photography, and a stunning dinner experience — so you can focus entirely on the moment you say I do.",
+      "For couples craving something quieter and deeply personal, our intimate elopements and micro weddings create a beautifully curated celebration for your closest people — or just the two of you.",
+      "We manage officiants, styling, florals, photography, dining, and on-the-day coordination so you can focus entirely on the moment.",
     ],
     whyChooseTitle: "Why Choose Us for an Intimate Wedding",
     whyChoose: commonWhyChoose("Intimate Weddings", "intimate weddings and elopements"),
@@ -141,13 +206,48 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       "Bridal styling and beauty coordination",
       "Personal on-the-day coordination",
     ],
-    faqs: commonFaqs("Intimate weddings", "intimate wedding"),
+    faqs: [
+      {
+        q: "What is the difference between an elopement and a micro wedding?",
+        a: "An elopement in Dubai usually involves only the couple, while a micro wedding includes close loved ones.",
+      },
+      {
+        q: "How many guests are suitable for a micro wedding?",
+        a: "Most micro weddings in Dubai welcome between 10 and 50 guests, creating a personal atmosphere.",
+      },
+      {
+        q: "Can a small wedding still feel luxurious and grand?",
+        a: "Absolutely. Premium décor, curated dining, entertainment, and personalised details make intimate celebrations feel beautifully elevated.",
+      },
+      {
+        q: "What venues are suitable for intimate weddings in the UAE?",
+        a: "Private villas, boutique resorts, gardens, yachts, terraces, and secluded settings are ideal for intimate weddings in the UAE.",
+      },
+      {
+        q: "Can we personalise every detail of our micro wedding?",
+        a: "Yes. We customise the ceremony, styling, menu, music, stationery, entertainment, and guest experience around your story.",
+      },
+      {
+        q: "How quickly can an intimate elopement be planned?",
+        a: "Depending on availability, an intimate elopement in Dubai can often be arranged within a few weeks.",
+      },
+      {
+        q: "Can distant family and friends join our intimate wedding virtually?",
+        a: "Yes. We can arrange professional live streaming, digital guest messages, and virtual participation for loved ones worldwide.",
+      },
+      {
+        q: "Do you provide complete micro wedding planning and coordination?",
+        a: "Yes. We manage venue sourcing, décor, catering, suppliers, photography, timelines, and complete wedding-day coordination.",
+      },
+    ],
   },
+
   "civil-weddings-uae": {
     heroSubtitle: "Legally recognised ceremonies, beautifully hosted.",
+    introHeading: "Civil Weddings",
     intro: [
-      "Whether you're a UAE resident or travelling in for the occasion, we make your civil wedding in the UAE effortless and elegant. We guide you through the legal requirements while designing a ceremony and celebration that feels genuinely yours.",
-      "Many couples pair their civil ceremony with an intimate reception, a beachfront dinner, or a full luxury celebration — and we're able to plan all of it seamlessly under one team.",
+      "Whether you're a UAE resident or travelling in for the occasion, we make your civil wedding journey effortless and elegant.",
+      "We guide you through the legal requirements while designing a ceremony and celebration that feels genuinely yours.",
     ],
     whyChooseTitle: "Why Choose Us for a Civil Wedding in the UAE",
     whyChoose: commonWhyChoose("Civil Weddings", "civil ceremonies and celebrations"),
@@ -163,15 +263,17 @@ export const serviceDetails: Record<string, ServiceDetail> = {
     ],
     faqs: commonFaqs("Civil weddings", "civil wedding"),
   },
+
   "luxury-hotel-weddings": {
     heroSubtitle: "Five-star ballrooms and waterfront estates.",
+    introHeading: "Luxury Hotel Weddings",
     intro: [
-      "For couples who dream of an unmistakably grand celebration, our luxury hotel weddings deliver the elegance of the UAE's most iconic five-star properties, styled to your vision. From glittering ballrooms to waterfront resorts, we design and manage every element end-to-end.",
-      "Our team partners with the region's premier hotels and independent venues to secure the right setting, negotiate on your behalf, and deliver a truly seamless multi-day experience for you and your guests.",
+      "For couples who dream of a grand celebration, our luxury hotel weddings bring together the UAE's most iconic five-star properties and a design tailored to your vision.",
+      "From glittering ballrooms to waterfront resorts, we plan and manage every detail from venue sourcing to the final guest farewell.",
     ],
     whyChooseTitle: "Why Choose Us for a Luxury Hotel Wedding",
-    whyChoose: commonWhyChoose("Luxury Weddings", "luxury hotel weddings"),
-    inclusionsTitle: "Luxury Wedding Planning Services",
+    whyChoose: commonWhyChoose("Luxury Hotel Weddings", "luxury hotel weddings"),
+    inclusionsTitle: "Luxury Hotel Wedding Planning Services",
     inclusionsIntro: "Our end-to-end luxury planning includes:",
     inclusions: [
       "Venue sourcing and contract negotiation",
@@ -181,86 +283,260 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       "Advanced AV, lighting, and production",
       "Multi-day guest experience coordination",
     ],
-    faqs: commonFaqs("Luxury weddings", "luxury wedding"),
+    faqs: [
+      {
+        q: "How do we choose the right luxury hotel wedding venue in Dubai?",
+        a: "We consider your guest count, wedding style, ballroom capacity, location, hospitality standards, and celebration requirements.",
+      },
+      {
+        q: "What is included in a luxury hotel wedding package?",
+        a: "Packages may include the ballroom, catering, tables, seating, service staff, bridal suites, and selected amenities.",
+      },
+      {
+        q: "Can we host all our wedding functions at one hotel?",
+        a: "Yes. Many luxury hotels in Dubai offer multiple spaces for ceremonies, receptions, and pre-wedding celebrations.",
+      },
+      {
+        q: "Can you transform a hotel ballroom to match our wedding vision?",
+        a: "Absolutely. We personalise the ballroom with bespoke décor, floral installations, lighting, staging, and thoughtful styling.",
+      },
+      {
+        q: "Can we customise the hotel wedding menu?",
+        a: "Yes. We coordinate menu tastings and personalised dining experiences with the hotel's culinary and banquet teams.",
+      },
+      {
+        q: "Do hotels allow external wedding vendors?",
+        a: "Policies vary. We coordinate with the hotel regarding external decorators, entertainers, photographers, production teams, and applicable charges.",
+      },
+      {
+        q: "Can you manage several wedding events across different hotel spaces?",
+        a: "Yes. We coordinate every function, venue transition, supplier schedule, and guest movement for a seamless celebration.",
+      },
+      {
+        q: "How do you manage a luxury hotel wedding on the day?",
+        a: "Our Dubai wedding coordinators oversee timelines, hotel teams, vendors, production, ceremonies, reception details, logistics each and every step of the way.",
+      },
+    ],
   },
-  "south-asian-weddings": {
-    heroSubtitle: "Mehndi, Sangeet, Pheras, Walima — planned with heart.",
-    introHeading: "South Asian Weddings Dubai",
+
+  "yacht-marina-weddings": {
+    heroSubtitle: "Private yachts, marina views, and celebrations on the water.",
+    introHeading: "Yacht & Marina Weddings",
     intro: [
-      "Celebrate vibrant South Asian weddings in Dubai with bespoke wedding planning services tailored to your traditions, customs, and celebrations. As an experienced wedding organizer UAE and dedicated wedding coordinator, we specialize in luxurious multi-day celebrations including Mehndi, Sangeet, Pheras, Walima, and grand receptions. From elegant wedding decoration Dubai to seamless event coordination, we create unforgettable weddings that beautifully reflect your heritage.",
+      "Celebrate your wedding on the water with a private yacht or marina setting framed by Dubai's skyline and waterfront views.",
+      "We coordinate the vessel, marina access, décor, dining, entertainment, guest boarding, safety requirements, and every detail of the celebration.",
     ],
-    idealFor: [
-      "North Indian Weddings",
-      "Pakistani Weddings",
-      "South Indian Weddings",
-      "Tamil Weddings",
-      "Sikh Weddings",
-      "Gujarati Weddings",
-      "Multicultural Weddings",
-    ],
-    whyChooseTitle: "Why Choose Us for a South Asian Wedding",
-    whyChoose: commonWhyChoose("South Asian Weddings", "South Asian weddings"),
-    inclusionsTitle: "South Asian Wedding Services",
-    inclusionsIntro: "Our multi-event planning includes:",
+    whyChooseTitle: "Why Choose Us for a Yacht or Marina Wedding",
+    whyChoose: commonWhyChoose("Yacht & Marina Weddings", "yacht and marina weddings"),
+    inclusionsTitle: "Yacht & Marina Wedding Services",
+    inclusionsIntro: "Our waterfront wedding planning includes:",
     inclusions: [
-      "Mehndi, Sangeet, Haldi, and Nikah setups",
-      "Grand pheras and reception stage design",
-      "Bride and groom entry concepts and choreography",
-      "Traditional and fusion catering coordination",
-      "Live dhol, DJs, and cultural entertainment",
-      "Guest hospitality, RSVP, and logistics",
+      "Private yacht and marina venue sourcing",
+      "Guest boarding and transport coordination",
+      "Bespoke deck and waterfront décor",
+      "Catering, entertainment, and live music",
+      "Lighting, sound, and technical production",
+      "Safety, permits, and marina logistics",
     ],
-    faqs: commonFaqs("South Asian weddings", "South Asian wedding"),
+    faqs: [
+      {
+        q: "How many guests can attend a yacht wedding in Dubai?",
+        a: "Guest capacity depends on the yacht’s size, layout, dining setup, and onboard safety regulations.",
+      },
+      {
+        q: "Can the yacht sail during our wedding celebration?",
+        a: "Yes. Your luxury yacht wedding in Dubai can cruise along a pre-approved scenic route.",
+      },
+      {
+        q: "Which views can we enjoy during a Dubai yacht wedding?",
+        a: "Routes may feature Dubai Marina, Palm Jumeirah, Atlantis, Bluewaters Island, and Burj Al Arab views.",
+      },
+      {
+        q: "Can we have both the ceremony and reception onboard?",
+        a: "Absolutely. We create separate onboard spaces for your ceremony, dining, entertainment, and relaxed celebrations.",
+      },
+      {
+        q: "What happens if the sea conditions are unsuitable?",
+        a: "We prepare flexible sailing schedules, sheltered marina options, and alternative plans with the yacht operator.",
+      },
+      {
+        q: "Can a yacht be decorated without affecting its interiors?",
+        a: "Yes. We use secure, yacht-friendly décor designed specifically for decks, cabins, and marina settings.",
+      },
+      {
+        q: "Can you arrange live entertainment onboard the yacht?",
+        a: "Yes. We coordinate DJs, musicians, performers, and sound systems suitable for yacht weddings in Dubai.",
+      },
+      {
+        q: "How are food and beverages served during a yacht wedding?",
+        a: "We arrange onboard wedding catering, customised menus, professional service teams, and elegant dining setups.",
+      },
+    ],
   },
-  "emirati-gcc-weddings": {
-    heroSubtitle: "Zaffa, Majlis, and Gulf hospitality — done properly.",
-    introHeading: "Emirati & GCC Weddings Dubai",
+
+  "garden-weddings": {
+    heroSubtitle: "Lush greenery, floral styling, and elegant open-air celebrations.",
+    introHeading: "Garden Weddings",
     intro: [
-      "Experience elegant Emirati weddings in Dubai with luxury wedding planning services designed to honour local traditions and Gulf customs. Our expert wedding coordinator team delivers sophisticated celebrations featuring traditional Zaffa processions, elegant Majlis settings, exceptional hospitality, and bespoke wedding decoration Dubai. As a trusted wedding organizer in UAE, we ensure every ceremony is planned with precision and cultural authenticity.",
+      "Create a romantic garden wedding surrounded by greenery, natural light, and elegant floral design.",
+      "From intimate ceremonies to full outdoor receptions, we build a cohesive setting with comfortable guest layouts, lighting, dining, entertainment, and weather planning.",
     ],
-    idealFor: [
-      "Emirati Weddings",
-      "Arabic Weddings",
-      "Saudi Weddings",
-      "Kuwaiti Weddings",
-      "Qatari Weddings",
-      "Bahraini Weddings",
-      "Omani Weddings",
-      "GCC Family Weddings",
-    ],
-    whyChooseTitle: "Why Choose Us for an Emirati or GCC Wedding",
-    whyChoose: commonWhyChoose("Emirati Weddings", "Emirati and GCC weddings"),
-    inclusionsTitle: "Emirati Wedding Services",
-    inclusionsIntro: "Our Emirati wedding planning covers:",
+    whyChooseTitle: "Why Choose Us for a Garden Wedding",
+    whyChoose: commonWhyChoose("Garden Weddings", "garden weddings"),
+    inclusionsTitle: "Garden Wedding Styling & Planning",
+    inclusionsIntro: "Our garden wedding services include:",
     inclusions: [
-      "Traditional Zaffa processions",
-      "Majlis-style seating and lounges",
-      "Kosha and stage design",
-      "Arabic and international catering coordination",
-      "Traditional performers and live entertainment",
-      "Complete family and guest hospitality",
+      "Garden venue sourcing and layout planning",
+      "Floral arches, aisles, and table styling",
+      "Ambient lighting and candle design",
+      "Outdoor dining and reception setups",
+      "Guest comfort and weather preparation",
+      "Entertainment and technical coordination",
     ],
-    faqs: commonFaqs("Emirati weddings", "Emirati wedding"),
+    faqs: [
+      {
+        q: "What should we consider when choosing a garden wedding venue?",
+        a: "Consider privacy, landscape quality, capacity, accessibility, facilities, lighting options, and permitted celebration timings.",
+      },
+      {
+        q: "Can existing gardens be incorporated into the wedding design?",
+        a: "Yes. We enhance natural greenery with florals, pathways, installations, lighting, and complementary décor.",
+      },
+      {
+        q: "Which footwear is best for a garden wedding?",
+        a: "Comfortable shoes, wedges, or heel protectors help guests move easily across lawns and pathways.",
+      },
+      {
+        q: "How do you create privacy at an outdoor garden venue?",
+        a: "We use greenery walls, elegant screens, draping, floral partitions, and carefully planned layouts.",
+      },
+      {
+        q: "Can we hold both the ceremony and reception in the garden?",
+        a: "Yes. We create distinct ceremony, dining, entertainment, and lounge areas within the garden setting.",
+      },
+      {
+        q: "How do you light a garden wedding after sunset?",
+        a: "We combine illuminated trees, chandeliers, festoon lights, candles, lanterns, and discreet pathway lighting.",
+      },
+      {
+        q: "Can seasonal flowers be used for garden wedding décor?",
+        a: "Absolutely. Seasonal blooms create fresher, more natural, and beautifully coordinated garden wedding decoration.",
+      },
+      {
+        q: "How do you manage insects during a garden wedding?",
+        a: "We coordinate discreet pest control, citronella décor, air movement, and venue-approved preventive measures.",
+      },
+    ],
   },
-  "western-weddings": {
-    heroSubtitle: "Timeless, sophisticated, effortlessly elegant.",
+
+  "outdoor-weddings": {
+    heroSubtitle: "Open-air ceremonies designed around your location and vision.",
+    introHeading: "Outdoor Weddings",
     intro: [
-      "For couples seeking a classic Western wedding in Dubai, we design refined celebrations rooted in timeless traditions — from the aisle walk to the first dance. Whether it's a garden ceremony, beachfront vow exchange, or ballroom reception, every detail is tailored to your story.",
-      "Our team plans destination weddings for British, American, European, and Australian couples, along with UAE residents, ensuring every element reflects your style, vows, and vision.",
+      "Plan a bespoke outdoor wedding in the UAE with a setting chosen around your style, guest count, and preferred atmosphere.",
+      "We handle layouts, flooring, shade, cooling, lighting, power, permits, catering, entertainment, and backup plans so the event runs smoothly.",
     ],
-    whyChooseTitle: "Why Choose Us for a Western Wedding",
-    whyChoose: commonWhyChoose("Western Weddings", "Western weddings"),
-    inclusionsTitle: "Western Wedding Services",
-    inclusionsIntro: "Our Western wedding planning includes:",
+    whyChooseTitle: "Why Choose Us for an Outdoor Wedding",
+    whyChoose: commonWhyChoose("Outdoor Weddings", "outdoor weddings"),
+    inclusionsTitle: "Outdoor Wedding Planning Services",
+    inclusionsIntro: "Our outdoor wedding planning includes:",
     inclusions: [
-      "Ceremony aisle and arch design",
-      "Reception venue styling",
-      "Officiant and vow coordination",
-      "Live band, DJ, and entertainment",
-      "Full menu curation and tastings",
-      "Bridal party and guest hospitality",
+      "Outdoor venue sourcing and site planning",
+      "Flooring, staging, seating, and shade solutions",
+      "Weather planning and covered alternatives",
+      "Lighting, sound, power, and production",
+      "Catering and guest hospitality coordination",
+      "Permits, supplier access, and logistics",
     ],
-    faqs: commonFaqs("Western weddings", "Western wedding"),
+    faqs: [
+      {
+        q: "Which locations are suitable for outdoor weddings in Dubai?",
+        a: "Beaches, deserts, terraces, courtyards, private estates, resort lawns, and waterfront venues offer beautiful open-air settings.",
+      },
+      {
+        q: "How do you design the layout for an outdoor wedding?",
+        a: "We create dedicated ceremony, dining, entertainment, lounge, and photography zones with comfortable guest flow.",
+      },
+      {
+        q: "Can temporary structures be installed at an outdoor wedding venue?",
+        a: "Yes. We can arrange pergolas, canopies, stages, raised platforms, marquees, and decorative overhead installations.",
+      },
+      {
+        q: "How are lighting and power managed for outdoor weddings?",
+        a: "We coordinate generators, safe cabling, backup power, ambient lighting, stage lighting, and illuminated pathways.",
+      },
+      {
+        q: "How do you manage sound at an open-air wedding?",
+        a: "Our production team plans speaker placement and sound levels for clear coverage without disturbing nearby areas.",
+      },
+      {
+        q: "Can outdoor wedding spaces be made accessible for every guest?",
+        a: "Yes. We plan stable walkways, ramps, suitable flooring, accessible seating, and convenient drop-off points.",
+      },
+      {
+        q: "How do you keep an outdoor celebration comfortable from day to night?",
+        a: "We arrange shade, cooling, heaters, refreshments, soft lighting, and comfortable lounges according to the season.",
+      },
+      {
+        q: "Can the ceremony and reception have different outdoor designs?",
+        a: "Absolutely. We create distinctive yet connected settings for each part of your outdoor wedding in Dubai.",
+      },
+    ],
+  },
+
+  "destination-weddings": {
+    heroSubtitle: "Complete UAE wedding experiences for couples and guests travelling from abroad.",
+    introHeading: "Destination Weddings",
+    intro: [
+      "Plan a seamless destination wedding in Dubai or across the UAE with one experienced team managing every part of the journey.",
+      "From venue sourcing and guest accommodation to airport transfers, multi-day events, hospitality, décor, entertainment, and farewell experiences, every detail is coordinated for you.",
+    ],
+    whyChooseTitle: "Why Choose Us for a Destination Wedding",
+    whyChoose: commonWhyChoose("Destination Weddings", "destination weddings"),
+    inclusionsTitle: "Destination Wedding Planning Services",
+    inclusionsIntro: "Our destination wedding services include:",
+    inclusions: [
+      "Venue sourcing across Dubai and the UAE",
+      "Hotel bookings and room-block coordination",
+      "Airport transfers and guest transportation",
+      "Welcome events and multi-day itineraries",
+      "Décor, catering, entertainment, and production",
+      "RSVP, hospitality, and on-ground coordination",
+    ],
+    faqs: [
+      {
+        q: "Can we plan our destination wedding in Dubai from overseas?",
+        a: "Yes. Virtual consultations and regular updates make planning your destination wedding in Dubai simple and personal.",
+      },
+      {
+        q: "Which UAE destination is best for our wedding style?",
+        a: "We recommend Dubai, Abu Dhabi, or Ras Al Khaimah based on your vision and guest experience.",
+      },
+      {
+        q: "Can our destination wedding include several days of celebrations?",
+        a: "Absolutely. We curate welcome events, pre-wedding functions, ceremonies, receptions, and farewell gatherings.",
+      },
+      {
+        q: "Do you create personalised wedding itineraries for guests?",
+        a: "Yes. We design clear schedules covering every celebration, dress code, timing, and important guest information.",
+      },
+      {
+        q: "Can we include traditions from our home country?",
+        a: "Yes. We thoughtfully incorporate your rituals, cuisine, music, attire, and meaningful family customs.",
+      },
+      {
+        q: "Do you source trusted local vendors for destination weddings?",
+        a: "Yes. We connect couples with experienced UAE florists, caterers, entertainers, photographers, and production specialists.",
+      },
+      {
+        q: "Can you arrange experiences around the wedding celebrations?",
+        a: "Yes. We curate desert dinners, yacht gatherings, city experiences, welcome parties, and farewell brunches.",
+      },
+      {
+        q: "How do you maintain one design theme across multiple events?",
+        a: "We coordinate colours, florals, stationery, signage, styling, and production throughout your UAE destination wedding.",
+      },
+    ],
   },
 };
 

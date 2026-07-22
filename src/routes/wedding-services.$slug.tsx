@@ -56,6 +56,42 @@ const beachWeddingFaqs: ServiceFaq[] = [
   },
 ];
 
+
+const desertWeddingFaqs: ServiceFaq[] = [
+  {
+    q: "What makes a desert wedding in Dubai unique?",
+    a: "A desert wedding in Dubai offers breathtaking dunes, sunset views, Arabian-inspired hospitality, and a private setting for an unforgettable luxury celebration.",
+  },
+  {
+    q: "How do guests reach a desert wedding venue?",
+    a: "We plan clear arrival routes, designated parking, luxury transfers, and coordinated desert access for guests, vendors, and wedding suppliers.",
+  },
+  {
+    q: "How do you keep guests comfortable during a desert wedding?",
+    a: "We provide shaded areas, cooling solutions, elegant lounges, refreshments, suitable flooring, and carefully planned ceremony timings for maximum comfort.",
+  },
+  {
+    q: "What is the best time of day for a desert wedding ceremony?",
+    a: "Sunset is ideal for a luxury desert wedding, offering cooler temperatures, golden lighting, and beautiful wedding photography.",
+  },
+  {
+    q: "Can you install proper flooring and seating on the sand?",
+    a: "Yes. We create stable flooring, raised platforms, elegant aisles, stages, dining areas, and comfortable seating suitable for desert terrain.",
+  },
+  {
+    q: "Can a desert wedding include an Arabian-inspired experience?",
+    a: "Yes. We can incorporate traditional welcomes, Arabic entertainment, majlis seating, lantern décor, regional cuisine, and cultural hospitality experiences.",
+  },
+  {
+    q: "How is food and catering managed at a desert wedding?",
+    a: "We coordinate approved caterers, mobile kitchens, service areas, power requirements, food safety, dining setups, and professional hospitality teams.",
+  },
+  {
+    q: "Do desert weddings require special permits and approvals?",
+    a: "Yes. Requirements depend on the location and activities. We manage venue permissions, supplier access, production approvals, and event logistics.",
+  },
+];
+
 export const Route = createFileRoute("/wedding-services/$slug")({
   loader: ({ params }) => {
     const service = getServiceBySlug(params.slug);
@@ -119,9 +155,12 @@ function ServiceNotFound() {
 function WeddingServicePage() {
   const { service, meta, detail } = Route.useLoaderData();
 
-  const faqsToDisplay = service.slug.toLowerCase().includes("beach")
-    ? beachWeddingFaqs
-    : detail.faqs;
+  const faqsToDisplay =
+    service.slug === "desert-wedding-dubai"
+      ? desertWeddingFaqs
+      : service.slug.toLowerCase().includes("beach")
+        ? beachWeddingFaqs
+        : detail.faqs;
 
   const optionalFeatureSection = {
     enabled: true, // Change to false whenever this section should be hidden.
