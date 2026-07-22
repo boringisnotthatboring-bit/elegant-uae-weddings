@@ -107,7 +107,7 @@ export const flagshipServices: ServiceItem[] = [
       "GCC Family Weddings",
     ],
     cta: "Explore Emirati & GCC Weddings",
-    image: "emirati-gcc-weddings.webp",
+    image: 'Emirati-Wedding-new-(1).webp',
   },
   {
     slug: "south-asian-weddings",
@@ -125,7 +125,7 @@ export const flagshipServices: ServiceItem[] = [
       "Multicultural Weddings",
     ],
     cta: "Explore South Asian Weddings",
-    image: "south-asian-weddings.webp",
+    image: 'South-Asian-Weddings.webp',
   }
 ];
 
