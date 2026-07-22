@@ -127,7 +127,7 @@ export const Route = createFileRoute("/wedding-services/$slug")({
       <h1 className="font-display text-3xl">Something went wrong</h1>
       <p className="mt-3 text-muted-foreground">
         Please try again or{" "}
-        <Link to="/contact" className="text-primary underline">
+        <Link to="/contact" search={{ type: undefined }} className="text-primary underline">
           contact us
         </Link>
         .
@@ -161,15 +161,6 @@ function WeddingServicePage() {
       : service.slug.toLowerCase().includes("beach")
         ? beachWeddingFaqs
         : detail.faqs;
-
-  const optionalFeatureSection = {
-    enabled: true, // Change to false whenever this section should be hidden.
-    image: service.image,
-    title: `${service.title} in Dubai`,
-    intro: detail.inclusionsIntro,
-    items: detail.inclusions.slice(0, 6),
-    outro: detail.inclusionsOutro,
-  };
 
   const otherServices = useMemo(
     () => allServices.filter((item) => item.slug !== service.slug),
@@ -256,21 +247,6 @@ function WeddingServicePage() {
                 className="h-full w-full object-cover"
               />
             </div>
-            {(detail.idealFor ?? service.perfectFor) && (
-              <div className="mt-8">
-                <p className="text-sm font-medium">
-                  {detail.idealFor ? "Ideal for:" : "Perfect for:"}
-                </p>
-                <ul className="mt-3 grid gap-1.5 text-sm text-muted-foreground sm:grid-cols-2">
-                  {(detail.idealFor ?? service.perfectFor)!.map((p: string) => (
-                    <li key={p} className="flex items-start gap-2">
-                      <Check className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
-                      {p}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
             <div className="mt-8">
               <Button asChild>
                 <Link to="/portfolio">View Portfolio</Link>
@@ -305,43 +281,42 @@ function WeddingServicePage() {
         </div>
       </section>
 
-      {optionalFeatureSection.enabled && (
-        <section className="section-y bg-[#c8a969] text-white">
+      {/* Ideal For */}
+      {(detail.idealFor ?? service.perfectFor) && (
+        <section className="section-y">
           <div className="container-page">
             <div className="grid gap-10 md:grid-cols-2 md:items-center md:gap-12">
-              <div className="relative aspect-[4/3] overflow-hidden">
+              <div className="relative aspect-[4/3] overflow-hidden rounded-sm shadow-lg md:order-2">
                 <img
-                  src={optionalFeatureSection.image}
-                  alt={optionalFeatureSection.title}
+                  src={service.image}
+                  alt={service.title}
                   className="h-full w-full object-cover"
                 />
               </div>
 
-              <div>
-                <h2 className="font-display text-3xl leading-tight md:text-4xl">
-                  {optionalFeatureSection.title}
-                </h2>
-                <p className="mt-5 text-base leading-relaxed text-white/95">
-                  {optionalFeatureSection.intro}
+              <div className="md:order-1">
+                <p className="eyebrow">
+                  {detail.idealFor ? "Ideal For" : "Perfect For"}
                 </p>
-                <ul className="mt-3 space-y-2 pl-5 text-base leading-relaxed text-white/95">
-                  {optionalFeatureSection.items.map((item: string) => (
-                    <li key={item} className="list-disc">
-                      {item}
-                    </li>
-                  ))}
+                <h2 className="mt-3 font-display text-3xl md:text-4xl">
+                  {detail.idealFor
+                    ? `Who Is ${service.title} Ideal For?`
+                    : `Who Is ${service.title} Perfect For?`}
+                </h2>
+
+                <ul className="mt-6 grid gap-3 text-sm text-muted-foreground sm:grid-cols-2">
+                  {(detail.idealFor ?? service.perfectFor)!.map(
+                    (item: string) => (
+                      <li key={item} className="flex items-start gap-2">
+                        <Check className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
+                        {item}
+                      </li>
+                    ),
+                  )}
                 </ul>
-                {optionalFeatureSection.outro && (
-                  <p className="mt-3 text-base leading-relaxed text-white/95">
-                    {optionalFeatureSection.outro}
-                  </p>
-                )}
-                <div className="mt-7">
-                  <Button
-                    asChild
-                    variant="outline"
-                    className="rounded-none border-white bg-transparent text-white hover:bg-white hover:text-[#9f824b]"
-                  >
+
+                <div className="mt-8">
+                  <Button asChild variant="outline" className="rounded-none">
                     <Link to="/contact" search={{ type: meta.contactType }}>
                       Contact Us Now
                     </Link>
@@ -352,50 +327,6 @@ function WeddingServicePage() {
           </div>
         </section>
       )}
-
-      {/* Inclusions */}
-      <section className="section-y">
-        <div className="container-page">
-          <div className="grid gap-10 md:grid-cols-2 md:items-center md:gap-12">
-            <div className="relative aspect-[4/3] overflow-hidden rounded-sm shadow-lg md:order-2">
-              <img
-                src={service.image}
-                alt={service.title}
-                className="h-full w-full object-cover"
-              />
-            </div>
-            <div className="md:order-1">
-              <p className="eyebrow">Inclusions</p>
-              <h2 className="mt-3 font-display text-3xl md:text-4xl">
-                {detail.inclusionsTitle}
-              </h2>
-              <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-                {detail.inclusionsIntro}
-              </p>
-              <ul className="mt-6 grid gap-3 text-sm text-muted-foreground sm:grid-cols-2">
-                {detail.inclusions.map((item: string) => (
-                  <li key={item} className="flex items-start gap-2">
-                    <Check className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-              {detail.inclusionsOutro && (
-                <p className="mt-6 text-base leading-relaxed text-muted-foreground">
-                  {detail.inclusionsOutro}
-                </p>
-              )}
-              <div className="mt-8">
-                <Button asChild variant="outline" className="rounded-none">
-                  <Link to="/contact" search={{ type: meta.contactType }}>
-                    Contact Us Now
-                  </Link>
-                </Button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
 
       {/* Other services */}

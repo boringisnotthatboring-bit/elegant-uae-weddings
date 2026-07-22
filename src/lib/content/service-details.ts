@@ -16,10 +16,6 @@ export interface ServiceDetail {
   idealFor?: string[];
   whyChooseTitle: string;
   whyChoose: WhyChooseItem[];
-  inclusionsTitle: string;
-  inclusionsIntro: string;
-  inclusions: string[];
-  inclusionsOutro?: string;
   faqs: ServiceFaq[];
 }
 
@@ -84,18 +80,6 @@ export const serviceDetails: Record<string, ServiceDetail> = {
     ],
     whyChooseTitle: "Why Choose Us for a Luxury Beach Wedding in Dubai",
     whyChoose: commonWhyChoose("Luxury Beach Weddings", "luxury beach weddings"),
-    inclusionsTitle: "Beach Wedding Decoration & Styling",
-    inclusionsIntro: "Our beach wedding decoration services include:",
-    inclusions: [
-      "Floral arches and aisle décor",
-      "Luxury wedding stage setups",
-      "Elegant table styling and centrepieces",
-      "Romantic lighting and candle design",
-      "Beachfront reception styling",
-      "Bespoke themes and colour concepts",
-    ],
-    inclusionsOutro:
-      "We create elegant beachfront setups that turn your seaside vision into a fully realised celebration.",
     faqs: [
       {
         q: "Which are the best beaches in Dubai for a luxury wedding?",
@@ -141,16 +125,6 @@ export const serviceDetails: Record<string, ServiceDetail> = {
     ],
     whyChooseTitle: "Why Choose Us for a Desert Wedding in Dubai",
     whyChoose: commonWhyChoose("Desert Weddings", "desert weddings"),
-    inclusionsTitle: "Desert Wedding Styling & Experience",
-    inclusionsIntro: "Our desert wedding styling includes:",
-    inclusions: [
-      "Dune-top ceremony setups and aisle design",
-      "Bedouin-inspired majlis lounges",
-      "Traditional welcomes and Arabic entertainment",
-      "Fire lanterns, torches, and warm lighting",
-      "Long banquet tables and reception styling",
-      "Cinematic photography and videography",
-    ],
     faqs: [
       {
         q: "What makes a desert wedding in Dubai unique?",
@@ -196,16 +170,6 @@ export const serviceDetails: Record<string, ServiceDetail> = {
     ],
     whyChooseTitle: "Why Choose Us for an Intimate Wedding",
     whyChoose: commonWhyChoose("Intimate Weddings", "intimate weddings and elopements"),
-    inclusionsTitle: "What's Included in an Intimate Celebration",
-    inclusionsIntro: "Our intimate wedding services typically include:",
-    inclusions: [
-      "Ceremony styling and floral design",
-      "Officiant coordination and paperwork guidance",
-      "Photography and videography",
-      "Curated dining experiences",
-      "Bridal styling and beauty coordination",
-      "Personal on-the-day coordination",
-    ],
     faqs: [
       {
         q: "What is the difference between an elopement and a micro wedding?",
@@ -251,16 +215,6 @@ export const serviceDetails: Record<string, ServiceDetail> = {
     ],
     whyChooseTitle: "Why Choose Us for a Civil Wedding in the UAE",
     whyChoose: commonWhyChoose("Civil Weddings", "civil ceremonies and celebrations"),
-    inclusionsTitle: "Civil Wedding Services",
-    inclusionsIntro: "We handle the details that matter, including:",
-    inclusions: [
-      "Guidance on UAE civil marriage requirements",
-      "Court and notary appointment coordination",
-      "Ceremony styling and floral design",
-      "Photography and videography",
-      "Reception planning and venue sourcing",
-      "Full-service celebration after your ceremony",
-    ],
     faqs: commonFaqs("Civil weddings", "civil wedding"),
   },
 
@@ -273,16 +227,6 @@ export const serviceDetails: Record<string, ServiceDetail> = {
     ],
     whyChooseTitle: "Why Choose Us for a Luxury Hotel Wedding",
     whyChoose: commonWhyChoose("Luxury Hotel Weddings", "luxury hotel weddings"),
-    inclusionsTitle: "Luxury Hotel Wedding Planning Services",
-    inclusionsIntro: "Our end-to-end luxury planning includes:",
-    inclusions: [
-      "Venue sourcing and contract negotiation",
-      "Bespoke décor, floral, and stage design",
-      "Live entertainment and celebrity performers",
-      "Premium catering and menu curation",
-      "Advanced AV, lighting, and production",
-      "Multi-day guest experience coordination",
-    ],
     faqs: [
       {
         q: "How do we choose the right luxury hotel wedding venue in Dubai?",
@@ -328,16 +272,6 @@ export const serviceDetails: Record<string, ServiceDetail> = {
     ],
     whyChooseTitle: "Why Choose Us for a Yacht or Marina Wedding",
     whyChoose: commonWhyChoose("Yacht & Marina Weddings", "yacht and marina weddings"),
-    inclusionsTitle: "Yacht & Marina Wedding Services",
-    inclusionsIntro: "Our waterfront wedding planning includes:",
-    inclusions: [
-      "Private yacht and marina venue sourcing",
-      "Guest boarding and transport coordination",
-      "Bespoke deck and waterfront décor",
-      "Catering, entertainment, and live music",
-      "Lighting, sound, and technical production",
-      "Safety, permits, and marina logistics",
-    ],
     faqs: [
       {
         q: "How many guests can attend a yacht wedding in Dubai?",
@@ -383,16 +317,6 @@ export const serviceDetails: Record<string, ServiceDetail> = {
     ],
     whyChooseTitle: "Why Choose Us for a Garden Wedding",
     whyChoose: commonWhyChoose("Garden Weddings", "garden weddings"),
-    inclusionsTitle: "Garden Wedding Styling & Planning",
-    inclusionsIntro: "Our garden wedding services include:",
-    inclusions: [
-      "Garden venue sourcing and layout planning",
-      "Floral arches, aisles, and table styling",
-      "Ambient lighting and candle design",
-      "Outdoor dining and reception setups",
-      "Guest comfort and weather preparation",
-      "Entertainment and technical coordination",
-    ],
     faqs: [
       {
         q: "What should we consider when choosing a garden wedding venue?",
@@ -438,16 +362,6 @@ export const serviceDetails: Record<string, ServiceDetail> = {
     ],
     whyChooseTitle: "Why Choose Us for an Outdoor Wedding",
     whyChoose: commonWhyChoose("Outdoor Weddings", "outdoor weddings"),
-    inclusionsTitle: "Outdoor Wedding Planning Services",
-    inclusionsIntro: "Our outdoor wedding planning includes:",
-    inclusions: [
-      "Outdoor venue sourcing and site planning",
-      "Flooring, staging, seating, and shade solutions",
-      "Weather planning and covered alternatives",
-      "Lighting, sound, power, and production",
-      "Catering and guest hospitality coordination",
-      "Permits, supplier access, and logistics",
-    ],
     faqs: [
       {
         q: "Which locations are suitable for outdoor weddings in Dubai?",
@@ -493,16 +407,6 @@ export const serviceDetails: Record<string, ServiceDetail> = {
     ],
     whyChooseTitle: "Why Choose Us for a Destination Wedding",
     whyChoose: commonWhyChoose("Destination Weddings", "destination weddings"),
-    inclusionsTitle: "Destination Wedding Planning Services",
-    inclusionsIntro: "Our destination wedding services include:",
-    inclusions: [
-      "Venue sourcing across Dubai and the UAE",
-      "Hotel bookings and room-block coordination",
-      "Airport transfers and guest transportation",
-      "Welcome events and multi-day itineraries",
-      "Décor, catering, entertainment, and production",
-      "RSVP, hospitality, and on-ground coordination",
-    ],
     faqs: [
       {
         q: "Can we plan our destination wedding in Dubai from overseas?",
