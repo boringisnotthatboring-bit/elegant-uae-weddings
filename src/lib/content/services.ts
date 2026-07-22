@@ -88,8 +88,45 @@ export const flagshipServices: ServiceItem[] = [
       "Multi-day wedding celebrations",
     ],
     cta: "Explore Luxury Hotel Weddings",
-    image: img("photo-1519671482749-fd09be7ccebf"),
+    image: 'luxury-hotel-weddings-new.webp',
   },
+  {
+    slug: "emirati-gcc-weddings",
+    title: "Emirati & GCC Weddings",
+    short: "Elegant Gulf traditions, luxury hospitality, and timeless celebrations.",
+    description:
+      "Experience elegant Emirati and GCC weddings in Dubai with bespoke wedding planning services that honour local traditions, cultural customs, and refined luxury. From traditional Zaffa processions and Majlis settings to exceptional hospitality and personalised décor, we create unforgettable celebrations across the UAE.",
+    perfectFor: [
+      "Emirati Weddings",
+      "Arabic Weddings",
+      "Saudi Weddings",
+      "Kuwaiti Weddings",
+      "Qatari Weddings",
+      "Bahraini Weddings",
+      "Omani Weddings",
+      "GCC Family Weddings",
+    ],
+    cta: "Explore Emirati & GCC Weddings",
+    image: "emirati-gcc-weddings.webp",
+  },
+  {
+    slug: "south-asian-weddings",
+    title: "South Asian Weddings",
+    short: "Multi-day celebrations filled with colour, culture, and unforgettable traditions.",
+    description:
+      "Celebrate luxurious South Asian weddings in Dubai with bespoke wedding planning designed around your culture, traditions, and family celebrations. From Mehndi and Sangeet to Pheras, Walima, and grand receptions, we deliver seamless multi-day wedding experiences across the UAE.",
+    perfectFor: [
+      "North Indian Weddings",
+      "Pakistani Weddings",
+      "South Indian Weddings",
+      "Tamil Weddings",
+      "Sikh Weddings",
+      "Gujarati Weddings",
+      "Multicultural Weddings",
+    ],
+    cta: "Explore South Asian Weddings",
+    image: "south-asian-weddings.webp",
+  }
 ];
 
 export const culturalServices: ServiceItem[] = [

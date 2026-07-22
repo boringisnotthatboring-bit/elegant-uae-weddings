@@ -96,8 +96,16 @@ export const Route = createFileRoute("/wedding-services/$slug")({
   loader: ({ params }) => {
     const service = getServiceBySlug(params.slug);
     const detail = getServiceDetail(params.slug);
-    if (!service || !serviceCtaMeta[params.slug] || !detail) throw notFound();
-    return { service, meta: serviceCtaMeta[params.slug], detail };
+
+    if (!service || !detail) throw notFound();
+
+    const meta = serviceCtaMeta[params.slug] ?? {
+      viewLabel: `View ${service.title}`,
+      ctaLabel: `Plan My ${service.title}`,
+      contactType: service.title,
+    };
+
+    return { service, meta, detail };
   },
   head: ({ loaderData }) => {
     if (!loaderData) {

@@ -398,6 +398,151 @@ export const serviceDetails: Record<string, ServiceDetail> = {
     ],
   },
 
+  "emirati-gcc-weddings": {
+    heroSubtitle: "Luxury Gulf traditions, elegant celebrations, and exceptional hospitality.",
+    introHeading: "Emirati & GCC Weddings Dubai",
+    intro: [
+      "Experience elegant Emirati weddings in Dubai with luxury wedding planning services designed to honour local traditions and Gulf customs.",
+      "Our expert wedding coordinator team delivers sophisticated celebrations featuring traditional Zaffa processions, elegant Majlis settings, exceptional hospitality, and bespoke wedding decoration Dubai. As a trusted wedding organizer in UAE, we ensure every ceremony is planned with precision and cultural authenticity.",
+      "From intimate family gatherings to grand multi-day celebrations, every detail is thoughtfully coordinated to reflect your heritage, family traditions, and personal vision.",
+    ],
+    idealFor: [
+      "Emirati Weddings",
+      "Arabic Weddings",
+      "Saudi Weddings",
+      "Kuwaiti Weddings",
+      "Qatari Weddings",
+      "Bahraini Weddings",
+      "Omani Weddings",
+      "GCC Family Weddings",
+    ],
+    whyChooseTitle: "Why Choose Us for Emirati & GCC Weddings in Dubai",
+    whyChoose: [
+      {
+        title: "Experienced Emirati & GCC Wedding Planners",
+        body: "Our team understands the scale, privacy, hospitality, and cultural details required for Emirati, Arabic, and GCC family weddings across Dubai and the UAE.",
+      },
+      {
+        title: "Culturally Authentic Wedding Experiences",
+        body: "We thoughtfully coordinate traditional customs, family requirements, Zaffa processions, Majlis settings, Arabic entertainment, and meaningful ceremonial details with care and respect.",
+      },
+      {
+        title: "Luxury Majlis, Stage & Wedding Decoration",
+        body: "From elegant Majlis lounges and grand stages to floral installations, lighting, entrances, and bespoke wedding decoration Dubai, every space is designed around your preferred style.",
+      },
+      {
+        title: "Complete Privacy & Guest Management",
+        body: "We coordinate separate celebration areas, controlled access, guest reception, hospitality teams, family requirements, supplier schedules, and discreet on-the-day management.",
+      },
+    ],
+    faqs: [
+      {
+        q: "Do you organise traditional Emirati weddings in Dubai?",
+        a: "Yes. We plan elegant Emirati weddings across Dubai and the UAE while carefully respecting local traditions, family preferences, privacy requirements, and cultural customs.",
+      },
+      {
+        q: "Can you arrange a traditional Zaffa procession?",
+        a: "Yes. We can coordinate traditional Arabic Zaffa processions with drummers, performers, music, entrances, choreography, and production tailored to the couple and venue.",
+      },
+      {
+        q: "Can you design separate celebrations for men and women?",
+        a: "Yes. We can plan separate halls, entrances, hospitality areas, entertainment, dining, and production while maintaining one coordinated wedding experience.",
+      },
+      {
+        q: "Do you create luxury Majlis settings?",
+        a: "Yes. We design elegant Majlis seating areas with customised furniture, florals, lighting, carpets, tables, privacy screens, and hospitality layouts.",
+      },
+      {
+        q: "Can you arrange Arabic entertainment and performers?",
+        a: "Yes. We can source Arabic singers, musicians, drummers, traditional performers, DJs, and other entertainment according to the family's preferences and venue regulations.",
+      },
+      {
+        q: "Can you coordinate Arabic and Gulf catering?",
+        a: "Yes. We work with experienced catering teams to arrange Emirati, Arabic, and Gulf menus, live stations, traditional sweets, coffee service, and premium guest hospitality.",
+      },
+      {
+        q: "Can you manage a large GCC family wedding?",
+        a: "Absolutely. We coordinate large guest lists, seating plans, invitations, RSVP management, family requirements, supplier access, transport, hospitality, and complete event operations.",
+      },
+      {
+        q: "Do you provide private and discreet wedding coordination?",
+        a: "Yes. Privacy is treated as a priority. We can coordinate controlled access, private supplier protocols, photography restrictions, separate entrances, security, and discreet guest management.",
+      },
+    ],
+  },
+
+  "south-asian-weddings": {
+    heroSubtitle: "Vibrant traditions, multi-day celebrations, and unforgettable moments.",
+    introHeading: "South Asian Weddings Dubai",
+    intro: [
+      "Celebrate vibrant South Asian weddings in Dubai with bespoke wedding planning services tailored to your traditions, customs, and celebrations.",
+      "As an experienced wedding organizer UAE and dedicated wedding coordinator, we specialise in luxurious multi-day celebrations including Mehndi, Sangeet, Pheras, Walima, and grand receptions. From elegant wedding decoration Dubai to seamless event coordination, we create unforgettable weddings that beautifully reflect your heritage.",
+      "Whether you are planning a Pakistani, North Indian, South Indian, Tamil, Sikh, Gujarati, or multicultural wedding, every event is designed to feel connected, personal, and beautifully executed.",
+    ],
+    idealFor: [
+      "North Indian Weddings",
+      "Pakistani Weddings",
+      "South Indian Weddings",
+      "Tamil Weddings",
+      "Sikh Weddings",
+      "Gujarati Weddings",
+      "Multicultural Weddings",
+    ],
+    whyChooseTitle: "Why Choose Us for South Asian Weddings in Dubai",
+    whyChoose: [
+      {
+        title: "Specialists in Multi-Day Wedding Celebrations",
+        body: "We coordinate complete South Asian wedding journeys, including engagement events, Mehndi, Haldi, Sangeet, Pheras, Nikah, Baraat, Walima, receptions, and farewell celebrations.",
+      },
+      {
+        title: "Bespoke Cultural Wedding Design",
+        body: "Every event is designed around your heritage, family traditions, preferred colours, rituals, attire, entertainment, and personal wedding vision.",
+      },
+      {
+        title: "Luxury Décor, Staging & Production",
+        body: "From vibrant Mehndi styling and grand reception stages to mandaps, floral installations, lighting, sound, LED screens, entrances, and wedding decoration Dubai, we transform every venue.",
+      },
+      {
+        title: "Complete Family, Guest & Event Coordination",
+        body: "Our wedding coordinator team manages suppliers, timelines, ceremonies, family requirements, guest hospitality, venue transitions, transport, and every detail across all wedding functions.",
+      },
+    ],
+    faqs: [
+      {
+        q: "Do you organise Pakistani and Indian weddings in Dubai?",
+        a: "Yes. We plan Pakistani, North Indian, South Indian, Tamil, Sikh, Gujarati, and multicultural weddings across Dubai and the UAE.",
+      },
+      {
+        q: "Can you plan several South Asian wedding events?",
+        a: "Absolutely. We can coordinate Mehndi, Haldi, Sangeet, Nikah, Pheras, Baraat, Walima, receptions, and other family celebrations as one seamless wedding experience.",
+      },
+      {
+        q: "Can each wedding function have a different design?",
+        a: "Yes. Each event can have its own colour palette, décor concept, entertainment, stage, lighting, menu, and atmosphere while remaining connected to the overall wedding story.",
+      },
+      {
+        q: "Can you arrange a traditional mandap or Nikah stage?",
+        a: "Yes. We design customised mandaps, Nikah stages, reception stages, floral backdrops, aisle settings, seating layouts, and ceremonial spaces according to your traditions.",
+      },
+      {
+        q: "Do you arrange South Asian entertainment?",
+        a: "Yes. We can coordinate DJs, dhol players, live singers, dancers, Bollywood performers, choreography, family performances, and customised bride and groom entrances.",
+      },
+      {
+        q: "Can you coordinate culturally appropriate catering?",
+        a: "Yes. We work with experienced caterers to arrange Pakistani, Indian, vegetarian, regional, and international menus, including live stations and customised dining experiences.",
+      },
+      {
+        q: "Can you manage large guest lists and international guests?",
+        a: "Yes. We assist with invitations, RSVP tracking, accommodation, airport transfers, transportation, welcome desks, seating plans, itineraries, and guest hospitality.",
+      },
+      {
+        q: "Can you plan a multicultural South Asian wedding?",
+        a: "Absolutely. We thoughtfully combine different cultures, ceremonies, cuisines, music, and family traditions into one respectful and beautifully coordinated celebration.",
+      },
+    ],
+  },
+
   "destination-weddings": {
     heroSubtitle: "Complete UAE wedding experiences for couples and guests travelling from abroad.",
     introHeading: "Destination Weddings",
