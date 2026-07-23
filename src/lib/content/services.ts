@@ -35,10 +35,12 @@ export const flagshipServices: ServiceItem[] = [
     description:
       "Plan a breathtaking desert wedding in Dubai surrounded by golden dunes, sunset views, Arabian-inspired hospitality, and a private luxury setting.",
     perfectFor: [
-      "Arabian-inspired weddings",
-      "Destination weddings",
-      "Outdoor weddings",
-      "Private desert celebrations",
+      "Couples dreaming of a romantic Luxury Desert Wedding surrounded by the golden dunes and breathtaking Arabian landscapes.",
+      "Those looking for an unforgettable celebration with elegant desert styling, personalised Wedding Decoration Dubai, and timeless traditions.",
+      "Destination couples planning a unique wedding experience across Dubai, Abu Dhabi, Ras Al Khaimah, and the UAE.",
+      "Brides and grooms who love intimate ceremonies, spectacular sunsets, and unforgettable starlit celebrations.",
+      "Couples seeking professional Wedding Planning Services with a dedicated Wedding Coordinator to thoughtfully bring every detail together.",
+      "Anyone wanting a private, luxurious wedding that blends natural beauty, refined elegance, and authentic Arabian charm.",
     ],
     cta: "Explore Desert Weddings",
     image: "/service-images/A4-E4.webp",

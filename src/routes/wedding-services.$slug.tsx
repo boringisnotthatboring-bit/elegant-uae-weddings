@@ -219,9 +219,6 @@ function WeddingServicePage() {
             <h1 className="mt-4 font-display text-4xl leading-tight md:text-5xl lg:text-6xl">
               {service.title}
             </h1>
-            <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-white/85 md:text-lg">
-              {detail.heroSubtitle}
-            </p>
           </div>
         </div>
       </section>
@@ -290,9 +287,11 @@ function WeddingServicePage() {
               <div className="md:order-1">
                 <p className="eyebrow">{detail.idealFor ? "Ideal For" : "Perfect For"}</p>
                 <h2 className="mt-3 font-display text-3xl md:text-4xl">
-                  {detail.idealFor
-                    ? `Who Is ${service.title} Ideal For?`
-                    : `Who Is ${service.title} Perfect For?`}
+                  {service.slug === "desert-wedding-dubai"
+                    ? "Who Is a Luxury Desert Wedding Ideal For?"
+                    : detail.idealFor
+                      ? `Who Is ${service.title} Ideal For?`
+                      : `Who Is ${service.title} Perfect For?`}
                 </h2>
 
                 <ul className="mt-6 grid gap-3 text-sm text-muted-foreground sm:grid-cols-2">
