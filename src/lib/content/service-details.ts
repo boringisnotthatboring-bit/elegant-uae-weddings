@@ -62,7 +62,7 @@ const commonFaqs = (kind: string, kindLower: string): ServiceFaq[] => [
 
 export const serviceDetails: Record<string, ServiceDetail> = {
   "beach-wedding-dubai": {
-    heroSubtitle: "White sands, sunset vows, endless Arabian Gulf.",
+    heroSubtitle: "",
     introHeading: "Luxury Beach Weddings",
     intro: [
       'Say "I Do" by the Sea with a Celebration Designed Just for You.',

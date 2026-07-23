@@ -6,6 +6,7 @@ export interface ServiceItem {
   perfectFor?: string[];
   cta: string;
   image: string;
+  banner?: string;
   featured?: boolean;
 }
 
@@ -170,7 +171,7 @@ export const culturalServices: ServiceItem[] = [
       "Seasonal UAE weddings",
     ],
     cta: "Explore Outdoor Weddings",
-    image: img("photo-1507504031003-b417219a0fde"),
+    image: "/service-images/outdoor.webp",
   },
   {
     slug: "destination-weddings",
@@ -185,7 +186,7 @@ export const culturalServices: ServiceItem[] = [
       "Luxury UAE wedding experiences",
     ],
     cta: "Explore Destination Weddings",
-    image: img("photo-1511285560929-80b456fea0bc"),
+    image: "/service-images/destination.webp",
   },
 ];
 
