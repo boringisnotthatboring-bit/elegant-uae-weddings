@@ -68,6 +68,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       'Say "I Do" by the Sea with a Celebration Designed Just for You.',
       "Celebrate your love with a breathtaking Luxury Beach Wedding planned by Awesome Events Weddings. As a trusted Wedding Planner Dubai and Wedding Organizer UAE, we create elegant beachfront celebrations across Dubai, Abu Dhabi, Ras Al Khaimah, and the UAE's most exclusive coastal venues. Whether you envision an intimate sunset ceremony or a grand Destination Wedding, our bespoke Wedding Planning Services ensure every detail is beautifully curated.",
       "Every celebration is thoughtfully designed to reflect your love story while creating unforgettable memories by the sea.",
+      "No two love stories are the same, and neither are our weddings. Our bespoke wedding planning services are tailored to your style, traditions, and vision, creating unforgettable luxury weddings in Dubai & UAE that feel uniquely yours.",
     ],
     idealFor: [
       "Exclusive beach wedding venues and luxury beachfront resorts",
@@ -77,8 +78,25 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       "Photography, videography, live entertainment, fireworks, and synchronized drone shows",
       "Guest accommodation, travel coordination, and personalised wedding experiences",
     ],
-    whyChooseTitle: "Why Choose Us for a Luxury Beach Wedding in Dubai",
-    whyChoose: commonWhyChoose("Luxury Beach Weddings", "luxury beach weddings"),
+    whyChooseTitle: "What Sets Our Luxury Beach Weddings Apart",
+    whyChoose: [
+      {
+        title: "Bespoke Beach Wedding Experiences",
+        body: "Every beach wedding is uniquely designed around your vision, traditions, and personal style. Whether you dream of a romantic sunset ceremony or a grand beachfront celebration, we create bespoke experiences that reflect your story.",
+      },
+      {
+        title: "Exclusive Beachfront Venues",
+        body: "We partner with some of the UAE's most sought-after beach wedding venues, luxury resorts, and private coastal locations, helping you find the perfect setting for an elegant seaside celebration.",
+      },
+      {
+        title: "Seamless Beach Wedding Planning",
+        body: "Our dedicated Wedding Coordinator team manages every detail, from venue styling and Wedding Decoration Dubai to guest logistics, entertainment, timelines, and beachfront ceremony coordination, allowing you to enjoy a stress-free wedding day.",
+      },
+      {
+        title: "Luxury Touches That Create Lasting Memories",
+        body: "From elegant floral styling and bespoke ceremony setups to spectacular fireworks, synchronized drone shows, and exceptional guest experiences, we create Luxury Beach Weddings that are unforgettable for you and everyone celebrating by your side.",
+      },
+    ],
     faqs: [
       {
         q: "Which are the best beaches in Dubai for a luxury wedding?",
