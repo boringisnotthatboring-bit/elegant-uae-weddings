@@ -8,6 +8,7 @@ export interface ServiceItem {
   image: string;
   banner?: string;
   featured?: boolean;
+  perfectForImage?: string;
 }
 
 const img = (id: string) => `https://images.unsplash.com/${id}?auto=format&fit=crop&w=1400&q=70`;

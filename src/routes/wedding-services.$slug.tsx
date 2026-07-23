@@ -278,7 +278,7 @@ function WeddingServicePage() {
             <div className="grid gap-10 md:grid-cols-2 md:items-center md:gap-12">
               <div className="relative aspect-[4/3] overflow-hidden rounded-sm shadow-lg md:order-2">
                 <img
-                  src={service.image}
+                  src={service.perfectForImage ?? service.image}
                   alt={service.title}
                   className="h-full w-full object-cover"
                 />
