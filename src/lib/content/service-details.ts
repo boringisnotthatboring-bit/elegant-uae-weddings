@@ -71,12 +71,12 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       "No two love stories are the same, and neither are our weddings. Our bespoke wedding planning services are tailored to your style, traditions, and vision, creating unforgettable luxury weddings in Dubai & UAE that feel uniquely yours.",
     ],
     idealFor: [
-      "Exclusive beach wedding venues and luxury beachfront resorts",
-      "Dedicated Wedding Coordinator and end-to-end planning",
-      "Elegant Wedding Decoration Dubai, floral styling, ceremony arches, and reception décor",
-      "Luxury lighting, sound, staging, and beachfront seating",
-      "Photography, videography, live entertainment, fireworks, and synchronized drone shows",
-      "Guest accommodation, travel coordination, and personalised wedding experiences",
+      "Couples dreaming of a romantic Luxury Beach Wedding with breathtaking sea views and unforgettable sunset ceremonies.",
+      "Destination couples looking to celebrate their wedding in Dubai, Abu Dhabi, Ras Al Khaimah, or anywhere across the UAE.",
+      "Those who love elegant beachfront celebrations with personalised Wedding Decoration Dubai and luxury styling.",
+      "Couples planning an intimate gathering or a grand seaside celebration with family and friends.",
+      "Brides and grooms looking for complete Wedding Planning Services and a dedicated Wedding Coordinator from start to finish.",
+      "Anyone wanting a relaxed yet sophisticated wedding experience surrounded by the beauty of the Arabian Gulf.",
     ],
     whyChooseTitle: "What Sets Our Luxury Beach Weddings Apart",
     whyChoose: [
