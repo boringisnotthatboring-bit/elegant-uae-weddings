@@ -293,7 +293,7 @@ function HomePage() {
           <SectionHeader
             eyebrow="FAQ"
             title="Frequently asked questions, answered"
-            body="Everything couples ask us before booking — from seasonality and budgets to legal ceremonies and cultural traditions."
+            body="Everything you need to know before planning your wedding—from venues and timelines to legal requirements and destination celebrations."
           />
           <FaqAccordion items={faqItems} />
         </div>

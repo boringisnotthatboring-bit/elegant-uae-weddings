@@ -68,17 +68,35 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       'Say "I Do" by the Sea with a Celebration Designed Just for You.',
       "Celebrate your love with a breathtaking Luxury Beach Wedding planned by Awesome Events Weddings. As a trusted Wedding Planner Dubai and Wedding Organizer UAE, we create elegant beachfront celebrations across Dubai, Abu Dhabi, Ras Al Khaimah, and the UAE's most exclusive coastal venues. Whether you envision an intimate sunset ceremony or a grand Destination Wedding, our bespoke Wedding Planning Services ensure every detail is beautifully curated.",
       "Every celebration is thoughtfully designed to reflect your love story while creating unforgettable memories by the sea.",
+      "No two love stories are the same, and neither are our weddings. Our bespoke wedding planning services are tailored to your style, traditions, and vision, creating unforgettable luxury weddings in Dubai & UAE that feel uniquely yours.",
     ],
     idealFor: [
-      "Exclusive beach wedding venues and luxury beachfront resorts",
-      "Dedicated Wedding Coordinator and end-to-end planning",
-      "Elegant Wedding Decoration Dubai, floral styling, ceremony arches, and reception décor",
-      "Luxury lighting, sound, staging, and beachfront seating",
-      "Photography, videography, live entertainment, fireworks, and synchronized drone shows",
-      "Guest accommodation, travel coordination, and personalised wedding experiences",
+      "Couples dreaming of a romantic Luxury Beach Wedding with breathtaking sea views and unforgettable sunset ceremonies.",
+      "Destination couples looking to celebrate their wedding in Dubai, Abu Dhabi, Ras Al Khaimah, or anywhere across the UAE.",
+      "Those who love elegant beachfront celebrations with personalised Wedding Decoration Dubai and luxury styling.",
+      "Couples planning an intimate gathering or a grand seaside celebration with family and friends.",
+      "Brides and grooms looking for complete Wedding Planning Services and a dedicated Wedding Coordinator from start to finish.",
+      "Anyone wanting a relaxed yet sophisticated wedding experience surrounded by the beauty of the Arabian Gulf.",
     ],
-    whyChooseTitle: "Why Choose Us for a Luxury Beach Wedding in Dubai",
-    whyChoose: commonWhyChoose("Luxury Beach Weddings", "luxury beach weddings"),
+    whyChooseTitle: "What Sets Our Luxury Beach Weddings Apart",
+    whyChoose: [
+      {
+        title: "Bespoke Beach Wedding Experiences",
+        body: "Every beach wedding is uniquely designed around your vision, traditions, and personal style. Whether you dream of a romantic sunset ceremony or a grand beachfront celebration, we create bespoke experiences that reflect your story.",
+      },
+      {
+        title: "Exclusive Beachfront Venues",
+        body: "We partner with some of the UAE's most sought-after beach wedding venues, luxury resorts, and private coastal locations, helping you find the perfect setting for an elegant seaside celebration.",
+      },
+      {
+        title: "Seamless Beach Wedding Planning",
+        body: "Our dedicated Wedding Coordinator team manages every detail, from venue styling and Wedding Decoration Dubai to guest logistics, entertainment, timelines, and beachfront ceremony coordination, allowing you to enjoy a stress-free wedding day.",
+      },
+      {
+        title: "Luxury Touches That Create Lasting Memories",
+        body: "From elegant floral styling and bespoke ceremony setups to spectacular fireworks, synchronized drone shows, and exceptional guest experiences, we create Luxury Beach Weddings that are unforgettable for you and everyone celebrating by your side.",
+      },
+    ],
     faqs: [
       {
         q: "Which are the best beaches in Dubai for a luxury wedding?",
@@ -119,8 +137,9 @@ export const serviceDetails: Record<string, ServiceDetail> = {
     heroSubtitle: "Golden dunes, Arabian nights, cinematic sunsets.",
     introHeading: "Desert Weddings",
     intro: [
-      "Say your vows against a horizon of golden dunes with a desert wedding in Dubai — an unforgettable celebration inspired by the timeless romance of Arabia.",
-      "From exclusive dune-top ceremonies and majlis-style receptions to traditional welcomes, live performances, and cinematic lighting, every moment is designed to feel personal and effortlessly luxurious.",
+      "Plan an Unforgettable Desert Wedding in Dubai",
+      "Celebrate your love amidst the golden dunes with a breathtaking Desert Wedding in Dubai. At Awesome Events Weddings, we create extraordinary desert celebrations that combine Arabian charm, luxury, and unforgettable experiences. Whether you envision an intimate sunset ceremony, a romantic candlelit reception beneath the stars, or a lavish multi-day celebration, our experienced Wedding Planner Dubai team brings your dream wedding to life with creativity and flawless execution.",
+      "From exclusive desert wedding venues and bespoke Wedding Decoration Dubai to gourmet catering, live entertainment, photography, luxury seating, traditional Majlis setups, fireworks, synchronized drone shows, and complete Wedding Planning Services, we take care of every detail. Whether you're planning a Destination Wedding or a private celebration in the UAE, we create personalised Desert Weddings that reflect your style, traditions, and vision, ensuring an unforgettable experience for you and your guests.",
     ],
     whyChooseTitle: "Why Choose Us for a Desert Wedding in Dubai",
     whyChoose: commonWhyChoose("Desert Weddings", "desert weddings"),
