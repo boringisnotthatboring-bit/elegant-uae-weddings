@@ -3,6 +3,8 @@ import { SectionHeader } from "@/components/section-header";
 import { VenueCard } from "@/components/venue-card";
 import { Button } from "@/components/ui/button";
 import { venueCategories } from "@/lib/content/venues";
+import venueOne from "@/assets/venue/awimg1.png";
+import venueTwo from "@/assets/venue/awimg2.png";
 
 export const Route = createFileRoute("/venues")({
   head: () => ({
@@ -145,9 +147,12 @@ function VenuesPage() {
 
             {/* Temporary image placeholders */}
             <div className="relative mx-auto min-h-[460px] w-full max-w-xl">
-              <div className="absolute right-0 top-0 h-[55%] w-[78%] border border-border bg-background/80" />
+              <div className="absolute right-0 top-0 h-[55%] w-[78%] border border-border bg-background/80">
+              <img src={venueOne} alt="Venue One" /></div>
 
-              <div className="absolute bottom-0 left-0 h-[55%] w-[78%] border border-border bg-background/80" />
+              <div className="absolute bottom-0 left-0 h-[55%] w-[78%] border border-border bg-background/80">
+                <img src={venueTwo} alt="Venue Two" />
+              </div>
             </div>
           </div>
         </div>
