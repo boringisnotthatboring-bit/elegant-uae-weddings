@@ -15,7 +15,7 @@ export const venueCategories: VenueCategory[] = [
     description:
       'Say "I do" on the pristine white sands of the Arabian Gulf, where breathtaking sunsets and the sound of gentle waves create an unforgettable setting. Our handpicked beachfront wedding venues in Dubai and the UAE are perfect for romantic ceremonies, elegant receptions, and luxury destination weddings by the sea.',
     cta: "Explore Beachfront Wedding Venues",
-    image: img("photo-1523438885200-e635ba2c371e"),
+    image: "/venues/beach-front.webp",
   },
   {
     slug: "garden",
@@ -23,7 +23,7 @@ export const venueCategories: VenueCategory[] = [
     description:
       "Celebrate your love surrounded by lush greenery, blooming flowers, and picturesque landscapes. Our carefully selected garden wedding venues provide a naturally romantic backdrop for intimate ceremonies, elegant outdoor receptions, and timeless celebrations across Dubai and the UAE.",
     cta: "Explore Garden Wedding Venues",
-    image: img("photo-1526047932273-341f2a7631f9"),
+    image: "/venues/g5.webp",
   },
   {
     slug: "luxury-hotel",
@@ -31,7 +31,7 @@ export const venueCategories: VenueCategory[] = [
     description:
       "Host your celebration at Dubai's most prestigious luxury hotel wedding venues, featuring grand ballrooms, five-star hospitality, world-class dining, and breathtaking event spaces. From iconic hotels in Dubai to exclusive venues in Abu Dhabi and Ras Al Khaimah, discover the perfect setting for an unforgettable luxury wedding.",
     cta: "Explore Luxury Hotel Wedding Venues",
-    image: img("photo-1519167758481-83f550bb49b3"),
+    image: "/venues/luxury.webp",
   },
   {
     slug: "unique",
@@ -39,7 +39,7 @@ export const venueCategories: VenueCategory[] = [
     description:
       "Looking for something extraordinary? Discover our collection of unique wedding venues, from rooftop terraces and private islands to heritage landmarks and exclusive waterfront locations. Whether you're planning an intimate gathering or a lavish celebration, we'll help you find a venue that's as unique as your love story.",
     cta: "Explore All Wedding Venues",
-    image: img("photo-1464366400600-7168b8af9bc3"),
+    image: "/venues/gc.webp",
   },
 ];
 
