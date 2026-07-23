@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { allServices, serviceCtaMeta } from "@/lib/content/services";
-import servicesHero from "@/assets/wedding-services/beach-wedding-hero.png";
+import servicesHero from "@/assets/wedding-services/beach-wedding-hero.webp";
 
 export const Route = createFileRoute("/services")({
   head: () => ({

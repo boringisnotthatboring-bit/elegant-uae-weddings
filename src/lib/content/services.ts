@@ -25,7 +25,7 @@ export const flagshipServices: ServiceItem[] = [
       "Luxury beachfront celebrations",
     ],
     cta: "Explore Luxury Beach Weddings",
-    image: "beach-wedding-1.webp",
+    image: "/service-images/beach-wedding-1.webp",
   },
   {
     slug: "desert-wedding-dubai",
@@ -40,7 +40,7 @@ export const flagshipServices: ServiceItem[] = [
       "Private desert celebrations",
     ],
     cta: "Explore Desert Weddings",
-    image: "/A4-E4.webp",
+    image: "/service-images/A4-E4.webp",
   },
   {
     slug: "intimate-elopements",
@@ -70,7 +70,7 @@ export const flagshipServices: ServiceItem[] = [
       "Celebration planning after your ceremony",
     ],
     cta: "Explore Civil Weddings",
-    image: img("photo-1522673607200-164d1b6ce486"),
+    image: "/service-images/civil-wedding-1.webp",
   },
   {
     slug: "luxury-hotel-weddings",
@@ -85,7 +85,7 @@ export const flagshipServices: ServiceItem[] = [
       "Multi-day wedding celebrations",
     ],
     cta: "Explore Luxury Hotel Weddings",
-    image: "luxury-hotel-weddings-new.webp",
+    image: "/service-images/luxury-hotel-weddings-new.webp",
   },
   {
     slug: "emirati-gcc-weddings",
@@ -104,7 +104,7 @@ export const flagshipServices: ServiceItem[] = [
       "GCC Family Weddings",
     ],
     cta: "Explore Emirati & GCC Weddings",
-    image: "Emirati-Wedding-new-(1).webp",
+    image: "/service-images/Emirati-Wedding-new-(1).webp",
   },
   {
     slug: "south-asian-weddings",
@@ -122,7 +122,7 @@ export const flagshipServices: ServiceItem[] = [
       "Multicultural Weddings",
     ],
     cta: "Explore South Asian Weddings",
-    image: "South-Asian-Weddings.webp",
+    image: "/service-images/South-Asian-Weddings.webp",
   },
 ];
 
@@ -140,7 +140,7 @@ export const culturalServices: ServiceItem[] = [
       "Luxury destination weddings",
     ],
     cta: "Explore Yacht & Marina Weddings",
-    image: img("photo-1540946485063-a40da27545f8"),
+    image: "/service-images/yacht.webp",
   },
   {
     slug: "garden-weddings",
@@ -155,7 +155,7 @@ export const culturalServices: ServiceItem[] = [
       "Daytime celebrations",
     ],
     cta: "Explore Garden Weddings",
-    image: img("photo-1519225421980-715cb0215aed"),
+    image: "/service-images/gard1.webp",
   },
   {
     slug: "outdoor-weddings",
