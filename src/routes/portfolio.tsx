@@ -41,13 +41,6 @@ export const Route = createFileRoute("/portfolio")({
   component: PortfolioPage,
 });
 
-/*
-  This automatically loads every .webp image inside:
-
-  src/assets/portfolio/
-
-  You do not need to import 119 images manually.
-*/
 const portfolioModules = import.meta.glob(
   "/src/assets/portfolio/*.webp",
   {

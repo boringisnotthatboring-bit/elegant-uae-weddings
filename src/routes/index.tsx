@@ -8,7 +8,7 @@ import { ServicesCarousel } from "@/components/services-carousel";
 import { FaqAccordion } from "@/components/faq-accordion";
 import { WeddingVenuesShowcase } from "@/components/wedding-venues-showcase";
 import { TestimonialsCarousel } from "@/components/testimonials-carousel";
-import { flagshipServices, specialties } from "@/lib/content/services";
+import { flagshipServices } from "@/lib/content/services";
 import { faqItems } from "@/lib/content/faqs";
 import { testimonials } from "@/lib/content/testimonials";
 import { company } from "@/lib/content/nav";
@@ -121,21 +121,6 @@ function HomePage() {
               manage every detail from the first consultation to the final celebration, bringing
               each couple’s unique wedding vision to life.
             </p>
-            <div className="mt-8">
-              <p className="eyebrow text-foreground/60">Weddings We Specialize In</p>
-              <ul className="mt-3 flex flex-wrap gap-2">
-                {specialties.map((s) => (
-                  <li key={s}>
-                    <Link
-                      to="/services"
-                      className="inline-flex rounded-full border border-border px-4 py-1.5 text-xs uppercase tracking-widest text-foreground/75 transition-colors hover:border-primary hover:text-primary"
-                    >
-                      {s}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
           </div>
           <dl className="grid grid-cols-2 gap-4">
             {trustStats.map((s) => (

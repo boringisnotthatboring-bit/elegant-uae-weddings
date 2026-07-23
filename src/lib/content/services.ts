@@ -254,18 +254,6 @@ export const customOfferings: CustomOffering[] = [
   },
 ];
 
-export const specialties = [
-  "Luxury Beach Weddings",
-  "Desert Weddings",
-  "Intimate Elopements & Micro Weddings",
-  "Civil Weddings",
-  "Luxury Hotel Weddings",
-  "Yacht & Marina Weddings",
-  "Garden Weddings",
-  "Outdoor Weddings",
-  "Destination Weddings",
-];
-
 export const allServices: ServiceItem[] = [...flagshipServices, ...culturalServices];
 
 export function getServiceBySlug(slug: string): ServiceItem | undefined {
