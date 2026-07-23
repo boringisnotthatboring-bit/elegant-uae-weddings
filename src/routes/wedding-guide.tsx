@@ -12,7 +12,10 @@ export const Route = createFileRoute("/wedding-guide")({
           "Expert wedding planning guides for Dubai and the UAE — costs, venues, legal requirements, cultural traditions and more.",
       },
       { property: "og:title", content: "Wedding Guide — Dubai & UAE" },
-      { property: "og:description", content: "Guides, tips and inspiration for couples planning weddings in the UAE." },
+      {
+        property: "og:description",
+        content: "Guides, tips and inspiration for couples planning weddings in the UAE.",
+      },
     ],
   }),
   component: WeddingGuidePage,
@@ -59,7 +62,11 @@ function WeddingGuidePage() {
                   <span className="uppercase tracking-widest text-primary">{p.category}</span>
                   <span className="text-muted-foreground">·</span>
                   <time className="text-muted-foreground">
-                    {new Date(p.date).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })}
+                    {new Date(p.date).toLocaleDateString("en-GB", {
+                      day: "numeric",
+                      month: "short",
+                      year: "numeric",
+                    })}
                   </time>
                 </div>
                 <h3 className="mt-3 font-display text-xl leading-tight">{p.title}</h3>

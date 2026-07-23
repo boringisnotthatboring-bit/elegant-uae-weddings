@@ -1,101 +1,165 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Linkedin, Instagram, Mail, MapPin, Phone } from "lucide-react";
+import { Linkedin, Instagram, Mail, MapPin, Phone, ExternalLink } from "lucide-react";
 import { SectionHeader } from "@/components/section-header";
-import { ContactForm } from "@/components/contact-form";
 import { Button } from "@/components/ui/button";
 import { company, socialLinks } from "@/lib/content/nav";
 
+/*
+  Paste your published Google Form link below.
+
+  Normal link example:
+  https://docs.google.com/forms/d/e/FORM_ID/viewform
+
+  The embed link should normally be:
+  https://docs.google.com/forms/d/e/FORM_ID/viewform?embedded=true
+*/
+
+const GOOGLE_FORM_URL = "PASTE_YOUR_GOOGLE_FORM_LINK_HERE";
+
+const GOOGLE_FORM_EMBED_URL = "PASTE_YOUR_GOOGLE_FORM_EMBED_LINK_HERE";
+
 export const Route = createFileRoute("/contact")({
-  validateSearch: (search: Record<string, unknown>) => ({
+  validateSearch: (search: Record<string, unknown>): { type?: string } => ({
     type: typeof search.type === "string" ? search.type : undefined,
   }),
+
   head: () => ({
     meta: [
-      { title: "Contact Us | Awesome Events Weddings — Wedding Planner Dubai" },
+      {
+        title: "Contact Us | Awesome Events Weddings — Wedding Planner Dubai",
+      },
       {
         name: "description",
         content:
-          "Book a free consultation with Dubai's leading luxury wedding planner. Share your vision — we'll build a bespoke celebration across the UAE.",
+          "Book a free consultation with Dubai's leading luxury wedding planner. Share your vision and receive a bespoke wedding consultation across the UAE.",
       },
-      { property: "og:title", content: "Contact Awesome Events Weddings" },
-      { property: "og:description", content: "Book a free luxury wedding consultation in Dubai." },
+      {
+        property: "og:title",
+        content: "Contact Awesome Events Weddings",
+      },
+      {
+        property: "og:description",
+        content: "Book a free luxury wedding consultation in Dubai.",
+      },
     ],
   }),
+
   component: ContactPage,
 });
 
 function ContactPage() {
-  const { type } = Route.useSearch();
   return (
     <>
+      {/* Page heading */}
       <section className="section-y">
         <div className="container-page">
           <nav className="mb-6 text-xs uppercase tracking-widest text-muted-foreground">
-            <Link to="/">Home</Link> <span className="mx-2">/</span> Contact
+            <Link to="/" className="transition-colors hover:text-primary">
+              Home
+            </Link>
+
+            <span className="mx-2">/</span>
+
+            <span>Contact</span>
           </nav>
+
           <SectionHeader
             eyebrow="Contact Us"
             title="Looking for a Wedding Planner in Dubai?"
-            body="Planning a wedding in Dubai or anywhere across the UAE? Share a few details about your celebration, and our wedding specialists will prepare a personalized consultation tailored to your vision."
+            body="Planning a wedding in Dubai or anywhere across the UAE? Complete our wedding questionnaire and share a few details about your celebration. Our wedding specialists will prepare a personalised consultation tailored to your vision."
           />
         </div>
       </section>
 
+      {/* Contact and Google Form */}
       <section className="section-y bg-secondary/40">
         <div className="container-page grid gap-12 lg:grid-cols-[1.4fr_1fr]">
+          {/* Google Form */}
           <div>
-            <div className="rounded-sm border border-border bg-card p-8">
+            <div className="rounded-sm border border-border bg-card p-6 md:p-8">
               <p className="eyebrow">Free Wedding Consultation</p>
-              <h3 className="mt-3 font-display text-2xl">Start Your Wedding Questionnaire</h3>
-              <p className="mt-2 text-sm text-muted-foreground">
-                Complete our one-minute wedding questionnaire to help us recommend the right wedding planning services, venues, and packages for your celebration.
+
+              <h2 className="mt-3 font-display text-2xl md:text-3xl">
+                Start Your Wedding Questionnaire
+              </h2>
+
+              <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+                Tell us about your wedding date, guest count, preferred location, celebration style,
+                and the services you require. One of our wedding specialists will review your
+                enquiry and contact you shortly.
               </p>
-              <div className="mt-4">
+
+              <div className="mt-6">
                 <Button asChild variant="outline">
-                  <a href="#enquiry-form">Start the questionnaire →</a>
+                  <a href={GOOGLE_FORM_URL} target="_blank" rel="noopener noreferrer">
+                    Open Questionnaire
+                    <ExternalLink className="ml-2 h-4 w-4" />
+                  </a>
                 </Button>
               </div>
             </div>
 
-            <div id="enquiry-form" className="mt-10 scroll-mt-24">
-              <h3 className="font-display text-2xl">Send us a message</h3>
-              <p className="mt-2 text-sm text-muted-foreground">
-                Tell us about your dream wedding — one of our specialists will be in touch within one business day.
-              </p>
-              <div className="mt-6">
-                <ContactForm initialWeddingType={type} />
-              </div>
+            <div className="mt-10 overflow-hidden rounded-sm border border-border bg-white shadow-sm">
+              <iframe
+                title="Awesome Events Weddings Consultation Form"
+                src={GOOGLE_FORM_EMBED_URL}
+                width="100%"
+                height="1450"
+                loading="lazy"
+                className="block min-h-[1100px] w-full border-0"
+              >
+                Loading…
+              </iframe>
             </div>
           </div>
 
+          {/* Contact information */}
           <aside className="flex flex-col gap-6">
             <div className="rounded-sm border border-border bg-card p-6">
-              <h4 className="font-display text-xl">Get in touch</h4>
-              <ul className="mt-4 space-y-3 text-sm">
-                <li className="flex items-start gap-2">
-                  <MapPin className="mt-0.5 h-4 w-4 text-primary" /> {company.address}
+              <h3 className="font-display text-xl">Get in Touch</h3>
+
+              <ul className="mt-5 space-y-4 text-sm">
+                <li className="flex items-start gap-3">
+                  <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+
+                  <span>{company.address}</span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <Phone className="mt-0.5 h-4 w-4 text-primary" /> {company.phone}
+
+                <li className="flex items-start gap-3">
+                  <Phone className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+
+                  <a href={`tel:${company.phone}`} className="transition-colors hover:text-primary">
+                    {company.phone}
+                  </a>
                 </li>
-                <li className="flex items-start gap-2">
-                  <Mail className="mt-0.5 h-4 w-4 text-primary" /> {company.email}
+
+                <li className="flex items-start gap-3">
+                  <Mail className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+
+                  <a
+                    href={`mailto:${company.email}`}
+                    className="break-all transition-colors hover:text-primary"
+                  >
+                    {company.email}
+                  </a>
                 </li>
               </ul>
-              <div className="mt-5 flex gap-2">
+
+              <div className="mt-6 flex gap-2">
                 <a
                   href={socialLinks.linkedin}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   aria-label="LinkedIn"
                   className="rounded-full border border-border p-2 transition-colors hover:border-primary hover:text-primary"
                 >
                   <Linkedin className="h-4 w-4" />
                 </a>
+
                 <a
                   href={socialLinks.instagram}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   aria-label="Instagram"
                   className="rounded-full border border-border p-2 transition-colors hover:border-primary hover:text-primary"
                 >
@@ -103,6 +167,8 @@ function ContactPage() {
                 </a>
               </div>
             </div>
+
+            {/* Map */}
             <div className="overflow-hidden rounded-sm border border-border">
               <iframe
                 title="Awesome Events Weddings location"

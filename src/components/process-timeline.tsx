@@ -21,9 +21,7 @@ export function ProcessTimeline({ steps }: { steps: ProcessStep[] }) {
               <p className="text-xs uppercase tracking-widest text-muted-foreground">
                 Step {index + 1}
               </p>
-              <h3 className="mt-1 font-display text-xl md:text-2xl">
-                {step.title}
-              </h3>
+              <h3 className="mt-1 font-display text-xl md:text-2xl">{step.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                 {step.description}
               </p>

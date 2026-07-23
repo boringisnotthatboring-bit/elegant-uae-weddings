@@ -25,10 +25,14 @@ export const Route = createFileRoute("/")({
         content:
           "Dubai's leading luxury wedding planner. Beach, desert, hotel and destination weddings across the UAE — planned end-to-end by our award-winning team.",
       },
-      { property: "og:title", content: "Luxury Wedding Planner in Dubai | Awesome Events Weddings" },
+      {
+        property: "og:title",
+        content: "Luxury Wedding Planner in Dubai | Awesome Events Weddings",
+      },
       {
         property: "og:description",
-        content: "Dubai's leading luxury wedding planner. Beach, desert, hotel and destination weddings across the UAE — planned end-to-end by our award-winning team.",
+        content:
+          "Dubai's leading luxury wedding planner. Beach, desert, hotel and destination weddings across the UAE — planned end-to-end by our award-winning team.",
       },
     ],
   }),
@@ -41,7 +45,6 @@ const trustStats = [
   { value: "100+", label: "Event Partners" },
   { value: "300+", label: "Happy Couples" },
 ];
-
 
 function HomePage() {
   return (
@@ -56,7 +59,7 @@ function HomePage() {
             height={1200}
             className="h-full w-full object-cover"
           />
-        <div className="absolute inset-0 hero-scrim" />
+          <div className="absolute inset-0 hero-scrim" />
         </div>
         <div className="container-page relative flex min-h-[85vh] flex-col justify-end pb-20 pt-32 text-primary-foreground">
           <div className="inline-flex max-w-fit rounded-full bg-white/15 px-4 py-2 backdrop-blur-xl backdrop-saturate-150">
@@ -66,10 +69,16 @@ function HomePage() {
             Turning Dreams into Beautiful Realities
           </h1>
           <p className="mt-6 max-w-2xl text-base text-primary-foreground/85 md:text-lg">
-            Awesome Events Weddings is a leading wedding planner in Dubai, creating bespoke luxury weddings and unforgettable celebrations across the UAE — from private beach ceremonies and iconic hotel weddings to breathtaking destination events.
+            Awesome Events Weddings is a leading wedding planner in Dubai, creating bespoke luxury
+            weddings and unforgettable celebrations across the UAE — from private beach ceremonies
+            and iconic hotel weddings to breathtaking destination events.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
+            <Button
+              asChild
+              size="lg"
+              className="bg-accent text-accent-foreground hover:bg-accent/90"
+            >
               <Link to="/contact">Book Free Consultation</Link>
             </Button>
             <Button
@@ -96,13 +105,21 @@ function HomePage() {
               Experience you can count on, elegance you can feel.
             </p>
             <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground">
-              With over 12 years of experience, Awesome Events Weddings is a trusted luxury wedding planner in Dubai, creating extraordinary celebrations across the UAE.
+              With over 12 years of experience, Awesome Events Weddings is a trusted luxury wedding
+              planner in Dubai, creating extraordinary celebrations across the UAE.
             </p>
             <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground">
-              From intimate ceremonies and civil weddings to grand multicultural and destination weddings, we provide complete end-to-end wedding planning and execution, including creative concept development, venue selection, bespoke décor, vendor management, budgeting, entertainment, technical production, guest hospitality, invitations, transportation, accommodation, wedding logistics, permits, timelines, and seamless on-ground coordination.
+              From intimate ceremonies and civil weddings to grand multicultural and destination
+              weddings, we provide complete end-to-end wedding planning and execution, including
+              creative concept development, venue selection, bespoke décor, vendor management,
+              budgeting, entertainment, technical production, guest hospitality, invitations,
+              transportation, accommodation, wedding logistics, permits, timelines, and seamless
+              on-ground coordination.
             </p>
             <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground">
-              Through meticulous planning, personalized service, and world-class production, we manage every detail from the first consultation to the final celebration, bringing each couple’s unique wedding vision to life.
+              Through meticulous planning, personalized service, and world-class production, we
+              manage every detail from the first consultation to the final celebration, bringing
+              each couple’s unique wedding vision to life.
             </p>
             <div className="mt-8">
               <p className="eyebrow text-foreground/60">Weddings We Specialize In</p>
@@ -122,13 +139,8 @@ function HomePage() {
           </div>
           <dl className="grid grid-cols-2 gap-4">
             {trustStats.map((s) => (
-              <div
-                key={s.label}
-                className="rounded-sm border border-border bg-card p-6"
-              >
-                <dt className="font-display text-4xl text-primary md:text-5xl">
-                  {s.value}
-                </dt>
+              <div key={s.label} className="rounded-sm border border-border bg-card p-6">
+                <dt className="font-display text-4xl text-primary md:text-5xl">{s.value}</dt>
                 <dd className="mt-1 text-xs uppercase tracking-widest text-muted-foreground">
                   {s.label}
                 </dd>
@@ -149,12 +161,20 @@ function HomePage() {
               UAE Weddings across the country
             </h2>
             <p className="mt-6 text-base leading-relaxed text-muted-foreground">
-              From our headquarters in Dubai, we plan and coordinate weddings across the UAE, including Abu Dhabi, Ras Al Khaimah, Sharjah, Fujairah, Ajman, and other stunning destinations.
+              From our headquarters in Dubai, we plan and coordinate weddings across the UAE,
+              including Abu Dhabi, Ras Al Khaimah, Sharjah, Fujairah, Ajman, and other stunning
+              destinations.
             </p>
-            <div className="mt-6"><ServiceIconRow /></div>
+            <div className="mt-6">
+              <ServiceIconRow />
+            </div>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Button asChild><Link to="/contact">Book Free Consultation</Link></Button>
-              <Button asChild variant="outline"><Link to="/services">Our Services</Link></Button>
+              <Button asChild>
+                <Link to="/contact">Book Free Consultation</Link>
+              </Button>
+              <Button asChild variant="outline">
+                <Link to="/services">Our Services</Link>
+              </Button>
             </div>
           </div>
           <div className="relative -mx-2 md:-mx-4 lg:scale-[1.07] lg:origin-center">
@@ -187,12 +207,13 @@ function HomePage() {
           </div>
           <div className="mt-10">
             <Button asChild variant="outline">
-              <Link to="/services">View all Weddings <ArrowRight className="ml-2 h-4 w-4" /></Link>
+              <Link to="/services">
+                View all Weddings <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
             </Button>
           </div>
         </div>
       </section>
-
 
       {/* Why Couples Choose Us */}
       <section className="pt-8 pb-16 md:pt-12 md:pb-24">
@@ -207,19 +228,29 @@ function HomePage() {
               <div>
                 <h3 className="font-display text-xl md:text-2xl">Experienced Wedding Planners</h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground md:text-base">
-                  As a trusted Wedding Planner Dubai and Wedding Organizer UAE, we provide personalised Wedding Planning Services, guiding you through every stage of your celebration with care and attention to detail.
+                  As a trusted Wedding Planner Dubai and Wedding Organizer UAE, we provide
+                  personalised Wedding Planning Services, guiding you through every stage of your
+                  celebration with care and attention to detail.
                 </p>
               </div>
               <div>
-                <h3 className="font-display text-xl md:text-2xl">Luxury & Customized Wedding Experiences</h3>
+                <h3 className="font-display text-xl md:text-2xl">
+                  Luxury & Customized Wedding Experiences
+                </h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground md:text-base">
-                  From elegant styling and Wedding Decoration Dubai to bespoke themes and venue design, every celebration is thoughtfully customised to reflect your vision, traditions, and personal style.
+                  From elegant styling and Wedding Decoration Dubai to bespoke themes and venue
+                  design, every celebration is thoughtfully customised to reflect your vision,
+                  traditions, and personal style.
                 </p>
               </div>
               <div>
-                <h3 className="font-display text-xl md:text-2xl">Complete Wedding Planning Services</h3>
+                <h3 className="font-display text-xl md:text-2xl">
+                  Complete Wedding Planning Services
+                </h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground md:text-base">
-                  Our dedicated Wedding Coordinator manages venue selection, décor, entertainment, photography, guest experiences, and production for weddings across Dubai, Abu Dhabi, Ras Al Khaimah, and the UAE.
+                  Our dedicated Wedding Coordinator manages venue selection, décor, entertainment,
+                  photography, guest experiences, and production for weddings across Dubai, Abu
+                  Dhabi, Ras Al Khaimah, and the UAE.
                 </p>
               </div>
             </div>
@@ -282,14 +313,24 @@ function HomePage() {
                 Ready to plan your dream wedding?
               </h2>
               <p className="mt-4 max-w-xl text-primary-foreground/80">
-                Share a few details about your celebration and our wedding specialists will prepare a personalized consultation tailored to your vision.
+                Share a few details about your celebration and our wedding specialists will prepare
+                a personalized consultation tailored to your vision.
               </p>
             </div>
             <div className="flex flex-wrap gap-3 md:justify-end">
-              <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
+              <Button
+                asChild
+                size="lg"
+                className="bg-accent text-accent-foreground hover:bg-accent/90"
+              >
                 <Link to="/contact">Book Free Consultation</Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-primary-foreground/40 bg-transparent text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="border-primary-foreground/40 bg-transparent text-primary-foreground hover:bg-primary-foreground hover:text-primary"
+              >
                 <Link to="/portfolio">View our portfolio page</Link>
               </Button>
             </div>

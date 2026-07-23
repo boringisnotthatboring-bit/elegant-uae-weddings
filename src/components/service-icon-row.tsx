@@ -32,9 +32,7 @@ export function ServiceIconRow() {
             <Icon className="h-4 w-4" />
           </span>
 
-          <span className="leading-snug">
-            {label}
-          </span>
+          <span className="leading-snug">{label}</span>
         </li>
       ))}
     </ul>

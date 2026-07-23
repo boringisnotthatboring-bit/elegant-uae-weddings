@@ -10,7 +10,12 @@ export const Route = createFileRoute("/wedding-guide/$slug")({
   },
   head: ({ loaderData }) => {
     if (!loaderData) {
-      return { meta: [{ title: "Article not found — Wedding Guide" }, { name: "robots", content: "noindex" }] };
+      return {
+        meta: [
+          { title: "Article not found — Wedding Guide" },
+          { name: "robots", content: "noindex" },
+        ],
+      };
     }
     const p = loaderData.post;
     return {
@@ -30,7 +35,9 @@ export const Route = createFileRoute("/wedding-guide/$slug")({
       <div className="container-page text-center">
         <h1 className="font-display text-4xl">Article not found</h1>
         <div className="mt-6">
-          <Button asChild><Link to="/wedding-guide">Back to Wedding Guide</Link></Button>
+          <Button asChild>
+            <Link to="/wedding-guide">Back to Wedding Guide</Link>
+          </Button>
         </div>
       </div>
     </div>
@@ -49,13 +56,17 @@ function ArticlePage() {
       <article className="section-y">
         <div className="container-page max-w-3xl">
           <nav className="mb-6 text-xs uppercase tracking-widest text-muted-foreground">
-            <Link to="/wedding-guide">Wedding Guide</Link>{" "}
-            <span className="mx-2">/</span> {post.category}
+            <Link to="/wedding-guide">Wedding Guide</Link> <span className="mx-2">/</span>{" "}
+            {post.category}
           </nav>
           <p className="eyebrow">{post.category}</p>
           <h1 className="mt-3 font-display text-4xl leading-tight md:text-5xl">{post.title}</h1>
           <p className="mt-4 text-sm text-muted-foreground">
-            {new Date(post.date).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })}
+            {new Date(post.date).toLocaleDateString("en-GB", {
+              day: "numeric",
+              month: "long",
+              year: "numeric",
+            })}
           </p>
           <div className="mt-8 aspect-[16/9] overflow-hidden rounded-sm">
             <img src={post.image} alt={post.title} className="h-full w-full object-cover" />
@@ -67,17 +78,25 @@ function ArticlePage() {
             ) : (
               <>
                 <p>
-                  This is a seeded article outline. Our editorial team is preparing the full guide with expert insight, up-to-date pricing and real venue examples across Dubai, Abu Dhabi and the wider UAE.
+                  This is a seeded article outline. Our editorial team is preparing the full guide
+                  with expert insight, up-to-date pricing and real venue examples across Dubai, Abu
+                  Dhabi and the wider UAE.
                 </p>
                 <p>
-                  In the meantime, if you'd like to discuss how this topic applies to your wedding, book a free consultation and one of our planners will walk you through it in detail.
+                  In the meantime, if you'd like to discuss how this topic applies to your wedding,
+                  book a free consultation and one of our planners will walk you through it in
+                  detail.
                 </p>
               </>
             )}
           </div>
           <div className="mt-10 flex flex-wrap gap-3">
-            <Button asChild><Link to="/contact">Book Free Consultation</Link></Button>
-            <Button asChild variant="outline"><Link to="/wedding-guide">Back to the Guide</Link></Button>
+            <Button asChild>
+              <Link to="/contact">Book Free Consultation</Link>
+            </Button>
+            <Button asChild variant="outline">
+              <Link to="/wedding-guide">Back to the Guide</Link>
+            </Button>
           </div>
         </div>
       </article>
@@ -95,7 +114,12 @@ function ArticlePage() {
                   className="group"
                 >
                   <div className="aspect-[4/3] overflow-hidden rounded-sm">
-                    <img src={r.image} alt={r.title} loading="lazy" className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                    <img
+                      src={r.image}
+                      alt={r.title}
+                      loading="lazy"
+                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
                   </div>
                   <h3 className="mt-3 font-display text-lg group-hover:text-primary">{r.title}</h3>
                 </Link>

@@ -34,5 +34,4 @@ export const processSteps: ProcessStep[] = [
 export const processIntro =
   "From the first conversation to the final celebration, we bring your wedding vision to life through a thoughtfully curated journey where every element is carefully considered, coordinated, and crafted to create a celebration that feels truly yours.";
 
-export const processSubheading =
-  "How we plan your celebration";
+export const processSubheading = "How we plan your celebration";

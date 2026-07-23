@@ -1,5 +1,3 @@
-
-
 export interface ServiceItem {
   slug: string;
   title: string;
@@ -11,8 +9,7 @@ export interface ServiceItem {
   featured?: boolean;
 }
 
-const img = (id: string) =>
-  `https://images.unsplash.com/${id}?auto=format&fit=crop&w=1400&q=70`;
+const img = (id: string) => `https://images.unsplash.com/${id}?auto=format&fit=crop&w=1400&q=70`;
 
 export const flagshipServices: ServiceItem[] = [
   {
@@ -28,7 +25,7 @@ export const flagshipServices: ServiceItem[] = [
       "Luxury beachfront celebrations",
     ],
     cta: "Explore Luxury Beach Weddings",
-    image: 'beach-wedding-1.webp',
+    image: "beach-wedding-1.webp",
   },
   {
     slug: "desert-wedding-dubai",
@@ -43,7 +40,7 @@ export const flagshipServices: ServiceItem[] = [
       "Private desert celebrations",
     ],
     cta: "Explore Desert Weddings",
-    image: '/A4-E4.webp',
+    image: "/A4-E4.webp",
   },
   {
     slug: "intimate-elopements",
@@ -88,7 +85,7 @@ export const flagshipServices: ServiceItem[] = [
       "Multi-day wedding celebrations",
     ],
     cta: "Explore Luxury Hotel Weddings",
-    image: 'luxury-hotel-weddings-new.webp',
+    image: "luxury-hotel-weddings-new.webp",
   },
   {
     slug: "emirati-gcc-weddings",
@@ -107,7 +104,7 @@ export const flagshipServices: ServiceItem[] = [
       "GCC Family Weddings",
     ],
     cta: "Explore Emirati & GCC Weddings",
-    image: 'Emirati-Wedding-new-(1).webp',
+    image: "Emirati-Wedding-new-(1).webp",
   },
   {
     slug: "south-asian-weddings",
@@ -125,8 +122,8 @@ export const flagshipServices: ServiceItem[] = [
       "Multicultural Weddings",
     ],
     cta: "Explore South Asian Weddings",
-    image: 'South-Asian-Weddings.webp',
-  }
+    image: "South-Asian-Weddings.webp",
+  },
 ];
 
 export const culturalServices: ServiceItem[] = [

@@ -20,9 +20,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-40 border-b border-border/70 bg-background/85 backdrop-blur">
       <div className="container-page flex h-20 items-center justify-between gap-4">
         <Link to="/" className="flex flex-col leading-tight">
-          <span className="font-display text-2xl tracking-tight text-primary">
-            Awesome Events
-          </span>
+          <span className="font-display text-2xl tracking-tight text-primary">Awesome Events</span>
           <span className="eyebrow -mt-0.5 text-[0.6rem]">Weddings · Dubai</span>
         </Link>
 
@@ -39,9 +37,7 @@ export function SiteHeader() {
                     {item.label}
                     <ChevronDown className="h-3.5 w-3.5 transition-transform group-hover:rotate-180" />
                   </Link>
-                  <div
-                    className="invisible absolute left-1/2 top-full z-50 w-72 -translate-x-1/2 pt-3 opacity-0 transition-all duration-150 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100"
-                  >
+                  <div className="invisible absolute left-1/2 top-full z-50 w-72 -translate-x-1/2 pt-3 opacity-0 transition-all duration-150 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
                     <div className="overflow-hidden rounded-sm border border-border bg-background shadow-xl">
                       <ul className="py-2">
                         {serviceLinks.map((s) => (
@@ -85,7 +81,9 @@ export function SiteHeader() {
             lang={locale === "en" ? "ar" : "en"}
           >
             <Globe className="h-3.5 w-3.5" />
-            <span style={{ fontFamily: locale === "en" ? "'Cairo','Tajawal',sans-serif" : undefined }}>
+            <span
+              style={{ fontFamily: locale === "en" ? "'Cairo','Tajawal',sans-serif" : undefined }}
+            >
               {locale === "en" ? "عربي" : "English"}
             </span>
           </button>

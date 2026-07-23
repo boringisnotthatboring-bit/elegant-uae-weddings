@@ -13,6 +13,7 @@ Rework the `/services` overview page to match the reference layout from weddingp
 ## Changes
 
 ### `src/routes/services.tsx`
+
 - Keep the existing hero section unchanged.
 - Keep the intro band ("Every celebration, planned with heart") but move the divider styling to match the reference (short centered rule under the intro).
 - Replace the 3-column grid of `<Link>` cards with a stacked list. For each entry in `allServices`, render a row:
@@ -28,9 +29,11 @@ Rework the `/services` overview page to match the reference layout from weddingp
 - Remove the imported `ArrowRight` if no longer used.
 
 ### `src/lib/content/services.ts`
+
 - Add a `ctaLabel` (or export a `serviceCtaLabels` map) so the row CTA and the detail-page CTA stay in sync. Values come from the existing `serviceMeta` in `wedding-services.$slug.tsx` (e.g. "Start Planning Your Beach Wedding" → row button reads "VIEW BEACH WEDDING"; use short "VIEW X WEDDING" style labels matching the reference).
 
 ### `src/routes/wedding-services.$slug.tsx`
+
 - Import the shared CTA/label helpers instead of the local `serviceMeta` map (keep the same routing behavior and `search={{ type }}` handoff to `/contact`).
 
 ## Out of scope

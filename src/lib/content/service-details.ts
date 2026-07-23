@@ -3,7 +3,6 @@ export interface WhyChooseItem {
   body: string;
 }
 
-
 export interface ServiceFaq {
   q: string;
   a: string;

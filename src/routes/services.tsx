@@ -33,7 +33,9 @@ function ServicesPage() {
         <div className="container-page flex min-h-[420px] items-center justify-center py-24 md:min-h-[520px]">
           <div className="mx-auto w-full max-w-3xl text-center text-white">
             <nav className="mb-6 text-[0.65rem] uppercase tracking-[0.3em] text-white/70">
-              <Link to="/" className="hover:text-white">Home</Link>
+              <Link to="/" className="hover:text-white">
+                Home
+              </Link>
               <span className="mx-2">/</span>
               <span className="text-white">Wedding Services</span>
             </nav>
@@ -42,7 +44,13 @@ function ServicesPage() {
               Creating Unforgettable Weddings Across the UAE
             </h1>
             <p className="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-white/85 md:text-lg">
-              Celebrate your love story with Awesome Events Weddings, an award-winning Wedding Agency in UAE and trusted Wedding Planner in Dubai. Based in Dubai, we create unforgettable celebrations across Dubai, Abu Dhabi, Ras Al Khaimah, and the UAE. From romantic Beach Weddings and magical Desert Weddings to elegant Luxury Hotel Weddings and unforgettable Destination Weddings, our personalised Wedding Planning Services bring your vision to life with creativity, care, and exceptional attention to every detail.
+              Celebrate your love story with Awesome Events Weddings, an award-winning Wedding
+              Agency in UAE and trusted Wedding Planner in Dubai. Based in Dubai, we create
+              unforgettable celebrations across Dubai, Abu Dhabi, Ras Al Khaimah, and the UAE. From
+              romantic Beach Weddings and magical Desert Weddings to elegant Luxury Hotel Weddings
+              and unforgettable Destination Weddings, our personalised Wedding Planning Services
+              bring your vision to life with creativity, care, and exceptional attention to every
+              detail.
             </p>
             <div className="mt-8 flex justify-center">
               <Button asChild size="lg">
@@ -61,7 +69,9 @@ function ServicesPage() {
               Explore Our Wedding Services in Dubai
             </h2>
             <p className="mt-5 text-base leading-relaxed text-muted-foreground">
-              At Awesome Events Weddings, we design unforgettable celebrations tailored to your vision, traditions, and personality. Choose the wedding experience that speaks to you — each has its own dedicated planning journey.
+              At Awesome Events Weddings, we design unforgettable celebrations tailored to your
+              vision, traditions, and personality. Choose the wedding experience that speaks to you
+              — each has its own dedicated planning journey.
             </p>
             <div className="mx-auto mt-8 h-px w-24 bg-border" />
           </div>
@@ -114,10 +124,7 @@ function ServicesPage() {
                     )}
                     <div className="mt-8">
                       <Button asChild variant="outline" className="uppercase tracking-[0.18em]">
-                        <Link
-                          to="/wedding-services/$slug"
-                          params={{ slug: s.slug }}
-                        >
+                        <Link to="/wedding-services/$slug" params={{ slug: s.slug }}>
                           {viewLabel}
                         </Link>
                       </Button>

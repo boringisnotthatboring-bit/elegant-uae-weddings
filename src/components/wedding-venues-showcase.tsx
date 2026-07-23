@@ -18,10 +18,7 @@ export function WeddingVenuesShowcase() {
 
         <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {venueCategories.map((item) => (
-            <article
-              key={item.slug}
-              className="group flex h-full flex-col"
-            >
+            <article key={item.slug} className="group flex h-full flex-col">
               <div className="relative aspect-[4/3] overflow-hidden rounded-sm">
                 <img
                   src={item.image}
@@ -31,9 +28,7 @@ export function WeddingVenuesShowcase() {
                 />
               </div>
               <div className="flex flex-1 flex-col pt-5">
-                <h3 className="font-display text-xl md:text-2xl">
-                  {item.title}
-                </h3>
+                <h3 className="font-display text-xl md:text-2xl">{item.title}</h3>
                 <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">
                   {item.description}
                 </p>

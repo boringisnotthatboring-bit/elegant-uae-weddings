@@ -34,8 +34,12 @@ export const faqItems: FaqItem[] = [
     q: "What wedding planning services does Awesome Events Weddings offer?",
     a: (
       <>
-        We provide complete wedding planning, décor, production, entertainment, hospitality, logistics, coordination and much more. Check out our{" "}
-        <Link to="/services" className="font-medium text-primary underline underline-offset-4 hover:text-primary/80">
+        We provide complete wedding planning, décor, production, entertainment, hospitality,
+        logistics, coordination and much more. Check out our{" "}
+        <Link
+          to="/services"
+          className="font-medium text-primary underline underline-offset-4 hover:text-primary/80"
+        >
           Services Page
         </Link>{" "}
         for more details.
@@ -70,7 +74,10 @@ export const faqItems: FaqItem[] = [
     q: "How do we start planning our wedding?",
     a: (
       <>
-        <Link to="/contact" className="font-medium text-primary underline underline-offset-4 hover:text-primary/80">
+        <Link
+          to="/contact"
+          className="font-medium text-primary underline underline-offset-4 hover:text-primary/80"
+        >
           Contact us
         </Link>
         , complete the 1 minute questionnaire, and schedule your free wedding planning consultation.

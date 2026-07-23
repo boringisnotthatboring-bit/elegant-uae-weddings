@@ -8,15 +8,10 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import {
-  getServiceBySlug,
-  allServices,
-  serviceCtaMeta,
-} from "@/lib/content/services";
+import { getServiceBySlug, allServices, serviceCtaMeta } from "@/lib/content/services";
 import {
   getServiceDetail,
   type WhyChooseItem,
-  
   type ServiceFaq,
 } from "@/lib/content/service-details";
 import servicesHero from "@/assets/services-hero.jpg";
@@ -55,7 +50,6 @@ const beachWeddingFaqs: ServiceFaq[] = [
     a: "Yes. Subject to venue approvals and local regulations, we can arrange spectacular fireworks, synchronized drone shows, and other luxury entertainment to make your celebration truly unforgettable.",
   },
 ];
-
 
 const desertWeddingFaqs: ServiceFaq[] = [
   {
@@ -193,9 +187,7 @@ function WeddingServicePage() {
     if (serviceSlides.length <= 1) return;
 
     const timer = window.setInterval(() => {
-      setActiveServiceSlide((current) =>
-        current === serviceSlides.length - 1 ? 0 : current + 1,
-      );
+      setActiveServiceSlide((current) => (current === serviceSlides.length - 1 ? 0 : current + 1));
     }, 4500);
 
     return () => window.clearInterval(timer);
@@ -213,9 +205,13 @@ function WeddingServicePage() {
         <div className="container-page flex min-h-[380px] items-center justify-center py-20 md:min-h-[460px]">
           <div className="mx-auto w-full max-w-3xl text-center text-white">
             <nav className="mb-6 text-[0.65rem] uppercase tracking-[0.3em] text-white/70">
-              <Link to="/" className="hover:text-white">Home</Link>
+              <Link to="/" className="hover:text-white">
+                Home
+              </Link>
               <span className="mx-2">/</span>
-              <Link to="/services" className="hover:text-white">Wedding Services</Link>
+              <Link to="/services" className="hover:text-white">
+                Wedding Services
+              </Link>
               <span className="mx-2">/</span>
               <span className="text-white">{service.title}</span>
             </nav>
@@ -240,20 +236,13 @@ function WeddingServicePage() {
             </h2>
             <div className="mt-6 space-y-4">
               {detail.intro.map((p: string, i: number) => (
-                <p
-                  key={i}
-                  className="text-base leading-relaxed text-muted-foreground"
-                >
+                <p key={i} className="text-base leading-relaxed text-muted-foreground">
                   {p}
                 </p>
               ))}
             </div>
             <div className="relative mt-10 aspect-[16/9] overflow-hidden rounded-sm shadow-lg">
-              <img
-                src={service.image}
-                alt={service.title}
-                className="h-full w-full object-cover"
-              />
+              <img src={service.image} alt={service.title} className="h-full w-full object-cover" />
             </div>
             <div className="mt-8">
               <Button asChild>
@@ -269,9 +258,7 @@ function WeddingServicePage() {
         <div className="container-page">
           <div className="max-w-3xl">
             <p className="eyebrow">Why Choose Us</p>
-            <h2 className="mt-3 font-display text-3xl md:text-4xl">
-              {detail.whyChooseTitle}
-            </h2>
+            <h2 className="mt-3 font-display text-3xl md:text-4xl">{detail.whyChooseTitle}</h2>
           </div>
           <div className="mt-10 grid gap-6 md:grid-cols-2">
             {detail.whyChoose.map((item: WhyChooseItem) => (
@@ -280,9 +267,7 @@ function WeddingServicePage() {
                 className="flex h-full flex-col rounded-sm border border-border bg-card p-6"
               >
                 <h3 className="font-display text-lg">{item.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                  {item.body}
-                </p>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{item.body}</p>
               </div>
             ))}
           </div>
@@ -303,9 +288,7 @@ function WeddingServicePage() {
               </div>
 
               <div className="md:order-1">
-                <p className="eyebrow">
-                  {detail.idealFor ? "Ideal For" : "Perfect For"}
-                </p>
+                <p className="eyebrow">{detail.idealFor ? "Ideal For" : "Perfect For"}</p>
                 <h2 className="mt-3 font-display text-3xl md:text-4xl">
                   {detail.idealFor
                     ? `Who Is ${service.title} Ideal For?`
@@ -313,14 +296,12 @@ function WeddingServicePage() {
                 </h2>
 
                 <ul className="mt-6 grid gap-3 text-sm text-muted-foreground sm:grid-cols-2">
-                  {(detail.idealFor ?? service.perfectFor)!.map(
-                    (item: string) => (
-                      <li key={item} className="flex items-start gap-2">
-                        <Check className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
-                        {item}
-                      </li>
-                    ),
-                  )}
+                  {(detail.idealFor ?? service.perfectFor)!.map((item: string) => (
+                    <li key={item} className="flex items-start gap-2">
+                      <Check className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
+                      {item}
+                    </li>
+                  ))}
                 </ul>
 
                 <div className="mt-8">
@@ -336,15 +317,12 @@ function WeddingServicePage() {
         </section>
       )}
 
-
       {/* Other services */}
       <section className="section-y">
         <div className="container-page">
           <div className="text-center">
             <p className="eyebrow">Services</p>
-            <h2 className="mt-3 font-display text-3xl md:text-4xl">
-              Other Wedding Services
-            </h2>
+            <h2 className="mt-3 font-display text-3xl md:text-4xl">Other Wedding Services</h2>
             <div className="mt-5">
               <Button asChild variant="outline" className="rounded-none">
                 <Link to="/services">View All Services</Link>
@@ -377,9 +355,7 @@ function WeddingServicePage() {
                         </div>
                         <div className="p-5">
                           <h4 className="font-display text-lg">{item.title}</h4>
-                          <p className="mt-1.5 text-sm text-muted-foreground">
-                            {item.short}
-                          </p>
+                          <p className="mt-1.5 text-sm text-muted-foreground">{item.short}</p>
                         </div>
                       </Link>
                     ))}
@@ -414,16 +390,10 @@ function WeddingServicePage() {
         <div className="container-page">
           <div className="max-w-3xl">
             <p className="eyebrow">FAQs</p>
-            <h2 className="mt-3 font-display text-3xl md:text-4xl">
-              Frequently Asked Questions
-            </h2>
+            <h2 className="mt-3 font-display text-3xl md:text-4xl">Frequently Asked Questions</h2>
           </div>
           <div className="mt-8 max-w-3xl">
-            <Accordion
-              type="single"
-              collapsible
-              className="w-full font-['Times_New_Roman']"
-            >
+            <Accordion type="single" collapsible className="w-full font-['Times_New_Roman']">
               {faqsToDisplay.map((faq: ServiceFaq, i: number) => (
                 <AccordionItem key={i} value={`item-${i}`}>
                   <AccordionTrigger className="text-left font-['Times_New_Roman'] text-xl leading-relaxed md:text-2xl">
@@ -447,8 +417,7 @@ function WeddingServicePage() {
             Let's Talk About Your {service.title}
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
-            Share your details and our specialists will design a bespoke plan
-            for your celebration.
+            Share your details and our specialists will design a bespoke plan for your celebration.
           </p>
           <div className="mt-8">
             <Button asChild size="lg">

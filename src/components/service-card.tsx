@@ -2,13 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import type { ServiceItem } from "@/lib/content/services";
 
-export function ServiceCard({
-  item,
-  featured,
-}: {
-  item: ServiceItem;
-  featured?: boolean;
-}) {
+export function ServiceCard({ item, featured }: { item: ServiceItem; featured?: boolean }) {
   return (
     <Link
       to="/wedding-services/$slug"

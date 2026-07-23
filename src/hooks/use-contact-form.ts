@@ -31,17 +31,13 @@ export function useContactForm(overrides?: Partial<ContactFormValues>) {
   });
   const [submitted, setSubmitted] = useState(false);
 
-  const update = <K extends keyof ContactFormValues>(
-    key: K,
-    value: ContactFormValues[K],
-  ) => setValues((v) => ({ ...v, [key]: value }));
+  const update = <K extends keyof ContactFormValues>(key: K, value: ContactFormValues[K]) =>
+    setValues((v) => ({ ...v, [key]: value }));
 
   const toggleService = (s: string) =>
     setValues((v) => ({
       ...v,
-      services: v.services.includes(s)
-        ? v.services.filter((x) => x !== s)
-        : [...v.services, s],
+      services: v.services.includes(s) ? v.services.filter((x) => x !== s) : [...v.services, s],
     }));
 
   const handleSubmit = async (e: FormEvent) => {

@@ -101,7 +101,9 @@ export function TestimonialsCarousel({ items }: { items: Testimonial[] }) {
             onClick={() => setIndex(i)}
             className={
               "h-1.5 rounded-full transition-all " +
-              (((index % total) + total) % total === i ? "w-8 bg-accent" : "w-1.5 bg-primary-foreground/30")
+              (((index % total) + total) % total === i
+                ? "w-8 bg-accent"
+                : "w-1.5 bg-primary-foreground/30")
             }
           />
         ))}

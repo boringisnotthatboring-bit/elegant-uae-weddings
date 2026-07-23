@@ -31,10 +31,7 @@ function VenuesPage() {
         <div className="container-page">
           <div className="mx-auto max-w-6xl text-center">
             <nav className="mb-8 text-xs uppercase tracking-[0.25em] text-muted-foreground">
-              <Link
-                to="/"
-                className="transition-colors hover:text-primary"
-              >
+              <Link to="/" className="transition-colors hover:text-primary">
                 Home
               </Link>
 
@@ -104,12 +101,10 @@ function VenuesPage() {
                   </h3>
 
                   <p className="mt-3 max-w-2xl text-sm leading-7 text-muted-foreground md:text-base">
-                    Our passionate team of wedding planners and wedding
-                    coordinators brings years of experience in creating
-                    exceptional celebrations across the UAE. From the first
-                    consultation to your wedding day, we manage every detail
-                    with professionalism, creativity, and genuine care,
-                    allowing you to relax and enjoy every moment.
+                    Our passionate team of wedding planners and wedding coordinators brings years of
+                    experience in creating exceptional celebrations across the UAE. From the first
+                    consultation to your wedding day, we manage every detail with professionalism,
+                    creativity, and genuine care, allowing you to relax and enjoy every moment.
                   </p>
                 </div>
 
@@ -119,10 +114,9 @@ function VenuesPage() {
                   </h3>
 
                   <p className="mt-3 max-w-2xl text-sm leading-7 text-muted-foreground md:text-base">
-                    Every wedding is uniquely designed to reflect your
-                    personality and vision. From elegant wedding decoration in
-                    Dubai and floral installations to custom stage styling,
-                    lighting, and tablescapes, we create timeless settings for
+                    Every wedding is uniquely designed to reflect your personality and vision. From
+                    elegant wedding decoration in Dubai and floral installations to custom stage
+                    styling, lighting, and tablescapes, we create timeless settings for
                     unforgettable luxury weddings in Dubai &amp; UAE.
                   </p>
                 </div>
@@ -133,12 +127,10 @@ function VenuesPage() {
                   </h3>
 
                   <p className="mt-3 max-w-2xl text-sm leading-7 text-muted-foreground md:text-base">
-                    As a leading wedding organizer UAE, we've built strong
-                    relationships with the region's finest venues,
-                    photographers, designers, entertainers, and hospitality
-                    partners. Whether you're planning a destination
-                    celebration or a local wedding, our wedding planning
-                    services ensure a smooth, stress-free experience with
+                    As a leading wedding organizer UAE, we've built strong relationships with the
+                    region's finest venues, photographers, designers, entertainers, and hospitality
+                    partners. Whether you're planning a destination celebration or a local wedding,
+                    our wedding planning services ensure a smooth, stress-free experience with
                     trusted professionals by your side every step of the way.
                   </p>
                 </div>

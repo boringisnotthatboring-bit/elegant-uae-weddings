@@ -4,16 +4,10 @@ import { ProcessTimeline } from "@/components/process-timeline";
 import { Button } from "@/components/ui/button";
 import { SectionHeader } from "@/components/section-header";
 import { BlogPreviewGrid } from "@/components/blog-preview-grid";
-import {
-  processSteps,
-  processIntro,
-  processSubheading,
-} from "@/lib/content/process";
+import { processSteps, processIntro, processSubheading } from "@/lib/content/process";
 import { blogPosts } from "@/lib/content/blog";
 
-const publishedPosts = blogPosts
-  .filter((post) => post.status === "published")
-  .slice(0, 4);
+const publishedPosts = blogPosts.filter((post) => post.status === "published").slice(0, 4);
 
 export const Route = createFileRoute("/process")({
   head: () => ({

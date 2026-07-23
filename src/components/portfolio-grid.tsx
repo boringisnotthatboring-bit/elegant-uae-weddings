@@ -6,10 +6,7 @@ export function PortfolioGrid() {
   const [lightbox, setLightbox] = useState<string | null>(null);
 
   const filtered = useMemo(
-    () =>
-      active === "All"
-        ? portfolioItems
-        : portfolioItems.filter((p) => p.category === active),
+    () => (active === "All" ? portfolioItems : portfolioItems.filter((p) => p.category === active)),
     [active],
   );
 
@@ -48,9 +45,7 @@ export function PortfolioGrid() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent" />
             <div className="absolute inset-x-0 bottom-0 p-4 text-left text-primary-foreground">
-              <p className="text-xs uppercase tracking-widest text-accent">
-                {item.location}
-              </p>
+              <p className="text-xs uppercase tracking-widest text-accent">{item.location}</p>
               <p className="font-display text-lg">{item.title}</p>
             </div>
           </button>
@@ -63,11 +58,7 @@ export function PortfolioGrid() {
           onClick={() => setLightbox(null)}
           role="dialog"
         >
-          <img
-            src={lightbox}
-            alt=""
-            className="max-h-full max-w-full rounded-sm"
-          />
+          <img src={lightbox} alt="" className="max-h-full max-w-full rounded-sm" />
         </div>
       )}
     </div>

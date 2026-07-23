@@ -6,15 +6,14 @@ export interface VenueCategory {
   image: string;
 }
 
-const img = (id: string) =>
-  `https://images.unsplash.com/${id}?auto=format&fit=crop&w=1400&q=70`;
+const img = (id: string) => `https://images.unsplash.com/${id}?auto=format&fit=crop&w=1400&q=70`;
 
 export const venueCategories: VenueCategory[] = [
   {
     slug: "beachfront",
     title: "Beachfront Wedding Venues",
     description:
-      "Say \"I do\" on the pristine white sands of the Arabian Gulf, where breathtaking sunsets and the sound of gentle waves create an unforgettable setting. Our handpicked beachfront wedding venues in Dubai and the UAE are perfect for romantic ceremonies, elegant receptions, and luxury destination weddings by the sea.",
+      'Say "I do" on the pristine white sands of the Arabian Gulf, where breathtaking sunsets and the sound of gentle waves create an unforgettable setting. Our handpicked beachfront wedding venues in Dubai and the UAE are perfect for romantic ceremonies, elegant receptions, and luxury destination weddings by the sea.',
     cta: "Explore Beachfront Wedding Venues",
     image: img("photo-1523438885200-e635ba2c371e"),
   },

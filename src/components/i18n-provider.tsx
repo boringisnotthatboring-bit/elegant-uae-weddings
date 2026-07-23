@@ -50,9 +50,5 @@ export function I18nProvider({ children }: { children: ReactNode }) {
 
   const t = (_key: string, fallback: string) => fallback;
 
-  return (
-    <I18nContext.Provider value={{ locale, setLocale, t }}>
-      {children}
-    </I18nContext.Provider>
-  );
+  return <I18nContext.Provider value={{ locale, setLocale, t }}>{children}</I18nContext.Provider>;
 }
