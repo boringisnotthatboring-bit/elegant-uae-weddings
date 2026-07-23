@@ -9,7 +9,6 @@ export interface ServiceFaq {
 }
 
 export interface ServiceDetail {
-  heroSubtitle: string;
   introHeading?: string;
   intro: string[];
   idealFor?: string[];
@@ -62,7 +61,6 @@ const commonFaqs = (kind: string, kindLower: string): ServiceFaq[] => [
 
 export const serviceDetails: Record<string, ServiceDetail> = {
   "beach-wedding-dubai": {
-    heroSubtitle: "",
     introHeading: "Luxury Beach Weddings",
     intro: [
       'Say "I Do" by the Sea with a Celebration Designed Just for You.',
@@ -134,7 +132,6 @@ export const serviceDetails: Record<string, ServiceDetail> = {
   },
 
   "desert-wedding-dubai": {
-    heroSubtitle: "Golden dunes, Arabian nights, cinematic sunsets.",
     introHeading: "Desert Weddings",
     intro: [
       "Say your vows against a horizon of golden dunes with a desert wedding in Dubai — an unforgettable celebration inspired by the timeless romance of Arabia.",
@@ -179,7 +176,6 @@ export const serviceDetails: Record<string, ServiceDetail> = {
   },
 
   "intimate-elopements": {
-    heroSubtitle: "Small guest lists, big feelings.",
     introHeading: "Intimate Elopements & Micro Weddings",
     intro: [
       "For couples craving something quieter and deeply personal, our intimate elopements and micro weddings create a beautifully curated celebration for your closest people — or just the two of you.",
@@ -224,7 +220,6 @@ export const serviceDetails: Record<string, ServiceDetail> = {
   },
 
   "civil-weddings-uae": {
-    heroSubtitle: "Legally recognised ceremonies, beautifully hosted.",
     introHeading: "Civil Weddings",
     intro: [
       "Whether you're a UAE resident or travelling in for the occasion, we make your civil wedding journey effortless and elegant.",
@@ -236,7 +231,6 @@ export const serviceDetails: Record<string, ServiceDetail> = {
   },
 
   "luxury-hotel-weddings": {
-    heroSubtitle: "Five-star ballrooms and waterfront estates.",
     introHeading: "Luxury Hotel Weddings",
     intro: [
       "For couples who dream of a grand celebration, our luxury hotel weddings bring together the UAE's most iconic five-star properties and a design tailored to your vision.",
@@ -281,7 +275,6 @@ export const serviceDetails: Record<string, ServiceDetail> = {
   },
 
   "yacht-marina-weddings": {
-    heroSubtitle: "Private yachts, marina views, and celebrations on the water.",
     introHeading: "Yacht & Marina Weddings",
     intro: [
       "Celebrate your wedding on the water with a private yacht or marina setting framed by Dubai's skyline and waterfront views.",
@@ -326,7 +319,6 @@ export const serviceDetails: Record<string, ServiceDetail> = {
   },
 
   "garden-weddings": {
-    heroSubtitle: "Lush greenery, floral styling, and elegant open-air celebrations.",
     introHeading: "Garden Weddings",
     intro: [
       "Create a romantic garden wedding surrounded by greenery, natural light, and elegant floral design.",
@@ -371,7 +363,6 @@ export const serviceDetails: Record<string, ServiceDetail> = {
   },
 
   "outdoor-weddings": {
-    heroSubtitle: "Open-air ceremonies designed around your location and vision.",
     introHeading: "Outdoor Weddings",
     intro: [
       "Plan a bespoke outdoor wedding in the UAE with a setting chosen around your style, guest count, and preferred atmosphere.",
@@ -416,7 +407,6 @@ export const serviceDetails: Record<string, ServiceDetail> = {
   },
 
   "emirati-gcc-weddings": {
-    heroSubtitle: "Luxury Gulf traditions, elegant celebrations, and exceptional hospitality.",
     introHeading: "Emirati & GCC Weddings Dubai",
     intro: [
       "Experience elegant Emirati weddings in Dubai with luxury wedding planning services designed to honour local traditions and Gulf customs.",
@@ -489,7 +479,6 @@ export const serviceDetails: Record<string, ServiceDetail> = {
   },
 
   "south-asian-weddings": {
-    heroSubtitle: "Vibrant traditions, multi-day celebrations, and unforgettable moments.",
     introHeading: "South Asian Weddings Dubai",
     intro: [
       "Celebrate vibrant South Asian weddings in Dubai with bespoke wedding planning services tailored to your traditions, customs, and celebrations.",
@@ -561,7 +550,6 @@ export const serviceDetails: Record<string, ServiceDetail> = {
   },
 
   "destination-weddings": {
-    heroSubtitle: "Complete UAE wedding experiences for couples and guests travelling from abroad.",
     introHeading: "Destination Weddings",
     intro: [
       "Plan a seamless destination wedding in Dubai or across the UAE with one experienced team managing every part of the journey.",

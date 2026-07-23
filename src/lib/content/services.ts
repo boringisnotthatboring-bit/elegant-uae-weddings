@@ -28,6 +28,7 @@ export const flagshipServices: ServiceItem[] = [
     ],
     cta: "Explore Luxury Beach Weddings",
     image: "/service-images/beach-wedding-1.webp",
+    banner: "/service-images/LBW-COVER.webp",
   },
   {
     slug: "desert-wedding-dubai",
