@@ -137,8 +137,9 @@ export const serviceDetails: Record<string, ServiceDetail> = {
     heroSubtitle: "Golden dunes, Arabian nights, cinematic sunsets.",
     introHeading: "Desert Weddings",
     intro: [
-      "Say your vows against a horizon of golden dunes with a desert wedding in Dubai — an unforgettable celebration inspired by the timeless romance of Arabia.",
-      "From exclusive dune-top ceremonies and majlis-style receptions to traditional welcomes, live performances, and cinematic lighting, every moment is designed to feel personal and effortlessly luxurious.",
+      "Plan an Unforgettable Desert Wedding in Dubai",
+      "Celebrate your love amidst the golden dunes with a breathtaking Desert Wedding in Dubai. At Awesome Events Weddings, we create extraordinary desert celebrations that combine Arabian charm, luxury, and unforgettable experiences. Whether you envision an intimate sunset ceremony, a romantic candlelit reception beneath the stars, or a lavish multi-day celebration, our experienced Wedding Planner Dubai team brings your dream wedding to life with creativity and flawless execution.",
+      "From exclusive desert wedding venues and bespoke Wedding Decoration Dubai to gourmet catering, live entertainment, photography, luxury seating, traditional Majlis setups, fireworks, synchronized drone shows, and complete Wedding Planning Services, we take care of every detail. Whether you're planning a Destination Wedding or a private celebration in the UAE, we create personalised Desert Weddings that reflect your style, traditions, and vision, ensuring an unforgettable experience for you and your guests.",
     ],
     whyChooseTitle: "Why Choose Us for a Desert Wedding in Dubai",
     whyChoose: commonWhyChoose("Desert Weddings", "desert weddings"),
