@@ -219,9 +219,6 @@ function WeddingServicePage() {
             <h1 className="mt-4 font-display text-4xl leading-tight md:text-5xl lg:text-6xl">
               {service.title}
             </h1>
-            <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-white/85 md:text-lg">
-              {detail.heroSubtitle}
-            </p>
           </div>
         </div>
       </section>
