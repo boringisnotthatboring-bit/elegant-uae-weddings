@@ -290,9 +290,11 @@ function WeddingServicePage() {
               <div className="md:order-1">
                 <p className="eyebrow">{detail.idealFor ? "Ideal For" : "Perfect For"}</p>
                 <h2 className="mt-3 font-display text-3xl md:text-4xl">
-                  {detail.idealFor
-                    ? `Who Is ${service.title} Ideal For?`
-                    : `Who Is ${service.title} Perfect For?`}
+                  {service.slug === "desert-wedding-dubai"
+                    ? "Who Is a Luxury Desert Wedding Ideal For?"
+                    : detail.idealFor
+                      ? `Who Is ${service.title} Ideal For?`
+                      : `Who Is ${service.title} Perfect For?`}
                 </h2>
 
                 <ul className="mt-6 grid gap-3 text-sm text-muted-foreground sm:grid-cols-2">
