@@ -1,40 +1,45 @@
-import {
-  Sparkles,
-  Camera,
-  Lightbulb,
-  Brush,
-  Users,
-  UtensilsCrossed,
-  PartyPopper,
-  Mic,
-} from "lucide-react";
-
-const services = [
-  { icon: Sparkles, label: "Decor & Wedding Styling" },
-  { icon: Camera, label: "Photography & Videography" },
-  { icon: Lightbulb, label: "AV & Lighting" },
-  { icon: Brush, label: "Makeup & Henna Artists" },
-  { icon: Users, label: "Guest Hospitality & RSVP" },
-  { icon: UtensilsCrossed, label: "Catering Services" },
-  { icon: PartyPopper, label: "Entertainment" },
-  { icon: Mic, label: "Emcee & Celebrities" },
+const weddingTypes = [
+  "Luxury Weddings",
+  "Beach Weddings",
+  "Desert Weddings",
+  "Indian Weddings",
+  "Arabic Weddings",
+  "Civil Weddings",
 ];
 
 export function ServiceIconRow() {
   return (
-    <ul className="grid grid-cols-1 gap-x-10 gap-y-4 sm:grid-cols-2">
-      {services.map(({ icon: Icon, label }) => (
-        <li
-          key={label}
-          className="grid grid-cols-[44px_1fr] items-center gap-3 text-sm text-foreground/75"
-        >
-          <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-border bg-card text-primary">
-            <Icon className="h-4 w-4" />
-          </span>
-
-          <span className="leading-snug">{label}</span>
-        </li>
-      ))}
-    </ul>
+    <div className="max-w-3xl">
+      <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        {weddingTypes.map((type) => (
+          <div
+            key={type}
+            className="
+              flex
+              h-11
+              items-center
+              justify-center
+              rounded-full
+              border
+              border-[#DDD2C5]
+              bg-[#FCF8F3]
+              px-6
+              text-center
+              text-[13px]
+              font-medium
+              uppercase
+              tracking-[0.14em]
+              text-[#78645A]
+              transition-all
+              duration-300
+              hover:border-[#8A5A44]
+              hover:text-[#8A5A44]
+            "
+          >
+            {type}
+          </div>
+        ))}
+      </div>
+    </div>
   );
 }

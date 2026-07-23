@@ -135,6 +135,29 @@ function HomePage() {
         </div>
       </section>
 
+      {/* Weddings We Specialize In */}
+      <section className="pb-16 md:pb-24">
+        <div className="container-page">
+          <div className="max-w-[840px] rounded-sm border border-border bg-secondary/30 p-8">
+            <p className="eyebrow">Weddings We Specialize In</p>
+
+            <div className="mt-5">
+              <ServiceIconRow />
+            </div>
+
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Button asChild>
+                <Link to="/contact">Book Free Consultation</Link>
+              </Button>
+
+              <Button asChild variant="outline">
+                <Link to="/services">View Our Wedding Services</Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* UAE coverage */}
       <section className="bg-secondary/60 section-y">
         <div className="container-page grid gap-10 lg:grid-cols-2 lg:items-center">
@@ -146,21 +169,12 @@ function HomePage() {
               UAE Weddings across the country
             </h2>
             <p className="mt-6 text-base leading-relaxed text-muted-foreground">
-              From our headquarters in Dubai, we plan and coordinate weddings across the UAE,
-              including Abu Dhabi, Ras Al Khaimah, Sharjah, Fujairah, Ajman, and other stunning
-              destinations.
+              From our headquarters in Dubai, we plan and coordinate weddings across all seven
+              emirates of the UAE, including Dubai, Abu Dhabi, Sharjah, Ajman, Umm Al Quwain,
+              Ras Al Khaimah, Fujairah, and other parts of the UAE, creating personalised
+              celebrations in some of the country's most beautiful destinations.
             </p>
-            <div className="mt-6">
-              <ServiceIconRow />
-            </div>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Button asChild>
-                <Link to="/contact">Book Free Consultation</Link>
-              </Button>
-              <Button asChild variant="outline">
-                <Link to="/services">Our Services</Link>
-              </Button>
-            </div>
+
           </div>
           <div className="relative -mx-2 md:-mx-4 lg:scale-[1.07] lg:origin-center">
             <div
