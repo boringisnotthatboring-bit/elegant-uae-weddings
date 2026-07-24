@@ -287,11 +287,13 @@ function WeddingServicePage() {
               <div className="md:order-1">
                 <p className="eyebrow">{detail.idealFor ? "Ideal For" : "Perfect For"}</p>
                 <h2 className="mt-3 font-display text-3xl md:text-4xl">
-                  {service.slug === "desert-wedding-dubai"
-                    ? "Who Is a Luxury Desert Wedding Ideal For?"
-                    : detail.idealFor
-                      ? `Who Is ${service.title} Ideal For?`
-                      : `Who Is ${service.title} Perfect For?`}
+                  {service.slug === "beach-wedding-dubai"
+                    ? "Who Are Luxury Beach Weddings Ideal For?"
+                    : service.slug === "desert-wedding-dubai"
+                      ? "Who Is a Luxury Desert Wedding Ideal For?"
+                      : detail.idealFor
+                        ? `Who Is ${service.title} Ideal For?`
+                        : `Who Is ${service.title} Perfect For?`}
                 </h2>
 
                 <ul className="mt-6 grid gap-3 text-sm text-muted-foreground sm:grid-cols-2">
@@ -383,6 +385,66 @@ function WeddingServicePage() {
           )}
         </div>
       </section>
+
+      {/* Beach Wedding Décor */}
+      {service.slug === "beach-wedding-dubai" && (
+        <section className="section-y bg-secondary/20">
+          <div className="container-page">
+            <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+              <div className="max-w-2xl">
+                <p className="eyebrow">Wedding Décor</p>
+
+                <h2 className="mt-3 font-display text-3xl leading-tight md:text-4xl">
+                  Luxury Beach Wedding Décor in Dubai &amp; UAE
+                </h2>
+
+                <p className="mt-6 text-base leading-relaxed text-muted-foreground">
+                  Transform your Luxury Beach Wedding into an unforgettable seaside celebration
+                  with bespoke Wedding Decoration Dubai designed to complement the natural beauty
+                  of the coastline. From romantic sunset ceremonies to elegant beachfront
+                  receptions, our expert designers create sophisticated décor that blends luxury,
+                  romance, and the charm of the Arabian Gulf.
+                </p>
+
+                <h3 className="mt-7 font-display text-xl">
+                  Our Beach Wedding Décor highlight:
+                </h3>
+
+                <ul className="mt-5 space-y-3 text-sm text-muted-foreground md:text-base">
+                  {[
+                    "Elegant beachfront ceremony arches",
+                    "Fresh floral installations and aisle styling",
+                    "Luxury reception tablescapes and seating",
+                    "Ambient lighting for sunset and evening celebrations",
+                    "Custom stage and dance floor styling",
+                    "Coastal-inspired décor and colour palettes",
+                    "Premium lounge setups and wedding backdrops",
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-3">
+                      <Check className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <p className="mt-7 text-base leading-relaxed text-muted-foreground">
+                  Every detail is thoughtfully curated to create a seamless Luxury Beach Wedding
+                  experience, ensuring your celebration is as breathtaking as the ocean views
+                  surrounding it.
+                </p>
+
+                <div className="mt-8">
+                  <Button asChild className="rounded-none bg-primary text-primary-foreground hover:bg-primary/90">
+                    <Link to="/contact" search={{ type: meta.contactType }}>
+                      Contact Us
+                    </Link>
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* FAQs */}
       <section className="section-y bg-secondary/40">
