@@ -463,13 +463,39 @@ export const serviceDetails: Record<string, ServiceDetail> = {
   },
 
   "yacht-marina-weddings": {
-    introHeading: "Yacht & Marina Weddings",
+    introHeading: "Luxury Yacht & Marina Weddings in Dubai",
     intro: [
-      "Celebrate your wedding on the water with a private yacht or marina setting framed by Dubai's skyline and waterfront views.",
-      "We coordinate the vessel, marina access, décor, dining, entertainment, guest boarding, safety requirements, and every detail of the celebration.",
+      "At Awesome Events Weddings, we create unforgettable luxury yacht weddings in Dubai for couples who dream of celebrating against sparkling waters, iconic skylines, and breathtaking sunset views. As a trusted Wedding Planner Dubai, we help you explore the best Dubai Marina wedding locations, Dubai Harbour wedding party venues, and exclusive waterfront settings across the UAE.",
+      "Whether you are planning a Palm Jumeirah yacht ceremony, a Burj Al Arab yacht wedding, an intimate engagement, or a stylish marina reception, we offer personalised Dubai Marina wedding packages designed around your guest count, style, and budget. Our team also assists with wedding yacht rental Dubai, small wedding yacht rental Dubai Marina, and suitable options for an affordable wedding yacht Dubai celebration.",
+      "From yacht sourcing and marina wedding venue UAE selection to elegant deck décor, floral styling, entertainment, photography, guest transfers, and on-board catering for yacht weddings, every detail is thoughtfully coordinated. We can also create an all-inclusive yacht wedding Dubai experience or a memorable yacht engagement party Dubai, ensuring your celebration feels warm, refined, effortless, and beautifully yours.",
     ],
-    whyChooseTitle: "Why Choose Us for a Yacht or Marina Wedding",
-    whyChoose: commonWhyChoose("Yacht & Marina Weddings", "yacht and marina weddings"),
+    idealFor: [
+      "Couples planning yacht weddings in Dubai and the UAE",
+      "Brides and grooms seeking private ceremonies with sea and skyline views",
+      "Families hosting intimate celebrations, marina receptions, or luxury onboard events",
+      "Couples looking for Dubai Marina wedding packages and private yacht rentals",
+      "Those wanting bespoke décor, onboard catering, entertainment, and guest coordination",
+      "Anyone dreaming of an elegant, exclusive, and unforgettable waterfront wedding experience",
+    ],
+    whyChooseTitle: "Luxury Yacht & Marina Weddings, Beautifully Curated",
+    whyChoose: [
+      {
+        title: "Waterfront Celebrations with a Personal Touch",
+        body: "We create yacht weddings in Dubai that feel intimate, elegant, and beautifully connected to the sea, skyline, and your love story.",
+      },
+      {
+        title: "Carefully Selected Yachts and Marina Venues",
+        body: "Our team helps source private yachts, luxury vessels, and exclusive marina wedding venues in Dubai suited to your guest count and celebration style.",
+      },
+      {
+        title: "Stylish Deck and Waterfront Design",
+        body: "We enhance every setting with refined floral styling, ambient lighting, elegant seating, personalised details, and décor designed for open-water surroundings.",
+      },
+      {
+        title: "Smooth Onboard Wedding Coordination",
+        body: "From boarding schedules and vendor access to catering, entertainment, guest movement, and ceremony timing, we manage each and every detail with care.",
+      },
+    ],
     decor: {
       heading: "Luxury Yacht & Marina Wedding Decoration in Dubai & UAE",
       intro:
@@ -521,15 +547,34 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       },
     ],
   },
+  },
 
   "garden-weddings": {
-    introHeading: "Garden Weddings",
+    introHeading: "Luxury Garden Weddings in Dubai & Across the UAE",
     intro: [
-      "Create a romantic garden wedding surrounded by greenery, natural light, and elegant floral design.",
-      "From intimate ceremonies to full outdoor receptions, we build a cohesive setting with comfortable guest layouts, lighting, dining, entertainment, and weather planning.",
+      "At Awesome Events Weddings, we create romantic garden weddings in Dubai surrounded by greenery, open skies, and elegant natural settings. As an experienced Garden Wedding Planner Dubai, we help couples find the perfect outdoor wedding venues Dubai, including wedding venues in Al Barari, Jumeirah garden wedding venues, Palm Jumeirah outdoor wedding locations, and beautiful resort garden wedding venues in the UAE.",
+      "From intimate garden wedding spaces Dubai and micro wedding venues Dubai to luxury outdoor wedding venues Dubai and affordable garden wedding venues in Dubai, we source spaces that suit your vision and guest count.",
+      "Our outdoor wedding event management UAE covers venue styling, floral décor, lighting, seating, staging, weather planning, and seamless coordination. As bespoke wedding decorators Dubai, we create warm, personal celebrations across outdoor wedding reception venues Abu Dhabi, outdoor wedding spaces Downtown Dubai, and green and eco-friendly wedding venues UAE.",
     ],
-    whyChooseTitle: "Why Choose Us for a Garden Wedding",
-    whyChoose: commonWhyChoose("Garden Weddings", "garden weddings"),
+    whyChooseTitle: "Romantic Garden Weddings Inspired by Nature",
+    whyChoose: [
+      {
+        title: "Nature-Led Wedding Experiences",
+        body: "We create luxury garden weddings in Dubai that feel romantic, refreshing, and naturally elegant, with every detail shaped around the surrounding landscape.",
+      },
+      {
+        title: "Curated Outdoor Garden Settings",
+        body: "Our team helps select private estates, resort gardens, landscaped lawns, and exclusive garden wedding venues across the UAE that suit your celebration beautifully.",
+      },
+      {
+        title: "Floral Design That Feels Effortless",
+        body: "From blooming ceremony spaces to layered tablescapes, we use florals, greenery, textures, and lighting to create a warm and harmonious atmosphere.",
+      },
+      {
+        title: "Comfortable Celebrations Under the Open Sky",
+        body: "We carefully plan seating, shade, flooring, lighting, dining areas, and guest flow to ensure your outdoor garden wedding feels relaxed, welcoming, and seamless.",
+      },
+    ],
     decor: {
       heading: "Garden Wedding Decoration in Dubai & the UAE",
       intro:
@@ -581,12 +626,22 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       },
     ],
   },
+  },
 
   "outdoor-weddings": {
-    introHeading: "Outdoor Weddings",
+    introHeading: "Luxury Outdoor Weddings in Dubai & the UAE",
     intro: [
-      "Plan a bespoke outdoor wedding in the UAE with a setting chosen around your style, guest count, and preferred atmosphere.",
-      "We handle layouts, flooring, shade, cooling, lighting, power, permits, catering, entertainment, and backup plans so the event runs smoothly.",
+      "At Awesome Events Weddings, we create elegant outdoor weddings in Dubai and the UAE surrounded by open skies, breathtaking scenery, and thoughtfully styled spaces. As experienced Dubai outdoor wedding planners, we help couples discover beautiful beach, desert, garden, terrace, waterfront, and private outdoor wedding venues across the UAE.",
+      "Whether you are planning an intimate ceremony or a grand celebration, our team brings together bespoke décor, floral styling, elegant seating, ambient lighting, staging, guest comfort, and seamless event coordination. We also support couples in finding the right luxury outdoor wedding venues in Dubai, Abu Dhabi, and Ras Al Khaimah.",
+      "From sunset beach ceremonies to desert receptions and stylish terrace weddings, every celebration is designed to feel warm, personal, and unforgettable. Our goal is to create a refined outdoor wedding experience that reflects your story while making every guest feel comfortable and beautifully welcomed.",
+    ],
+    idealFor: [
+      "Couples dreaming of a luxury outdoor wedding in Dubai or the UAE",
+      "Brides and grooms who love beaches, deserts, gardens, terraces, waterfronts, or their own backyard",
+      "Couples wanting to enjoy the UAE’s cool winter breeze during an open-air celebration",
+      "Intimate ceremonies, grand receptions, and relaxed family gatherings",
+      "Couples seeking bespoke décor, scenic surroundings, and personalised styling",
+      "Those wanting complete planning, guest comfort, and weather-ready coordination",
     ],
     whyChooseTitle: "Why Choose Us for an Outdoor Wedding",
     whyChoose: commonWhyChoose("Outdoor Weddings", "outdoor weddings"),
@@ -650,14 +705,12 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       "From intimate family gatherings to grand multi-day celebrations, every detail is thoughtfully coordinated to reflect your heritage, family traditions, and personal vision.",
     ],
     idealFor: [
-      "Emirati Weddings",
-      "Arabic Weddings",
-      "Saudi Weddings",
-      "Kuwaiti Weddings",
-      "Qatari Weddings",
-      "Bahraini Weddings",
-      "Omani Weddings",
-      "GCC Family Weddings",
+      "Couples planning Emirati weddings in Dubai and the UAE",
+      "Families hosting traditional Arabic and GCC weddings",
+      "Saudi, Kuwaiti, Qatari, Bahraini, and Omani celebrations",
+      "Couples seeking Majlis styling, Zaffa entrances, and cultural hospitality",
+      "Multi-day family weddings with premium décor and coordination",
+      "Anyone wanting a refined, traditional, and memorable GCC wedding experience",
     ],
     whyChooseTitle: "Why Choose Us for Emirati & GCC Weddings in Dubai",
     whyChoose: [
@@ -678,6 +731,22 @@ export const serviceDetails: Record<string, ServiceDetail> = {
         body: "We coordinate separate celebration areas, controlled access, guest reception, hospitality teams, family requirements, supplier schedules, and discreet on-the-day management.",
       },
     ],
+    decor: {
+      heading: "Emirati & GCC Wedding Decoration in Dubai & the UAE",
+      intro:
+        "Our Emirati and GCC wedding décor services in Dubai and the UAE create elegant celebrations inspired by cultural traditions, refined luxury, and warm Arabian hospitality.",
+      listHeading: "Our Emirati & GCC Wedding Décor Services Highlight:",
+      items: [
+        "Majlis-inspired seating and lounge styling",
+        "Grand floral stages and statement backdrops",
+        "Elegant Zaffa entrances and ceremonial pathways",
+        "Luxury tablescapes and family seating arrangements",
+        "Arabic lighting, lanterns, and decorative details",
+        "Custom themes, colours, and cultural styling",
+      ],
+      outro:
+        "Every Emirati and GCC wedding setup in Dubai is thoughtfully designed to honour your traditions and welcome every guest beautifully.",
+    },
     faqs: [
       {
         q: "Do you organise traditional Emirati weddings in Dubai?",
@@ -722,13 +791,12 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       "Whether you are planning a Pakistani, North Indian, South Indian, Tamil, Sikh, Gujarati, or multicultural wedding, every event is designed to feel connected, personal, and beautifully executed.",
     ],
     idealFor: [
-      "North Indian Weddings",
-      "Pakistani Weddings",
-      "South Indian Weddings",
-      "Tamil Weddings",
-      "Sikh Weddings",
-      "Gujarati Weddings",
-      "Multicultural Weddings",
+      "Couples planning South Asian weddings in Dubai and the UAE",
+      "Families hosting Indian, Pakistani, Bangladeshi, Sri Lankan, Nepali, or multicultural celebrations",
+      "Multi-day weddings featuring Mehndi, Sangeet, Nikah, Pheras, Walima, and receptions",
+      "Families seeking full hotel buyouts for private celebrations and guest accommodation",
+      "Couples wanting cultural décor, traditional entertainment, premium catering, and personalised hospitality",
+      "Anyone dreaming of a vibrant, elegant, and unforgettable South Asian wedding experience",
     ],
     whyChooseTitle: "Why Choose Us for South Asian Weddings in Dubai",
     whyChoose: [
@@ -802,13 +870,40 @@ export const serviceDetails: Record<string, ServiceDetail> = {
   },
 
   "destination-weddings": {
-    introHeading: "Destination Weddings",
+    introHeading: "Luxury Destination Weddings in Dubai & the UAE",
     intro: [
-      "Plan a seamless destination wedding in Dubai or across the UAE with one experienced team managing every part of the journey.",
-      "From venue sourcing and guest accommodation to airport transfers, multi-day events, hospitality, décor, entertainment, and farewell experiences, every detail is coordinated for you.",
+      "Wherever you are in the world, Awesome Events Weddings makes it easy to get married in Dubai and celebrate your love in one of the UAE’s most unforgettable settings. As an experienced Dubai wedding planner, we create warm, elegant, and beautifully personalised destination weddings in the UAE.",
+      "From a romantic beach wedding in Dubai or celebration at Palm Jumeirah wedding venues to desert wedding venues Dubai, an Al Maha desert resort wedding, or a glamorous rooftop wedding Dubai, we help you find a location that feels perfect for your story. We also plan sophisticated 5-star hotel weddings in Dubai, Burj Khalifa view wedding venues, and grand Emirates Palace Abu Dhabi weddings.",
+      "Whether you are planning an Indian destination wedding in Dubai, an Arabic celebration, or a multicultural event, our Arabic wedding planners Dubai team brings every detail together with care. From luxury bespoke weddings UAE, venue sourcing, guest hospitality, and entertainment to UAE wedding decoration and styling and a trusted destination wedding photographer Dubai, we create a seamless celebration that feels personal, joyful, and truly unforgettable.",
     ],
-    whyChooseTitle: "Why Choose Us for a Destination Wedding",
-    whyChoose: commonWhyChoose("Destination Weddings", "destination weddings"),
+    idealFor: [
+      "Couples planning a destination wedding in Dubai or the UAE",
+      "International couples seeking luxury venues, exceptional hospitality, and iconic settings",
+      "Families hosting multi-day celebrations with guests travelling from different countries",
+      "Couples wanting beach, desert, hotel, garden, yacht, or city-view wedding venues",
+      "Those looking for complete travel, accommodation, guest, décor, and event coordination",
+      "Couples drawn to the UAE’s growing reputation as a leading global wedding destination",
+      "Anyone dreaming of a warm, elegant, and unforgettable luxury destination wedding experience",
+    ],
+    whyChooseTitle: "Bringing Your Dream Destination Wedding to the UAE",
+    whyChoose: [
+      {
+        title: "Planning Made Easy from Anywhere",
+        body: "Wherever you are in the world, we make planning your destination wedding in Dubai feel simple, personal, and beautifully organised.",
+      },
+      {
+        title: "Curated Multi-Day Wedding Experiences",
+        body: "From welcome dinners and pre-wedding celebrations to the ceremony and farewell brunch, we create a seamless journey for every guest.",
+      },
+      {
+        title: "Celebrations Rooted in Your Culture",
+        body: "We thoughtfully bring together your traditions, rituals, cuisine, music, and styling to create meaningful multicultural weddings in the UAE.",
+      },
+      {
+        title: "Complete Destination Wedding Coordination",
+        body: "Our team manages travel schedules, accommodation, guest communication, suppliers, production, and event flow, ensuring a joyful and stress-free celebration.",
+      },
+    ],
     decor: {
       heading: "Luxury Styling for Destination Weddings in Dubai",
       intro:
@@ -861,6 +956,9 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       },
     ],
   },
+  },
+
+
 };
 
 export function getServiceDetail(slug: string): ServiceDetail | undefined {
