@@ -138,7 +138,7 @@ function HomePage() {
       {/* Weddings We Specialize In */}
       <section className="pb-16 md:pb-24">
         <div className="container-page">
-          <div className="max-w-[840px] rounded-sm border border-border bg-secondary/30 p-8">
+          <div className="max-w-[840px] p-8">
             <p className="eyebrow">Weddings We Specialize In</p>
 
             <div className="mt-5">
@@ -293,8 +293,9 @@ function HomePage() {
             eyebrow="FAQ"
             title="Frequently asked questions, answered"
             body="Everything you need to know before planning your wedding—from venues and timelines to legal requirements and destination celebrations."
+            className="[&_h2]:text-4xl md:[&_h2]:text-5xl [&_p]:text-lg md:[&_p]:text-xl [&_p]:leading-8"
           />
-          <FaqAccordion items={faqItems} />
+          <div className="[&_button]:text-xl [&_button]:font-faq [&_[data-slot=accordion-content]]:text-xl"><FaqAccordion items={faqItems} /></div>
         </div>
       </section>
 

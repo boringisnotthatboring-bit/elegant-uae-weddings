@@ -14,11 +14,120 @@ export const Route = createFileRoute("/services")({
           "Bespoke wedding planning services across Dubai, Abu Dhabi & the UAE — beach, desert, hotel, cultural, civil and destination weddings.",
       },
       { property: "og:title", content: "Wedding Services in Dubai & UAE" },
-      { property: "og:description", content: "Every wedding planning service, one trusted team." },
+      {
+        property: "og:description",
+        content: "Every wedding planning service, one trusted team.",
+      },
     ],
   }),
   component: ServicesPage,
 });
+
+const serviceContentOverrides: Record<
+  string,
+  {
+    description: string;
+    perfectFor?: string[];
+  }
+> = {
+  "beach-wedding-dubai": {
+    description:
+      "If you've always dreamed of a Beach Wedding Dubai, we'll help you create a beautiful luxury wedding on the white sands of the Arabian Gulf, complete with sunset views, elegant styling, and unforgettable moments by the sea. It's the perfect choice for couples planning a destination wedding or a romantic outdoor wedding in the UAE.",
+  },
+
+  "desert-wedding-dubai": {
+    description:
+      "Looking for something truly unique? A Desert Wedding in Dubai & UAE offers breathtaking sand dunes, spectacular sunsets, and a magical outdoor wedding experience inspired by Arabian traditions. It's an unforgettable setting for couples planning a destination wedding filled with unforgettable moments.",
+    perfectFor: [
+      "Arabian-inspired weddings",
+      "Destination weddings",
+      "Outdoor weddings",
+      "Private desert celebrations",
+    ],
+  },
+
+  "intimate-elopements": {
+    description:
+      "Whether it's just the two of you or your closest loved ones, our Intimate Elopements & Micro Weddings create meaningful celebrations in beautiful locations across the UAE. A wonderful option for couples planning a romantic destination wedding or a private outdoor wedding.",
+    perfectFor: [
+      "Romantic elopements",
+      "Small wedding celebrations",
+      "Destination weddings",
+      "Outdoor ceremonies",
+    ],
+  },
+
+  "civil-weddings-uae": {
+    description:
+      "Whether you're a resident or travelling to the UAE, we'll help make your Civil Weddings UAE journey simple and memorable. Many couples choose to celebrate their legal ceremony with a luxury wedding, an intimate reception, or a destination wedding experience afterwards.",
+    perfectFor: [
+      "UAE residents",
+      "International couples",
+      "Couples looking for a Celebrant in Dubai or UAE",
+      "Legally recognised civil marriages",
+      "Wedding Celebrations planning after your ceremony",
+    ],
+  },
+
+  "luxury-hotel-weddings": {
+    description:
+      "If you're dreaming of a sophisticated luxury wedding, we'll help you find the perfect hotel setting, from elegant ballrooms to spectacular waterfront venues across Dubai, Abu Dhabi, and Ras Al Khaimah. Ideal for grand celebrations and unforgettable destination weddings.",
+    perfectFor: [
+      "Luxury weddings",
+      "Grand ballroom celebrations",
+      "Destination weddings",
+      "Multi-day wedding celebrations",
+    ],
+  },
+
+  "emirati-gcc-weddings": {
+    description:
+      "Celebrate luxury Emirati and GCC weddings in Dubai with bespoke planning inspired by cultural traditions, elegant Majlis settings, Zaffa processions, personalised décor, and exceptional hospitality across Dubai, Abu Dhabi, Ras Al Khaimah, and the UAE.",
+  },
+
+  "south-asian-weddings": {
+    description:
+      "Celebrate luxury South Asian weddings in Dubai with bespoke planning shaped around your culture, traditions, and family celebrations. From Mehndi and Sangeet to Pheras, Walima, and grand receptions, we create seamless multi-day weddings across Dubai, Abu Dhabi, Ras Al Khaimah, and the UAE.",
+  },
+
+  "yacht-marina-weddings": {
+    description:
+      "Host a luxury yacht or marina wedding in Dubai surrounded by sparkling waters and stunning skyline views. From private vessels and bespoke décor to fine dining and thoughtful guest experiences, every detail is planned to feel personal, elegant, and effortlessly memorable.",
+    perfectFor: [
+      "Private yacht weddings",
+      "Marina ceremonies",
+      "Waterfront receptions",
+      "Luxury destination weddings",
+    ],
+  },
+
+  "garden-weddings": {
+    description:
+      "Plan a romantic garden wedding in Dubai surrounded by lush greenery, elegant floral styling, soft ambient lighting, and a beautifully designed outdoor setting. Every detail is thoughtfully curated to create a warm, intimate, and unforgettable celebration.",
+    perfectFor: [
+      "Intimate garden ceremonies",
+      "Outdoor wedding receptions",
+      "Resort garden weddings",
+      "Luxury destination weddings",
+    ],
+  },
+
+  "outdoor-weddings": {
+    description:
+      "Exchange your vows beneath open skies with a luxury outdoor wedding in Dubai filled with beautiful scenery, elegant décor, and thoughtful details. From beaches and deserts to terraces and private venues, every setting is styled to feel warm, personal, and unforgettable.",
+  },
+
+  "destination-weddings": {
+    description:
+      "Begin your forever in one of the world’s most beautiful settings with a luxury destination wedding in Dubai. From beach resorts and desert escapes to five-star hotels and iconic city venues, every detail is thoughtfully designed to feel personal, effortless, and unforgettable.",
+    perfectFor: [
+      "International couples",
+      "Multi-day wedding celebrations",
+      "Cultural and multicultural weddings",
+      "Luxury destination weddings across the UAE",
+    ],
+  },
+};
 
 function ServicesPage() {
   return (
@@ -30,6 +139,7 @@ function ServicesPage() {
           <div className="absolute inset-0 bg-black/45" />
           <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/25 to-black/50" />
         </div>
+
         <div className="container-page flex min-h-[420px] items-center justify-center py-24 md:min-h-[520px]">
           <div className="mx-auto w-full max-w-3xl text-center text-white">
             <nav className="mb-6 text-[0.65rem] uppercase tracking-[0.3em] text-white/70">
@@ -39,10 +149,13 @@ function ServicesPage() {
               <span className="mx-2">/</span>
               <span className="text-white">Wedding Services</span>
             </nav>
+
             <p className="eyebrow text-white/75">Wedding Services</p>
+
             <h1 className="mt-4 font-display text-4xl leading-tight md:text-5xl lg:text-6xl">
               Creating Unforgettable Weddings Across the UAE
             </h1>
+
             <p className="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-white/85 md:text-lg">
               Celebrate your love story with Awesome Events Weddings, an award-winning Wedding
               Agency in UAE and trusted Wedding Planner in Dubai. Based in Dubai, we create
@@ -52,6 +165,7 @@ function ServicesPage() {
               bring your vision to life with creativity, care, and exceptional attention to every
               detail.
             </p>
+
             <div className="mt-8 flex justify-center">
               <Button asChild size="lg">
                 <Link to="/contact">Book a Free Consultation</Link>
@@ -66,13 +180,17 @@ function ServicesPage() {
         <div className="container-page">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="font-display text-3xl md:text-4xl">
-              Explore Our Wedding Services in Dubai
+              Our Wedding Planning Services
             </h2>
+
             <p className="mt-5 text-base leading-relaxed text-muted-foreground">
-              At Awesome Events Weddings, we design unforgettable celebrations tailored to your
-              vision, traditions, and personality. Choose the wedding experience that speaks to you
-              — each has its own dedicated planning journey.
+              From elegant Beach Weddings and Luxury Hotel Weddings to Destination Weddings, Civil
+              Weddings, and intimate celebrations, Awesome Events Weddings offers customised
+              Wedding Planning Services across Dubai, Abu Dhabi, Ras Al Khaimah, and the UAE. As an
+              experienced Wedding Planner Dubai and Wedding Organizer UAE, we help bring your ideas
+              to life with thoughtful planning, creative styling, and personalised experiences.
             </p>
+
             <div className="mx-auto mt-8 h-px w-24 bg-border" />
           </div>
         </div>
@@ -82,49 +200,65 @@ function ServicesPage() {
       <section className="pb-20 pt-12 md:pb-28 md:pt-16">
         <div className="container-page">
           <div className="mx-auto max-w-5xl space-y-16 md:space-y-24">
-            {allServices.map((s) => {
-              const meta = serviceCtaMeta[s.slug];
-              const viewLabel = meta?.viewLabel ?? `View ${s.title}`;
+            {allServices.map((service) => {
+              const meta = serviceCtaMeta[service.slug];
+              const viewLabel = meta?.viewLabel ?? `View ${service.title}`;
+              const override = serviceContentOverrides[service.slug];
+              const description = override?.description ?? service.description;
+              const perfectFor = override?.perfectFor ?? service.perfectFor;
+
               return (
                 <article
-                  key={s.slug}
+                  key={service.slug}
                   className="grid gap-8 md:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] md:items-center md:gap-12"
                 >
                   <Link
                     to="/wedding-services/$slug"
-                    params={{ slug: s.slug }}
+                    params={{ slug: service.slug }}
                     className="group relative block aspect-[5/4] overflow-hidden rounded-sm shadow-md"
                   >
                     <img
-                      src={s.image}
-                      alt={s.title}
+                      src={service.image}
+                      alt={service.title}
                       loading="lazy"
                       className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
                   </Link>
+
                   <div>
-                    <h3 className="font-display text-3xl md:text-4xl">{s.title}</h3>
+                    <h3 className="font-display text-3xl md:text-4xl">{service.title}</h3>
+
                     <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-                      {s.description}
+                      {description}
                     </p>
-                    {s.perfectFor && s.perfectFor.length > 0 && (
+
+                    {perfectFor && perfectFor.length > 0 && (
                       <div className="mt-6">
                         <p className="text-xs font-medium uppercase tracking-[0.2em] text-primary">
                           Perfect for
                         </p>
+
                         <ul className="mt-3 grid gap-1.5 text-sm text-muted-foreground sm:grid-cols-2">
-                          {s.perfectFor.map((p) => (
-                            <li key={p} className="flex items-start gap-2">
+                          {perfectFor.map((item) => (
+                            <li key={item} className="flex items-start gap-2">
                               <Check className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
-                              {p}
+                              {item}
                             </li>
                           ))}
                         </ul>
                       </div>
                     )}
+
                     <div className="mt-8">
-                      <Button asChild variant="outline" className="uppercase tracking-[0.18em]">
-                        <Link to="/wedding-services/$slug" params={{ slug: s.slug }}>
+                      <Button
+                        asChild
+                        variant="outline"
+                        className="uppercase tracking-[0.18em]"
+                      >
+                        <Link
+                          to="/wedding-services/$slug"
+                          params={{ slug: service.slug }}
+                        >
                           {viewLabel}
                         </Link>
                       </Button>
