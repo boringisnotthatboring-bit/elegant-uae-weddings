@@ -345,6 +345,88 @@ function ServicesPage() {
                 the UAE.
               </p>
             </article>
+
+            <article className="group border border-primary-foreground/20 bg-primary-foreground/[0.06] p-7 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:bg-primary-foreground/[0.1] md:p-9">
+              <p className="text-xs uppercase tracking-[0.24em] text-primary-foreground/55">05</p>
+              <h3 className="mt-4 font-display text-2xl leading-snug md:text-3xl">
+                Luxury Private Parties in Dubai &amp; UAE
+              </h3>
+              <p className="mt-4 text-sm leading-7 text-primary-foreground/75 md:text-base">
+                From renting out luxury yachts or private islands, exclusive poolside celebrations,
+                desert soirées, contemporary galleries, to private jets, we get it for you and
+                transform these extraordinary venues into unforgettable celebrations, tailored
+                entirely to your style and occasion.
+              </p>
+            </article>
+
+            <article className="group border border-primary-foreground/20 bg-primary-foreground/[0.06] p-7 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:bg-primary-foreground/[0.1] md:p-9">
+              <p className="text-xs uppercase tracking-[0.24em] text-primary-foreground/55">06</p>
+              <h3 className="mt-4 font-display text-2xl leading-snug md:text-3xl">
+                Audio-Visual &amp; Lighting Solutions
+              </h3>
+              <p className="mt-4 text-sm leading-7 text-primary-foreground/75 md:text-base">
+                We provide advanced audio-visual systems, intelligent lighting, LED screens, and
+                sound engineering for elegant luxury wedding experiences.
+              </p>
+            </article>
+
+            <article className="group border border-primary-foreground/20 bg-primary-foreground/[0.06] p-7 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:bg-primary-foreground/[0.1] md:p-9">
+              <p className="text-xs uppercase tracking-[0.24em] text-primary-foreground/55">07</p>
+              <h3 className="mt-4 font-display text-2xl leading-snug md:text-3xl">
+                Wedding Catering Services
+              </h3>
+              <p className="mt-4 text-sm leading-7 text-primary-foreground/75 md:text-base">
+                Our wedding catering services offer customized menus, luxury catering, professional
+                hospitality, and exceptional dining experiences for weddings and grand celebrations
+                across the UAE.
+              </p>
+            </article>
+
+            <article className="group border border-primary-foreground/20 bg-primary-foreground/[0.06] p-7 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:bg-primary-foreground/[0.1] md:p-9">
+              <p className="text-xs uppercase tracking-[0.24em] text-primary-foreground/55">08</p>
+              <h3 className="mt-4 font-display text-2xl leading-snug md:text-3xl">
+                Drone Light Shows &amp; Fireworks
+              </h3>
+              <p className="mt-4 text-sm leading-7 text-primary-foreground/75 md:text-base">
+                Create an unforgettable grand entrance for your wedding or finale with breathtaking
+                aerial spectacles and synchronized moments that leave every guest amazed.
+              </p>
+            </article>
+
+            <article className="group border border-primary-foreground/20 bg-primary-foreground/[0.06] p-7 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:bg-primary-foreground/[0.1] md:p-9">
+              <p className="text-xs uppercase tracking-[0.24em] text-primary-foreground/55">09</p>
+              <h3 className="mt-4 font-display text-2xl leading-snug md:text-3xl">
+                Makeup &amp; Henna Artists (Bride, Friends &amp; Family)
+              </h3>
+              <p className="mt-4 text-sm leading-7 text-primary-foreground/75 md:text-base">
+                Our trusted beauty professionals ensure every member of your celebration feels
+                confident, camera-ready, and beautifully prepared for the big day.
+              </p>
+            </article>
+
+            <article className="group border border-primary-foreground/20 bg-primary-foreground/[0.06] p-7 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:bg-primary-foreground/[0.1] md:p-9">
+              <p className="text-xs uppercase tracking-[0.24em] text-primary-foreground/55">10</p>
+              <h3 className="mt-4 font-display text-2xl leading-snug md:text-3xl">
+                AI Technology
+              </h3>
+              <p className="mt-4 text-sm leading-7 text-primary-foreground/75 md:text-base">
+                Elevate your wedding in Dubai or anywhere in the UAE with e-invitations, QR guest
+                experiences, AI photo booths, robots, live streaming, language translators, and
+                virtual access for family and friends.
+              </p>
+            </article>
+
+            <article className="group border border-primary-foreground/20 bg-primary-foreground/[0.06] p-7 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:bg-primary-foreground/[0.1] md:col-span-2 md:mx-auto md:w-[calc(50%-0.75rem)] md:p-9">
+              <p className="text-xs uppercase tracking-[0.24em] text-primary-foreground/55">11</p>
+              <h3 className="mt-4 font-display text-2xl leading-snug md:text-3xl">
+                Guest Hospitality &amp; RSVP
+              </h3>
+              <p className="mt-4 text-sm leading-7 text-primary-foreground/75 md:text-base">
+                From invitations and RSVP tracking to welcome services, seating plans, guest
+                assistance, and family coordination, we ensure every guest experience is thoughtfully
+                managed from start to finish.
+              </p>
+            </article>
           </div>
         </div>
       </section>
