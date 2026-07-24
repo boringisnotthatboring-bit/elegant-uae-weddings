@@ -51,18 +51,22 @@ export function TestimonialsCarousel({ items }: { items: Testimonial[] }) {
         >
           {looped.map((t, i) => (
             <figure key={i} className="w-full shrink-0 px-2">
-              <div className="rounded-sm border border-border bg-card p-8 md:p-12">
+              <div className="rounded-sm border border-border bg-card p-8 text-card-foreground md:p-12">
                 <div className="flex gap-1 text-accent">
                   {Array.from({ length: t.rating }).map((_, s) => (
                     <Star key={s} className="h-4 w-4 fill-current" />
                   ))}
                 </div>
-                <blockquote className="mt-6 font-display text-2xl leading-snug md:text-3xl">
+
+                <blockquote className="mt-6 font-display text-2xl leading-snug text-card-foreground md:text-3xl">
                   “{t.quote}”
                 </blockquote>
+
                 <figcaption className="mt-6 text-sm">
-                  <span className="font-medium text-foreground">{t.author}</span>
+                  <span className="font-medium text-card-foreground">{t.author}</span>
+
                   <span className="text-muted-foreground"> — {t.location}</span>
+
                   {t.placeholder && (
                     <span className="ml-2 rounded-full border border-dashed border-accent px-2 py-0.5 text-[0.65rem] uppercase tracking-wider text-accent">
                       Placeholder
