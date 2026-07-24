@@ -286,8 +286,7 @@ function WeddingServicePage() {
 
               <div className="md:order-1">
                 <p className="eyebrow">
-                  {service.slug === "civil-weddings-uae" ||
-                  service.slug === "luxury-hotel-weddings"
+                  {service.slug === "civil-weddings-uae" || service.slug === "luxury-hotel-weddings"
                     ? "Perfect For"
                     : detail.idealFor
                       ? "Ideal For"
@@ -395,38 +394,26 @@ function WeddingServicePage() {
         </div>
       </section>
 
-      {/* Desert Wedding Décor */}
-      {service.slug === "desert-wedding-dubai" && (
+      {/* Wedding Décor */}
+      {detail.decor && (
         <section className="section-y bg-secondary/20">
           <div className="container-page">
             <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
               <div className="max-w-2xl">
-                <p className="eyebrow">Wedding Décor</p>
+                <p className="eyebrow">{detail.decor.eyebrow ?? "Wedding Décor"}</p>
 
                 <h2 className="mt-3 font-display text-3xl leading-tight md:text-4xl">
-                  Luxury Desert Wedding Décor &amp; Styling
+                  {detail.decor.heading}
                 </h2>
 
                 <p className="mt-6 text-base leading-relaxed text-muted-foreground">
-                  Transform the beauty of the Arabian desert into a refined wedding setting with
-                  customized décor, elegant styling, and thoughtfully curated details. From romantic
-                  ceremonies to luxury receptions, every element is designed to complement the
-                  natural landscape while reflecting your personal vision.
+                  {detail.decor.intro}
                 </p>
 
-                <h3 className="mt-7 font-display text-xl">
-                  Our desert wedding décor services highlight:
-                </h3>
+                <h3 className="mt-7 font-display text-xl">{detail.decor.listHeading}</h3>
 
                 <ul className="mt-5 space-y-3 text-sm text-muted-foreground md:text-base">
-                  {[
-                    "Floral stages inspired by the Arabian landscape",
-                    "Elegant wedding arches and aisle styling",
-                    "Luxury table settings and centerpieces",
-                    "Romantic lighting, lanterns, and candle décor",
-                    "Premium desert reception setups",
-                    "Customized wedding themes and colour palettes",
-                  ].map((item) => (
+                  {detail.decor.items.map((item) => (
                     <li key={item} className="flex items-start gap-3">
                       <Check className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
                       <span>{item}</span>
@@ -434,10 +421,11 @@ function WeddingServicePage() {
                   ))}
                 </ul>
 
-                <p className="mt-7 text-base leading-relaxed text-muted-foreground">
-                  We create luxury desert wedding setups in Dubai that blend natural beauty, refined
-                  styling, cultural details, and timeless elegance.
-                </p>
+                {detail.decor.outro && (
+                  <p className="mt-7 text-base leading-relaxed text-muted-foreground">
+                    {detail.decor.outro}
+                  </p>
+                )}
 
                 <div className="mt-8">
                   <Button
@@ -445,208 +433,21 @@ function WeddingServicePage() {
                     className="rounded-none bg-primary text-primary-foreground hover:bg-primary/90"
                   >
                     <Link to="/contact" search={{ type: meta.contactType }}>
-                      Contact Us
-                    </Link>
-                  </Button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* Intimate Elopements & Micro Weddings Décor */}
-      {service.slug === "intimate-elopements" && (
-        <section className="section-y bg-secondary/20">
-          <div className="container-page">
-            <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
-              <div className="max-w-2xl">
-                <p className="eyebrow">Wedding Décor</p>
-
-                <h2 className="mt-3 font-display text-3xl leading-tight md:text-4xl">
-                  Luxury Styling for Intimate Weddings in Dubai
-                </h2>
-
-                <p className="mt-6 text-base leading-relaxed text-muted-foreground">
-                  Create a beautifully personal setting with Luxury Wedding Decoration for Intimate
-                  Elopements &amp; Micro Weddings across Dubai, Abu Dhabi, Ras Al Khaimah, and the
-                  UAE. At Awesome Events Weddings, we design elegant spaces that celebrate love
-                  through personal touches, smaller settings, cosy styling, candlelight, private
-                  dining, and personalised décor. Whether you're planning a romantic Beach Wedding,
-                  an intimate Luxury Hotel Wedding, or a private Destination Wedding, our bespoke
-                  Wedding Decoration Dubai services are thoughtfully tailored to your vision.
-                </p>
-
-                <h3 className="mt-7 font-display text-xl">
-                  Our Intimate Wedding Décor Services Highlight:
-                </h3>
-
-                <ul className="mt-5 space-y-3 text-sm text-muted-foreground md:text-base">
-                  {[
-                    "Personalised décor and bespoke floral styling",
-                    "Romantic ceremony backdrops and elegant wedding arches",
-                    "Cosy styling with candlelight and ambient lighting",
-                    "Luxury tablescapes and private dining setups",
-                    "Beautiful aisle décor and intimate seating arrangements",
-                    "Custom colour palettes and decorative accents",
-                    "Elegant photo corners and personalised celebration details",
-                  ].map((item) => (
-                    <li key={item} className="flex items-start gap-3">
-                      <Check className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                <p className="mt-7 text-base leading-relaxed text-muted-foreground">
-                  Every Intimate Elopement and Micro Wedding is thoughtfully designed to create a
-                  warm, meaningful atmosphere where every detail reflects your story. Our customised
-                  Wedding Decoration transforms intimate celebrations into timeless memories for you
-                  and your closest loved ones
-                </p>
-
-                <div className="mt-8">
-                  <Button
-                    asChild
-                    className="rounded-none bg-primary text-primary-foreground hover:bg-primary/90"
-                  >
-                    <Link to="/contact" search={{ type: meta.contactType }}>
-                      Contact Us
+                      {detail.decor.ctaLabel ?? "Contact Us"}
                     </Link>
                   </Button>
                 </div>
               </div>
 
-              {/* Intentionally empty: reserved for the intimate wedding image */}
-              <div aria-hidden="true" />
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* Civil Wedding Décor */}
-      {service.slug === "civil-weddings-uae" && (
-        <section className="section-y bg-secondary/20">
-          <div className="container-page">
-            <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
-              <div className="max-w-2xl">
-                <p className="eyebrow">Wedding Décor</p>
-
-                <h2 className="mt-3 font-display text-3xl leading-tight md:text-4xl">
-                  Elegant Styling for Civil Weddings in Dubai
-                </h2>
-
-                <p className="mt-6 text-base leading-relaxed text-muted-foreground">
-                  Celebrate your day with civil wedding decoration in Dubai designed to feel
-                  intimate, elegant, and personal. Awesome Events Weddings creates bespoke décor
-                  across Dubai, Abu Dhabi, Ras Al Khaimah, and the UAE, transforming ceremony and
-                  reception spaces into warm, welcoming settings.
-                </p>
-
-                <h3 className="mt-7 font-display text-xl">
-                  Our Civil Wedding Décor Services Include:
-                </h3>
-
-                <ul className="mt-5 space-y-3 text-sm text-muted-foreground md:text-base">
-                  {[
-                    "Elegant ceremony backdrops and floral installations",
-                    "Personalised wedding styling and décor concepts",
-                    "Contemporary arches and beautifully styled aisles",
-                    "Luxury tablescapes and intimate seating",
-                    "Romantic lighting, candles, and decorative details",
-                    "Custom colour palettes, signage, and photo backdrops",
-                    "Stylish reception décor and personalised finishing touches",
-                  ].map((item) => (
-                    <li key={item} className="flex items-start gap-3">
-                      <Check className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                <p className="mt-7 text-base leading-relaxed text-muted-foreground">
-                  Our civil wedding décor services in Dubai and the UAE bring together thoughtful
-                  styling, timeless details, and a setting that feels beautifully yours.
-                </p>
-
-                <div className="mt-8">
-                  <Button
-                    asChild
-                    className="rounded-none bg-primary text-primary-foreground hover:bg-primary/90"
-                  >
-                    <Link to="/contact" search={{ type: meta.contactType }}>
-                      Contact Us
-                    </Link>
-                  </Button>
+              {detail.decor.image && (
+                <div className="relative aspect-[4/3] overflow-hidden rounded-sm shadow-lg">
+                  <img
+                    src={detail.decor.image}
+                    alt={detail.decor.imageAlt ?? detail.decor.heading}
+                    className="h-full w-full object-cover"
+                  />
                 </div>
-              </div>
-
-              {/* Intentionally empty: reserved for the civil wedding image */}
-              <div aria-hidden="true" />
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* Luxury Hotel Wedding Décor */}
-      {service.slug === "luxury-hotel-weddings" && (
-        <section className="section-y bg-secondary/20">
-          <div className="container-page">
-            <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
-              <div className="max-w-2xl">
-                <p className="eyebrow">Wedding Décor</p>
-
-                <h2 className="mt-3 font-display text-3xl leading-tight md:text-4xl">
-                  Luxury Hotel Wedding Decoration in Dubai
-                </h2>
-
-                <p className="mt-6 text-base leading-relaxed text-muted-foreground">
-                  Step into a beautifully designed celebration where every detail feels personal,
-                  elegant, and truly yours. Our luxury hotel wedding decoration services in Dubai
-                  &amp; UAE are thoughtfully created to transform stunning hotel ballrooms and
-                  reception spaces into warm, memorable settings filled with beauty and charm.
-                </p>
-
-                <h3 className="mt-7 font-display text-xl">
-                  Our hotel wedding décor services highlight:
-                </h3>
-
-                <ul className="mt-5 space-y-3 text-sm text-muted-foreground md:text-base">
-                  {[
-                    "Bespoke floral stages and ceremony backdrops",
-                    "Elegant ballroom entrances and aisle décor",
-                    "Luxury table styling and statement centerpieces",
-                    "Romantic wedding lighting and ambience concepts",
-                    "Beautiful reception and stage setups",
-                    "Custom wedding themes and colour palettes & much more",
-                  ].map((item) => (
-                    <li key={item} className="flex items-start gap-3">
-                      <Check className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                <p className="mt-7 text-base leading-relaxed text-muted-foreground">
-                  From the first welcome to the final celebration, we create luxury hotel wedding
-                  setups in Dubai &amp; UAE that reflect your love story and make every guest feel
-                  part of something truly special.
-                </p>
-
-                <div className="mt-8">
-                  <Button
-                    asChild
-                    className="rounded-none bg-primary text-primary-foreground hover:bg-primary/90"
-                  >
-                    <Link to="/contact" search={{ type: meta.contactType }}>
-                      Contact Us
-                    </Link>
-                  </Button>
-                </div>
-              </div>
-
-              {/* Intentionally empty: reserved for the luxury hotel wedding image */}
-              <div aria-hidden="true" />
+              )}
             </div>
           </div>
         </section>
