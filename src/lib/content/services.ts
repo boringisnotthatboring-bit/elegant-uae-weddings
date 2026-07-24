@@ -79,7 +79,7 @@ export const flagshipServices: ServiceItem[] = [
       "Celebration planning after your ceremony",
     ],
     cta: "Explore Civil Weddings",
-    image: "/service-images/civil-wedding-1.webp",
+    image: "/service-images/civil-i.webp",
     banner: "/service-images/civil-b.webp",
   },
   {
