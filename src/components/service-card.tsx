@@ -13,7 +13,7 @@ export function ServiceCard({ item, featured }: { item: ServiceItem; featured?: 
     >
       <div className={"relative overflow-hidden " + (featured ? "aspect-[16/9]" : "aspect-[4/3]")}>
         <img
-          src={item.image}
+          src={item.perfectForImage ?? item.image}
           alt={item.title}
           loading="lazy"
           className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"

@@ -170,11 +170,10 @@ function HomePage() {
             </h2>
             <p className="mt-6 text-base leading-relaxed text-muted-foreground">
               From our headquarters in Dubai, we plan and coordinate weddings across all seven
-              emirates of the UAE, including Dubai, Abu Dhabi, Sharjah, Ajman, Umm Al Quwain,
-              Ras Al Khaimah, Fujairah, and other parts of the UAE, creating personalised
-              celebrations in some of the country's most beautiful destinations.
+              emirates of the UAE, including Dubai, Abu Dhabi, Sharjah, Ajman, Umm Al Quwain, Ras Al
+              Khaimah, Fujairah, and other parts of the UAE, creating personalised celebrations in
+              some of the country's most beautiful destinations.
             </p>
-
           </div>
           <div className="relative -mx-2 md:-mx-4 lg:scale-[1.07] lg:origin-center">
             <div
