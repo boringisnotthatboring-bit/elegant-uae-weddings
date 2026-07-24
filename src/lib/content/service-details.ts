@@ -132,13 +132,38 @@ export const serviceDetails: Record<string, ServiceDetail> = {
   },
 
   "desert-wedding-dubai": {
-    introHeading: "Desert Weddings",
+    introHeading: "Plan an Unforgettable Desert Wedding in Dubai",
     intro: [
-      "Say your vows against a horizon of golden dunes with a desert wedding in Dubai — an unforgettable celebration inspired by the timeless romance of Arabia.",
-      "From exclusive dune-top ceremonies and majlis-style receptions to traditional welcomes, live performances, and cinematic lighting, every moment is designed to feel personal and effortlessly luxurious.",
+      "Celebrate your love amidst the golden dunes with a breathtaking Desert Wedding in Dubai. At Awesome Events Weddings, we create extraordinary desert celebrations that combine Arabian charm, luxury, and unforgettable experiences. Whether you envision an intimate sunset ceremony, a romantic candlelit reception beneath the stars, or a lavish multi-day celebration, our experienced Wedding Planner Dubai team brings your dream wedding to life with creativity and flawless execution.",
+      "From exclusive desert wedding venues and bespoke Wedding Decoration Dubai to gourmet catering, live entertainment, photography, luxury seating, traditional Majlis setups, fireworks, synchronized drone shows, and complete Wedding Planning Services, we take care of every detail. Whether you're planning a Destination Wedding or a private celebration in the UAE, we create personalised Desert Weddings that reflect your style, traditions, and vision, ensuring an unforgettable experience for you and your guests.",
+    ],
+    idealFor: [
+      "Couples dreaming of romantic ceremonies among golden dunes and Arabian landscapes",
+      "Destination couples planning a desert wedding in Dubai or the UAE",
+      "Couples seeking elegant desert wedding décor and personalised styling",
+      "Intimate ceremonies, sunset vows, and starlit wedding receptions",
+      "Couples needing complete wedding planning services and coordination",
+      "Anyone wanting a private celebration with luxury, nature, and authentic Arabian charm",
     ],
     whyChooseTitle: "Why Choose Us for a Desert Wedding in Dubai",
-    whyChoose: commonWhyChoose("Desert Weddings", "desert weddings"),
+    whyChoose: [
+      {
+        title: "Experienced Desert Wedding Planners",
+        body: "With over 12 years of experience, we create luxury desert weddings across Dubai and the UAE, combining creative design, cultural understanding, and seamless execution.",
+      },
+      {
+        title: "Bespoke Desert Wedding Concepts",
+        body: "Every celebration is personalized around your story, traditions, style, and guest experience, creating unforgettable weddings inspired by the beauty of the Arabian desert.",
+      },
+      {
+        title: "Exclusive Desert Wedding Venues",
+        body: "We help couples discover exceptional desert wedding venues in Dubai and the UAE, including luxury resorts, private camps, dune settings, and outdoor ceremony locations.",
+      },
+      {
+        title: "Complete Desert Wedding Planning",
+        body: "We manage end-to-end planning, including décor, catering, entertainment, transportation, permits, logistics, technical production, guest hospitality, timelines, and on-site coordination.",
+      },
+    ],
     faqs: [
       {
         q: "What makes a desert wedding in Dubai unique?",
