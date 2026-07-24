@@ -271,13 +271,40 @@ export const serviceDetails: Record<string, ServiceDetail> = {
   },
 
   "civil-weddings-uae": {
-    introHeading: "Civil Weddings",
+    introHeading: "Elegant Civil Weddings in Dubai & Across the UAE",
     intro: [
-      "Whether you're a UAE resident or travelling in for the occasion, we make your civil wedding journey effortless and elegant.",
-      "We guide you through the legal requirements while designing a ceremony and celebration that feels genuinely yours.",
+      "At Awesome Events Weddings, we create civil weddings in Dubai that feel meaningful, elegant, and deeply personal. As an experienced Wedding Planner Dubai, we help couples turn a simple legal ceremony into a beautifully styled celebration filled with warmth, thoughtful details, and unforgettable moments.",
+      "Whether you are planning an intimate courthouse ceremony, a private hotel celebration, or a refined gathering with family and friends, our team manages every element with care. From venue sourcing and ceremony styling to elegant wedding décor, florals, catering, photography, guest hospitality, and complete event coordination, we ensure your celebration feels effortless from beginning to end.",
+      "We also support couples with civil ceremony planning, timelines, documentation guidance, and venue arrangements, helping the entire process feel clear and well organised. Every civil wedding in the UAE is designed around your story, personal style, traditions, and preferred guest experience.",
+      "Our aim is to create a celebration that feels relaxed yet special, intimate yet beautifully elevated, allowing you to focus on the joy of beginning your new journey together.",
     ],
-    whyChooseTitle: "Why Choose Us for a Civil Wedding in the UAE",
-    whyChoose: commonWhyChoose("Civil Weddings", "civil ceremonies and celebrations"),
+    idealFor: [
+      "UAE residents planning a legally recognised civil marriage",
+      "International couples getting married in Dubai or the UAE",
+      "Couples seeking a simple, elegant, and personalised civil ceremony",
+      "Newlyweds planning a reception or celebration after their legal ceremony",
+      "Couples needing civil wedding planning and coordination",
+      "Anyone wanting a warm, stylish, and stress-free civil wedding in the UAE",
+    ],
+    whyChooseTitle: "Creating Meaningful Civil Weddings Across the UAE",
+    whyChoose: [
+      {
+        title: "Personalised Civil Ceremony Styling",
+        body: "We create elegant civil wedding setups in Dubai with refined décor, floral details, thoughtful seating, and a setting that feels truly personal.",
+      },
+      {
+        title: "Guidance Through Every Step",
+        body: "Our team supports couples with ceremony planning, timelines, documentation guidance, and coordination, helping the process feel clear, calm, and well organised.",
+      },
+      {
+        title: "Intimate Celebrations with Beautiful Details",
+        body: "From a private signing ceremony to a stylish family reception, we add meaningful touches that make your civil wedding in the UAE feel warm and memorable.",
+      },
+      {
+        title: "Complete End-to-End Civil Wedding Support",
+        body: "We manage venue arrangements, décor, catering, photography & videography, guest experience, and on-the-day coordination, allowing you to enjoy every moment with ease.",
+      },
+    ],
     faqs: commonFaqs("Civil weddings", "civil wedding"),
   },
 
