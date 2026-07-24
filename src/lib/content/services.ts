@@ -63,7 +63,8 @@ export const flagshipServices: ServiceItem[] = [
       "Outdoor ceremonies",
     ],
     cta: "Explore Intimate Weddings",
-    image: img("photo-1465495976277-4387d4b0b4c6"),
+    image: "/service-images/int-elo.webp",
+    banner: "/service-images/int-cover.webp",
   },
   {
     slug: "civil-weddings-uae",
@@ -79,6 +80,7 @@ export const flagshipServices: ServiceItem[] = [
     ],
     cta: "Explore Civil Weddings",
     image: "/service-images/civil-wedding-1.webp",
+    banner: "/service-images/civil-b.webp",
   },
   {
     slug: "luxury-hotel-weddings",
@@ -93,7 +95,8 @@ export const flagshipServices: ServiceItem[] = [
       "Multi-day wedding celebrations",
     ],
     cta: "Explore Luxury Hotel Weddings",
-    image: "/service-images/luxury-hotel-weddings-new.webp",
+    image: "/service-images/lhw-i.webp",
+    banner: "/service-images/lhw-b.webp",
   },
   {
     slug: "emirati-gcc-weddings",
@@ -112,7 +115,7 @@ export const flagshipServices: ServiceItem[] = [
       "GCC Family Weddings",
     ],
     cta: "Explore Emirati & GCC Weddings",
-    image: "/service-images/Emirati-Wedding-new-(1).webp",
+    image: "/service-images/emirati.webp",
   },
   {
     slug: "south-asian-weddings",

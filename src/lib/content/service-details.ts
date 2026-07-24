@@ -143,22 +143,23 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       },
     ],
     decor: {
-  heading: "Luxury Beach Wedding Décor in Dubai & UAE",
-  intro:
-    "Transform your Luxury Beach Wedding into an unforgettable seaside celebration with bespoke Wedding Decoration Dubai designed to complement the natural beauty of the coastline. From romantic sunset ceremonies to elegant beachfront receptions, our expert designers create sophisticated décor that blends luxury, romance, and the charm of the Arabian Gulf.",
-  listHeading: "Our Beach Wedding Décor Highlights:",
-  items: [
-    "Elegant beachfront ceremony arches",
-    "Fresh floral installations and aisle styling",
-    "Luxury reception tablescapes and seating",
-    "Ambient lighting for sunset and evening celebrations",
-    "Custom stage and dance floor styling",
-    "Coastal-inspired décor and colour palettes",
-    "Premium lounge setups and wedding backdrops",
-  ],
-  outro:
-    "Every detail is thoughtfully curated to create a seamless Luxury Beach Wedding experience, ensuring your celebration is as breathtaking as the ocean views surrounding it.",
-},
+      heading: "Luxury Beach Wedding Décor in Dubai & UAE",
+      intro:
+        "Transform your Luxury Beach Wedding into an unforgettable seaside celebration with bespoke Wedding Decoration Dubai designed to complement the natural beauty of the coastline. From romantic sunset ceremonies to elegant beachfront receptions, our expert designers create sophisticated décor that blends luxury, romance, and the charm of the Arabian Gulf.",
+      listHeading: "Our Beach Wedding Décor Highlights:",
+      items: [
+        "Elegant beachfront ceremony arches",
+        "Fresh floral installations and aisle styling",
+        "Luxury reception tablescapes and seating",
+        "Ambient lighting for sunset and evening celebrations",
+        "Custom stage and dance floor styling",
+        "Coastal-inspired décor and colour palettes",
+        "Premium lounge setups and wedding backdrops",
+      ],
+      outro:
+        "Every detail is thoughtfully curated to create a seamless Luxury Beach Wedding experience, ensuring your celebration is as breathtaking as the ocean views surrounding it.",
+      image: "/decor/lbw1.webp",
+    },
   },
 
   "desert-wedding-dubai": {
@@ -209,6 +210,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       ],
       outro:
         "We create luxury desert wedding setups in Dubai that blend natural beauty, refined styling, cultural details, and timeless elegance.",
+      image: "/decor/DW1.webp",
     },
     faqs: [
       {
@@ -296,6 +298,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       ],
       outro:
         "Every Intimate Elopement and Micro Wedding is thoughtfully designed to create a warm, meaningful atmosphere where every detail reflects your story. Our customised Wedding Decoration transforms intimate celebrations into timeless memories for you and your closest loved ones.",
+      image: "/decor/ie1.webp",
     },
     faqs: [
       {
@@ -384,6 +387,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       ],
       outro:
         "Our civil wedding décor services in Dubai and the UAE bring together thoughtful styling, timeless details, and a setting that feels beautifully yours.",
+      image: "/decor/civil-d.webp",
     },
     faqs: commonFaqs("Civil weddings", "civil wedding"),
   },
@@ -420,6 +424,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       ],
       outro:
         "From the first welcome to the final celebration, we create luxury hotel wedding setups in Dubai & UAE that reflect your love story and make every guest feel part of something truly special.",
+      image: "/decor/lhw-d.webp",
     },
     faqs: [
       {
@@ -856,7 +861,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       },
     ],
   },
-}
+};
 
 export function getServiceDetail(slug: string): ServiceDetail | undefined {
   return serviceDetails[slug];
