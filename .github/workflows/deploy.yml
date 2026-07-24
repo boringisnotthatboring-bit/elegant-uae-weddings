@@ -1,0 +1,51 @@
+name: Deploy Awesome Weddings
+
+on:
+  push:
+    branches:
+      - main
+
+  # Also allows deployment from the GitHub Actions page.
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: awesome-weddings-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: Deploy to GoDaddy IIS
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Configure SSH
+        env:
+          DEPLOY_SSH_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
+          DEPLOY_KNOWN_HOSTS: ${{ secrets.DEPLOY_KNOWN_HOSTS }}
+        run: |
+          mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
+
+          printf '%s\n' "$DEPLOY_SSH_KEY" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+
+          printf '%s\n' "$DEPLOY_KNOWN_HOSTS" > ~/.ssh/known_hosts
+          chmod 600 ~/.ssh/known_hosts
+
+      - name: Run deployment script
+        env:
+          DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
+          DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
+        run: |
+          ssh \
+            -i ~/.ssh/deploy_key \
+            -o BatchMode=yes \
+            -o IdentitiesOnly=yes \
+            -o StrictHostKeyChecking=yes \
+            -o ConnectTimeout=30 \
+            "$DEPLOY_USER@$DEPLOY_HOST" \
+            'powershell.exe -NoProfile -NonInteractive -ExecutionPolicy Bypass -File "C:\scripts\awesome-weddings.ps1"'
