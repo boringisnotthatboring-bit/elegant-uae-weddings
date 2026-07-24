@@ -295,7 +295,9 @@ function HomePage() {
             body="Everything you need to know before planning your wedding—from venues and timelines to legal requirements and destination celebrations."
             className="[&_h2]:text-4xl md:[&_h2]:text-5xl [&_p]:text-lg md:[&_p]:text-xl [&_p]:leading-8"
           />
-          <div className="[&_button]:text-xl [&_button]:font-faq [&_[data-slot=accordion-content]]:text-xl"><FaqAccordion items={faqItems} /></div>
+          <div className="[&_button]:text-xl [&_button]:font-faq [&_[data-slot=accordion-content]]:text-xl">
+            <FaqAccordion items={faqItems} />
+          </div>
         </div>
       </section>
 
