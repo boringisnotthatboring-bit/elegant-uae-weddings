@@ -9,6 +9,7 @@ export interface ServiceItem {
   banner?: string;
   featured?: boolean;
   perfectForImage?: string;
+  detailImage?: string;
 }
 
 const img = (id: string) => `https://images.unsplash.com/${id}?auto=format&fit=crop&w=1400&q=70`;
@@ -28,6 +29,7 @@ export const flagshipServices: ServiceItem[] = [
     ],
     cta: "Explore Luxury Beach Weddings",
     image: "/service-images/lb-wedding.webp",
+    detailImage: "/LB2.webp",
     perfectForImage: "/service-images/beach-wedding-1.webp",
     banner: "/service-images/LBW-COVER.webp",
   },
@@ -47,7 +49,7 @@ export const flagshipServices: ServiceItem[] = [
     ],
     cta: "Explore Desert Weddings",
     image: "/service-images/A4-E4.webp",
-    perfectForImage: "/service-images/dw2.webp",
+    perfectForImage: "/DW22.webp",
     banner: "/service-images/DW3.webp",
   },
   {
@@ -114,6 +116,8 @@ export const flagshipServices: ServiceItem[] = [
     ],
     cta: "Explore Emirati & GCC Weddings",
     image: "/service-images/emirati.webp",
+    detailImage: "/edwp.webp",
+    perfectForImage: "/edwp.webp",
   },
   {
     slug: "south-asian-weddings",
@@ -131,6 +135,9 @@ export const flagshipServices: ServiceItem[] = [
     ],
     cta: "Explore South Asian Weddings",
     image: "/service-images/South-Asian-Weddings.webp",
+    banner: "/SAW1-image-upscaler.webp",
+    detailImage: "/SAW1-image-upscaler.webp",
+    perfectForImage: "/SAW1-image-upscaler.webp",
   },
 ];
 
@@ -151,6 +158,9 @@ export const culturalServices: ServiceItem[] = [
     ],
     cta: "Explore Yacht & Marina Weddings",
     image: "/service-images/yacht.webp",
+    banner: "/YACHT 2.webp",
+    detailImage: "/yacht 4.webp",
+    perfectForImage: "/yacht 4.webp",
   },
   {
     slug: "garden-weddings",
@@ -166,6 +176,9 @@ export const culturalServices: ServiceItem[] = [
     ],
     cta: "Explore Garden Weddings",
     image: "/service-images/gard1.webp",
+    banner: "/GARD1.webp",
+    detailImage: "/GW1.webp",
+    perfectForImage: "/GW2.webp",
   },
   {
     slug: "outdoor-weddings",
@@ -183,6 +196,9 @@ export const culturalServices: ServiceItem[] = [
     ],
     cta: "Explore Outdoor Weddings",
     image: "/service-images/outdoor.webp",
+    banner: "/OW1.webp",
+    detailImage: "/OW3.webp",
+    perfectForImage: "/EOW1.webp",
   },
   {
     slug: "destination-weddings",
@@ -201,6 +217,9 @@ export const culturalServices: ServiceItem[] = [
     ],
     cta: "Explore Destination Weddings",
     image: "/service-images/destination.webp",
+    banner: "/DEST1.webp",
+    detailImage: "/DEST1.webp",
+    perfectForImage: "/DEST1.webp",
   },
 ];
 
