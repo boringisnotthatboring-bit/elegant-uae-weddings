@@ -285,13 +285,21 @@ function WeddingServicePage() {
               </div>
 
               <div className="md:order-1">
-                <p className="eyebrow">{detail.idealFor ? "Ideal For" : "Perfect For"}</p>
+                <p className="eyebrow">
+                  {service.slug === "civil-weddings-uae"
+                    ? "Perfect For"
+                    : detail.idealFor
+                      ? "Ideal For"
+                      : "Perfect For"}
+                </p>
                 <h2 className="mt-3 font-display text-3xl md:text-4xl">
                   {service.slug === "desert-wedding-dubai"
                     ? "Who Is a Luxury Desert Wedding Ideal For?"
-                    : detail.idealFor
-                      ? `Who Is ${service.title} Ideal For?`
-                      : `Who Is ${service.title} Perfect For?`}
+                    : service.slug === "civil-weddings-uae"
+                      ? "Who Should Consider a Civil Wedding?"
+                      : detail.idealFor
+                        ? `Who Is ${service.title} Ideal For?`
+                        : `Who Is ${service.title} Perfect For?`}
                 </h2>
 
                 <ul className="mt-6 grid gap-3 text-sm text-muted-foreground sm:grid-cols-2">
@@ -507,6 +515,70 @@ function WeddingServicePage() {
               </div>
 
               {/* Intentionally empty: reserved for the intimate wedding image */}
+              <div aria-hidden="true" />
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Civil Wedding Décor */}
+      {service.slug === "civil-weddings-uae" && (
+        <section className="section-y bg-secondary/20">
+          <div className="container-page">
+            <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+              <div className="max-w-2xl">
+                <p className="eyebrow">Wedding Décor</p>
+
+                <h2 className="mt-3 font-display text-3xl leading-tight md:text-4xl">
+                  Elegant Styling for Civil Weddings in Dubai
+                </h2>
+
+                <p className="mt-6 text-base leading-relaxed text-muted-foreground">
+                  Celebrate your day with civil wedding decoration in Dubai designed to feel
+                  intimate, elegant, and personal. Awesome Events Weddings creates bespoke décor
+                  across Dubai, Abu Dhabi, Ras Al Khaimah, and the UAE, transforming ceremony and
+                  reception spaces into warm, welcoming settings.
+                </p>
+
+                <h3 className="mt-7 font-display text-xl">
+                  Our Civil Wedding Décor Services Include:
+                </h3>
+
+                <ul className="mt-5 space-y-3 text-sm text-muted-foreground md:text-base">
+                  {[
+                    "Elegant ceremony backdrops and floral installations",
+                    "Personalised wedding styling and décor concepts",
+                    "Contemporary arches and beautifully styled aisles",
+                    "Luxury tablescapes and intimate seating",
+                    "Romantic lighting, candles, and decorative details",
+                    "Custom colour palettes, signage, and photo backdrops",
+                    "Stylish reception décor and personalised finishing touches",
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-3">
+                      <Check className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <p className="mt-7 text-base leading-relaxed text-muted-foreground">
+                  Our civil wedding décor services in Dubai and the UAE bring together thoughtful
+                  styling, timeless details, and a setting that feels beautifully yours.
+                </p>
+
+                <div className="mt-8">
+                  <Button
+                    asChild
+                    className="rounded-none bg-primary text-primary-foreground hover:bg-primary/90"
+                  >
+                    <Link to="/contact" search={{ type: meta.contactType }}>
+                      Contact Us
+                    </Link>
+                  </Button>
+                </div>
+              </div>
+
+              {/* Intentionally empty: reserved for the civil wedding image */}
               <div aria-hidden="true" />
             </div>
           </div>
