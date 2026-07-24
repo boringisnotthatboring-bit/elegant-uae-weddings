@@ -171,14 +171,13 @@ function ContactPage() {
             {/* Map */}
             <div className="overflow-hidden rounded-sm border border-border">
               <iframe
-                title="Awesome Events Weddings location"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115963.66688058548!2d55.22757735!3d25.2048493!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f43496ad9c645%3A0xbde66e5084295162!2sDubai!5e0!3m2!1sen!2sae!4v1700000000000"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3609.4526034444984!2d55.27847327593053!3d25.221676330707556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6cac1c87c3e1%3A0xeb5f7e43d2be81c4!2sWebsters!5e0!3m2!1sen!2sae!4v1784871304483!5m2!1sen!2sae"
                 width="100%"
                 height="320"
                 loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
                 className="block"
                 allowFullScreen
+                referrerPolicy="strict-origin-when-cross-origin"
               />
             </div>
           </aside>
