@@ -142,6 +142,23 @@ export const serviceDetails: Record<string, ServiceDetail> = {
         a: "Yes. Subject to venue approvals and local regulations, we can arrange spectacular fireworks, synchronized drone shows, and other luxury entertainment to make your celebration truly unforgettable.",
       },
     ],
+    decor: {
+  heading: "Luxury Beach Wedding Décor in Dubai & UAE",
+  intro:
+    "Transform your Luxury Beach Wedding into an unforgettable seaside celebration with bespoke Wedding Decoration Dubai designed to complement the natural beauty of the coastline. From romantic sunset ceremonies to elegant beachfront receptions, our expert designers create sophisticated décor that blends luxury, romance, and the charm of the Arabian Gulf.",
+  listHeading: "Our Beach Wedding Décor Highlights:",
+  items: [
+    "Elegant beachfront ceremony arches",
+    "Fresh floral installations and aisle styling",
+    "Luxury reception tablescapes and seating",
+    "Ambient lighting for sunset and evening celebrations",
+    "Custom stage and dance floor styling",
+    "Coastal-inspired décor and colour palettes",
+    "Premium lounge setups and wedding backdrops",
+  ],
+  outro:
+    "Every detail is thoughtfully curated to create a seamless Luxury Beach Wedding experience, ensuring your celebration is as breathtaking as the ocean views surrounding it.",
+},
   },
 
   "desert-wedding-dubai": {
@@ -448,6 +465,22 @@ export const serviceDetails: Record<string, ServiceDetail> = {
     ],
     whyChooseTitle: "Why Choose Us for a Yacht or Marina Wedding",
     whyChoose: commonWhyChoose("Yacht & Marina Weddings", "yacht and marina weddings"),
+    decor: {
+      heading: "Luxury Yacht & Marina Wedding Decoration in Dubai & UAE",
+      intro:
+        "Our yacht and marina wedding décor services in Dubai create elegant waterfront celebrations inspired by the sea, skyline views, and refined modern luxury.",
+      listHeading: "Our yacht & marina wedding décor services highlight:",
+      items: [
+        "Stylish deck décor and floral installations",
+        "Elegant gangway entrances and welcome signage",
+        "Luxury lounge seating and waterfront reception styling",
+        "Refined tablescapes and onboard dining setups",
+        "Ambient lighting, lanterns, and sunset-inspired details",
+        "Bespoke themes, colour palettes, and personalised yacht styling",
+      ],
+      outro:
+        "Every luxury yacht wedding setup in Dubai is thoughtfully designed to feel intimate, sophisticated, and beautifully connected to the waterfront.",
+    },
     faqs: [
       {
         q: "How many guests can attend a yacht wedding in Dubai?",
@@ -492,6 +525,22 @@ export const serviceDetails: Record<string, ServiceDetail> = {
     ],
     whyChooseTitle: "Why Choose Us for a Garden Wedding",
     whyChoose: commonWhyChoose("Garden Weddings", "garden weddings"),
+    decor: {
+      heading: "Garden Wedding Decoration in Dubai & the UAE",
+      intro:
+        "Our garden wedding décor services in Dubai and the UAE create romantic outdoor celebrations inspired by lush greenery, natural beauty, and timeless elegance.",
+      listHeading: "Our garden wedding décor services highlight:",
+      items: [
+        "Floral ceremony arches and garden backdrops",
+        "Elegant aisles, pathways, and welcome installations",
+        "Luxury tablescapes and outdoor dining arrangements",
+        "Romantic lighting, chandeliers, lanterns, and candles",
+        "Garden lounges, shaded seating, and reception styling",
+        "Bespoke themes, colour palettes, and botanical details",
+      ],
+      outro:
+        "Every garden wedding setup in Dubai is thoughtfully designed to complement the landscape and create a warm, elegant, and unforgettable celebration.",
+    },
     faqs: [
       {
         q: "What should we consider when choosing a garden wedding venue?",
@@ -536,6 +585,22 @@ export const serviceDetails: Record<string, ServiceDetail> = {
     ],
     whyChooseTitle: "Why Choose Us for an Outdoor Wedding",
     whyChoose: commonWhyChoose("Outdoor Weddings", "outdoor weddings"),
+    decor: {
+      heading: "Outdoor Wedding Decoration in Dubai & the UAE",
+      intro:
+        "Our outdoor wedding décor services in Dubai and the UAE create elegant open-air celebrations shaped around beautiful surroundings, seasonal weather, and your personal wedding style.",
+      listHeading: "Our outdoor wedding décor services highlight:",
+      items: [
+        "Statement ceremony arches, stages, and scenic backdrops",
+        "Elegant aisles, entrances, and personalised welcome installations",
+        "Luxury outdoor seating, lounges, and dining arrangements",
+        "Romantic lighting, chandeliers, lanterns, and illuminated pathways",
+        "Flooring, shaded areas, weather-ready structures, and guest comfort features",
+        "Bespoke themes, floral styling, colour palettes, and decorative details",
+      ],
+      outro:
+        "Every outdoor wedding setup in Dubai is thoughtfully designed to suit beaches, deserts, gardens, terraces, waterfront venues, or the backyard of your own home, creating a warm and memorable celebration under the open sky.",
+    },
     faqs: [
       {
         q: "Which locations are suitable for outdoor weddings in Dubai?",
@@ -679,6 +744,22 @@ export const serviceDetails: Record<string, ServiceDetail> = {
         body: "Our wedding coordinator team manages suppliers, timelines, ceremonies, family requirements, guest hospitality, venue transitions, transport, and every detail across all wedding functions.",
       },
     ],
+    decor: {
+      heading: "South Asian Wedding Decoration in Dubai & the UAE",
+      intro:
+        "Our South Asian wedding décor services in Dubai and the UAE create vibrant, elegant celebrations inspired by cultural traditions, family moments, and refined luxury.",
+      listHeading: "Our South Asian wedding décor services highlight:",
+      items: [
+        "Bespoke Mehndi, Sangeet, Nikah, Pheras, and Walima setups",
+        "Grand floral stages, mandaps, and statement backdrops",
+        "Elegant entrances, ceremonial aisles, and welcome décor",
+        "Luxury tablescapes and family seating arrangements",
+        "Colourful lighting, draping, lanterns, and decorative details",
+        "Custom themes, colour palettes, and cultural styling",
+      ],
+      outro:
+        "Every South Asian wedding setup in Dubai is thoughtfully designed to honour your traditions and create a warm, memorable experience for every guest.",
+    },
     faqs: [
       {
         q: "Do you organise Pakistani and Indian weddings in Dubai?",
@@ -723,6 +804,23 @@ export const serviceDetails: Record<string, ServiceDetail> = {
     ],
     whyChooseTitle: "Why Choose Us for a Destination Wedding",
     whyChoose: commonWhyChoose("Destination Weddings", "destination weddings"),
+    decor: {
+      heading: "Luxury Styling for Destination Weddings in Dubai",
+      intro:
+        "Wherever you are in the world, our team can design and create your dream destination wedding décor in Dubai or anywhere across the UAE. Every setting is thoughtfully styled to feel personal, elegant, and beautifully connected to your love story.",
+      listHeading: "Our Destination Wedding Decoration Services Highlight:",
+      items: [
+        "Bespoke wedding décor concepts inspired by your culture, style, and celebration",
+        "Grand stages, mandaps, floral arches, ceremony backdrops, and aisle styling",
+        "Statement entrances, welcome installations, signage, and personalised photo areas",
+        "Luxury tablescapes, centrepieces, lounge styling, and reception décor",
+        "Romantic lighting, chandeliers, candles, draping, and immersive ambience",
+        "Custom décor for hotels, beaches, deserts, gardens, yachts, and outdoor venues",
+        "Coordinated themes, colour palettes, floral design, staging, and finishing details",
+      ],
+      outro:
+        "From intimate celebrations to grand multicultural and multi-day weddings, we create luxury destination wedding decoration in Dubai and the UAE that feels warm, unforgettable, and uniquely yours.",
+    },
     faqs: [
       {
         q: "Can we plan our destination wedding in Dubai from overseas?",
@@ -758,7 +856,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       },
     ],
   },
-};
+}
 
 export function getServiceDetail(slug: string): ServiceDetail | undefined {
   return serviceDetails[slug];
