@@ -270,6 +270,85 @@ function ServicesPage() {
           </div>
         </div>
       </section>
+      {/* Custom Wedding Planning Services */}
+      <section className="section-y bg-primary text-primary-foreground">
+        <div className="container-page">
+          <div className="mx-auto max-w-4xl text-center">
+            <p className="text-xs font-medium uppercase tracking-[0.28em] text-primary-foreground/70">
+              Bespoke Planning
+            </p>
+
+            <h2 className="mt-4 font-display text-4xl leading-tight md:text-5xl">
+              Custom Wedding Planning Services
+            </h2>
+
+            <div className="mx-auto mt-7 h-px w-20 bg-primary-foreground/30" />
+
+            <p className="mx-auto mt-7 max-w-3xl text-base leading-8 text-primary-foreground/85 md:text-lg">
+              At Awesome Events Weddings, our custom wedding planning services are tailored around
+              your story, style, culture, and celebration goals. From the first idea to the final
+              moment, we bring every detail together with creativity, care, and seamless
+              coordination.
+            </p>
+
+            <p className="mx-auto mt-4 max-w-3xl text-base leading-8 text-primary-foreground/75 md:text-lg">
+              The services below will give you a clearer understanding of how we support you in
+              creating a wedding that feels personal, effortless, and beautifully yours.
+            </p>
+          </div>
+
+          <div className="mx-auto mt-14 grid max-w-6xl gap-6 md:grid-cols-2">
+            <article className="group border border-primary-foreground/20 bg-primary-foreground/[0.06] p-7 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:bg-primary-foreground/[0.1] md:p-9">
+              <p className="text-xs uppercase tracking-[0.24em] text-primary-foreground/55">01</p>
+              <h3 className="mt-4 font-display text-2xl leading-snug md:text-3xl">
+                End-to-End Wedding Planning in Dubai &amp; UAE
+              </h3>
+              <p className="mt-4 text-sm leading-7 text-primary-foreground/75 md:text-base">
+                From the first consultation to the final farewell, we manage every detail of your
+                luxury wedding dream, ensuring a seamless, stress-free, and beautifully executed
+                celebration takes place.
+              </p>
+            </article>
+
+            <article className="group border border-primary-foreground/20 bg-primary-foreground/[0.06] p-7 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:bg-primary-foreground/[0.1] md:p-9">
+              <p className="text-xs uppercase tracking-[0.24em] text-primary-foreground/55">02</p>
+              <h3 className="mt-4 font-display text-2xl leading-snug md:text-3xl">
+                Wedding Entertainment Experiences
+              </h3>
+              <p className="mt-4 text-sm leading-7 text-primary-foreground/75 md:text-base">
+                We curate DJs, live performers, artists, celebrities, EMCEE, traditional acts, and
+                memorable bride and groom entry concepts with music, lighting, choreography, and
+                special effects.
+              </p>
+            </article>
+
+            <article className="group border border-primary-foreground/20 bg-primary-foreground/[0.06] p-7 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:bg-primary-foreground/[0.1] md:p-9">
+              <p className="text-xs uppercase tracking-[0.24em] text-primary-foreground/55">03</p>
+              <h3 className="mt-4 font-display text-2xl leading-snug md:text-3xl">
+                Venue, Décor &amp; Wedding Styling
+              </h3>
+              <p className="mt-4 text-sm leading-7 text-primary-foreground/75 md:text-base">
+                We help source the perfect wedding venue and transform it with elegant décor,
+                floral styling, stage design, table settings, and theme-based concepts tailored to
+                your vision.
+              </p>
+            </article>
+
+            <article className="group border border-primary-foreground/20 bg-primary-foreground/[0.06] p-7 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:bg-primary-foreground/[0.1] md:p-9">
+              <p className="text-xs uppercase tracking-[0.24em] text-primary-foreground/55">04</p>
+              <h3 className="mt-4 font-display text-2xl leading-snug md:text-3xl">
+                Milestone Celebrations
+              </h3>
+              <p className="mt-4 text-sm leading-7 text-primary-foreground/75 md:text-base">
+                We help celebrate life's special milestones with customized experiences, designed
+                to feel completely stress-free and create lasting memories in Dubai or anywhere in
+                the UAE.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
     </>
   );
 }
