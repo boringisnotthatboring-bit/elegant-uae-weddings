@@ -45,6 +45,7 @@ export function SiteHeader() {
                             <Link
                               to="/wedding-services/$slug"
                               params={{ slug: s.slug }}
+                              onClick={(e) => e.currentTarget.blur()}
                               className="block px-4 py-2 text-sm text-foreground/80 transition-colors hover:bg-secondary hover:text-primary"
                             >
                               {s.label}
