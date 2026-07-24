@@ -27,7 +27,8 @@ export const flagshipServices: ServiceItem[] = [
       "Luxury beachfront celebrations",
     ],
     cta: "Explore Luxury Beach Weddings",
-    image: "/service-images/beach-wedding-1.webp",
+    image: "/service-images/lb-wedding.webp",
+    perfectForImage: "/service-images/beach-wedding-1.webp",
     banner: "/service-images/LBW-COVER.webp",
   },
   {
