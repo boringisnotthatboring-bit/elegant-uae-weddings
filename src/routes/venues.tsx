@@ -1,8 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SectionHeader } from "@/components/section-header";
-import { VenueCard } from "@/components/venue-card";
 import { Button } from "@/components/ui/button";
-import { venueCategories } from "@/lib/content/venues";
+import { getServiceBySlug } from "@/lib/content/services";
 import venueOne from "@/assets/venue/awimg1.png";
 import venueTwo from "@/assets/venue/awimg2.png";
 
@@ -24,6 +23,33 @@ export const Route = createFileRoute("/venues")({
   }),
   component: VenuesPage,
 });
+
+const beachWedding = getServiceBySlug("beach-wedding-dubai");
+const outdoorWedding = getServiceBySlug("outdoor-weddings");
+const luxuryHotelWedding = getServiceBySlug("luxury-hotel-weddings");
+
+const featuredVenues = [
+  {
+    title: "Beach Wedding Venues",
+    description:
+      "Celebrate by the Arabian Gulf at luxury beachfront resorts and private coastal locations, with elegant ceremony settings, beautiful sea views, and unforgettable sunset backdrops.",
+    image: beachWedding?.image,
+  },
+  {
+    title: "Outdoor Wedding Venues",
+    description:
+      "Discover romantic open-air settings across the UAE, including garden lawns, terraces, courtyards, desert landscapes, and beautifully styled outdoor celebration spaces.",
+    image: outdoorWedding?.image,
+  },
+  {
+    title: "Luxury Wedding Venues Dubai",
+    description:
+      "Host your celebration in Dubai's finest five-star hotels, grand ballrooms, waterfront resorts, and premium event spaces designed for sophisticated luxury weddings.",
+    image: luxuryHotelWedding?.image,
+  },
+].filter((venue): venue is { title: string; description: string; image: string } =>
+  Boolean(venue.image),
+);
 
 function VenuesPage() {
   return (
@@ -71,12 +97,45 @@ function VenuesPage() {
         </div>
       </section>
 
-      {/* Venue Categories */}
+      {/* Featured Venue Categories */}
       <section className="section-y bg-secondary/40">
-        <div className="container-page grid gap-8 md:grid-cols-2">
-          {venueCategories.map((venue) => (
-            <VenueCard key={venue.slug} item={venue} />
-          ))}
+        <div className="container-page">
+          <div className="mx-auto max-w-6xl text-center">
+            <p className="eyebrow">Venues</p>
+            <h2 className="mt-3 font-display text-3xl md:text-5xl">
+              Wedding Venues in Dubai
+            </h2>
+            <p className="mx-auto mt-5 max-w-4xl text-sm leading-7 text-muted-foreground md:text-base">
+              Explore beautiful wedding settings across Dubai and the UAE, from beachfront resorts
+              and elegant outdoor venues to luxurious hotel ballrooms.
+            </p>
+            <div className="mx-auto mt-8 h-px w-16 bg-border" />
+          </div>
+
+          <div className="mx-auto mt-12 grid max-w-6xl gap-6 md:grid-cols-3">
+            {featuredVenues.map((venue) => (
+              <article
+                key={venue.title}
+                className="overflow-hidden rounded-sm border border-border bg-card"
+              >
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img
+                    src={venue.image}
+                    alt={venue.title}
+                    loading="lazy"
+                    className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+                  />
+                </div>
+
+                <div className="p-6 text-left">
+                  <h3 className="font-display text-2xl leading-snug">{venue.title}</h3>
+                  <p className="mt-3 text-sm leading-7 text-muted-foreground">
+                    {venue.description}
+                  </p>
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -84,7 +143,6 @@ function VenuesPage() {
       <section className="section-y bg-secondary/30">
         <div className="container-page">
           <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:gap-20">
-            {/* Left content */}
             <div>
               <p className="text-xs font-medium uppercase tracking-[0.28em] text-primary">
                 Why Choose Us
@@ -145,13 +203,21 @@ function VenuesPage() {
               </div>
             </div>
 
-            {/* Temporary image placeholders */}
             <div className="relative mx-auto min-h-[460px] w-full max-w-xl">
-              <div className="absolute right-0 top-0 h-[55%] w-[78%] border border-border bg-background/80">
-              <img src={venueOne} alt="Venue One" /></div>
+              <div className="absolute right-0 top-0 h-[55%] w-[78%] overflow-hidden border border-border bg-background/80">
+                <img
+                  src={venueOne}
+                  alt="Elegant wedding venue"
+                  className="h-full w-full object-cover"
+                />
+              </div>
 
-              <div className="absolute bottom-0 left-0 h-[55%] w-[78%] border border-border bg-background/80">
-                <img src={venueTwo} alt="Venue Two" />
+              <div className="absolute bottom-0 left-0 h-[55%] w-[78%] overflow-hidden border border-border bg-background/80">
+                <img
+                  src={venueTwo}
+                  alt="Luxury wedding venue"
+                  className="h-full w-full object-cover"
+                />
               </div>
             </div>
           </div>
