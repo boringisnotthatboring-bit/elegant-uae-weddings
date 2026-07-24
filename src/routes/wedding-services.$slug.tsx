@@ -286,7 +286,8 @@ function WeddingServicePage() {
 
               <div className="md:order-1">
                 <p className="eyebrow">
-                  {service.slug === "civil-weddings-uae"
+                  {service.slug === "civil-weddings-uae" ||
+                  service.slug === "luxury-hotel-weddings"
                     ? "Perfect For"
                     : detail.idealFor
                       ? "Ideal For"
@@ -297,9 +298,11 @@ function WeddingServicePage() {
                     ? "Who Is a Luxury Desert Wedding Ideal For?"
                     : service.slug === "civil-weddings-uae"
                       ? "Who Should Consider a Civil Wedding?"
-                      : detail.idealFor
-                        ? `Who Is ${service.title} Ideal For?`
-                        : `Who Is ${service.title} Perfect For?`}
+                      : service.slug === "luxury-hotel-weddings"
+                        ? "Who Are Luxury Hotel Weddings Perfect For?"
+                        : detail.idealFor
+                          ? `Who Is ${service.title} Ideal For?`
+                          : `Who Is ${service.title} Perfect For?`}
                 </h2>
 
                 <ul className="mt-6 grid gap-3 text-sm text-muted-foreground sm:grid-cols-2">
@@ -579,6 +582,70 @@ function WeddingServicePage() {
               </div>
 
               {/* Intentionally empty: reserved for the civil wedding image */}
+              <div aria-hidden="true" />
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Luxury Hotel Wedding Décor */}
+      {service.slug === "luxury-hotel-weddings" && (
+        <section className="section-y bg-secondary/20">
+          <div className="container-page">
+            <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+              <div className="max-w-2xl">
+                <p className="eyebrow">Wedding Décor</p>
+
+                <h2 className="mt-3 font-display text-3xl leading-tight md:text-4xl">
+                  Luxury Hotel Wedding Decoration in Dubai
+                </h2>
+
+                <p className="mt-6 text-base leading-relaxed text-muted-foreground">
+                  Step into a beautifully designed celebration where every detail feels personal,
+                  elegant, and truly yours. Our luxury hotel wedding decoration services in Dubai
+                  &amp; UAE are thoughtfully created to transform stunning hotel ballrooms and
+                  reception spaces into warm, memorable settings filled with beauty and charm.
+                </p>
+
+                <h3 className="mt-7 font-display text-xl">
+                  Our hotel wedding décor services highlight:
+                </h3>
+
+                <ul className="mt-5 space-y-3 text-sm text-muted-foreground md:text-base">
+                  {[
+                    "Bespoke floral stages and ceremony backdrops",
+                    "Elegant ballroom entrances and aisle décor",
+                    "Luxury table styling and statement centerpieces",
+                    "Romantic wedding lighting and ambience concepts",
+                    "Beautiful reception and stage setups",
+                    "Custom wedding themes and colour palettes & much more",
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-3">
+                      <Check className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <p className="mt-7 text-base leading-relaxed text-muted-foreground">
+                  From the first welcome to the final celebration, we create luxury hotel wedding
+                  setups in Dubai &amp; UAE that reflect your love story and make every guest feel
+                  part of something truly special.
+                </p>
+
+                <div className="mt-8">
+                  <Button
+                    asChild
+                    className="rounded-none bg-primary text-primary-foreground hover:bg-primary/90"
+                  >
+                    <Link to="/contact" search={{ type: meta.contactType }}>
+                      Contact Us
+                    </Link>
+                  </Button>
+                </div>
+              </div>
+
+              {/* Intentionally empty: reserved for the luxury hotel wedding image */}
               <div aria-hidden="true" />
             </div>
           </div>

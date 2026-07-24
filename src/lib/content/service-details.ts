@@ -309,10 +309,19 @@ export const serviceDetails: Record<string, ServiceDetail> = {
   },
 
   "luxury-hotel-weddings": {
-    introHeading: "Luxury Hotel Weddings",
+    introHeading: "Celebrate Your Love in Dubai’s Most Luxurious Hotels",
     intro: [
-      "For couples who dream of a grand celebration, our luxury hotel weddings bring together the UAE's most iconic five-star properties and a design tailored to your vision.",
-      "From glittering ballrooms to waterfront resorts, we plan and manage every detail from venue sourcing to the final guest farewell.",
+      "Enjoy an elegant and effortless luxury hotel wedding in Dubai with Awesome Events Weddings. As a trusted Wedding Planner in Dubai and Wedding Organizer UAE, we create warm, memorable celebrations across Dubai, Abu Dhabi, Ras Al Khaimah, and the UAE’s finest five-star hotels.",
+      "Whether you are planning an intimate ceremony, a glamorous ballroom reception, or a grand hotel celebration, our bespoke wedding planning services cover venue sourcing, complete coordination, luxury wedding décor, floral styling, staging, lighting, entertainment, photography, guest accommodation, transportation, catering, seating plans, and wedding logistics.",
+      "Every luxury hotel wedding in the UAE is thoughtfully designed around your story, creating a celebration that feels personal, elegant, and unforgettable for you and your guests.",
+    ],
+    idealFor: [
+      "Couples planning a luxury hotel wedding in Dubai or the UAE",
+      "Brides and grooms dreaming of a grand ballroom ceremony and elegant reception",
+      "Families hosting multi-day wedding celebrations within one five-star hotel",
+      "Couples seeking premium hospitality, catering, décor, and guest accommodation",
+      "Those wanting complete hotel wedding planning and seamless coordination",
+      "Anyone looking for a warm, elegant, and unforgettable celebration in a luxury venue",
     ],
     whyChooseTitle: "Why Choose Us for a Luxury Hotel Wedding",
     whyChoose: commonWhyChoose("Luxury Hotel Weddings", "luxury hotel weddings"),
