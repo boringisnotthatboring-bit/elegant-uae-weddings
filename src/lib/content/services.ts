@@ -47,6 +47,7 @@ export const flagshipServices: ServiceItem[] = [
     ],
     cta: "Explore Desert Weddings",
     image: "/service-images/A4-E4.webp",
+    perfectForImage: "/service-images/dw2.webp",
     banner: "/service-images/DW3.webp",
   },
   {

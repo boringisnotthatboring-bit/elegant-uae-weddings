@@ -179,14 +179,12 @@ function ServicesPage() {
       <section className="pt-16 md:pt-24">
         <div className="container-page">
           <div className="mx-auto max-w-3xl text-center">
-            <h2 className="font-display text-3xl md:text-4xl">
-              Our Wedding Planning Services
-            </h2>
+            <h2 className="font-display text-3xl md:text-4xl">Our Wedding Planning Services</h2>
 
             <p className="mt-5 text-base leading-relaxed text-muted-foreground">
               From elegant Beach Weddings and Luxury Hotel Weddings to Destination Weddings, Civil
-              Weddings, and intimate celebrations, Awesome Events Weddings offers customised
-              Wedding Planning Services across Dubai, Abu Dhabi, Ras Al Khaimah, and the UAE. As an
+              Weddings, and intimate celebrations, Awesome Events Weddings offers customised Wedding
+              Planning Services across Dubai, Abu Dhabi, Ras Al Khaimah, and the UAE. As an
               experienced Wedding Planner Dubai and Wedding Organizer UAE, we help bring your ideas
               to life with thoughtful planning, creative styling, and personalised experiences.
             </p>
@@ -250,15 +248,8 @@ function ServicesPage() {
                     )}
 
                     <div className="mt-8">
-                      <Button
-                        asChild
-                        variant="outline"
-                        className="uppercase tracking-[0.18em]"
-                      >
-                        <Link
-                          to="/wedding-services/$slug"
-                          params={{ slug: service.slug }}
-                        >
+                      <Button asChild variant="outline" className="uppercase tracking-[0.18em]">
+                        <Link to="/wedding-services/$slug" params={{ slug: service.slug }}>
                           {viewLabel}
                         </Link>
                       </Button>
@@ -328,9 +319,9 @@ function ServicesPage() {
                 Venue, Décor &amp; Wedding Styling
               </h3>
               <p className="mt-4 text-sm leading-7 text-primary-foreground/75 md:text-base">
-                We help source the perfect wedding venue and transform it with elegant décor,
-                floral styling, stage design, table settings, and theme-based concepts tailored to
-                your vision.
+                We help source the perfect wedding venue and transform it with elegant décor, floral
+                styling, stage design, table settings, and theme-based concepts tailored to your
+                vision.
               </p>
             </article>
 
@@ -340,9 +331,9 @@ function ServicesPage() {
                 Milestone Celebrations
               </h3>
               <p className="mt-4 text-sm leading-7 text-primary-foreground/75 md:text-base">
-                We help celebrate life's special milestones with customized experiences, designed
-                to feel completely stress-free and create lasting memories in Dubai or anywhere in
-                the UAE.
+                We help celebrate life's special milestones with customized experiences, designed to
+                feel completely stress-free and create lasting memories in Dubai or anywhere in the
+                UAE.
               </p>
             </article>
 
@@ -406,9 +397,7 @@ function ServicesPage() {
 
             <article className="group border border-primary-foreground/20 bg-primary-foreground/[0.06] p-7 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:bg-primary-foreground/[0.1] md:p-9">
               <p className="text-xs uppercase tracking-[0.24em] text-primary-foreground/55">10</p>
-              <h3 className="mt-4 font-display text-2xl leading-snug md:text-3xl">
-                AI Technology
-              </h3>
+              <h3 className="mt-4 font-display text-2xl leading-snug md:text-3xl">AI Technology</h3>
               <p className="mt-4 text-sm leading-7 text-primary-foreground/75 md:text-base">
                 Elevate your wedding in Dubai or anywhere in the UAE with e-invitations, QR guest
                 experiences, AI photo booths, robots, live streaming, language translators, and
@@ -423,14 +412,13 @@ function ServicesPage() {
               </h3>
               <p className="mt-4 text-sm leading-7 text-primary-foreground/75 md:text-base">
                 From invitations and RSVP tracking to welcome services, seating plans, guest
-                assistance, and family coordination, we ensure every guest experience is thoughtfully
-                managed from start to finish.
+                assistance, and family coordination, we ensure every guest experience is
+                thoughtfully managed from start to finish.
               </p>
             </article>
           </div>
         </div>
       </section>
-
     </>
   );
 }
