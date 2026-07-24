@@ -201,13 +201,39 @@ export const serviceDetails: Record<string, ServiceDetail> = {
   },
 
   "intimate-elopements": {
-    introHeading: "Intimate Elopements & Micro Weddings",
+    introHeading: "Beautiful Intimate Elopements & Micro Weddings Across the UAE",
     intro: [
-      "For couples craving something quieter and deeply personal, our intimate elopements and micro weddings create a beautifully curated celebration for your closest people — or just the two of you.",
-      "We manage officiants, styling, florals, photography, dining, and on-the-day coordination so you can focus entirely on the moment.",
+      "At Awesome Events Weddings, we believe a smaller celebration can still feel truly grand. As a trusted Wedding Planner Dubai, we create intimate elopements and micro weddings that are personal, refined, and unforgettable. Every celebration is thoughtfully designed with premium styling, elegant wedding décor, beautiful floral details, carefully curated catering, and seamless complete event coordination.",
+      "Whether you are planning a private ceremony for two or a close gathering with family and friends, we transform intimate spaces into meaningful wedding settings filled with warmth, elegance, and character. From venue styling and guest experience to entertainment, dining, photography, and on-the-day management, every detail is handled with care.",
+      "Our goal is to make your wedding feel micro but grand, creating a celebration that feels special, luxurious, and remembered by everyone who attends. With personalised planning and a strong focus on your story, we ensure your intimate wedding in Dubai or anywhere across the UAE feels effortless, heartfelt, and beautifully yours.",
     ],
-    whyChooseTitle: "Why Choose Us for an Intimate Wedding",
-    whyChoose: commonWhyChoose("Intimate Weddings", "intimate weddings and elopements"),
+    idealFor: [
+      "Couples planning a romantic and private elopement",
+      "Small wedding celebrations with close family and friends",
+      "Intimate destination weddings in Dubai and the UAE",
+      "Outdoor ceremonies in gardens, beaches, deserts, or private venues",
+      "Couples seeking elegant décor, personalised details, and complete coordination",
+      "Anyone wanting a small wedding that still feels meaningful, stylish, and memorable",
+    ],
+    whyChooseTitle: "What Makes Our Intimate Elopements & Micro Weddings Special",
+    whyChoose: [
+      {
+        title: "Thoughtfully Curated Intimate Celebrations",
+        body: "We design micro weddings in Dubai around meaningful moments, close connections, and a relaxed atmosphere that feels personal from beginning to end.",
+      },
+      {
+        title: "Beautiful Venues for Smaller Weddings",
+        body: "From private villas and boutique hotels to rooftops, gardens, yachts, and desert settings, we source charming venues suited to intimate weddings in the UAE.",
+      },
+      {
+        title: "Elevated Details with a Grand Feel",
+        body: "Smaller guest lists allow us to focus on premium florals, elegant décor, personalised dining, refined styling, and memorable details that make every celebration feel beautifully grand.",
+      },
+      {
+        title: "Personal Support from Start to Finish",
+        body: "Our dedicated team provides complete elopement and micro wedding planning, managing suppliers, catering, schedules, guest care, and wedding-day coordination with warmth and attention.",
+      },
+    ],
     faqs: [
       {
         q: "What is the difference between an elopement and a micro wedding?",

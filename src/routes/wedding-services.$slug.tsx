@@ -444,6 +444,75 @@ function WeddingServicePage() {
         </section>
       )}
 
+      {/* Intimate Elopements & Micro Weddings Décor */}
+      {service.slug === "intimate-elopements" && (
+        <section className="section-y bg-secondary/20">
+          <div className="container-page">
+            <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+              <div className="max-w-2xl">
+                <p className="eyebrow">Wedding Décor</p>
+
+                <h2 className="mt-3 font-display text-3xl leading-tight md:text-4xl">
+                  Luxury Styling for Intimate Weddings in Dubai
+                </h2>
+
+                <p className="mt-6 text-base leading-relaxed text-muted-foreground">
+                  Create a beautifully personal setting with Luxury Wedding Decoration for Intimate
+                  Elopements &amp; Micro Weddings across Dubai, Abu Dhabi, Ras Al Khaimah, and the
+                  UAE. At Awesome Events Weddings, we design elegant spaces that celebrate love
+                  through personal touches, smaller settings, cosy styling, candlelight, private
+                  dining, and personalised décor. Whether you're planning a romantic Beach Wedding,
+                  an intimate Luxury Hotel Wedding, or a private Destination Wedding, our bespoke
+                  Wedding Decoration Dubai services are thoughtfully tailored to your vision.
+                </p>
+
+                <h3 className="mt-7 font-display text-xl">
+                  Our Intimate Wedding Décor Services Highlight:
+                </h3>
+
+                <ul className="mt-5 space-y-3 text-sm text-muted-foreground md:text-base">
+                  {[
+                    "Personalised décor and bespoke floral styling",
+                    "Romantic ceremony backdrops and elegant wedding arches",
+                    "Cosy styling with candlelight and ambient lighting",
+                    "Luxury tablescapes and private dining setups",
+                    "Beautiful aisle décor and intimate seating arrangements",
+                    "Custom colour palettes and decorative accents",
+                    "Elegant photo corners and personalised celebration details",
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-3">
+                      <Check className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <p className="mt-7 text-base leading-relaxed text-muted-foreground">
+                  Every Intimate Elopement and Micro Wedding is thoughtfully designed to create a
+                  warm, meaningful atmosphere where every detail reflects your story. Our customised
+                  Wedding Decoration transforms intimate celebrations into timeless memories for you
+                  and your closest loved ones
+                </p>
+
+                <div className="mt-8">
+                  <Button
+                    asChild
+                    className="rounded-none bg-primary text-primary-foreground hover:bg-primary/90"
+                  >
+                    <Link to="/contact" search={{ type: meta.contactType }}>
+                      Contact Us
+                    </Link>
+                  </Button>
+                </div>
+              </div>
+
+              {/* Intentionally empty: reserved for the intimate wedding image */}
+              <div aria-hidden="true" />
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* FAQs */}
       <section className="section-y bg-secondary/40">
         <div className="container-page">
